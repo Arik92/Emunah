@@ -1,0 +1,48 @@
+/*
+    NAME : Customizer
+    AUTHOR NAME : Infinyteam
+    AUTHOR WEBSITE : www.infinyteam.com
+    OUR PORTFOLIO : http://themeforest.net/user/infinyteam/portfolio?ref=infinyteam
+*/
+
+
+/* COLORS
+================================================== */
+
+a:hover, a:link:hover {
+    color: #f20e0e;
+}
+
+/* BACKGROUND COLORS
+================================================== */
+
+.spinner>div, header.header#layout2 .mainmenu, .search-modal .search-close:hover, .featured-posts .post.has-caption:hover .post-category a, .blog-layout.has-slider .post:hover .post-category a, .blog-layout.layout-1 .post:hover .post-category a, .post-header .post-category a, .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span, .featured-navigation div:hover, .FollowByEmail input.follow-by-email-submit:hover, #footer .FollowByEmail input.follow-by-email-submit:hover, .contact-form input[type="submit"], .totop:hover {
+    background-color: #f20e0e;
+    border-color: #f20e0e;
+    color: #ffffff;
+}
+.search-modal input[type="text"]:focus {
+    border-color: #f20e0e;
+}
+
+/* BOXSHADOWS & BORDER COLORS
+================================================== */
+
+header.header#layout2 .mainmenu, .mainmenu .menu>ul>li ul, .mainmenu .menu>ul>li>.megamenu, .search-modal .search-close:focus, .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span, .slider-nav div, .social-counter a:hover, .FollowByEmail input.follow-by-email-address:focus, .FollowByEmail input.follow-by-email-submit:hover, #footer .FollowByEmail input.follow-by-email-submit, .totop {
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* TRANSITIONS
+================================================== */
+
+.slide-menu .menu-close, .menu-tigger, .search-modal input[type="text"], .topmenu>ul>li a, .social-links>ul>li a, .mainmenu .menu>ul>li a, header.header#layout3 .mainmenu .menu>ul>li>a:before, .mainmenu .megamenu .item-content, .search-modal, .search-modal .search-close, .search-tigger, .post .post-format, .featured-posts .post.has-caption:before, .featured-posts .post.has-caption .post-title a, .post .post-category a, .slider-nav div, .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span, .has-gallery .post .post-thumb img, .social-counter a, .FollowByEmail input.follow-by-email-submit {
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -ms-transition: .35s;
+    -o-transition: .35s;
+    transition: .35s;
+}
