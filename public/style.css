@@ -355,7 +355,7 @@ header.header {
 
 .header-content {
     display: block;
-    height: 90px;
+    height: 110px;
     line-height: 90px;
     margin-bottom: 30px;
     padding: 0;
@@ -369,7 +369,7 @@ header.header {
 .logo-container {
     float: left;
     display: flex;
-    height: 90px;
+    height: 110px;
 }
 .logo-container .logo {
     display: block;
