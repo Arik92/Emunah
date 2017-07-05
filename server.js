@@ -23,9 +23,9 @@ app.use(express.static('public'));
 app.use(express.static('node_modules'));
 
 // Configure passport-local to use user model for authentication
-passport.use(User.createStrategy());
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+// passport.use(User.createStrategy());
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
 
 app.all('[^.]+', function(req, res) {
   res.sendFile(__dirname + "/public/index.html");
