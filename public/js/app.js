@@ -17,6 +17,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/about',
       templateUrl: '/templates/page-about.html'
     })
+    .state('page-about-rav', {
+      url: '/about-rav-dror',
+      templateUrl: '/templates/page-about-rav.html'
+    })
     .state('page-category', {
       url: '/category',
       templateUrl: '/templates/page-category.html'
