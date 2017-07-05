@@ -1,5 +1,5 @@
 app.directive("navDirective", function(){
 	return {
-		templateUrl: 'templates/nav.html',
+		templateUrl: 'nav.html',
 	};
 });
