@@ -1,11 +1,5 @@
 app.controller('signCtrl', function($scope){
 
-  function nonEmptyFields() {
-    if (!$scope.pass1) {
-      alert("password field is needed");
-    }
-  }//nonEmptyFields
-
   function checkNames() {
     var patt = /[a-zA-z]+/;
     if ((!patt.test($scope.fname)||(!$scope.fname))) {
@@ -33,9 +27,7 @@ app.controller('signCtrl', function($scope){
     }
   }
 
-  $scope.checkInput = function() {
-    //console.log("first name is now", $scope.fname);
-    //nonEmptyFields();
+  $scope.checkSignup = function() {
     checkNames();
     checkPass();
      if (!checkEmail()) {
