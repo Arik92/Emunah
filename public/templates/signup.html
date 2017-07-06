@@ -1,26 +1,88 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Sign up</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-  </head>
-  <body>
-    <div class="page-header col-md-6 col-md-offset-3"> Become a believer! </div>
-    <div class="container col-md-6 col-md-offset-3">
-      <div class="form-group">
-        First name: <input type="text" placeholder="Rav">
-      </div>
-      <div class="form-group">
-        Last name: <input type="text" placeholder="Dror">
-      </div>
-      <div class="form-group">
-        Email: <input type="text" placeholder="ravdror@rd.com">
-      </div>
-      <div class="form-group">
-        Address: <input type="text" placeholder="LA">
-      </div>
-      <button class="btn btn-primary">Submit</button>
+<div class="wide page single-page">
+  <section class="search-modal">
+    <h3 style="display: none;">Search Modal</h3>
+    <div class="container">
+      <form action="page-search.html" method="get">
+        <input type="text" name="q" value="Search.." />
+        <span class="search-close"></span>
+      </form>
     </div>
-  </body>
-</html>
+  </section>
+  <section id="main-area">
+    <h3 style="display: none;">Main Area</h3>
+    <div class="container">
+      <div class="row">
+        <section id="main" class="main col-md-8">
+          <h2 style="display: none;">Main</h2>
+          <div class="blog-posts hfeed">
+            <article class="post single-post">
+              <div class="post-header">
+                <h1 class="post-title">Sign Up</h1><!-- Post Title -->
+              </div><!-- Post Header -->
+              <div class="post-body">
+                <h2>We’d Love to Hear From You, Get In Touch With Us!</h2>
+                <p>Questions? Comments? Praise? Critique?</p>
+                <form class="contact-form" action="mailto:contact@infinyteam.com" method="POST">
+                  <div class="input-group">
+                    <label for="name">First Name<i>(Required)</i>:</label>
+                    <input type="text" name="name" value="" placeholder="Rav" id="name" />
+                  </div>
+                  <div class="input-group">
+                    <label for="name">Last Name<i>(Required)</i>:</label>
+                    <input type="text" name="name" value="" placeholder="Dror" id="name" />
+                  </div>
+                  <div class="input-group">
+                    <label for="email">Your Email<i>(Required)</i>:</label>
+                    <input type="email" name="email" value="" placeholder="ravdror@emunah.com" id="email" />
+                  </div>
+                 <div class="input-group">
+                    <label for="website">Password<i>(Required)</i>:</label>
+                    <input type="url" name="website" value="" placeholder="********" id="website" />
+                  </div>
+                 <div class="input-group">
+                    <label for="website">Confirm Password<i>(Required)</i>:</label>
+                    <input type="url" name="website" value="" placeholder="********" id="website" />
+                  </div>
+                  <div class="input-group">
+                    <label for="subject">Address<i>(Required)</i>:</label>
+                    <input type="text" name="subject" value="" placeholder="12345 Main Street, #25" id="subject" />
+                  </div>
+                  <div class="input-group">
+                    <label for="subject">City<i>(Required)</i>:</label>
+                    <input type="text" name="subject" value="" placeholder="Jerusalem" id="subject" />
+                  </div>
+                  <div class="input-group">
+                    <label for="subject">State<i>(Optional)</i>:</label>
+                    <input type="text" name="subject" value="" placeholder="Israel" id="subject" />
+                  </div>
+                  <div class="input-group">
+                    <label for="subject">Country<i>(Required)</i>:</label>
+                    <input type="text" name="subject" value="" placeholder="Israel" id="subject" />
+                  </div>
+                  <div class="input-group">
+                    <label for="subject">Zip<i>(Optional)</i>:</label>
+                    <input type="text" name="subject" value="" placeholder="91307" id="subject" />
+                  </div>
+                  <div class="input-group">
+                    <input type="submit" name="submit" value="Sign Up"/>
+                  </div>
+                </form>
+              </div><!-- Post Body -->
+              <div class="post-footer">
+                <div class="comments" id="comments">
+                  <div class="title">
+                    <h2>Comments</h2>
+                  </div><!-- Blog title -->
+                  <div class="alert alert-warning">
+                                        The Comments on this page is not allowed!
+                                    </div>
+                </div><!-- Blog Layout -->
+              </div><!-- Post Footer -->
+            </article><!-- Post -->
+          </div><!-- Blog posts -->
+        </section><!-- Main -->
+        <aside-directive></aside-directive>
+      </div><!-- Row -->
+    </div><!-- Container -->
+  </section><!-- Main Area -->
+</div>
