@@ -3,6 +3,8 @@ var expressSession = require('express-session');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var passport = require('passport');
+var nodemailer = require('nodemailer');
+var sgTransport = require('nodemailer-sendgrid-transport');
 var LocalStrategy = require('passport-local').Strategy;
 
 //mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');

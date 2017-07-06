@@ -27,7 +27,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('page-contact', {
       url: '/page-contact',
-      templateUrl: '/templates/page-contact.html'
+      templateUrl: '/templates/page-contact.html',
     })
     .state('page-error', {
       url: '/error',
