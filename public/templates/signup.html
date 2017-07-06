@@ -19,50 +19,50 @@
               <div class="post-header">
                 <h1 class="post-title">Sign Up</h1><!-- Post Title -->
               </div><!-- Post Header -->
-              <div class="post-body">
-                <form class="contact-form" action="mailto:contact@infinyteam.com" method="POST">
-                  <div class="input-group">
+              <div class="post-body" ng-controller="signCtrl">
+                <div class="container" method="POST">
+                  <div class="form-group">
                     <label for="name">First Name<i>(Required)</i>:</label>
-                    <input type="text" name="name" value="" placeholder="Rav" id="name" />
+                    <input type="text"   placeholder="Rav" ng-model="fname" />
                   </div>
-                  <div class="input-group">
+                  <div class="form-group">
                     <label for="name">Last Name<i>(Required)</i>:</label>
-                    <input type="text" name="name" value="" placeholder="Dror" id="name" />
+                    <input type="text" placeholder="Dror" ng-model="lname" />
                   </div>
-                  <div class="input-group">
+                  <div class="form-group">
                     <label for="email">Your Email<i>(Required)</i>:</label>
-                    <input type="email" name="email" value="" placeholder="ravdror@emunah.com" id="email" />
+                    <input type="email" placeholder="ravdror@emunah.com" ng-model="email" />
                   </div>
-                 <div class="input-group">
+                 <div class="form-group">
                     <label for="website">Password<i>(Required)</i>:</label>
-                    <input type="url" name="website" value="" placeholder="********" id="website" />
+                    <input type="password" name="website" value="" placeholder="secret" ng-model="pass1" />
                   </div>
-                 <div class="input-group">
+                 <div class="form-group">
                     <label for="website">Confirm Password<i>(Required)</i>:</label>
-                    <input type="url" name="website" value="" placeholder="********" id="website" />
+                    <input type="password"  placeholder="********" ng-model="pass2" />
                   </div>
-                  <div class="input-group">
+                  <div class="form-group">
                     <label for="subject">Address<i>(Required)</i>:</label>
                     <input type="text" name="subject" value="" placeholder="12345 Main Street, #25" id="subject" />
                   </div>
-                  <div class="input-group">
+                  <div class="form-group">
                     <label for="subject">City<i>(Required)</i>:</label>
                     <input type="text" name="subject" value="" placeholder="Jerusalem" id="subject" />
                   </div>
-                  <div class="input-group">
+                  <div class="form-group">
                     <label for="subject">State<i>(Optional)</i>:</label>
                     <input type="text" name="subject" value="" placeholder="Israel" id="subject" />
                   </div>
-                  <div class="input-group">
+                  <div class="form-group">
                     <label for="subject">Country<i>(Required)</i>:</label>
                     <input type="text" name="subject" value="" placeholder="Israel" id="subject" />
                   </div>
-                  <div class="input-group">
+                  <div class="form-group">
                     <label for="subject">Zip<i>(Optional)</i>:</label>
                     <input type="text" name="subject" value="" placeholder="91307" id="subject" />
                   </div>
-                  <div class="input-group">
-                    <input type="submit" name="submit" value="Sign Up"/>
+                  <div class="form-group">
+                    <input type="submit" ng-click="checkSignup()" value="Sign Up"/>
                   </div>
                 </form>
               </div><!-- Post Body -->
