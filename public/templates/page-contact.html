@@ -51,14 +51,14 @@
 										<li><i class="fa fa-envelope-o"></i>Email: <a href="mailto:info@emunah.com">info@emunah.com</a></li>
 									</ul>
 								</div>
-								<form class="contact-form" action="mailto:contact@infinyteam.com" method="POST">
+								<form class="contact-form">
 									<div class="input-group">
 										<label for="name">Your Name<i>(Required)</i> :</label>
-										<input type="text" name="name" value="" placeholder="Rav Dror" id="name" />
+										<input ng-model="mail.name" type="text" name="name" value="" placeholder="Rav Dror" id="name" />
 									</div>
 									<div class="input-group">
 										<label for="email">Your Email<i>(Required)</i> :</label>
-										<input type="email" name="email" value="" placeholder="ravdror@emunah.com" id="email" />
+										<input ng-model="mail.from" type="email" name="email" value="" placeholder="ravdror@emunah.com" id="email" />
 									</div>
 <!-- 									<div class="input-group">
 										<label for="website">Your Website<i>(Optional)</i> :</label>
@@ -66,20 +66,21 @@
 									</div> -->
 									<div class="input-group">
 										<label for="subject">Your Subject<i>(Required)</i> :</label>
-										<input type="text" name="subject" value="" placeholder="I Need a Service.." id="subject" />
+										<input ng-model="mail.subject" type="text" name="subject" value="" placeholder="I Need a Service.." id="subject" />
 									</div>
 									<div class="input-group">
 										<label for="message">Your Message<i>(Required)</i> :</label>
-										<textarea name="message" placeholder="Hi There.." id="message"></textarea>
+										<textarea ng-model="mail.message" name="message" placeholder="Hi There.." id="message"></textarea>
 									</div>
 <!-- 									<div class="input-group">
 									    <label>What is 2+2? (Anti-spam) <i>(Required)</i> :</label>
 										<input name="human" placeholder="Type the answer here"/>
 									</div> -->
 									<div class="input-group">
-										<input type="submit" name="submit" value="Send Message"/>
+										<button class="bt btn-success" ng-click="send(mail)"> Send message </button>
 									</div>
 								</form>
+								<div ng-cloak ng-show="!loading && serverMessage"><i class="material-icons center"></i>{{serverMessage}}</div>
 							</div><!-- Post Body -->
 							<div class="post-footer">
 								<div class="comments" id="comments">
@@ -87,8 +88,8 @@
 										<h2>Comments</h2>
 									</div><!-- Blog title -->
 									<div class="alert alert-warning">
-                                        The Comments on this page is not allowed!
-                                    </div>
+                    The Comments on this page are not allowed!
+                	</div>
 								</div><!-- Blog Layout -->
 							</div><!-- Post Footer -->
 						</article><!-- Post -->

@@ -1,11 +1,14 @@
 app.controller('mailController', function ($scope, $http) {
+  console.log("hello!!!");
   $scope.loading = false;
   $scope.send = function(mail) {
+    console.log(mail);
+
     $scope.loading = true;
     $http.post('/sendmail', {
-      from: 'It is Arik <mbreslow56@gmail.com>',
-      to: 'mrarkadi@gmail.com',
-      subject: 'Message from maynard?',
+      from: mail.from,
+      to: 'arkadi@doublero.com',
+      subject: mail.subject,
       text: mail.message
     }).then(res => {
         $scope.loading = false;
