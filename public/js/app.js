@@ -28,6 +28,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('page-contact', {
       url: '/page-contact',
       templateUrl: '/templates/page-contact.html',
+      controller: 'mailController'
     })
     .state('page-error', {
       url: '/error',
