@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mbreslow56/emunah#readme",
   "dependencies": {
+    "angular": "^1.6.5",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
     "express": "^4.15.3",
