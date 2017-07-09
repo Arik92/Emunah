@@ -13,7 +13,7 @@ router.post('/register', function(req, res, next) {
       if (err) {
         return next(err);
       }
-      res.send(req.user.username);
+      res.send(req.user.firstname);
     });
   });
 });
