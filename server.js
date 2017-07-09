@@ -31,22 +31,6 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use('/users', userRoutes);
-// Sendmail route
-app.post('/sendmail', function(req, res){
-    var options = {
-        auth: {
-            api_key: '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'
-        }
-    }
-    var mailer = nodemailer.createTransport(sgTransport(options));
-    mailer.sendMail(req.body, function(error, info){
-        if(error) {
-            res.status('401').json({err: info});
-        } else{
-            res.status('200').json({success: true});
-        }
-    });
-});
 
 app.all('[^.]+', function(req, res) {
   res.sendFile(__dirname + "/public/index.html");
