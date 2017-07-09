@@ -8,11 +8,6 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/home',
       templateUrl: '/templates/home.html'
     })
-    .state('contact', {
-      url: '/contact',
-      templateUrl: '/templates/contact.html',
-      controller: 'mailController'
-    })
     .state('page-about', {
       url: '/about',
       templateUrl: '/templates/page-about.html'
@@ -28,7 +23,6 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('page-contact', {
       url: '/page-contact',
       templateUrl: '/templates/page-contact.html',
-      controller: 'mailController'
     })
     .state('page-error', {
       url: '/error',

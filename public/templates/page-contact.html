@@ -16,25 +16,6 @@
 					<h2 style="display: none;">Main</h2>
 					<div class="blog-posts hfeed">
 						<article class="post single-post">
-							<div class="post-header">
-								<h1 class="post-title">Contact Us</h1><!-- Post Title -->
-								<ul class="post-meta">
-									<li><img class="avatar" width="24" height="24" src="images/author.jpg" alt="Author Avatar Image" />by <a href="page-author.html">Rav Dror</a></li>
-									<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
-									<li class="right"><a href="#print"><i class="fa fa-print"></i> Print This Page</a></li>
-								</ul><!-- Post Meta -->
-							</div><!-- Post Header -->
-							<div class="post-share">
-								<span class="counter"><strong>10</strong>Shares</span>
-								<ul>
-									<li class="facebook"><a href=""><i class="fa fa-facebook"></i><span>Share on Facebook</span></a></li>
-									<li class="twitter"><a href=""><i class="fa fa-twitter"></i><span>Share on Twitter</span></a></li>
-									<li class="google-plus"><a href=""><i class="fa fa-google-plus"></i></a></li>
-									<li class="linkedin"><a href=""><i class="fa fa-linkedin"></i></a></li>
-									<li class="whatsapp"><a href=""><i class="fa fa-whatsapp"></i></a></li>
-									<li class="email"><a href=""><i class="fa fa-envelope-o"></i></a></li>
-								</ul>
-							</div><!-- Post Share -->
 							<div class="post-body">
 								<h2>We’d Love to Hear From You, Get In Touch With Us!</h2>
 								<p>Questions? Comments? Praise? Critique?</p>
@@ -47,18 +28,18 @@
 									<p>Contact Details :</p>
 									<ul>
 										<li><i class="fa fa-phone"></i>Call Us: USA: 213-316-9730 / Israel: 052-844-3917 / Fax: Israel Fax: 02-652-9168</li>
-										<li><i class="fa fa-building-o"></i>Address : Hay Salam, Rue Ain Safae, N°151, Tanger, Maroc</li>
+										<!-- <li><i class="fa fa-building-o"></i> Address : Hay Salam, Rue Ain Safae, N°151, Tanger, Maroc</li> -->
 										<li><i class="fa fa-envelope-o"></i>Email: <a href="mailto:info@emunah.com">info@emunah.com</a></li>
 									</ul>
 								</div>
-								<form class="contact-form">
+								<form class="contact-form" action="https://formspree.io/mrarkadi@gmail.com" method="POST">
 									<div class="input-group">
 										<label for="name">Your Name<i>(Required)</i> :</label>
-										<input ng-model="mail.name" type="text" name="name" value="" placeholder="Rav Dror" id="name" />
+										<input type="text" name="name" value="" placeholder="your name" id="name" required/>
 									</div>
 									<div class="input-group">
 										<label for="email">Your Email<i>(Required)</i> :</label>
-										<input ng-model="mail.from" type="email" name="email" value="" placeholder="ravdror@emunah.com" id="email" />
+										<input type="email" name="email" value="" placeholder="user@email.com" id="email" required/>
 									</div>
 <!-- 									<div class="input-group">
 										<label for="website">Your Website<i>(Optional)</i> :</label>
@@ -66,32 +47,21 @@
 									</div> -->
 									<div class="input-group">
 										<label for="subject">Your Subject<i>(Required)</i> :</label>
-										<input ng-model="mail.subject" type="text" name="subject" value="" placeholder="I Need a Service.." id="subject" />
+										<input type="text" name="subject" value="" id="subject" required />
 									</div>
 									<div class="input-group">
 										<label for="message">Your Message<i>(Required)</i> :</label>
-										<textarea ng-model="mail.message" name="message" placeholder="Hi There.." id="message"></textarea>
+										<textarea name="message" required></textarea>
 									</div>
 <!-- 									<div class="input-group">
 									    <label>What is 2+2? (Anti-spam) <i>(Required)</i> :</label>
 										<input name="human" placeholder="Type the answer here"/>
 									</div> -->
 									<div class="input-group">
-										<button class="bt btn-success" ng-click="send(mail)"> Send message </button>
+										<input type="submit" value="Send" class="bt btn-success">
 									</div>
 								</form>
-								<div ng-cloak ng-show="!loading && serverMessage"><i class="material-icons center"></i>{{serverMessage}}</div>
 							</div><!-- Post Body -->
-							<div class="post-footer">
-								<div class="comments" id="comments">
-									<div class="title">
-										<h2>Comments</h2>
-									</div><!-- Blog title -->
-									<div class="alert alert-warning">
-                    The Comments on this page are not allowed!
-                	</div>
-								</div><!-- Blog Layout -->
-							</div><!-- Post Footer -->
 						</article><!-- Post -->
 					</div><!-- Blog posts -->
 				</section><!-- Main -->
