@@ -5,11 +5,13 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var nodemailer = require('nodemailer');
 var sgTransport = require('nodemailer-sendgrid-transport');
-var LocalStrategy = require('passport-local').Strategy;
-
-//mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
-
+var localStrategy = require('passport-local').Strategy;
+var User = require('./models/userModel');
+var userRoutes = require('./Routes/userRoutes');
 var app = express();
+//mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
+mongoose.connect("mongodb://localhost/users");
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -24,6 +26,11 @@ app.use(passport.session());
 app.use(express.static('public'));
 app.use(express.static('node_modules'));
 
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+app.use('/users', userRoutes);
 // Sendmail route
 app.post('/sendmail', function(req, res){
     var options = {
