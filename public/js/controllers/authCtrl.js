@@ -1,5 +1,6 @@
 app.controller('authCtrl', function($scope, authFactory, $state) {
   $scope.join = function() {
+    console.log("signup control user is", $scope.user);
         authFactory.join($scope.user)
       .then(function() {
         $state.go('home');
@@ -8,11 +9,12 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
       });
   }
   $scope.login = function() {
-    authFactory.login($scope.loginUser) //how do I know where this user comes from? where does it come from in emunah??
+    console.log("login control user is", $scope.user);
+    authFactory.login($scope.user) //how do I know where this user comes from? where does it come from in emunah??
       .then(function() {
         $state.go('home')
       }, function(err) {
-        alert(err.data);
+        console.log(err);
       });
   }
   $scope.logout = function() {

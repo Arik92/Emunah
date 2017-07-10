@@ -3,7 +3,7 @@
 		<div class="container">
 			<nav class="topmenu">
 				<ul>
-					<li>Welcome, {{currentUser}}</li>
+					<li ng-show="currentUser">Welcome, {{currentUser}}</li>
 					<li>25 Sivan 5777 - 19 June 2017</li>
 					<li>Parasha Korach</li>
 					<li><a ui-sref="login" ng-hide="currentUser">Login</a></li>
@@ -13,7 +13,6 @@
 					<li><a href="page-contact.html">WhatsApp Group</a></li>
 					<li><a href="page-contact.html">Donate</a></li>
 					<li><a href="page-contact.html">Store</a></li>
-
 				</ul>
 			</nav><!-- Top Menu -->
 			<nav class="social-links">
