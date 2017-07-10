@@ -4,7 +4,7 @@ var User = require('../models/userModel');
 var passport = require('passport');
 
 router.post('/register', function(req, res, next) {
-  User.register(new User({ username: req.body.email }), req.body.pass, function(err, user) {
+  User.register(new User({ username: req.body.email, email: req.body.fname }), req.body.pass, function(err, user) {
     if (err) {
       console.log('Error registering!', err);
       return next(err);

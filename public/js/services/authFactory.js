@@ -4,14 +4,15 @@ app.factory('authFactory', function($http) {
   auth.join = function(user) {
     return $http.post('/users/register', user)
       .then(function(response) {
-        console.log("Successfully registered");
+        console.log("Successfully registered", response.data);
         auth.currentUser = angular.copy(response.data);
       });
   };
 
   auth.login = function(user) {
     return $http.post('/users/login', user)
-      .then(function(response) {        
+      .then(function(response) {
+        console.log("Successfully logged in", response.data);
         auth.currentUser = angular.copy(response.data);
       });
   };
