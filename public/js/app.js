@@ -1,4 +1,4 @@
-var app = angular.module('emunApp', ['ui.router']);
+var app = angular.module("emunApp", ['ui.router']);
 
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
