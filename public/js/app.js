@@ -6,7 +6,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/home',
-      templateUrl: '/templates/home.html'
+      templateUrl: '/templates/home.html',
+      controller: function($rootScope, authFactory) {
+        $rootScope.currentUser = authFactory.currentUser.username;
+      }
     })
     .state('page-about', {
       url: '/about',
@@ -44,6 +47,11 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('login', {
       url: '/login',
       templateUrl: '/templates/login.html',
+      controller: 'authCtrl'
+    })
+    .state('logout', {
+      url: '/logout',
+      templateUrl: '/templates/home.html',
       controller: 'authCtrl'
     })
 });
