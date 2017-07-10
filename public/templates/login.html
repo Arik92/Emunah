@@ -20,21 +20,21 @@
                 <h1 class="post-title">Log In</h1><!-- Post Title -->
               </div><!-- Post Header -->
               <div class="post-body">
-                <form class="contact-form" action="mailto:contact@infinyteam.com" method="POST">
+                <form ng-submit="login()" method="post">
                   <div class="input-group">
                     <label for="email">Your Email:</label>
-                    <input type="email" name="email" value="" placeholder="ravdror@emunah.com" id="email" />
+                    <input type="email" ng-model="loginUser.username" placeholder="ravdror@emunah.com" />
                   </div>
                  <div class="input-group">
                     <label for="password">Password:</label>
-                    <input type="password" value="" placeholder="secret" />
+                    <input type="password" ng-model="loginUser.password" placeholder="secret" />
                   </div>
                   <div class="input-group">
                     <input type="submit" name="submit" value="Log In"/>
                   </div>
                 </form>
               </div><!-- Post Body -->
-              <div class="post-footer">                
+              <div class="post-footer">
               </div><!-- Post Footer -->
             </article><!-- Post -->
           </div><!-- Blog posts -->

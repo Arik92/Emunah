@@ -19,47 +19,47 @@
               <div class="post-header">
                 <h1 class="post-title">Sign Up</h1><!-- Post Title -->
               </div><!-- Post Header -->
-              <div class="post-body" ng-controller="signCtrl">
+              <div class="post-body" >
                 <div class="container" method="POST">
                   <div class="form-group">
                     <label for="name">First Name<i>(Required)</i>:</label>
-                    <input type="text"   placeholder="Rav" ng-model="fname" />
+                    <input type="text"   placeholder="Rav" ng-model="user.fname" />
                   </div>
                   <div class="form-group">
                     <label for="name">Last Name<i>(Required)</i>:</label>
-                    <input type="text" placeholder="Dror" ng-model="lname" />
+                    <input type="text" placeholder="Dror" ng-model="user.lname" />
                   </div>
                   <div class="form-group">
                     <label for="email">Your Email<i>(Required)</i>:</label>
-                    <input type="email" placeholder="ravdror@emunah.com" ng-model="email" />
+                    <input type="email" placeholder="ravdror@emunah.com" ng-model="user.email" />
                   </div>
                  <div class="form-group">
                     <label for="website">Password<i>(Required)</i>:</label>
-                    <input type="password" name="website" value="" placeholder="secret" ng-model="pass1" />
+                    <input type="password" placeholder="secret" ng-model="user.pass" />
                   </div>
                  <div class="form-group">
                     <label for="website">Confirm Password<i>(Required)</i>:</label>
-                    <input type="password"  placeholder="********" ng-model="pass2" />
+                    <input type="password"  placeholder="secret" ng-model="pass2" />
                   </div>
                   <div class="form-group">
                     <label for="subject">Address<i>(Required)</i>:</label>
-                    <input type="text" name="subject" value="" placeholder="12345 Main Street, #25" id="subject" />
+                    <input type="text" name="subject" placeholder="12345 Main Street, #25" id="subject"ng-model="user.street" />
                   </div>
                   <div class="form-group">
                     <label for="subject">City<i>(Required)</i>:</label>
-                    <input type="text" name="subject" value="" placeholder="Jerusalem" id="subject" />
+                    <input type="text" name="subject" placeholder="Jerusalem" id="subject" ng-model="user.city" />
                   </div>
                   <div class="form-group">
                     <label for="subject">State<i>(Optional)</i>:</label>
-                    <input type="text" name="subject" value="" placeholder="Israel" id="subject" />
+                    <input type="text" name="subject" placeholder="Israel" id="subject" ng-model="user.state"/>
                   </div>
                   <div class="form-group">
                     <label for="subject">Country<i>(Required)</i>:</label>
-                    <input type="text" name="subject" value="" placeholder="Israel" id="subject" />
+                    <input type="text" name="subject" placeholder="Israel" id="subject" ng-model="user.country"/>
                   </div>
                   <div class="form-group">
                     <label for="subject">Zip<i>(Optional)</i>:</label>
-                    <input type="text" name="subject" value="" placeholder="91307" id="subject" />
+                    <input type="text" name="subject" placeholder="91307" id="subject" ng-model="user.zip"/>
                   </div>
                   <div class="form-group">
                     <input type="submit" ng-click="checkSignup()" value="Sign Up"/>
@@ -67,14 +67,6 @@
                 </form>
               </div><!-- Post Body -->
               <div class="post-footer">
-                <div class="comments" id="comments">
-                  <div class="title">
-                    <h2>Comments</h2>
-                  </div><!-- Blog title -->
-                  <div class="alert alert-warning">
-                                        The Comments on this page is not allowed!
-                                    </div>
-                </div><!-- Blog Layout -->
               </div><!-- Post Footer -->
             </article><!-- Post -->
           </div><!-- Blog posts -->
