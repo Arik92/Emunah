@@ -1,7 +1,7 @@
 app.controller('authCtrl', function($scope, authFactory, $state) {
   $scope.join = function() {
     console.log("signup control user is", $scope.user);
-        authFactory.join($scope.user)
+      authFactory.join($scope.user)
       .then(function() {
         $state.go('home');
       }, function(err) {
