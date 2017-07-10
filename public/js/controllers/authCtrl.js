@@ -1,5 +1,4 @@
 app.controller('authCtrl', function($scope, authFactory, $state) {
-  $scope.username = authFactory.currentUser.username;
   $scope.join = function() {
         authFactory.join($scope.user)
       .then(function() {
@@ -66,7 +65,7 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
     checkPass();
     checkEmail();
     if (!$scope.checkFail) {
-      authFactory.join($scope.user);
+      $scope.join($scope.user);
     }
   }//checkInput
 });

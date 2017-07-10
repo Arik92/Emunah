@@ -13,13 +13,13 @@ router.post('/register', function(req, res, next) {
       if (err) {
         return next(err);
       }
-      res.send(req.user.firstname);
+      res.send(req.user);
     });
   });
 });
 router.get('/currentUser', function(req, res){
   if (req.user) {
-    res.send(req.user.firstname);
+    res.send(req.user);
   } else {
     res.send(null);
   }
@@ -28,7 +28,8 @@ router.get('/currentUser', function(req, res){
 router.post('/login', passport.authenticate('local'), function(req, res) {
   // If this function gets called, authentication was successful.
   // `req.user` contains the authenticated user.
-  res.send(req.user.username);
+  console.log("user from the server: ", res);
+  res.send(req.user);
 });
 
 router.get('/logout', function(req, res) {
