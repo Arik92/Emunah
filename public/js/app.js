@@ -8,6 +8,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/home',
       templateUrl: '/templates/home.html',
       controller: function($rootScope, authFactory) {
+        console.log("auth user data to work with", authFactory.currentUser);
         $rootScope.currentUser = authFactory.currentUser.username;
       }
     })
