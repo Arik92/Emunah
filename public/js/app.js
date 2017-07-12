@@ -28,6 +28,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/page-contact',
       templateUrl: '/templates/page-contact.html',
     })
+    .state('page-thanks', {
+      url: '/page-thanks',
+      templateUrl: '/templates/page-thanks.html',
+    })
     .state('page-error', {
       url: '/error',
       templateUrl: '/templates/page-error.html'
