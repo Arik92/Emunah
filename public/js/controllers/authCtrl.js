@@ -34,7 +34,7 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
     if ((!patt.test($scope.user.fname)||(!$scope.user.fname))) {
       alert("first name must contain one or more letters");
       $scope.checkFail = true;
-    } else if ((!patt.test($scope.userlname)||(!$scope.user.lname))) {
+    } else if ((!patt.test($scope.user.lname)||(!$scope.user.lname))) {
       alert("last name must contain one or more letters");
       $scope.checkFail = true;
     }
