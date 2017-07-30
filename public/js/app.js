@@ -59,4 +59,60 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/home.html',
       controller: 'authCtrl'
     })
+    .state('mitzvot', {
+      url: '/mitzvot',
+      templateUrl: '/templates/mitzvot.html'
+    })
+    .state('mitzvot-613', {
+      url: '/mitzvot-613',
+      templateUrl: '/templates/mitzvot-613.html'
+    })
+    .state('mitzvot-blessings', {
+      url: '/mitzvot-blessings',
+      templateUrl: '/templates/mitzvot-blessings.html'
+    })
+    .state('mitzvot-charity', {
+      url: '/mitzvot-charity',
+      templateUrl: '/templates/mitzvot-charity.html'
+    })
+    .state('mitzvot-kosher', {
+      url: '/mitzvot-kosher',
+      templateUrl: '/templates/mitzvot-kosher.html'
+    })
+    .state('mitzvot-mezuzah', {
+      url: '/mitzvot-mezuzah',
+      templateUrl: '/templates/mitzvot-mezuzah.html'
+    })
+    .state('mitzvot-mikvah', {
+      url: '/mitzvot-mikvah',
+      templateUrl: '/templates/mitzvot-mikvah.html'
+    })
+    .state('mitzvot-moon', {
+      url: '/mitzvot-moon',
+      templateUrl: '/templates/mitzvot-moon.html'
+    })
+    .state('mitzvot-parents', {
+      url: '/mitzvot-parents',
+      templateUrl: '/templates/mitzvot-parents.html'
+    })
+    .state('mitzvot-prayer', {
+      url: '/mitzvot-prayer',
+      templateUrl: '/templates/mitzvot-prayer.html'
+    })
+    .state('mitzvot-shabbat', {
+      url: '/mitzvot-shabbat',
+      templateUrl: '/templates/mitzvot-shabbat.html'
+    })
+    .state('mitzvot-synagogue', {
+      url: '/mitzvot-synagogue',
+      templateUrl: '/templates/mitzvot-synagogue.html'
+    })
+    .state('mitzvot-tefillin', {
+      url: '/mitzvot-tefillin',
+      templateUrl: '/templates/mitzvot-tefillin.html'
+    })
+    .state('mitzvot-tzitzit', {
+      url: '/mitzvot-tzitzit',
+      templateUrl: '/templates/mitzvot-tzitzit.html'
+    })
 });
