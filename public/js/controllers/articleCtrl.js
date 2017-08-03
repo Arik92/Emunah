@@ -1,11 +1,11 @@
-app.controller('artileCtrl', function($scope, articleFactory, $state, $stateParams) {
+app.controller('articleCtrl', function($scope, $state, $stateParams, articleFactory,) {
+  console.log("factory is", articleFactory);
   $scope.articleName = $stateParams.article;
-  $articleFactory.getArticle.then(function(err, res){
-    if (err) {
-      console.error(err);
-    } else {
-      console.log("response from article factory");
-      $scope.article = res.data;
-    } //else
-  }) ///callack
-}); //NOTE: might need to foolproof this.
+
+  $scope.renderArticle = function(name) {
+    $scope.article = articleFactory.getArticle(name);
+}// renderArticle
+
+  $scope.renderArticle($scope.articleName);
+  console.log("current  controller article: ", $scope.article);
+}); //NOTE: might need to foolproof this.see beerlist stateparams

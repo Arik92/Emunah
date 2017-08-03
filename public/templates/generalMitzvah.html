@@ -14,7 +14,9 @@
 								<h1 class="post-title">{{article.title}}</h1><!-- Post Title -->
 								<ul class="post-meta">
 									<li><img class="avatar" width="24" height="24" src="images/author.jpg" alt="Author Avatar Image" />by <a href="page-author.html">Rav Dror</a></li>
-
+									<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
+									<li><i class="fa fa-comment-o"></i> 240</li>
+									<li class="right"><i class="fa fa-eye"></i> 42,350 views</li>
 									<li class="right"><a href="#print"><i class="fa fa-print"></i> Print This Post</a></li>
 								</ul><!-- Post Meta -->
 							</div><!-- Post Header -->
@@ -33,7 +35,84 @@
 								<img src="images/9.jpg" alt="Post Title Placeholder" />
 							</div><!-- Post Image -->
 							<div class="post-body">
-								<p style="text-align: justify; padding: 0 0px;" ><strong></strong></p>
+								<p>
+									<ul>
+										<li ng-repeat="paragraph in article.content track by $index">{{paragraph}}</li>
+									</ul>
+								</p>
+								<p style="text-align: justify; padding: 0 0px;"><strong>The Hebrew word “kosher” literally means “fit.” It has come to refer more broadly to anything that is “above board” or “legit.” The laws of kosher define the foods that are fit for consumption for a Jew.</strong></p>
+								<p style="text-align: justify; padding: 0 0px;">Here are some of the basics of the kosher laws:
+									<ul>
+										<li>Certain species of animals (and their eggs and milk) are permitted for consumption, while others are forbidden—notably pork and shellfish.</li>
+										<li>Meat and milk are never combined. Separate utensils are used for each, and a waiting period is observed between eating them.</li>
+										<li>Meat must come from animals that are slaughtered in a specific (and painless) manner known as shechitah, and certain parts of the animal (including the blood) must be removed.</li>
+										<li>Fruits, vegetables and grains are basically always kosher, but must be insect free. Wine or grape juice, however, must be certified kosher.</li>
+										<li>Since even a small trace of a non-kosher substance can render a food not kosher, all processed foods and eating establishments require certification by a reliable rabbi or kashrut supervision agency.</li>
+									</ul>
+								</p>
+								<h3>Origin and History of Kosher</h3>
+								<p style="text-align: justify; padding: 0 0px;">The kosher laws were commanded by G‑d to the children of Israel in the Sinai Desert. Moses taught them to the people and wrote the basics of these laws in Leviticus 11 and Deuteronomy 14. The details were handed down through the generations and eventually written down in the Mishnah and Talmud. Various ordinances were enacted through the generations by the rabbinical authorities as safeguards for these biblical laws.</p>
+								<p style="text-align: justify; padding: 0 0px;">Throughout our 4,000-year history, the observance of kosher has been a hallmark of Jewish identity. Perhaps more than any other mitzvah, the kosher laws emphasize that Judaism is much more than a religion in the conventional sense of the word. To the Jew, holiness is not confined to holy places and times outside the everyday; rather, life in its totality is a sacred endeavor. Even the seemingly mundane activity of eating is a G‑dly act and a uniquely Jewish experience.</p>
+								<h3>What It Means</h3>
+								<div class="th-caption left-caption">
+									<a href="images/12.jpg">
+										<img width="300" src="images/12.jpg" alt="Image Captions" />
+										<div class="caption">The Miracle Of The Torah</div>
+									</a>
+								</div>
+								<p style="text-align: justify; padding: 0 30px;">A mitzvah is a Divine “commandment” and “connection.” We eat kosher because G‑d commanded us to, and by fulfilling the Divine will we connect to G‑d.</p>
+								<p style="text-align: justify; padding: 0 30px;">Our sages also point out the various advantages of the kosher laws: the health benefits, the humane treatment of animals, their unifying effect on a dispersed people, and their role as shield against assimilation. Additionally, Nachmanides, the great 12th century sage and kabbalist, points out that “the birds and many of the mammals forbidden by the Torah are predators, while the permitted animals are not; we are instructed not to eat those animals, so that we should not absorb these qualities into ourselves.” Kashrut (kosher laws) can thus be seen as “spiritual nutrition.” Just as there are foods that are good for the body and foods that are harmful, there are foods that nourish the Jewish soul and foods that affect it adversely.</p>
+								<p style="text-align: justify; padding: 0 30px;">None of the above, however, is the reason we keep kosher. Rather, we keep kosher because, as the commandment of the Creator of our bodies and our souls, the kosher way of life is obviously beneficial to both aspects of our beings.</p>
+								<!-- <div class="post-ad">
+									<span>Advertisment</span>
+									<a href="https://themeforest.net/user/infinyteam/portfolio?ref=infinyteam">
+										<img src="images/banner.jpg" alt="Banner Image Placeholder">
+									</a>
+								</div> -->
+								<h3>Which Animals Are Kosher?</h3>
+								<p style="text-align: justify; padding: 0 30px;">
+									<ul>
+										<li>Mammals: A mammal is kosher if it has split hooves and chews its cud. It must have both kosher signs. Examples: cows, sheep, goats and deer are kosher; pigs, rabbits, squirrels, bears, dogs, cats, camels and horses are not.</li>
+										<li>Fowl: The Torah lists 24 non-kosher bird species—mostly predatory and scavenger birds. Examples of kosher birds are the domestic species of chickens, ducks, geese, turkeys and pigeons.</li>
+										<li>Reptiles, amphibians, worms and insects: With the exception of four types of locust, these are not kosher.</li>
+										<li>Fish &amp; Seafood: A water creature is kosher only if it has fins and scales. Examples: salmon, tuna, pike, flounder, carp and herring are kosher; catfish, sturgeon, swordfish, lobster, shellfish, crabs and all water mammals are not.</li>
+									</ul>
+								</p>
+								<h3>The Slaughter and Butchering of Kosher Meat</h3>
+								<p style="text-align: justify; padding: 0 30px;">
+									Kosher mammals and birds are slaughtered by a special procedure called shechitah, in which the animal’s throat is quickly, precisely and painlessly cut with a sharp, perfectly smooth knife (called a chalaf) by a shochet—a highly trained, Torah-observant and G‑d-fearing individual.
+								</p>
+								<p style="text-align: justify; padding: 0 30px;">
+									An animal that dies or is killed by any other means is not kosher. It is also strictly forbidden to eat flesh removed from an animal while it is alive (this prohibition is actually one of the Seven Universal Noahide Laws, and is the only kosher law that applies to non-Jews as well as to Jews).
+								</p>
+								<p style="text-align: justify; padding: 0 30px;">
+									After the slaughtering, the internal organs of cattle are examined for potentially fatal diseases or injuries, such as adhesions (sirchot) in the lungs or holes in the stomach. The occurrence of any one of dozens of specified tereifot, as these defects are called, renders the entire animal not kosher.
+								</p>
+								<p style="text-align: justify; padding: 0 30px;">
+									Nikur (“deveining”) involves removing certain forbidden veins and fats from cattle. They are extremely prevalent in the hindquarters, and due to the complexity involved in their removal, this part of the animal is generally not sold as kosher.
+								</p>
+								<h3>Blood Removal</h3>
+								<div class="th-caption right-caption">
+									<a href="images/4.jpg">
+										<img width="300" src="images/4.jpg" alt="Image Captions" />
+										<div class="caption">The Miracle Of The Torah</div>
+									</a>
+								</div>
+								<p style="text-align: justify; padding: 0 30px;">The blood of mammals and fowl is utterly forbidden for consumption according to the Torah. Within 72 hours of slaughter, all extractable blood is drained from the meat by a special soaking and salting process. (Today, most kosher meat is sold with the blood already removed.)</p>
+								<p style="text-align: justify; padding: 0 30px;">The liver, which has an especially high blood content, needs to undergo a special broiling process before it can be eaten.</p>
+								<p style="text-align: justify; padding: 0 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, sunt, hic sed aspernatur exercitationem assumenda iste, suscipit est tempora cumque nemo nihil nesciunt ad delectus dolore dolorum minima itaque. Ullam.</p>
+								<h3>Milk, Eggs and Honey</h3>
+								<div class="th-caption center-caption">
+									<a href="images/11.jpg">
+										<img src="images/11.jpg" alt="Image Captions" />
+										<div class="caption">The Miracle Of The Torah</div>
+									</a>
+								</div>
+								<p style="text-align: justify; padding: 0 30px;">A rule of thumb cited by the Talmud is: What comes from a kosher animal is kosher; what comes from a non-kosher animal is not kosher.</p>
+								<p style="text-align: justify; padding: 0 30px;">Thus, milk and eggs are kosher only when they come from kosher animals. In addition, all eggs should be carefully examined before use to ensure that they are free of blood spots.</p>
+
+								<p style="text-align: justify; padding: 0 30px;">Honey is not considered an animal product, so honey is kosher though bees are not.</p>
+								<p style="text-align: justify; padding: 0 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia eveniet nemo quibusdam aperiam repellat quaerat blanditiis inventore, quidem quis saepe officiis est velit? Sed nemo sint praesentium qui rem eligendi, modi officia libero nisi quis nostrum cupiditate, sapiente iste, facilis laborum, ut temporibus earum unde illum quae distinctio repudiandae. Tempora!</p>
 								<div class="post-ad">
 									<!-- <span>Advertisment</span>
 									<a href="https://themeforest.net/user/infinyteam/portfolio?ref=infinyteam">
