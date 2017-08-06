@@ -72,6 +72,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/mitzvot-613',
       templateUrl: '/templates/mitzvot-613.html'
     })
+    .state('mitzvot-skullcap', {
+      url: '/mitzvot-skullcap',
+      templateUrl: '/templates/mitzvot-skullcap.html'
+    })
     .state('mitzvot-blessings', {
       url: '/mitzvot-blessings',
       templateUrl: '/templates/mitzvot-blessings.html'
