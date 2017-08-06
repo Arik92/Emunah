@@ -65,8 +65,8 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('generalMitzvot', {
       url: '/gmitzvot/:article',
-      templateUrl: '/templates/generalMitzvah.html'
-      controller: 'mitzCtrl'
+      templateUrl: '/templates/generalMitzvah.html',
+      controller: 'articleCtrl'
     })
     .state('mitzvot-613', {
       url: '/mitzvot-613',
