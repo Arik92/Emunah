@@ -23,7 +23,16 @@
 							<div class="post-share">
 								<span class="counter"><strong>24k</strong>Shares</span>
 								<ul>
-									<li class="facebook"><a href=""><i class="fa fa-facebook"></i><span>Share on Facebook</span></a></li>
+
+									<script>
+									    function fbShare(url, title, descr, image, winWidth, winHeight) {
+									        var winTop = (screen.height / 2) - (winHeight / 2);
+									        var winLeft = (screen.width / 2) - (winWidth / 2);
+									        window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+									    }
+									</script>
+
+									<li class="facebook"><a style="cursor:pointer" onclick="fbShare('http://newoldroad.com/', 'Fb Share', 'Facebook share popup', 'http://goo.gl/dS52U', 520, 350)"><i class="fa fa-facebook"></i><span>Share on Facebook</span></a></li>
 									<li class="twitter"><a href=""><i class="fa fa-twitter"></i><span>Share on Twitter</span></a></li>
 									<li class="google-plus"><a href=""><i class="fa fa-google-plus"></i></a></li>
 									<li class="linkedin"><a href=""><i class="fa fa-linkedin"></i></a></li>
@@ -72,7 +81,7 @@
 								</div>
 								<p style="text-align: justify; padding: 0 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod beatae, commodi vel esse aperiam temporibus praesentium quo quae hic labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores laboriosam sint voluptatibus cumque odio deserunt vero sapiente repellendus. Nemo iste praesentium quod voluptatem facere enim harum fugiat est maxime, molestias at vero optio porro illum veniam. Aperiam doloribus sint error cupiditate unde et? Velit fugit nulla assumenda laboriosam, veniam, quod.</p>
 								<p style="text-align: justify; padding: 0 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo recusandae quos perspiciatis sapiente pariatur doloremque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias suscipit, vel fuga ut quis atque ab nemo odio! Corporis, non.</p>
-								
+
 								<p style="text-align: justify; padding: 0 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque vitae itaque, quibusdam repellat. Accusantium facilis molestias reiciendis. Doloremque praesentium consequatur culpa tenetur quisquam provident ipsam molestiae sapiente veritatis eligendi aut sunt, blanditiis assumenda veniam corporis quis reprehenderit necessitatibus optio suscipit numquam omnis architecto! Qui molestiae commodi quas, officiis explicabo non! Maxime nam saepe molestiae sunt blanditiis nihil, repudiandae odio eos nesciunt asperiores beatae repellat quo, vitae ratione labore ipsam harum, vel, aut adipisci eligendi dolore! In ut dolore placeat repudiandae aliquam aspernatur, labore est earum. Pariatur, voluptatem! Quasi doloribus voluptatem rerum, fuga, pariatur obcaecati. Quas odio eius nesciunt molestiae aliquid.</p>
 								<p style="text-align: justify; padding: 0 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia eveniet nemo quibusdam aperiam repellat quaerat blanditiis inventore, quidem quis saepe officiis est velit? Sed nemo sint praesentium qui rem eligendi, modi officia libero nisi quis nostrum cupiditate, sapiente iste, facilis laborum, ut temporibus earum unde illum quae distinctio repudiandae. Tempora!</p>
 								<div class="post-ad">
@@ -109,7 +118,7 @@
 									<a href="page-tag.html">Torah Study</a>
 									<a href="page-tag.html">Parasha of the Week</a>
 									<a href="page-tag.html">Prayer</a>
-									
+
 								</div><!-- Post Tags -->
 								<div class="post-share">
 									<span class="counter"><strong>24k</strong>Shares</span>
