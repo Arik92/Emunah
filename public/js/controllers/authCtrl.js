@@ -31,13 +31,21 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
   }
   function checkNames() {
     var patt = /[a-zA-z]+/;
+    if (!$scope.user.fname) {
+      alert("fill in first name");
+      return false;
+    } else if (!$scope.user.lname) {
+      alert("fill in last name");
+      return false;
+    } else {
     if ((!patt.test($scope.user.fname)||(!$scope.user.fname))) {
       alert("first name must contain one or more letters");
       $scope.checkFail = true;
     } else if ((!patt.test($scope.user.lname)||(!$scope.user.lname))) {
       alert("last name must contain one or more letters");
       $scope.checkFail = true;
-    }
+    }//el if
+  }//else
   }//checkNames
 
   function checkEmail() {
@@ -70,8 +78,18 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
       $scope.join($scope.user);
     }
   }//checkInput
-});
 
+$scope.joinWhatsapp = function() {
+  authFactory.joinWhatsapp($scope.phone).then(function(err, res){
+    console.log("ctrl phone", $scope.phone);
+    if (err) {
+      console.log(err);
+    } else {
+      alert("your phone has been added!");
+    }
+  })
+}
+});
 // <script>
 //   window.fbAsyncInit = function() {
 //     FB.init({
