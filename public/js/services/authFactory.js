@@ -33,5 +33,12 @@ app.factory('authFactory', function($http) {
       })
   }
 
+  auth.joinWhatsapp = function(phone) {
+    console.log("phone factory:", phone);
+    return $http.post('/users/whatsapp', phone).then(function(response) {
+      console.log("whatsapp phone factory passed");
+    });
+  }//joinWhatsapp
+
   return auth;
 });

@@ -28,6 +28,11 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/page-contact',
       templateUrl: '/templates/page-contact.html',
     })
+    .state('whatsapp', {
+      url: '/whatsapp',
+      templateUrl: '/templates/whatsapp.html',
+      controller: 'authCtrl'
+    })
     .state('page-thanks', {
       url: '/page-thanks',
       templateUrl: '/templates/page-thanks.html',

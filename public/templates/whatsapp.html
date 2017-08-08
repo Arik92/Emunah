@@ -1,0 +1,47 @@
+<div class="wide page single-page">
+	<section class="search-modal">
+		<h3 style="display: none;">Search Modal</h3>
+		<div class="container">
+			<form action="page-search.html" method="get">
+				<input type="text" name="q" value="Search.." />
+				<span class="search-close"></span>
+			</form>
+		</div>
+	</section>
+	<section id="main-area">
+		<h3 style="display: none;">Main Area</h3>
+		<div class="container">
+			<div class="row">
+				<section id="main" class="main col-md-8">
+					<h2 style="display: none;">Main</h2>
+					<div class="blog-posts hfeed">
+						<article class="post single-post">
+							<div class="post-body">
+								<h2>We’d Love to Hear From You, Get In Touch With Us!</h2>
+
+								<p>Don’t forget to join our <a ui-sref="whatsapp"><strong>WhatsApp Group</strong></a>.</p>
+
+								<p>Please be sure to include your correct phone number.</p>
+
+								<form class="contact-form" method="POST">
+                  <div class="input-group">
+										<label for="phone number">Phone number<i>(Required)</i> :</label>
+										<input type="text" ng-model="phone" placeholder="mobile phone" required/>
+									</div>
+<!-- 									<div class="input-group">
+									    <label>What is 2+2? (Anti-spam) <i>(Required)</i> :</label>
+										<input name="human" placeholder="Type the answer here"/>
+									</div> -->
+									<div class="input-group">
+										<input type="submit" ng-click="joinWhatsapp()" class="bt btn-success">
+									</div>
+								</form>
+							</div><!-- Post Body -->
+						</article><!-- Post -->
+					</div><!-- Blog posts -->
+				</section><!-- Main -->
+				<aside-directive></aside-directive>
+			</div><!-- Row -->
+		</div><!-- Container -->
+	</section><!-- Main Area -->
+</div>
