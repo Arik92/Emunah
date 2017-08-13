@@ -80,8 +80,9 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
   }//checkInput
 
 $scope.joinWhatsapp = function() {
+  console.log("ctrl phone ctrl before call:", $scope.phone);
   authFactory.joinWhatsapp($scope.phone).then(function(err, res){
-    console.log("ctrl phone", $scope.phone);
+    console.log("ctrl phone after call:", $scope.phone);
     if (err) {
       console.log(err);
     } else {
