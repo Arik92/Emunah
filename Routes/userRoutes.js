@@ -2,9 +2,11 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/userModel');
 var passport = require('passport');
+var config = require('../public/js/config.js');
+
 // Twilio Credentials
-const accountSid = 'AC5c7b6a96a552fb968930b3c9da6eac27';
-const authToken = '251646d5e8bcbb3d5882db002697aa50';
+const accountSid = config.TWILIO_Sid;
+const authToken = config.TWILIO_Token;
 
 // require the Twilio module and create a REST client
 const client = require('twilio')(accountSid, authToken);

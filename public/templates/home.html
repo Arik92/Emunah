@@ -1196,7 +1196,7 @@
 								<article class="post">
 									<div class="post-thumb">
 										<a ui-sref="post-single">
-											<img class="lazy" src="images/4.jpg" data-src="images/4.jpg" alt="Post Title Placeholder" />
+											<img class="lazy" src="{{currentPlaylists[0].snippet.thumbnails.medium.url}}" data-src="{{currentPlaylists[0].snippet.thumbnails.medium.url}}" alt="Post Title Placeholder" ng-click="player()" />
 										</a>
 									</div><!-- Post Image -->
 									<div class="post-content">
@@ -1215,7 +1215,7 @@
 								<article class="post">
 									<div class="post-thumb">
 										<a ui-sref="post-single">
-											<img class="lazy" src="images/22.jpg" data-src="images/22.jpg" alt="Post Title Placeholder" />
+											<img class="lazy" src="{{currentPlaylists[1].snippet.thumbnails.medium.url}}" data-src="{{currentPlaylists[1].snippet.thumbnails.medium.url}}" alt="Post Title Placeholder" ng-click="player()" />
 										</a>
 										<span class="post-format">
 											<i class="fa fa-play"></i>
