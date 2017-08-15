@@ -2,11 +2,14 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/userModel');
 var passport = require('passport');
-
+// Twilio Credentials
+const accountSid = 'AC5c7b6a96a552fb968930b3c9da6eac27';
+const authToken = '251646d5e8bcbb3d5882db002697aa50';
 
 // require the Twilio module and create a REST client
 const client = require('twilio')(accountSid, authToken);
 router.post('/whatsapp/:phone', function(req, res, next) {
+
   console.log("req params", req.params.phone);
   client.messages.create(
     {
