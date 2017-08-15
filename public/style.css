@@ -50,9 +50,13 @@ body {
 }
 
 /* LINKS */
+a {
+  color: midnightblue;
+  text-decoration: none;
+}
 
 a, a:link, a:visited {
-    color: #222;
+    color: midnightblue;
     text-decoration: none;
     -webkit-backface-visibility: hidden;
 }
@@ -290,12 +294,14 @@ header.header {
 /* Top Bar */
 
 .topbar {
+  
     display: block;
-    height: 32px;
-    line-height: 32px;
-    margin-bottom: 30px;
+    height: 31px;
+    line-height: 30px;
+    margin-bottom: -50px;
     clear: both;
     border-bottom: 1px solid #eeeeee;
+    background-color: aliceblue;
 }
 .topbar .container {
     display: block;
@@ -369,7 +375,7 @@ header.header {
 .logo-container {
     float: left;
     display: flex;
-    height: 110px;
+    height: 10px;
 }
 .logo-container .logo {
     display: block;
@@ -398,9 +404,11 @@ header.header {
     clear: both;
 }
 .mainmenu .container {
-    display: block;
-    height: 40px;
-    background-color: #121212;
+      display: block;
+    height: 75px;
+    width: 100%;
+    line-height: 61px;
+    background-color: lightblue;
     position: relative;
 }
 .mainmenu.stick-me.sticking {
@@ -423,6 +431,8 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 .mainmenu .menu {
     float: left;
     display: block;
+        margin-left: 280px;
+    letter-spacing: 1.5px;
 }
 .mainmenu .menu>ul {
     margin: 0;
@@ -442,7 +452,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     text-transform: uppercase;
 }
 .mainmenu .menu>ul>li:hover>a, .mainmenu .menu>ul>li>a:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: midnightblue;
 }
 .mainmenu .menu>ul>li ul {
     position: absolute;
@@ -495,7 +505,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     right: 0;
     width: 100%;
     padding: 0;
-    background: #121212;
+    background: #ADD8E6;
     color: #fff;
     z-index: 99;
     opacity: 0;
@@ -981,7 +991,7 @@ header.header#layout3 .search-tigger:hover {
     margin-bottom: 10px;
 }
 .featured-posts .post.has-caption .post-category a {
-    background-color: #000;
+    background-color: midnightblue;
     border-color: #000;
     color: #fff;
     padding: 3px 10px;
@@ -1598,6 +1608,7 @@ header.header#layout3 .search-tigger:hover {
     letter-spacing: -.02em;
     text-transform: uppercase;
     background-color: #fff;
+    color: midnightblue
     padding-right: 20px;
     display: inline-block;
     position: relative;
@@ -1795,7 +1806,7 @@ header.header#layout3 .search-tigger:hover {
 .recent-posts li.post .post-meta li {
     font-size: 11px;
     font-weight: 400;
-    color: #aaa;
+    color: midnightblue;
 }
 
 /* Follow By Email Widget */
@@ -1838,7 +1849,7 @@ header.header#layout3 .search-tigger:hover {
     display: block;
     height: 40px;
     width: 100% !important;
-    background: #26272c;
+    background: midnightblue;
     color: #fff;
     border: 0;
     font-weight: 800;
@@ -2489,15 +2500,15 @@ code {
 
 #footer {
     display: block;
-    background-color: #101010;
+    background-color: lightblue;
     color: #848484;
-    padding: 60px 0;
+ 
     position: relative;
     overflow: hidden;
     clear: both;
 }
 #footer .footer-columns:last-child:before {
-    border-top: 1px solid #222;
+    border-top: 1px solid whitesmoke;
     padding-top: 60px;
     margin-top: 20px;
     content: "";
@@ -2506,11 +2517,11 @@ code {
     margin-right: 15px;
 }
 #footer .widget-title h2 {
-    background: #101010;
-    color: #fff;
+    background: lightblue;
+    color: midnightblue;
 }
 #footer .widget-title:before {
-    background: #222;
+    background: white;
 }
 #footer a {
     color: #fff;
@@ -2522,7 +2533,7 @@ code {
 /* Social Icons */
 
 #footer .social-icons a {
-    border-color: #222;
+    border-color: whitesmoke;
     margin: 0 10px 10px 0;
 }
 #footer .social-icons a:hover {
@@ -2570,7 +2581,7 @@ code {
 /* Recent Posts Widget */
 
 #footer .recent-posts li.post {
-    border-color: #222;
+    border-color: white;
 }
 #footer .recent-posts li.post .post-title {
     max-height: 40px;
@@ -2594,13 +2605,13 @@ code {
 }
 #footer .FollowByEmail input.follow-by-email-address {
     border: 0;
-    background: #222;
+    background: white;
     margin-bottom: 0;
     color: #fff;
 }
 #footer .FollowByEmail input.follow-by-email-submit {
     width: 120px !important;
-    background: #222;
+    background: midnightblue;
     color: #fff;
     border-left: 1px solid #101010;
 }
@@ -2615,7 +2626,7 @@ code {
 /* Tag Cloud Widget */
 
 #footer .list-label-widget-content ul li {
-    border-color: #222;
+    border-color: white;
 }
 
 /* Copyrights */
@@ -2625,20 +2636,20 @@ code {
     font-weight: 400;
     text-transform: capitalize;
     display: block;
-    background-color: #101010;
-    color: #848484;
-    border-top: 1px solid #222;
+    background-color: lightblue;
+    color: white;
+    border-top: 1px solid white;
     padding: 30px 0;
     position: relative;
     overflow: hidden;
     clear: both;
 }
 #copyrights a {
-    color: #ddd;
+    color: white;
     margin: 0 3px;
 }
 #copyrights a:hover {
-    color: #fff;
+    color: midnightblue;
 }
 
 /* Copy Text */
@@ -2666,7 +2677,7 @@ code {
     display: block;
     width: 1px;
     height: 12px;
-    background: #222;
+    background: white;
     float: right;
     margin: 5px 12px;
 }
@@ -3011,7 +3022,7 @@ code {
     font-size: 24px;
     line-height: 30px;
     text-align: center;
-    background: #121212;
+    background: midnightblue;
     color: #fff;
     position: fixed;
     bottom: 5px;
