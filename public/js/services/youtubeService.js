@@ -1,10 +1,11 @@
 app.service('ytService', function($http) {
   var serv= {};
-  // data-channel-external-id="UCtAh700VTIQb5Wsx_vdg-Pw"
+  var config = require('../config.js');
+  console.log(config);
   serv.getAllPlayLists = function() {
     var part = "snippet";
     var id = "UCtAh700VTIQb5Wsx_vdg-Pw";
-    return $http.get('https://www.googleapis.com/youtube/v3/playlists?part=snippet&maxResults=50&channelId=UCtAh700VTIQb5Wsx_vdg-Pw&key=').then(function(response){
+    return $http.get('https://www.googleapis.com/youtube/v3/playlists?part=snippet&maxResults=50&channelId=UCtAh700VTIQb5Wsx_vdg-Pw&key=' + config.YOUTUBE_KEY).then(function(response){
       console.log("response is", response);
       return response.data;
     } ,function(error){
@@ -12,11 +13,11 @@ app.service('ytService', function($http) {
     });
   }//getAllPlaylists
   serv.getLatestVids = function(num) {
-    return $http.get('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCtAh700VTIQb5Wsx_vdg-Pw&maxResults='+num+'&order=date&type=video&key=').then(function(response) {
+    return $http.get('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCtAh700VTIQb5Wsx_vdg-Pw&maxResults='+num+'&order=date&type=video&key=' + config.YOUTUBE_KEY).then(function(response) {
       //console.log('latest response', response);
       return response.data;
     }, function(error) {
-      console.error("error fetching laest vids");
+      console.error("error fetching latest vids");
     });
 
   }//getLatesVids
