@@ -44,8 +44,9 @@
 			<span class="menu-close">Close</span>
 			<ul>
 				<li ng-show="currentUser">Welcome, {{currentUser}}</li>
-				<li>19 Tammuz 5777 - 13 July 2017</li>
+				
 				<li>Parasha Eikev</li>
+				<li>19 Tammuz 5777 - 13 July 2017</li>
 			     <li><a ui-sref="home">Home</a>
 <!-- 			        <ul>
 			           <li><a href="../index.html">Homepage 1</a></li>
@@ -54,9 +55,9 @@
 			           <li><a href="home-page4.html">Homepage 4</a></li>
 			        </ul> -->
 			     </li>
-			     <li><a href="#">Rav Dror</a>
+			   <!--   <li><a href="#">Rav Dror</a>
 			     	 <li><a href="#">New York</a>
-			     	 	 <li><a href="#">USA Campaign</a>
+			     	 	 <li><a href="#">USA Campaign</a> -->
 <!-- 			        <ul>
 			           <li class="has-sub"><a href="#">Featured Posts</a>
 			              <ul>
@@ -132,17 +133,21 @@
 				<div class="topbar">
 					<div class="container">
 						<nav class="topmenu">
+
 							<ul>
+
 								<li ng-show="currentUser">Welcome, {{currentUser}}</li>
-								<li>19 Tammuz 5777 - 13 July 2017</li>
 								<li>Parasha Eikev</li>
+								<li>19 Tammuz 5777 - 13 July 2017</li>
+								
+								
+								<li><a ui-sref="page-contact">Subscribe</a></li>
+								<li><a ui-sref="whatsapp">WhatsApp Group</a></li>
+								<li><a ui-sref="page-contact"><b style="font-size:15px;">Donate</b></a></li>
+								<li><a ui-sref="page-contact"><b style="font-size:15px;">Store</b></a></li>
 								<li ng-hide="currentUser"><a ui-sref="login">Login</a></li>
 								<li ng-hide="currentUser"><a ui-sref="signup">Sign Up</a></li>
 								<li ng-show="currentUser"><a ng-click="logout()">Log out</a></li>
-								<li><a ui-sref="page-contact">Subscribe</a></li>
-								<li><a ui-sref="whatsapp">WhatsApp Group</a></li>
-								<li><a ui-sref="page-contact">Donate</a></li>
-								<li><a ui-sref="page-contact">Store</a></li>
 							</ul>
 						</nav><!-- Top Menu -->
 						<nav class="social-links">
@@ -159,15 +164,7 @@
 						</nav><!-- Social Links -->
 					</div><!-- Container -->
 				</div><!-- Top Bar -->
-				<div class="header-content">
-					<div class="container">
-						<div class="logo-container">
-							<div class="logo">
-								<a href="index.html">
-									<img src="images/emunahlogo.png" alt="Logo Image Placeholder" />
-								</a>
-							</div><!-- Logo -->
-						</div><!-- Logo Container -->
+				
 						<!-- <div class="ad-container">
 							<div class="advertisment">
 								<a href="https://themeforest.net/user/infinyteam/portfolio?ref=infinyteam
@@ -180,107 +177,24 @@
 				</div><!-- Header Content -->
 				<div class="mainmenu">
 					<div class="container">
+						<div class="logo-container">
+							<div class="logo">
+								<a href="index.html">
+									<img src="images/emunahlogo.png" alt="Logo Image Placeholder" style="
+    max-width: 56%;
+   
+    margin-top: 5px;
+    margin-right: -41px;
+    margin-left: 55px;
+">
+								</a>
+							</div><!-- Logo -->
+						</div><!-- Logo Container -->
 						<nav class="menu">
-							<ul>
+							<ul> 
+						
 								<!-- <li><a ui-sref="home">Home</a></li> -->
-								<li><a href="#">U.S.A Campaign</a></li>
-								<li><a href="#">Articles</a>
-									<div class="megamenu">
-										<div class="item-content">
-											<div class="item">
-												<div class="post">
-													<div class="post-thumb">
-														<a href="post-single.html">
-															<img src="images/1.jpg" alt="Post Title Placeholder" />
-														</a>
-
-													</div>
-													<div class="post-content">
-														<div class="post-category">
-															<a href="page-category.html">Parasha of the week</a>
-														</div>
-														<h6 class="post-title">
-															<a href="post-single.html">Pinchas</a>
-														</h6>
-													</div>
-												</div><!-- Post -->
-											</div>
-											<div class="item">
-												<div class="post">
-													<div class="post-thumb">
-														<a href="post-single.html">
-															<img src="images/2.jpg" alt="Post Title Placeholder" />
-														</a>
-
-													</div>
-													<div class="post-content">
-														<div class="post-category">
-														<a href="page-category.html">Parasha of the week</a>
-														</div>
-														<h6 class="post-title">
-															<a href="post-single.html">Pinchas</a>
-														</h6>
-													</div>
-												</div><!-- Post -->
-											</div>
-											<div class="item">
-												<div class="post">
-													<div class="post-thumb">
-														<a href="post-single.html">
-															<img src="images/3.jpg" alt="Post Title Placeholder" />
-														</a>
-
-													</div>
-													<div class="post-content">
-														<div class="post-category">
-														<a href="page-category.html">Parasha of the week</a>
-														</div>
-														<h6 class="post-title">
-															<a href="post-single.html">Balak</a>
-														</h6>
-													</div>
-												</div><!-- Post -->
-											</div>
-											<div class="item">
-												<div class="post">
-													<div class="post-thumb">
-														<a href="post-single.html">
-															<img src="images/4.jpg" alt="Post Title Placeholder" />
-														</a>
-
-													</div>
-													<div class="post-content">
-														<div class="post-category">
-														<a href="page-category.html">Parasha of the week</a>
-														</div>
-														<h6 class="post-title">
-															<a href="post-single.html">Pin'has</a>
-														</h6>
-													</div>
-												</div><!-- Post -->
-											</div>
-											<div class="item">
-												<div class="post">
-													<div class="post-thumb">
-														<a href="post-single.html">
-															<img src="images/5.jpg" alt="Post Title Placeholder" />
-														</a>
-
-													</div>
-													<div class="post-content">
-														<div class="post-category">
-														<a href="page-category.html">General</a>
-														</div>
-														<h6 class="post-title">
-															<a href="post-single.html">Purim: A Lesson In Emunat Chachamim</a>
-														</h6>
-													</div>
-												</div><!-- Post -->
-											</div>
-										</div>
-									</div>
-								</li>
-								<li><a href="page-category.html">Lectures</a>
+									<li><a href="page-category.html">Rav Dror</a>
 									<div class="megamenu">
 										<div class="item-content">
 											<div class="item">
@@ -385,7 +299,106 @@
 											</div>
 										</div>
 									</div>
+								</li>	
+									<li><a href="#">New York</a></li>
+								<li><a href="#">US Campaign</a></li>
+								<li><a href="#">Articles</a>
+									<div class="megamenu">
+										<div class="item-content">
+											<div class="item">
+												<div class="post">
+													<div class="post-thumb">
+														<a href="post-single.html">
+															<img src="images/1.jpg" alt="Post Title Placeholder" />
+														</a>
+
+													</div>
+													<div class="post-content">
+														<div class="post-category">
+															<a href="page-category.html">Parasha of the week</a>
+														</div>
+														<h6 class="post-title">
+															<a href="post-single.html">Pinchas</a>
+														</h6>
+													</div>
+												</div><!-- Post -->
+											</div>
+											<div class="item">
+												<div class="post">
+													<div class="post-thumb">
+														<a href="post-single.html">
+															<img src="images/2.jpg" alt="Post Title Placeholder" />
+														</a>
+
+													</div>
+													<div class="post-content">
+														<div class="post-category">
+														<a href="page-category.html">Parasha of the week</a>
+														</div>
+														<h6 class="post-title">
+															<a href="post-single.html">Pinchas</a>
+														</h6>
+													</div>
+												</div><!-- Post -->
+											</div>
+											<div class="item">
+												<div class="post">
+													<div class="post-thumb">
+														<a href="post-single.html">
+															<img src="images/3.jpg" alt="Post Title Placeholder" />
+														</a>
+
+													</div>
+													<div class="post-content">
+														<div class="post-category">
+														<a href="page-category.html">Parasha of the week</a>
+														</div>
+														<h6 class="post-title">
+															<a href="post-single.html">Balak</a>
+														</h6>
+													</div>
+												</div><!-- Post -->
+											</div>
+											<div class="item">
+												<div class="post">
+													<div class="post-thumb">
+														<a href="post-single.html">
+															<img src="images/4.jpg" alt="Post Title Placeholder" />
+														</a>
+
+													</div>
+													<div class="post-content">
+														<div class="post-category">
+														<a href="page-category.html">Parasha of the week</a>
+														</div>
+														<h6 class="post-title">
+															<a href="post-single.html">Pin'has</a>
+														</h6>
+													</div>
+												</div><!-- Post -->
+											</div>
+											<div class="item">
+												<div class="post">
+													<div class="post-thumb">
+														<a href="post-single.html">
+															<img src="images/5.jpg" alt="Post Title Placeholder" />
+														</a>
+
+													</div>
+													<div class="post-content">
+														<div class="post-category">
+														<a href="page-category.html">General</a>
+														</div>
+														<h6 class="post-title">
+															<a href="post-single.html">Purim: A Lesson In Emunat Chachamim</a>
+														</h6>
+													</div>
+												</div><!-- Post -->
+											</div>
+										</div>
+									</div>
 								</li>
+								
 								<li><a ui-sref="page-about">About</a>
 									<div class="megamenu">
 										<div class="item-content">
@@ -442,7 +455,7 @@
 														</h6>
 													</div>
 												</div><!-- Post -->
-											<!-- <!-- </div>
+											<!-- </div>
 											<div class="item">
 												<div class="post">
 													<div class="post-thumb">
