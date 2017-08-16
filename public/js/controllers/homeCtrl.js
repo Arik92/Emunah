@@ -41,6 +41,15 @@ $scope.getNextPlayLists = function() {
       }//for
       console.log("array after fetch loop", $scope.allPlayLists);
       $scope.prevToken = data.prevPageToken;
+      var count = 0;
+    $scope.currentPlaylists = [];
+    for (var i = $scope.playListIndex;i<$scope.playListIndex+6;i++) {
+      // $scope.currentPlaylists.push($scope.allPlayLists[i]); //NOTE: We might actually want this behaviour
+      $scope.currentPlaylists[count] = $scope.allPlayLists[i];
+      count++;
+    }//for update playlist
+    $scope.playListIndex+=6;
+    console.log("playlist index is now", $scope.playListIndex);
     }//else
   })
 }//fetch next playlists
@@ -61,15 +70,6 @@ $scope.updatePlaylistForward = function() {
   var diff = $scope.allPlayLists.length-$scope.playListIndex;
   if ((diff<=5)&&($scope.playListIndex+diff<$scope.numRes)) {
     $scope.getNextPlayLists();
-      var count = 0;
-    $scope.currentPlaylists = [];
-    for (var i = $scope.playListIndex;i<$scope.playListIndex+6;i++) {
-      // $scope.currentPlaylists.push($scope.allPlayLists[i]); //NOTE: We might actually want this behaviour
-      $scope.currentPlaylists[count] = $scope.allPlayLists[i];
-      count++;
-    }//for update playlist
-    $scope.playListIndex+=6;
-    console.log("playlist index is now", $scope.playListIndex);
   } else {
     if (diff<=5) {
       max = diff;  //if we reached here, these are the last 5 or less results
@@ -87,6 +87,19 @@ $scope.updatePlaylistForward = function() {
       console.log("playlist index is now", $scope.playListIndex);
     }//else if update shouldnt bring the rest of the results
 }//UPF
+
+$scope.updatePlaylistBackward = function() {
+  var count = 0;
+  $scope.currentPlaylists = [];
+    $scope.playListIndex-=12;
+  for (var i = $scope.playListIndex;i<$scope.playListIndex+6;i++) {
+    // $scope.currentPlaylists.push($scope.allPlayLists[i]); //NOTE: We might actually want this behaviour
+    $scope.currentPlaylists[count] = $scope.allPlayLists[i];
+    count++;
+  }//for update playlist
+  $scope.playListIndex+=6;
+  console.log("playlist index is now", $scope.playListIndex);
+}
 
 
 ////////////*************************PLAYLIST INTERFACE **********************************8////////////////////////
