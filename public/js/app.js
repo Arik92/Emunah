@@ -7,21 +7,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/home',
       templateUrl: '/templates/home.html',
-      controller: function($rootScope, $scope, authFactory, ytService) {
-        console.log("auth user data to work with", authFactory.currentUser);
-        $rootScope.currentUser = authFactory.currentUser.email;
-        $scope.getLatestVids = function(num) {
-        ytService.getLatestVids(num).then(function(data, err){
-          if (err) {
-            console.error("controller error fetching playlists", err);
-          } else {
-            $scope.latestVids = data.items;
-            console.log("latest vids are", data.items);
-          }//else
-        })
-      };
-      $scope.getLatestVids(3);
-    } //controller
+      controller: 'homeCtrl'
     })
     .state('page-about', {
       url: '/about',

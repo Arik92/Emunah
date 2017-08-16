@@ -111,7 +111,7 @@
 		<div class="container">
 			<div class="row-gallery">
 				<div class="first col-md-7 col-sm-12">
-					<div class="post has-caption" style="background-image: url({{latestVids[0].snippet.thumbnails.medium.url}});">
+					<div class="post has-caption" style="background-image: url({{latestVids[0].snippet.thumbnails.medium.url}});" ng-click="player()">
 
 						<div class="post-content">
 							<div class="post-category">
@@ -288,14 +288,14 @@
 					</div><!-- Blog Layout -->
 					<div class="blog-layout layout-3" style="display: block">
 						<div class="blog-title">
-							<h2>Videos</h2>
+							<h2>View Playlists</h2>
 						</div><!-- Blog title -->
 						<div class="blog-wrapper row">
-							<div class="col col-sm-4">
-								<article class="post">
+							<div class="col col-sm-4" ng-repeat="playlist in currentPlaylists track by $index">
+								<article class="post" >
 									<div class="post-thumb">
 										<a ui-sref="post-single">
-											<img class="lazy" src="images/7.jpg" data-src="images/7.jpg" alt="Post Title Placeholder" />
+											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}}  alt="Post Title Placeholder" />
 										</a>
 										<span class="post-format">
 											<i class="fa fa-play"></i>
@@ -303,120 +303,17 @@
 									</div><!-- Post Image -->
 									<div class="post-content">
 										<h5 class="post-title">
-											<a ui-sref="post-single">Parasha of the week: Ki Tisa</a>
+											<a ui-sref="post-single">{{playlist.snippet.title}}</a>
 										</h5><!-- Post Title -->
 										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
-											<li><i class="fa fa-comment-o"></i> 240</li>
+											<li><i class="fa fa-clock-o"></i>{{playlist.snippet.publishedAt}}</li>
+											<!-- <li><i class="fa fa-comment-o"></i> 240</li> -->
 										</ul><!-- Post Meta -->
 									</div><!-- Post Content -->
 								</article><!-- Post -->
 							</div><!-- Column -->
-							<div class="col col-sm-4">
-								<article class="post">
-									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src="images/10.jpg" data-src="images/10.jpg" alt="Post Title Placeholder" />
-										</a>
-										<span class="post-format">
-											<i class="fa fa-play"></i>
-										</span>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h5 class="post-title">
-											<a ui-sref="post-single">Jewish Holidays: Pessah</a>
-										</h5><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
-											<li><i class="fa fa-comment-o"></i> 53</li>
-										</ul><!-- Post Meta -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
-							</div><!-- Column -->
-							<div class="col col-sm-4">
-								<article class="post">
-									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src="images/8.jpg" data-src="images/8.jpg" alt="Post Title Placeholder" />
-										</a>
-										<span class="post-format">
-											<i class="fa fa-play"></i>
-										</span>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h5 class="post-title">
-											<a ui-sref="post-single">Prayer: The Importance Of The Talit</a>
-										</h5><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 21, 2016</li>
-											<li><i class="fa fa-comment-o"></i> 129</li>
-										</ul><!-- Post Meta -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
-							</div><!-- Column -->
-							<div class="col col-sm-4">
-								<article class="post">
-									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src="images/4.jpg" data-src="images/4.jpg" alt="Post Title Placeholder" />
-										</a>
-										<span class="post-format">
-											<i class="fa fa-play"></i>
-										</span>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h5 class="post-title">
-											<a ui-sref="post-single">Torah Study: The Sparkle</a>
-										</h5><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> September 12, 2016</li>
-											<li><i class="fa fa-comment-o"></i> 18</li>
-										</ul><!-- Post Meta -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
-							</div><!-- Column -->
-							<div class="col col-sm-4">
-								<article class="post">
-									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src="images/1.jpg" data-src="images/1.jpg" alt="Post Title Placeholder" />
-										</a>
-										<span class="post-format">
-											<i class="fa fa-play"></i>
-										</span>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h5 class="post-title">
-											<a ui-sref="post-single">Emunah &amp; Faith</a>
-										</h5><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
-											<li><i class="fa fa-comment-o"></i> 240</li>
-										</ul><!-- Post Meta -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
-							</div><!-- Column -->
-							<div class="col col-sm-4">
-								<article class="post">
-									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src="images/2.jpg" data-src="images/2.jpg" alt="Post Title Placeholder" />
-										</a>
-										<span class="post-format">
-											<i class="fa fa-play"></i>
-										</span>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h5 class="post-title">
-											<a ui-sref="post-single">Kabbalah &amp; Mysticism</a>
-										</h5><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
-											<li><i class="fa fa-comment-o"></i> 53</li>
-										</ul><!-- Post Meta -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
-							</div><!-- Column -->
+							<Button ng-click="updatePlaylistBackward()">Prev</Button>
+							<Button ng-click="updatePlaylistForward()">Next</Button>
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->
 					<div class="blog-layout layout-5 tiny-thumb" style="display: block">
@@ -1196,6 +1093,7 @@
 								<article class="post">
 									<div class="post-thumb">
 										<a ui-sref="post-single">
+
 											<img class="lazy" src="images/4.jpg" data-src="images/4.jpg" alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->

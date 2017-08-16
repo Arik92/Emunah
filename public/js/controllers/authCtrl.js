@@ -30,22 +30,15 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
       });
   }
   function checkNames() {
-    var patt = /[a-zA-z]+/;
-    if (!$scope.user.fname) {
+    var patt = /w+/;
+    if (!$scope.fname) {
       alert("fill in first name");
-      return false;
-    } else if (!$scope.user.lname) {
+    } else if (!$scope.lname) {
       alert("fill in last name");
-      return false;
-    } else {
-    if ((!patt.test($scope.user.fname)||(!$scope.user.fname))) {
-      alert("first name must contain one or more letters");
-      $scope.checkFail = true;
-    } else if ((!patt.test($scope.user.lname)||(!$scope.user.lname))) {
-      alert("last name must contain one or more letters");
-      $scope.checkFail = true;
-    }//el if
-  }//else
+    } else if ((!patt.test($scope.user.fname)||(!patt.test($scope.user.fname)))) {
+     alert("first or last name must only contain letters");
+     $scope.checkFail = true;
+   } // else if
   }//checkNames
 
   function checkEmail() {
@@ -80,17 +73,21 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
   }//checkInput
 
 $scope.joinWhatsapp = function() {
-  console.log("ctrl phone ctrl before call:", $scope.phone);
-  authFactory.joinWhatsapp($scope.phone).then(function(err, res){
-    console.log("ctrl phone after call:", $scope.phone);
-    if (err) {
-      console.log(err);
-    } else {
-      alert("your phone has been added!");
-    }
-  })
-}
-});
+  var patt = /^\+[1-9][0-9]{0,2}\.?[0-9]{1,14}$/; //no country code starts with 0
+  if (patt.test($scope.phone)) {
+    authFactory.joinWhatsapp($scope.phone).then(function(err, res){
+      if (err) {
+        console.log(err);
+      } else {
+        alert("your phone has been added!");
+      }
+    })
+  } else {
+    alert("Please enter a phone number in international format(see example) ");
+  }//else patt test
+}//joinWhatsapp
+
+}); //authCtrl
 // <script>
 //   window.fbAsyncInit = function() {
 //     FB.init({
