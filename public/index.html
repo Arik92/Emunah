@@ -181,11 +181,11 @@
 							<div class="logo">
 								<a href="index.html">
 									<img src="images/emunahlogo.png" alt="Logo Image Placeholder" style="
-    max-width: 56%;
+    max-width: 72%;
    
     margin-top: 5px;
     margin-right: -41px;
-    margin-left: 55px;
+  
 ">
 								</a>
 							</div><!-- Logo -->
@@ -194,7 +194,7 @@
 							<ul> 
 						
 								<!-- <li><a ui-sref="home">Home</a></li> -->
-									<li><a href="page-category.html">Rav Dror</a>
+									<li><a ui-sref="ravdror">Rav Dror</a>
 									<div class="megamenu">
 										<div class="item-content">
 											<div class="item">
@@ -209,7 +209,7 @@
 													</div>
 													<div class="post-content">
 														<div class="post-category">
-														<a href="page-category.html">Jewish Holidays</a>
+														<a ui-sref="ravdror">Jewish Holidays</a>
 														</div>
 														<h6 class="post-title">
 															<a href="post-single.html">The High Holidays</a>
@@ -302,7 +302,7 @@
 								</li>	
 									<li><a href="#">New York</a></li>
 								<li><a href="#">US Campaign</a></li>
-								<li><a href="#">Articles</a>
+								<li><a ui-sref="articles">Articles</a>
 									<div class="megamenu">
 										<div class="item-content">
 											<div class="item">
@@ -500,6 +500,11 @@
 								</li>
 								<li><a ui-sref="page-contact">Contact</a></li>
 								<li ng-show="currentUser"><a href="page-category.html">Emunahversity</a>
+								</li>
+								<!-- <li ng-show="currentUser"><a href="page-category.html"><i class="fa fa-user 2x"></i> Members</a></li> -->
+							</ul>
+								
+								
 									<!-- <div class="megamenu"> -->
 <!-- 										<div class="item-content">
 											<div class="item"> -->
@@ -598,9 +603,7 @@
 											<!-- </div> -->
 <!-- 										</div>
 									</div> -->
-								</li>
-								<li ng-show="currentUser"><a href="page-category.html"><i class="fa fa-user 2x"></i> Members</a></li>
-							</ul>
+								
 						</nav><!-- Menu -->
 						<span class="menu-tigger js-slideout-toggle">
 							<i class="fa fa-bars"></i> Menu

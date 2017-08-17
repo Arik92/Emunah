@@ -126,4 +126,12 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/mitzvot-tzitzit',
       templateUrl: '/templates/mitzvot-tzitzit.html'
     })
+    .state('ravdror', {
+      url: '/ravdror',
+      templateUrl: '/templates/ravdror.html'
+    })
+    .state('articles', {
+      url: '/articles',
+      templateUrl: '/templates/articles.html'
+    })
 });

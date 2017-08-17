@@ -40,5 +40,5 @@ app.all('[^.]+', function(req, res) {
 });
 
 app.listen(process.env.PORT || '8000', function(){
-  console.log("8000. BAruh Hashem!")
+  console.log("8000. Baruh Hashem!")
 });
