@@ -303,17 +303,20 @@
 									</div><!-- Post Image -->
 									<div class="post-content">
 										<h5 class="post-title">
-											<a ui-sref="post-single">{{playlist.snippet.title}}</a>
+											<label id="playlistText"><a ui-sref="post-single">{{playlist.snippet.title}}</a></label>
+											<br />
 										</h5><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i>{{playlist.snippet.publishedAt}}</li>
+										<div class="post-meta">
+											<i class="fa fa-clock-o"></i>{{playlist.snippet.publishedAt}}
 											<!-- <li><i class="fa fa-comment-o"></i> 240</li> -->
-										</ul><!-- Post Meta -->
+										</div><!-- Post Meta -->
 									</div><!-- Post Content -->
 								</article><!-- Post -->
 							</div><!-- Column -->
-							<Button style="margin-left:15px" ng-click="updatePlaylistBackward()">Prev</Button>
-							<Button ng-click="updatePlaylistForward()">Next</Button>
+							<div class="col col-sm-4">
+								<Button ng-click="updatePlaylistBackward()">Prev</Button>
+								<Button ng-click="updatePlaylistForward()">Next</Button>
+							</div> <!-- button wrapper-->
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->
 					<div class="blog-layout layout-5 tiny-thumb" style="display: block">
@@ -404,8 +407,8 @@
 							</div><!-- Column -->
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->
-					
-						
+
+
 					<div class="blog-layout layout-6 tiny-thumb" style="display: block">
 						<div class="blog-title">
 							<h2>Personal Growth</h2>
@@ -494,7 +497,7 @@
 							</div><!-- Column -->
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->
-					
+
 					<div class="blog-layout layout-8" style="display: block">
 						<div class="blog-title">
 							<h2>All the videos</h2>
