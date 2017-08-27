@@ -134,4 +134,8 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/articles',
       templateUrl: '/templates/articles.html'
     })
+     .state('store', {
+      url: '/store',
+      templateUrl: '/templates/store.html'
+    })
 });
