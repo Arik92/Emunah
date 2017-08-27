@@ -43,7 +43,7 @@ body {
 }
 #wrapper {
     background: #fff;
-   
+
     overflow: hidden;
     clear: both;
     position: relative;
@@ -3159,3 +3159,11 @@ span.psw {
        width: 100%;
     }
 }
+#playlistText {
+  display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+
