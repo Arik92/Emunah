@@ -1,7 +1,7 @@
 app.controller('authCtrl', function($scope, authFactory, $state) {
   $scope.join = function() {
-    console.log("signup control user is", $scope.user);
-      authFactory.join($scope.user)
+    console.log("joining control user is", $scope.newMember);
+      authFactory.join($scope.newMember)
       .then(function() {
         $state.go('home');
       }, function(err) {
@@ -30,20 +30,28 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
       });
   }
   function checkNames() {
-    var patt = /w+/;
-    if (!$scope.fname) {
+    var patt = /[a-zA-Z]/;
+    console.log("first name is", $scope.newMember.fname);
+    console.log("first name test:", patt.test($scope.newMember.fname));
+    console.log("last name test:", patt.test($scope.newMember.lname));
+    if (!$scope.newMember.fname) {
       alert("fill in first name");
-    } else if (!$scope.lname) {
+      $scope.checkFail = true;
+    } else if (!patt.test($scope.newMember.fname)) {
+      alert("first name must only contain english letters");
+      $scope.checkFail = true;
+    }else if (!$scope.newMember.lname) {
       alert("fill in last name");
-    } else if ((!patt.test($scope.user.fname)||(!patt.test($scope.user.fname)))) {
-     alert("first or last name must only contain letters");
-     $scope.checkFail = true;
-   } // else if
+      $scope.checkFail = true;
+    }else if (!patt.test($scope.newMember.lname)) {
+      alert("last name must only contain english letters");
+      $scope.checkFail = true;
+    }//else if
   }//checkNames
 
   function checkEmail() {
       var patt = /[\w.]+@\w+\.\w+/;//(com|net)
-      if (!patt.test($scope.user.email)) {
+      if (!patt.test($scope.newMember.email)) {
         alert("Must have a valid email address")
           $scope.checkFail = true;
       }//if
@@ -53,10 +61,10 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
   }
   function checkPass() {
     var patt = /\w{8}/;
-    if (!patt.test($scope.user.pass)) {
-      alert("pass not long enough!(at least 8 characters)");
+    if ((!patt.test($scope.newMember.pass)||(!$scope.newMember.pass))) {
+      alert("pass not long enough! (must be at least 8 characters)");
       $scope.checkFail = true;
-    } else if (($scope.user.pass!==$scope.pass2)||(!$scope.user.pass)) {
+    } else if (($scope.newMember.pass!==$scope.newMember.pass2)) {
       alert("Password fields must match")
         $scope.checkFail = true;
     }
@@ -65,9 +73,14 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
   $scope.checkSignup = function() {
     $scope.checkFail = false;
     checkNames();
-    checkPass();
-    checkEmail();
+    if (!$scope.checkFail){
+      checkEmail();
+    }
     if (!$scope.checkFail) {
+      checkPass();
+    }
+    if (!$scope.checkFail) {
+      console.log("user has been added", $scope.newMember);
       $scope.join($scope.user);
     }
   }//checkInput
@@ -86,7 +99,7 @@ $scope.joinWhatsapp = function() {
     alert("Please enter a phone number in international format(see example) ");
   }//else patt test
 }//joinWhatsapp
-
+$scope.newMember = {};
 }); //authCtrl
 // <script>
 //   window.fbAsyncInit = function() {
