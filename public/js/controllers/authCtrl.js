@@ -9,14 +9,31 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
       });
   }
   $scope.login = function() {
+    // $scope.checkFail = validateLogin();
+    // if (!$scope.checkFail) {
     console.log("login control user is", $scope.user);
     authFactory.login($scope.user) //how do I know where this user comes from? where does it come from in emunah??
       .then(function() {
         $state.go('home')
       }, function(err) {
+        alert("We cant sign you in with what you entered");
+        $scope.user = {};//reset user creds
         console.log(err);
       });
-  }
+    //}//if
+  }//login
+  function validateLogin() {
+    var patt = /\w{8}/;
+    console.log("user is", $scope.user);
+    if (!checkEmail($scope.user.username)) {
+      return true;
+    }else if (!patt.test($scope.user.password)) {
+      alert("Password is either missing or not long enough(at least 8 charatcers)");
+      return true;
+    } else {
+      return false;
+    }
+  }//validateLogin
   $scope.logout = function() {
     console.log("logging out");
     authFactory.logout($scope.user)
@@ -49,9 +66,9 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
     }//else if
   }//checkNames
 
-  function checkEmail() {
+  function checkEmail(email) {
       var patt = /[\w.]+@\w+\.\w+/;//(com|net)
-      if (!patt.test($scope.newMember.email)) {
+      if (!patt.test(email)) {
         alert("Must have a valid email address")
           $scope.checkFail = true;
       }//if
@@ -74,7 +91,7 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
     $scope.checkFail = false;
     checkNames();
     if (!$scope.checkFail){
-      checkEmail();
+      checkEmail($scope.newMember.email);
     }
     if (!$scope.checkFail) {
       checkPass();
