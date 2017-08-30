@@ -21,6 +21,12 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/category',
       templateUrl: '/templates/page-category.html'
     })
+    .state('player', {
+      url: '/player',
+      templateUrl: '/templates/player-page.html',
+      params: {playlistParam: null},
+      controller: 'playerCtrl'
+    })
     .state('page-contact', {
       url: '/page-contact',
       templateUrl: '/templates/page-contact.html',

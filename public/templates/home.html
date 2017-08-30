@@ -299,10 +299,10 @@
 							<div class="col col-sm-4" ng-repeat="playlist in currentPlaylists track by $index">
 								<article class="post" >
 									<div class="post-thumb">
-										<a href="{{playlist.playurl}}">
-											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}}  alt="Post Title Placeholder" />
+										<!-- <a href="{{playlist.playurl}}"> -->
+											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  ng-click="setCurr(playlist,'playlist')"/>
 											<!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
-										</a>
+										<!-- </a> -->
 										<span class="post-format">
 											<i class="fa fa-play"></i>
 										</span>
