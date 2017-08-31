@@ -2,11 +2,6 @@ app.service('ytService', function($http) {
   var serv= {};
   var config = require('../config.js');
 
-  // function getYouTubeKey() {
-  //   var key = $http.get('/key').then(function(response){}, function(error) {
-  //     console.error("error retreiving")
-  //   })
-  // }//ge
   serv.getAllPlayLists = function() {
     var part = "snippet";
     var id = "UCtAh700VTIQb5Wsx_vdg-Pw";
@@ -33,6 +28,13 @@ app.service('ytService', function($http) {
       console.error("error fetching latest vids");
     });
   }//getLatesVids
+  serv.getPlaylistVideos = function(playlistId) {
+    return $http.get('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId='+playlistId+'&key='+config.YOUTUBE_KEY)
+    .then(function(response) {
+      return response.data;
+    },function(err) {
+      console.error("error fetching playlist item");
+    })
+  }//getPlaylistVideos
   return serv;
 })//service
-

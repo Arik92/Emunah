@@ -9,7 +9,6 @@ app.controller('homeCtrl', function($rootScope, $scope, authFactory, ytService) 
     } else {
       $scope.latestVids = data.items;
       console.log("latest vids are", data.items);
-      $scope.attachSource($scope.latestVids, "video");
     }//else
   })//callback
 };//get latest videos
@@ -31,17 +30,7 @@ $scope.getAllPlayLists = function() {
     }//else
   });//callback
 }//getAllPlaylists
-$scope.attachSource = function(playlist, playlistType) {
-  for (var i=0;i<playlist.length;i++) {
-    if (playlistType==="playlist") {
-    playlist[i].playurl = "https://www.youtube.com/embed?listType=playlist&list="+playlist[i].id;
-    console.log("current playlist src is", playlist[i].playurl);
-  } else if (playlistType==="video") {
-    console.log("video playlist looks like", playlist);
-    playlist[i].playurl = "https://www.youtube.com/embed/"+playlist[i].id.videoId;
-  }//else is a video
-  }//for
-}//attactch source
+
 function playlistFilter(playlist) {
   for (var i=0;i<playlist.length;i++) {
     if (playlist[i].snippet.thumbnails.medium.url==="http://s.ytimg.com/yts/img/no_thumbnail-vfl4t3-4R.jpg") {
@@ -108,7 +97,6 @@ $scope.updatePlaylistForward = function() {
       $scope.playListIndex+=max;
       console.log("playlist index is now", $scope.playListIndex);
     }//else if update shouldnt bring the rest of the results
-    $scope.attachSource($scope.currentPlaylists, "playlist");
 }//UPF
 
 $scope.updatePlaylistBackward = function() {
@@ -122,9 +110,16 @@ $scope.updatePlaylistBackward = function() {
   }//for update playlist
   $scope.playListIndex+=6;
   console.log("playlist index is now", $scope.playListIndex);
-  $scope.attachSource($scope.currentPlaylists, "playlist");
 }//uplb
 
+$scope.setCurr = function(obj, type) {
+  if (type==='playlist') {
+  $rootScope.playlistParam = obj;
+  } else {
+  console.log("gotta complete this");
+  }//else type is a playlist
+  $state.go('player');
+}//setCurr
 
 ////////////*************************PLAYLIST INTERFACE **********************************8////////////////////////
 //invokes //
