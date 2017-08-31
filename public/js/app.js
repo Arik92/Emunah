@@ -1,4 +1,4 @@
-var app = angular.module("emunApp", ['ui.router']);
+var app = angular.module("emunApp", ['ui.router', 'youtube-embed']);
 
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
@@ -21,11 +21,11 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/category',
       templateUrl: '/templates/page-category.html'
     })
-    .state('player', {
-      url: '/player',
-      templateUrl: '/templates/player-page.html',
+    .state('playlist', {
+      url: '/playlist/:id',
+      templateUrl: '/templates/playlist-page.html',
       params: {playlistParam: null},
-      controller: 'playerCtrl'
+      controller: 'playlistCtrl'
     })
     .state('page-contact', {
       url: '/page-contact',
@@ -49,8 +49,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/page-search.html'
     })
     .state('post-single', {
-      url: '/single',
-      templateUrl: '/templates/post-single.html'
+      url: '/single/:id',
+        params: {videoParam: null},
+      templateUrl: '/templates/post-single.html',
+      controller: 'singleCtrl'
     })
     .state('signup', {
       url: '/signup',

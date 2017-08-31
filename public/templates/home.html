@@ -111,7 +111,7 @@
 		<div class="container">
 			<div class="row-gallery">
 				<div class="first col-md-7 col-sm-12">
-					<a href="{{latestVids[0].playurl}}">
+					<a ui-sref="post-single({videoParam: latestVids[0], id: latestVids[0].id})">
 					<div class="post has-caption" style="background-image: url({{latestVids[0].snippet.thumbnails.medium.url}});">
 						<div class="post-content">
 							<div class="post-category">
@@ -132,7 +132,7 @@
 				</a>
 				</div>
 				<div class="col-md-5 col-sm-6">
-					<a href="{{latestVids[1].playurl}}">
+					<a ui-sref="post-single({videoParam: latestVids[1], id: latestVids[1].id})">
 					<div class="post has-caption" style="background-image: url({{latestVids[1].snippet.thumbnails.medium.url}});">
 						<div class="post-content">
 							<div class="post-category">
@@ -146,7 +146,7 @@
 				</a>
 				</div>
 				<div class="col-md-5 col-sm-6">
-					<a href="{{latestVids[2].playurl}}">
+					<a ui-sref="post-single({videoParam: latestVids[2], id: latestVids[2].id})">
 					<div class="post has-caption" style="background-image: url({{latestVids[2].snippet.thumbnails.medium.url}});">
 						<div class="post-content">
 							<div class="post-category">
@@ -300,9 +300,10 @@
 								<article class="post" >
 									<div class="post-thumb">
 										<!-- <a href="{{playlist.playurl}}"> -->
-											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  ng-click="setCurr(playlist,'playlist')"/>
+										<a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">
+											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  />
 											<!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
-										<!-- </a> -->
+										</a>
 										<span class="post-format">
 											<i class="fa fa-play"></i>
 										</span>
