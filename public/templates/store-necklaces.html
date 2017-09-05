@@ -1,0 +1,213 @@
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px;margin-top:115px;height:415px;" id="mySidebar">
+ 
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a ui-sref="store-necklaces" class="w3-bar-item w3-button">Necklaces</a>
+    <a href="#" class="w3-bar-item w3-button">Shirts</a>
+    
+    <a href="#" class="w3-bar-item w3-button">Books in hebrew</a>
+    <a href="#" class="w3-bar-item w3-button">Books in English</a>
+    <a href="#" class="w3-bar-item w3-button">Booklets</a>
+    <a href="#" class="w3-bar-item w3-button">CDs</a>
+    <a href="#" class="w3-bar-item w3-button">Miscellaneous</a>
+  </div>
+  
+  
+  
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left">Products</p>
+    <p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right" onclick="document.getElementById('id01').style.display='block'"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  
+
+  <div class="w3-container w3-text-grey" id="jeans">
+   
+  </div>
+
+  <!-- Product grid -->
+  <div id='collection-component-5c081645c5b'></div>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'emunah-channel.myshopify.com',
+          apiKey: '3f930fdd39522658be669e2768e2ce36',
+          appId: '6',
+        });
+
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('collection', {
+            id: 440439253,
+            node: document.getElementById('collection-component-5c081645c5b'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+      "product": {
+        "buttonDestination": "modal",
+        "variantId": "all",
+        "contents": {
+          "imgWithCarousel": false,
+          "variantTitle": false,
+          "options": false,
+          "description": false,
+          "buttonWithQuantity": false,
+          "quantity": false
+        },
+        "text": {
+          "button": "View Product"
+        },
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "calc(25% - 20px)",
+              "margin-left": "20px",
+              "margin-bottom": "50px"
+            }
+          },
+          "button": {
+            "background-color": "#add8e6",
+            ":hover": {
+              "background-color": "#9cc2cf"
+            },
+            ":focus": {
+              "background-color": "#9cc2cf"
+            }
+          }
+        }
+      },
+      "cart": {
+        "contents": {
+          "button": true
+        },
+        "styles": {
+          "button": {
+            "background-color": "#add8e6",
+            ":hover": {
+              "background-color": "#9cc2cf"
+            },
+            ":focus": {
+              "background-color": "#9cc2cf"
+            }
+          },
+          "footer": {
+            "background-color": "#ffffff"
+          }
+        }
+      },
+      "modalProduct": {
+        "contents": {
+          "img": false,
+          "imgWithCarousel": true,
+          "variantTitle": false,
+          "buttonWithQuantity": true,
+          "button": false,
+          "quantity": false
+        },
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "100%",
+              "margin-left": "0px",
+              "margin-bottom": "0px"
+            }
+          },
+          "button": {
+            "background-color": "#add8e6",
+            ":hover": {
+              "background-color": "#9cc2cf"
+            },
+            ":focus": {
+              "background-color": "#9cc2cf"
+            }
+          }
+        }
+      },
+      "toggle": {
+        "styles": {
+          "toggle": {
+            "background-color": "#add8e6",
+            ":hover": {
+              "background-color": "#9cc2cf"
+            },
+            ":focus": {
+              "background-color": "#9cc2cf"
+            }
+          }
+        }
+      },
+      "productSet": {
+        "styles": {
+          "products": {
+            "@media (min-width: 601px)": {
+              "margin-left": "-20px"
+            }
+          }
+        }
+      }
+    }
+          });
+        });
+      }
+    })();
+    /*]]>*/
+    </script>
+
+
+
+</body>
+</html>
