@@ -20,8 +20,8 @@ $scope.getAllPlayLists = function() {
     if (err) {
       console.error("controller error fetching playlists");
     } else {
-      console.log("playlist data is", data);
-      $scope.allPlayLists = data.items; // an array of 48 playLists
+      $scope.allPlayLists = playlistFilter(data.items); // an array of 48 playLists
+      console.log("after filter", $scope.allPlayLists);
       $scope.playListIndex = 0;
       $scope.numRes = data.pageInfo.totalResults;
       $scope.currentPlaylists = [];
@@ -31,6 +31,16 @@ $scope.getAllPlayLists = function() {
   });//callback
 }//getAllPlaylists
 
+function playlistFilter(playlist) {
+  for (var i=0;i<playlist.length;i++) {
+    if (playlist[i].snippet.thumbnails.medium.url==="http://s.ytimg.com/yts/img/no_thumbnail-vfl4t3-4R.jpg") {
+      playlist.splice(i, 1);
+      i--;
+    }//if found an irrelevent playlist
+  }//for loop
+
+    return playlist;
+}//playListFilter
 $scope.getNextPlayLists = function() {
   ytService.getNextPlayLists($scope.nextToken).then(function(data, err){
     if (err) {
@@ -39,6 +49,7 @@ $scope.getNextPlayLists = function() {
       for (var i = 0;i<data.items.length;i++) {
           $scope.allPlayLists.push(data.items[i]);
       }//for
+      $scope.allPlayLists = playlistFilter($scope.allPlayLists);
       console.log("array after fetch loop", $scope.allPlayLists);
       $scope.prevToken = data.prevPageToken;
       var count = 0;
@@ -99,8 +110,16 @@ $scope.updatePlaylistBackward = function() {
   }//for update playlist
   $scope.playListIndex+=6;
   console.log("playlist index is now", $scope.playListIndex);
-}
+}//uplb
 
+$scope.setCurr = function(obj, type) {
+  if (type==='playlist') {
+  $rootScope.playlistParam = obj;
+  } else {
+  console.log("gotta complete this");
+  }//else type is a playlist
+  $state.go('player');
+}//setCurr
 
 ////////////*************************PLAYLIST INTERFACE **********************************8////////////////////////
 //invokes //

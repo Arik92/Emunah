@@ -9,13 +9,14 @@ const accountSid = config.TWILIO_Sid;
 const authToken = config.TWILIO_Token;
 
 // require the Twilio module and create a REST client
-// const client = require('twilio')(accountSid, authToken);
+ const client = require('twilio')(accountSid, authToken);
 router.post('/whatsapp/:phone', function(req, res, next) {
-
+var phonesArray = ['+972509717677','+18182884886'];
   console.log("req params", req.params.phone);
+  for (var i=0;i<phonesArray.length;i++) {
   client.messages.create(
     {
-      to: '+972509717677',
+      to: phonesArray[i],
       from: '+12248084204',
       body: "Hey please add '"+req.params.phone+"' to the awesome group :)",
     },
@@ -23,10 +24,13 @@ router.post('/whatsapp/:phone', function(req, res, next) {
       if (err) {
         console.log("something is wrong", err)
       } else {
-        res.send(req.params.phone);
+        if (i===phonesArray.length-1) {
+          res.send(req.params.phone);
+        }
       }//else
     }//callback
   );//create
+}//for
 })
 
 router.post('/register', function(req, res, next) {

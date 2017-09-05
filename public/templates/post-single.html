@@ -1,4 +1,5 @@
 <div class="wide home">
+aleksandra
 	<section id="main-area">
 		<h3 style="display: none;">Main Area</h3>
 		<div class="container">
@@ -108,10 +109,57 @@
 												<a href="page-category.html">Beauty</a>
 											</div>
 											<h5 class="post-title"><a href="post-single.html">The Miracle of the Torah.</a></h5><!-- Post Title -->
+Arik
+	<div id="wrapper">
+		<div class="search-modal">
+			<div class="container">
+				<form action="page-search.html" method="get">
+					<input type="text" name="q" value="Search.." />
+					<span class="search-close"></span>
+				</form>
+			</div>
+		</div>
+		<section id="main-area">
+			<h3 style="display: none;">Main Area</h3>
+			<div class="container">
+				<div class="status-message">
+					<div class="message">
+					</br>
+				</br>
+				You are seeing the video of the playlists: <strong>{{video.snippet.localized.title}}</strong>
+				Description: <strong>{{playerPlaylist.snippet.localized.description}}</strong></div>
+
+					<div class="breadcumbs">
+					</br>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="page-category.html">Category</a></li>
+							<li>CATEGORY NAME</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<section id="main" class="main col-md-8">
+						<div class="blog-layout layout-2" style="display: block">
+							<div class="blog-wrapper row">
+								<div class="col col-sm-6">
+									<article class="post">
+										<div class="post-thumb">
+												<youtube-video video-url="video.playurl" player="bestPlayer" enablejsapi="true" video-id="videoPlayer"  player-height="'100%'" player-width="'100%'" player-vars="{autoplay: 0, start: 0.01}"></youtube-video>
+											</a>
+											<span class="post-format">
+												<i class="fa fa-play"></i>
+											</span>
+										</div><!-- Post Image -->
+										<div class="post-content">
+											<h4 class="post-title">Title: {{video.snippet.title}} </h4><!-- Post Title -->
+											<p class="post-entry"> <b>Description: </b>{{video.snippet.description}}</p><!-- Post Entry -->
+end of arik
 											<ul class="post-meta">
-												<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
-												<li><i class="fa fa-comment-o"></i> 240</li>
+												<li><i class="fa fa-clock-o"></i>date: {{video.snippet.publishedAt}}</li>
+												<li><i class="fa fa-comment-o"></i>? 240</li>
 											</ul><!-- Post Meta -->
+aleksandra
 										</article>
 									</div>
 								</div>
@@ -353,4 +401,29 @@ My comment
 			</div><!-- Row -->
 		</div><!-- Container -->
 	</section><!-- Main Area -->
+end of aleks
+arik
+										</div><!-- Post Content -->
+									</article><!-- Post -->
+								</div><!-- Column -->
+							</div><!-- Blog Wrapper -->
+						</div><!-- Blog Layout -->
+						<div class="blog-pagination">
+							<ul>
+								<li class="active"><a href="index.html">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><span>...</span></li>
+								<li><a href="#">10</a></li>
+								<li class="next-page"><a href="#">Page Next <i class="fa fa-angle-right"></i></a></li>
+								<li class="total-pages">1 page of 10</li>
+							</ul>
+						</div>
+					</section><!-- Main -->
+					<aside-directive></aside-directive>
+				</div><!-- Row -->
+			</div><!-- Container -->
+		</section><!-- Main Area -->
+	</div><!-- Wrapper -->
+end of arik
 </div>

@@ -111,14 +111,16 @@
 		<div class="container">
 			<div class="row-gallery">
 				<div class="first col-md-7 col-sm-12">
-					<div class="post has-caption" style="background-image: url({{latestVids[0].snippet.thumbnails.medium.url}});" ng-click="player()">
-
+					<a ui-sref="post-single({videoParam: latestVids[0], id: latestVids[0].id})">
+					<div class="post has-caption" style="background-image: url({{latestVids[0].snippet.thumbnails.medium.url}});">
 						<div class="post-content">
 							<div class="post-category">
-							<a ui-sref="page-category">Video category?</a>
+							<!-- <a ui-sref="page-category"> -->
+							Video category?
+						<!-- </a> -->
 							</div>
 							<h2 class="post-title">
-								<a ui-sref="post-single">{{latestVids[0].snippet.title}}</a>
+								{{latestVids[0].snippet.title}}
 							</h2>
 							<ul class="post-meta">
 								<li>by <strong>Infinyteam</strong></li>
@@ -127,32 +129,35 @@
 							</ul>
 						</div>
 					</div><!-- Post -->
+				</a>
 				</div>
 				<div class="col-md-5 col-sm-6">
+					<a ui-sref="post-single({videoParam: latestVids[1], id: latestVids[1].id})">
 					<div class="post has-caption" style="background-image: url({{latestVids[1].snippet.thumbnails.medium.url}});">
-
 						<div class="post-content">
 							<div class="post-category">
-							<a ui-sref="page-category">Video category?</a>
+							Video category?
 							</div>
 							<h4 class="post-title">
-								<a ui-sref="post-single">{{latestVids[1].snippet.title}}</a>
+								{{latestVids[1].snippet.title}}
 							</h4>
 						</div>
 					</div><!-- Post -->
+				</a>
 				</div>
 				<div class="col-md-5 col-sm-6">
+					<a ui-sref="post-single({videoParam: latestVids[2], id: latestVids[2].id})">
 					<div class="post has-caption" style="background-image: url({{latestVids[2].snippet.thumbnails.medium.url}});">
-
 						<div class="post-content">
 							<div class="post-category">
-							<a ui-sref="page-category">Video category?</a>
+							Video category?
 							</div>
 							<h4 class="post-title">
-								<a ui-sref="post-single">{{latestVids[2].snippet.title}}</a>
+								{{latestVids[2].snippet.title}}
 							</h4>
 						</div>
 					</div><!-- Post -->
+				</a>
 				</div>
 			</div>
 		</div>
@@ -294,8 +299,10 @@
 							<div class="col col-sm-4" ng-repeat="playlist in currentPlaylists track by $index">
 								<article class="post" >
 									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}}  alt="Post Title Placeholder" />
+										<!-- <a href="{{playlist.playurl}}"> -->
+										<a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">
+											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  />
+											<!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
 										</a>
 										<span class="post-format">
 											<i class="fa fa-play"></i>
@@ -303,17 +310,20 @@
 									</div><!-- Post Image -->
 									<div class="post-content">
 										<h5 class="post-title">
-											<a ui-sref="post-single">{{playlist.snippet.title}}</a>
+											<label id="playlistText"><a ui-sref="post-single">{{playlist.snippet.title}}</a></label>
+											<br />
 										</h5><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i>{{playlist.snippet.publishedAt}}</li>
+										<div class="post-meta">
+											<i class="fa fa-clock-o"></i>{{playlist.snippet.publishedAt}}
 											<!-- <li><i class="fa fa-comment-o"></i> 240</li> -->
-										</ul><!-- Post Meta -->
+										</div><!-- Post Meta -->
 									</div><!-- Post Content -->
 								</article><!-- Post -->
 							</div><!-- Column -->
-							<Button style="margin-left:15px" ng-click="updatePlaylistBackward()">Prev</Button>
-							<Button ng-click="updatePlaylistForward()">Next</Button>
+							<div class="col col-sm-4">
+								<Button ng-click="updatePlaylistBackward()">Prev</Button>
+								<Button ng-click="updatePlaylistForward()">Next</Button>
+							</div> <!-- button wrapper-->
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->
 					<div class="blog-layout layout-5 tiny-thumb" style="display: block">
@@ -404,8 +414,8 @@
 							</div><!-- Column -->
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->
-					
-						
+
+
 					<div class="blog-layout layout-6 tiny-thumb" style="display: block">
 						<div class="blog-title">
 							<h2>Personal Growth</h2>
@@ -494,7 +504,7 @@
 							</div><!-- Column -->
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->
-					
+
 					<div class="blog-layout layout-8" style="display: block">
 						<div class="blog-title">
 							<h2>All the videos</h2>
