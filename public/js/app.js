@@ -1,4 +1,4 @@
-var app = angular.module("emunApp", ['ui.router']);
+ var app = angular.module("emunApp", ['ui.router']);
 
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
@@ -133,9 +133,5 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('articles', {
       url: '/articles',
       templateUrl: '/templates/articles.html'
-    })
-     .state('store', {
-      url: '/store',
-      templateUrl: '/templates/store.html'
     })
 });
