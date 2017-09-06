@@ -150,4 +150,28 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/store-necklaces',
       templateUrl: '/templates/store-necklaces.html'
     })
+    .state('store-shirts', {
+      url: '/store-shirts',
+      templateUrl: '/templates/store-shirts.html'
+    })
+    .state('store-hebrew', {
+      url: '/store-hebrew',
+      templateUrl: '/templates/store-hebrew.html'
+    })
+    .state('store-english', {
+      url: '/store-english',
+      templateUrl: '/templates/store-english.html'
+    })
+    .state('store-booklets', {
+      url: '/store-booklets',
+      templateUrl: '/templates/store-booklets.html'
+    })
+    .state('store-cds', {
+      url: '/store-cds',
+      templateUrl: '/templates/store-cds.html'
+    })
+    .state('store-misc', {
+      url: '/store-misc',
+      templateUrl: '/templates/store-misc.html'
+    })
 });
