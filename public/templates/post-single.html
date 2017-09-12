@@ -11,27 +11,30 @@
 								<div class="post-category">
 									<a href="page-category.html">CATEGORY</a>
 								</div>
-
+								
 								<h1 class="post-title"><strong>{{video.snippet.title}}</strong></h1><!-- Post Title -->
 								<ul class="post-meta">
 									<li><img class="avatar" width="24" height="24" src="images/author.jpg" alt="Author Avatar Image" />by <a href="page-author.html">Rav Dror</a></li>
-									<li><i class="fa fa-clock-o"></i>{{video.snippet.publishedAt}} </li>
+									<li><i class="fa fa-clock-o"></i>  {{video.snippet.publishedAt}}</li>
 									<li><i class="fa fa-comment-o"></i> 240</li>
 									<li class="right"><i class="fa fa-eye"></i> 42,350 views</li>
 									<li class="right"><a href="#print"><i class="fa fa-print"></i> Print This Post</a></li>
 								</ul><!-- Post Meta -->
 							</div><!-- Post Header -->
 							<div class="post-share" style="padding:4px">
+
 								<span class="counter"><strong>24k</strong>Shares</span>
 								<ul>
+
 									<script>
 									    function fbShare(url, title, descr, image, winWidth, winHeight) {
 									        var winTop = (screen.height / 2) - (winHeight / 2);
 									        var winLeft = (screen.width / 2) - (winWidth / 2);
-									        window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+									        window.open(‘http://www.facebook.com/sharer.php?s=100&p[title]=’ + title + ‘&p[summary]=’ + descr + ‘&p[url]=’ + url + ‘&p[images][0]=’ + image, ‘sharer’, ‘top=’ + winTop + ‘,left=’ + winLeft + ‘,toolbar=0,status=0,width=’ + winWidth + ‘,height=’ + winHeight);
 									    }
 									</script>
-									<!-- <li class="facebook"><a style="cursor:pointer" onclick="fbShare(window.location.href, 'Fb Share', 'Facebook share popup', 'http://goo.gl/dS52U', 520, 350)"><i class="fa fa-facebook"></i><span>Share on Facebook</span></a></li> -->
+
+									<!-- <li class="facebook"><a style="cursor:pointer" onclick="fbShare(window.location.href, ‘Fb Share’, ‘Facebook share popup’, ‘http://goo.gl/dS52U’, 520, 350)"><i class="fa fa-facebook"></i><span>Share on Facebook</span></a></li> -->
 									<div class="sharethis-inline-share-buttons"></div>
 									<!-- <li class="twitter"><a href=""><i class="fa fa-twitter"></i><span>Share on Twitter</span></a></li>
 									<li class="google-plus"><a href=""><i class="fa fa-google-plus"></i></a></li>
@@ -40,7 +43,8 @@
 									<li class="email"><a href=""><i class="fa fa-envelope-o"></i></a></li>
 								</ul> -->
 							</div><!-- Post Share -->
-							<div>
+						
+								<div>
 								<youtube-video video-url="video.playurl" player="bestPlayer" enablejsapi="true" video-id="videoPlayer"  player-height="'100%'" player-width="'100%'" player-vars="{autoplay: 0, start: 0.01}"></youtube-video>
 							</div><!-- Post Image -->
 							<div class="post-body">
@@ -52,15 +56,19 @@
 									</a>
 								</div> -->
 							</div><!-- Post Body -->
-						 </article><!-- post single post -->
+								<div class="post-ad">
+									<!-- <span>Advertisment</span>
+									<a href="https://themeforest.net/user/infinyteam/portfolio?ref=infinyteam">
+										<img src="images/banner.jpg" alt="Banner Image Placeholder">
+									</a> -->
+								</div>
+							</div><!-- Post Body -->
 							<div class="post-footer">
 								<div class="post-picked" id="post-picked">
 									<div class="picked-title">
 										<h2>You might also like</h2>
 										<span class="close"><i class="fa fa-close"></i></span>
 									</div>
-								</div>
-							</div>
 									<div class="picked-inner">
 										<article class="post">
 											<div class="post-thumb">
@@ -70,23 +78,250 @@
 												<a href="page-category.html">Beauty</a>
 											</div>
 											<h5 class="post-title"><a href="post-single.html">The Miracle of the Torah.</a></h5><!-- Post Title -->
-										</article><!-- Post -->
-									  </div> <!-- picked inner -->
-						<div class="blog-pagination">
-							<ul>
-								<li class="active"><a href="index.html">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><span>...</span></li>
-								<li><a href="#">10</a></li>
-								<li class="next-page"><a href="#">Page Next <i class="fa fa-angle-right"></i></a></li>
-								<li class="total-pages">1 page of 10</li>
-							</ul>
-						</div>
-					<aside-directive></aside-directive>
-				</div><!-- blog-posts hfeed -->
+											<ul class="post-meta">
+												<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
+												<li><i class="fa fa-comment-o"></i> 240</li>
+											</ul><!-- Post Meta -->
+										</article>
+									</div>
+								</div>
+								<div class="post-tags">
+									<span>Tags</span>
+									<a href="page-tag.html">Torah Study</a>
+									<a href="page-tag.html">Parasha of the Week</a>
+									<a href="page-tag.html">Prayer</a>
+
+								</div><!-- Post Tags -->
+								<div class="post-share" style="padding:4px">
+									<span class="counter"><strong>24k</strong>Shares</span>
+									<!-- <ul>
+										<li class="facebook"><a href=""><i class="fa fa-facebook"></i><span>Share on Facebook</span></a></li>
+										<li class="twitter"><a href=""><i class="fa fa-twitter"></i><span>Share on Twitter</span></a></li>
+										<li class="google-plus"><a href=""><i class="fa fa-google-plus"></i></a></li>
+										<li class="linkedin"><a href=""><i class="fa fa-linkedin"></i></a></li>
+										<li class="whatsapp"><a href=""><i class="fa fa-whatsapp"></i></a></li>
+										<li class="email"><a href=""><i class="fa fa-envelope-o"></i></a></li>
+									</ul> -->
+									<div class="sharethis-inline-share-buttons"></div>
+								</div><!-- Post Share -->
+								<div class="post-navigation">
+									<ul>
+										<li class="prev">
+											<span>Prev Article</span>
+											<a href="post-single.html">The Miracle of the Torah</a>
+										</li>
+										<li class="next">
+											<span>Next Article</span>
+											<a href="post-single.html">The Miracle of the Torah</a>
+										</li>
+									</ul>
+								</div><!-- Post Navigation -->
+								<div class="post-related">
+									<div class="title">
+										<h2>Related Posts</h2>
+									</div><!-- Blog title -->
+									<div class="content row">
+										<div class="col col-sm-4">
+											<article class="post">
+												<div class="post-thumb">
+													<a href="post-single.html">
+														<img src="images/7.jpg"/>
+													</a>
+												</div><!-- Post Image -->
+												<div class="post-content">
+													<h6 class="post-title">
+														<a href="post-single.html">The Miracle of the Torah</a>
+													</h6><!-- Post Title -->
+													<ul class="post-meta">
+														<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+													</ul><!-- Post Meta -->
+												</div><!-- Post Content -->
+											</article><!-- Post -->
+										</div><!-- Column -->
+										<div class="col col-sm-4">
+											<article class="post">
+												<div class="post-thumb">
+													<a href="post-single.html">
+														<img src="images/8.jpg"/>
+													</a>
+												</div><!-- Post Image -->
+												<div class="post-content">
+													<h6 class="post-title">
+														<a href="post-single.html">The Miracle of the Torah</a>
+													</h6><!-- Post Title -->
+													<ul class="post-meta">
+														<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+													</ul><!-- Post Meta -->
+												</div><!-- Post Content -->
+											</article><!-- Post -->
+										</div><!-- Column -->
+										<div class="col col-sm-4">
+											<article class="post">
+												<div class="post-thumb">
+													<a href="post-single.html">
+														<img src="images/11.jpg"/>
+													</a>
+												</div><!-- Post Image -->
+												<div class="post-content">
+													<h6 class="post-title">
+														<a href="post-single.html">The Miracle of the Torah</a>
+													</h6><!-- Post Title -->
+													<ul class="post-meta">
+														<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+													</ul><!-- Post Meta -->
+												</div><!-- Post Content -->
+											</article><!-- Post -->
+										</div><!-- Column -->
+									</div><!-- Content -->
+								</div><!-- Related Posts -->
+								<div class="post-author">
+									<div class="author-avatar">
+										<img src="images/author.jpg" alt="Author Avatar Image" />
+									</div>
+									<div class="author-content">
+										<div class="name">
+											<span>Written By</span>
+											<a class="author" href="page-author.html">AUTHOR</a>
+										</div>
+										<p>Rabbi Dror Moshe Cassouto spreads a message of Happiness, Simplicity, Faith, and understanding that it is okay to fail and fall. We are human beings – it’s our nature to get back up and start over again.</p>
+										<ul class="author-social">
+											<li><a href="#" title="My Website"><i class="fa fa-globe"></i></a></li>
+											<li><a href="#" title="Follow me on twitter"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#" title="Follow me on instagram"><i class="fa fa-instagram"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="post-recommended">
+									<div class="title">
+										<h2>Recommended Articles</h2>
+									</div><!-- Blog title -->
+									<div class="content row">
+										<div class="col col-sm-6">
+											<article class="post">
+												<div class="post-thumb">
+													<a href="post-single.html">
+														<img src="images/6.jpg"/>
+													</a>
+												</div><!-- Post Image -->
+												<div class="post-content">
+													<h6 class="post-title">
+														<a href="post-single.html">The Miracle of the Torah</a>
+													</h6><!-- Post Title -->
+													<ul class="post-meta">
+														<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+													</ul><!-- Post Meta -->
+												</div><!-- Post Content -->
+											</article><!-- Post -->
+										</div><!-- Column -->
+										<div class="col col-sm-6">
+											<article class="post">
+												<div class="post-thumb">
+													<a href="post-single.html">
+														<img src="images/9.jpg"/>
+													</a>
+												</div><!-- Post Image -->
+												<div class="post-content">
+													<h6 class="post-title">
+														<a href="post-single.html">The Miracle of the Torah</a>
+													</h6><!-- Post Title -->
+													<ul class="post-meta">
+														<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+													</ul><!-- Post Meta -->
+												</div><!-- Post Content -->
+											</article><!-- Post -->
+										</div><!-- Column -->
+										<div class="col col-sm-6">
+											<article class="post">
+												<div class="post-thumb">
+													<a href="post-single.html">
+														<img src="images/12.jpg">
+													</a>
+												</div><!-- Post Image -->
+												<div class="post-content">
+													<h6 class="post-title">
+														<a href="post-single.html">The Miracle of the Torah</a>
+													</h6><!-- Post Title -->
+													<ul class="post-meta">
+														<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+													</ul><!-- Post Meta -->
+												</div><!-- Post Content -->
+											</article><!-- Post -->
+										</div><!-- Column -->
+										<div class="col col-sm-6">
+											<article class="post">
+												<div class="post-thumb">
+													<a href="post-single.html">
+														<img src="images/10.jpg"/>
+													</a>
+												</div><!-- Post Image -->
+												<div class="post-content">
+													<h6 class="post-title">
+														<a href="post-single.html">The Miracle of the Torah</a>
+													</h6><!-- Post Title -->
+													<ul class="post-meta">
+														<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+													</ul><!-- Post Meta -->
+												</div><!-- Post Content -->
+											</article><!-- Post -->
+										</div><!-- Column -->
+									</div><!-- Content -->
+								</div><!-- Recommended Posts -->
+								<div class="comments" id="comments">
+									<div class="title">
+										<h2>Comments</h2></br></br>
+
+<div class="row">
+<div class="col-sm-1">
+<div class="thumbnail">
+<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+</div><!-- /thumbnail -->
+</div><!-- /col-sm-1 -->
+
+<div class="col-sm-5">
+<div class="panel panel-default">
+<div class="panel-heading">
+
+<strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+</div>
+<div class="panel-body">
+My comment
+</div><!-- /panel-body -->
+</div><!-- /panel panel-default -->
+</div><!-- /col-sm-5 -->
+</br>
+
+
+
+									</div>
+
+									  <div class="well">
+            <h4><i class="fa fa-paper-plane-o"></i> Leave a Comment:</h4>
+            <form role="form">
+                <div class="form-group">
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <button type="submit" name="say" value="" class="btn btn-primary"><i class="fa fa-reply"></i> Submit</button>
+            </form>
+        </div><!-- Blog title -->
+									<div class="blog-wrapper">
+										<div id="disqus_thread"></div>
+										 <script>
+										// 	(function() {
+										// 	var d = document, s = d.createElement(‘script’);
+										// 	s.src = ‘https://infinyteam.disqus.com/embed.js’;
+										// 	s.setAttribute(‘data-timestamp’, +new Date());
+										// 	(d.head || d.body).appendChild(s);
+										// 	})();
+										// </script>
+									</div><!-- Blog Wrapper -->
+								</div><!-- Blog Layout -->
+							</div><!-- Post Footer -->
+						</article><!-- Post -->
+					</div><!-- Blog posts -->
 				</section><!-- Main -->
-			</div><!-- row -->
-			</div><!-- Container -->
-	</section><!-- Main Area -->
-</div> <!-- wide home -->
+				<aside-directive></aside-directive>
+			</div><!-- Row -->
+		</div><!-- Container -->
+
+
+

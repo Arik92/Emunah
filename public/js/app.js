@@ -170,8 +170,8 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/store-cds',
       templateUrl: '/templates/store-cds.html'
     })
-    .state('store-misc', {
-      url: '/store-misc',
-      templateUrl: '/templates/store-misc.html'
+    .state('articles-single', {
+      url: '/article-single',
+      templateUrl: '/templates/single-article.html'
     })
 });
