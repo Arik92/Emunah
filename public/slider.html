@@ -1,0 +1,104 @@
+<section class="trending-posts widget" style="display:block">
+<div class="container">
+<!-- ng-show="!$state.is('home')" -->
+<div class="widget-title" ng-show="state.is('home')">
+  <h2>Video Categories</h2>
+</div>
+<div class="widget-content owl-carousel owl-theme" >
+  <div class="slider" >
+    <div class="item" >
+      <div class="post" ng-show="state.is('home')">
+        <div class="post-thumb">
+          <a ui-sref="post-single">
+            <img src="images/outreach.jpg" alt="Post Title Placeholder" />
+          </a>
+        </div>
+        <div class="post-content">
+          <div class="post-category">
+          <a ui-sref="page-category">Outreach</a>
+          </div>
+        </div>
+      </div>
+      <!-- Post -->
+    </div>
+    <div class="item">
+      <div class="post" ng-show="state.is('home')">
+        <div class="post-thumb">
+          <a ui-sref="post-single">
+            <img src="images/money.jpg" alt="Post Title Placeholder" />
+          </a>
+        </div>
+        <div class="post-content">
+          <div class="post-category">
+          <a ui-sref="page-category">Money</a>
+          </div>
+        </div>
+      </div>
+      <!-- Post -->
+    </div>
+    <!-- ng-repeat="latestVid in latestVids track by $index" -->
+    <div class="item">
+      <div class="post" ng-show="state.is('home')">
+        <div class="post-thumb">
+          <a ui-sref="post-single({videoParam: latestVids[5], id: latestVids[5].id.videoId})">
+            <!-- <div class="post has-caption" style="background-image: url({{latestVids[5].snippet.thumbnails.medium.url}});">
+        </div> -->
+        <img class="lazy" src={{latestVids[5].snippet.thumbnails.medium.url}} alt="Loading"  />
+        <div class="post-content">
+          <div class="post-category">
+          {{latestVids[5].snippet.title}}
+          </div>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div><!-- post -->
+    <div class="item" >
+      <div class="post" ng-show="state.is('home')">
+        <div class="post-thumb">
+          <a ui-sref="post-single">
+            <img src="images/18.jpg" alt="Post Title Placeholder" />
+          </a>
+        </div>
+        <div class="post-content">
+          <div class="post-category">
+          <a ui-sref="page-category">Stories</a>
+          </div>
+        </div>
+      </div>
+      <!-- Post -->
+    </div>
+    <div class="item" >
+      <div class="post" ng-show="state.is('home')">
+        <div class="post-thumb">
+          <a ui-sref="post-single">
+            <img src="images/israel.jpg" alt="Post Title Placeholder" />
+          </a>
+        </div>
+        <div class="post-content">
+          <div class="post-category">
+          <a ui-sref="page-category">Israel &amp; The Redemption</a>
+          </div>
+        </div>
+      </div>
+      <!-- Post -->
+    </div>
+    <div class="item" >
+      <div class="post" ng-show="state.is('home')">
+        <div class="post-thumb">
+          <a ui-sref="post-single">
+            <img src="images/12.jpg" alt="Post Title Placeholder" />
+          </a>
+        </div>
+        <div class="post-content">
+          <div class="post-category">
+          <a ui-sref="page-category">Others</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- Items -->
+  <div id="trendNav" class="slider-nav"></div>
+</div><!-- Container -->
+</div><!-- Container -->
+</section><!-- Trending Post -->
