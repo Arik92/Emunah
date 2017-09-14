@@ -1,4 +1,4 @@
-var app = angular.module("emunApp", ['ui.router', 'youtube-embed']);
+var app = angular.module("emunApp", ['ui.router','ui.carousel', 'youtube-embed']);
 
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
