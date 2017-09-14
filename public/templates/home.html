@@ -239,29 +239,8 @@
 
 	<!-- Trending Post Section removed from here -->
 	<section id="main-area">
-		<h3 style="display: none;">Main Area</h3>
-		<div class="container">
-		<ui-carousel
-  slides="latestVids"
-  slides-to-show="4"
-  slides-to-scroll="1"
-  initial-slide="1"
-  autoplay="true"
-  autoplay-speed="2000"
-  dots="true">
-
-  <carousel-item>
-			<a ui-sref="post-single({videoParam: item, id: item.id.videoId})">
-				<!-- <div class="post has-caption" style="background-image: url({{item.snippet.thumbnails.medium.url}});">
-		</div> -->
-		<img src="{{item.snippet.thumbnails.medium.url}}" alt="Loading"  />
-		<p>{{item.snippet.title}}</p>
-		</a>
-  </carousel-item>
-
-</ui-carousel>
-</ui-carousel>
-</div>
+		<h3 style="display: none;">Main Area</h3>		
+	<slider-directive></slider-directive>
 		<div class="container">
 			<div class="row">
 				<section id="main" class="main col-md-8">
