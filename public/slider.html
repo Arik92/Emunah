@@ -1,0 +1,21 @@
+<div class="container">
+  <ui-carousel
+slides="latestVids"
+slides-to-show="3"
+slides-to-scroll="1"
+initial-slide="1"
+autoplay="false"
+autoplay-speed="2000"
+dots="true">
+<carousel-item>
+  <div padding="5px" margin="10px"  class="post-content">
+    <a ui-sref="post-single({videoParam: item, id: item.id.videoId})">
+  <img src="{{item.snippet.thumbnails.medium.url}}" alt="Loading"  />
+    <div class="post-category">
+      <p>{{item.snippet.title}}</p>
+    </div>
+  </a>
+</div>
+</carousel-item>
+</ui-carousel>
+</div>

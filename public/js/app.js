@@ -1,4 +1,4 @@
-var app = angular.module("emunApp", ['ui.router', 'youtube-embed']);
+var app = angular.module("emunApp", ['ui.router','ui.carousel', 'youtube-embed']);
 
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
@@ -170,8 +170,8 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/store-cds',
       templateUrl: '/templates/store-cds.html'
     })
-    .state('store-misc', {
-      url: '/store-misc',
-      templateUrl: '/templates/store-misc.html'
+    .state('articles-single', {
+      url: '/article-single',
+      templateUrl: '/templates/single-article.html'
     })
 });
