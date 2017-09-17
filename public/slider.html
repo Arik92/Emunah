@@ -8,10 +8,12 @@ autoplay="false"
 autoplay-speed="2000"
 dots="true">
 <carousel-item>
-  <div padding="5px" margin="10px">
+  <div padding="5px" margin="10px"  class="post-content">
     <a ui-sref="post-single({videoParam: item, id: item.id.videoId})">
   <img src="{{item.snippet.thumbnails.medium.url}}" alt="Loading"  />
-  <p>{{item.snippet.title}}</p>
+    <div class="post-category">
+      <p>{{item.snippet.title}}</p>
+    </div>
   </a>
 </div>
 </carousel-item>
