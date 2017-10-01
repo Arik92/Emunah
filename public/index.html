@@ -26,13 +26,13 @@
     <link rel="stylesheet" href="css/responsive.css" media="all"/>
     <link rel="stylesheet" href="/angular-ui-carousel/dist/ui-carousel.min.css">
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
- 
-<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=59ae72b5c975c80011bcfd3a&product=inline-share-buttons' async='async'></script>
+
 
     <base href="/">
    
    
-
+ 
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=59ae72b5c975c80011bcfd3a&product=inline-share-buttons' async='async'></script>
   </head>
   <body>
     <div id="loader">
@@ -99,9 +99,24 @@
            <li><a href="page-category.html">Articles</a></li>
            <li class="has-sub"><a href="#">Lectures</a>
                   <ul>
-                     <li><a href="left-sidebar.html">Still to come</a></li>
-                     <li><a href="right-sidebar.html">Still to come</a></li>
-                     <li><a href="no-sidebar.html">Still to come</a></li>
+                     <li><a href="left-sidebar.html">Jewish Holidays</a></li>
+                     <li><a href="right-sidebar.html">Torah Study</a></li>
+                     <li><a href="no-sidebar.html">Torah Portion</a></li>
+                     <li><a href="left-sidebar.html">Interpersonal Relationships</a></li>
+                     <li><a href="right-sidebar.html">Prayers</a></li>
+                     <li><a href="no-sidebar.html">Emunah & Faith</a></li>
+                     <li><a href="left-sidebar.html">Personal Growth</a></li>
+                     <li><a href="right-sidebar.html">Kabbalah</a></li>
+                     <li><a href="no-sidebar.html">Mariage & Dating</a></li>
+                     <li><a href="left-sidebar.html">Outreach</a></li>
+                     <li><a href="right-sidebar.html">Money</a></li>
+                     <li><a href="no-sidebar.html">Teshuva repentance & Confessions</a></li>
+                     <li><a href="left-sidebar.html">Stories</a></li>
+                     <li><a href="right-sidebar.html">Israel & the Redemption</a></li>
+                     <li><a href="no-sidebar.html">Women</a></li>
+                     <li><a href="left-sidebar.html">Q&A</a></li>
+                     <li><a href="right-sidebar.html">Rabbi Chaim Vital</a></li>
+                
                   </ul>
              </li>
 <!--           <li><a href="page-category.html">Personal Growth</a></li>
@@ -125,17 +140,20 @@
         <li ng-hide="currentUser"><a ui-sref="signup">Sign Up</a></li>
         <li ng-show="currentUser"><a ng-click="logout()">Log out</a></li>
         <li><a ui-sref="page-contact">Subscribe</a></li>
+        <li><a ui-sref="page-contact">Store</a></li>
+        <li><a ui-sref="page-contact">Whatsapp</a></li>
+        <li><a ui-sref="page-contact">Donate</a></li>
       </ul>
     </nav>
     <div id="wrapper">
-      <div class="search-modal">
+     <!--  <div class="search-modal">
         <div class="container">
           <form action="page-search.html" method="get">
             <input type="text" name="q" value="Search.." />
             <span class="search-close"></span>
           </form>
         </div>
-      </div>
+      </div> -->
       <header class="header" id="layout1" style="display:block" ng-controller="authCtrl">
         <div class="topbar">
           <div class="container">
@@ -201,7 +219,7 @@
               <ul>
 
                 <!-- <li><a ui-sref="home">Home</a></li> -->
-                  <li><a ui-sref="ravdror">Rav Dror</a>
+                  <li><a ui-sref="ravdror">Rav Dror in the USA</a>
                   <div class="megamenu">
                     <div class="item-content">
                       <div class="item">
@@ -307,8 +325,29 @@
                     </div>
                   </div>
                 </li>
-                  <li><a href="#">New York</a></li>
-                <li><a href="#">US Campaign</a></li>
+                 
+                <li><a href="#">Lectures</a>
+                 <ul style="background-color: lightblue;margin-top: 35px;display: none;">
+                        <li><a href="left-sidebar.html">Jewish Holidays</a></li>
+                     <li><a href="right-sidebar.html">Torah Study</a></li>
+                     <li><a href="no-sidebar.html">Torah Portion</a></li>
+                     <li><a href="left-sidebar.html">Interpersonal Relationships</a></li>
+                     <li><a href="right-sidebar.html">Prayers</a></li>
+                     <li><a href="no-sidebar.html">Emunah & Faith</a></li>
+                     <li><a href="left-sidebar.html">Personal Growth</a></li>
+                     <li><a href="right-sidebar.html">Kabbalah</a></li>
+                     <li><a href="no-sidebar.html">Mariage & Dating</a></li>
+                     <li><a href="left-sidebar.html">Outreach</a></li>
+                     <li><a href="right-sidebar.html">Money</a></li>
+                     <li><a href="no-sidebar.html">Teshuva repentance & Confessions</a></li>
+                     <li><a href="left-sidebar.html">Stories</a></li>
+                     <li><a href="right-sidebar.html">Israel & the Redemption</a></li>
+                     <li><a href="no-sidebar.html">Women</a></li>
+                     <li><a href="left-sidebar.html">Q&A</a></li>
+                     <li><a href="right-sidebar.html">Rabbi Chaim Vital</a></li>
+                
+                      </ul> 
+</li>
                 <li><a ui-sref="articles">Articles</a>
                   <div class="megamenu">
                     <div class="item-content">
@@ -613,11 +652,15 @@
 
             </nav><!-- Menu -->
             <span class="menu-tigger js-slideout-toggle">
-              <i class="fa fa-bars"></i> Menu
+              <i class="fa fa-bars" style="
+    font-size: 55px;
+    margin-top: 9px;
+    margin-left: 22px;"></i>
+
             </span><!-- Menu Tigger -->
-            <span class="search-tigger">
+           <!--  <span class="search-tigger">
               <i class="fa fa-search"></i>
-            </span><!-- Search Tigger -->
+            </span> --><!-- Search Tigger -->
           </div><!-- Container -->
         </div><!-- Main Menu -->
       </header><!-- Header -->
