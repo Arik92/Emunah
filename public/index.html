@@ -26,9 +26,12 @@
     <link rel="stylesheet" href="css/responsive.css" media="all"/>
     <link rel="stylesheet" href="/angular-ui-carousel/dist/ui-carousel.min.css">
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
-    <base href="/">
-    <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=59ae72b5c975c80011bcfd3a&product=inline-share-buttons"></script>
+ 
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=59ae72b5c975c80011bcfd3a&product=inline-share-buttons' async='async'></script>
 
+    <base href="/">
+   
+   
 
   </head>
   <body>
@@ -148,7 +151,7 @@
                 <li><a ui-sref="page-contact">Subscribe</a></li>
                 <li><a ui-sref="whatsapp">WhatsApp Group</a></li>
                 <li><a ui-sref="page-contact"><b style="font-size:15px;">Donate</b></a></li>
-                <li><a ui-sref="store"><b style="font-size:15px;">Store</b></a></li>
+                <li><a ui-sref="store-necklaces"><b style="font-size:15px;">Store</b></a></li>
                 <li ng-hide="currentUser"><a ui-sref="login">Login</a></li>
                 <li ng-hide="currentUser"><a ui-sref="signup">Sign Up</a></li>
                 <li ng-show="currentUser"><a ng-click="logout()">Log out</a></li>
@@ -1692,6 +1695,10 @@
     <script src="js/directives/footerDirective.js"></script>
     <script src="js/directives/asideDirective.js"></script>
     <script src="js/directives/sliderDirective.js"></script>
+
+
+
+
 
     <!-- End All JavaScripts Needed -->
 <!--    <script id="dsq-count-scr" src="https://infinyteam.disqus.com/count.js" async></script> -->

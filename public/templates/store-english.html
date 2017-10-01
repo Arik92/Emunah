@@ -25,9 +25,32 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   
 </nav>
 
+<script type="text/javascript">
+  $.fn.followTo = function (pos) {
+    var $this = this,
+        $window = $(window);
+
+    $window.scroll(function (e) {
+        if ($window.scrollTop() > pos) {
+            $this.css({
+                position: 'relative',
+                top: pos
+            });
+        } else {
+            $this.css({
+                position: 'fixed',
+                top: 0
+            });
+        }
+    });
+};
+
+$('#mySidebar').followTo(250);
+</script>
+
 <!-- Top menu on small screens -->
-<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+<header class="w3-bar w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">Emunah Store</div>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 </header>
 
@@ -42,11 +65,12 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
+    <br>
     <p class="w3-left">Products: Books in English</p>
-    <p class="w3-right">
+<!--     <p class="w3-right">
       <i class="fa fa-shopping-cart w3-margin-right" onclick="document.getElementById('id01').style.display='block'"></i>
       <i class="fa fa-search"></i>
-    </p>
+    </p> -->
   </header>
 
   <!-- Image header -->
