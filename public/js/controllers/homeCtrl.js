@@ -127,7 +127,7 @@ $scope.setCurr = function(obj, type) {
 
 ////////////*************************PLAYLIST INTERFACE **********************************8////////////////////////
 //invokes //
-$scope.getLatestVids(23);
+$scope.getLatestVids(15);
 $scope.getAllPlayLists();
 $scope.state = $state;
 $scope.inState = function(state){
