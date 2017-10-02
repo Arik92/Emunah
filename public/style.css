@@ -3186,92 +3186,6 @@ span.psw {
 }
 
 
-.tab_container {
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 70px;
-    position: relative;
-}
-
-input, section {
-  clear: both;
-  padding-top: 10px;
-  display: none;
-}
-
-label {
-  font-weight: 700;
-  font-size: 18px;
-  display: block;
-  float: left;
-  width: 20%;
-  padding: 1.5em;
-  color: #757575;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  background: #f0f0f0;
-}
-
-#tab1:checked ~ #content1,
-#tab2:checked ~ #content2,
-#tab3:checked ~ #content3,
-#tab4:checked ~ #content4,
-#tab5:checked ~ #content5 {
-  display: block;
-  padding: 20px;
-  background: #fff;
-  color: #999;
-  border-bottom: 2px solid #f0f0f0;
-}
-
-.tab_container .tab-content p,
-.tab_container .tab-content h3 {
-  -webkit-animation: fadeInScale 0.7s ease-in-out;
-  -moz-animation: fadeInScale 0.7s ease-in-out;
-  animation: fadeInScale 0.7s ease-in-out;
-}
-.tab_container .tab-content h3  {
-  text-align: center;
-}
-
-.tab_container [id^="tab"]:checked + label {
-  background: #fff;
-  box-shadow: inset 0 3px #0CE;
-}
-
-.tab_container [id^="tab"]:checked + label .fa {
-  color: #0CE;
-}
-
-label .fa {
-  font-size: 1.3em;
-  margin: 0 0.4em 0 0;
-}
-
-/*Media query*/
-@media only screen and (max-width: 930px) {
-  label span {
-    font-size: 14px;
-  }
-  label .fa {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  label span {
-    display: none;
-  }
-
-  label .fa {
-    font-size: 16px;
-  }
-
-  .tab_container {
-    width: 98%;
-  }
-}
 
 /*Content Animation*/
 @keyframes fadeInScale {
@@ -3288,4 +3202,52 @@ label .fa {
 .store-menu {
     padding: 64px 0px 205px 0px;
 }
+/*
+@media only screen {
+  .sidebarstore {
+    position: relative;
+    display: none;
 
+    
+  }
+*/
+
+/*.w3-sidebar.w3-collapse {
+    display: block!important;
+}*/
+
+-
+
+.w3-top {
+    top: 0;
+}
+
+.w3-top, .w3-bottom {
+    position: fixed;
+    width: 100%;
+    /* z-index: 1; */
+}
+
+.w3-sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+ /*   position: fixed!important;*/
+    /* z-index: 1; */
+    overflow: auto;
+}
+    .w3-text-grey, .w3-hover-text-grey:hover, .w3-text-gray, .w3-hover-text-gray:hover {
+    color: #757575!important;
+}
+
+.sidebarstore {
+    font-size: 30px;
+    margin: 3px;
+
+}
+
+.w3-padding-64 {
+    padding-top: 64px!important;
+    padding-bottom: 64px!important;
+
+}
