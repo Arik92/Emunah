@@ -35,7 +35,7 @@
 					</div>
 					<div class="widget-content list-label-widget-content">
 						<ul>
-							 <li ng-repeat="playlist in allPlayLists track by $index"><a href="#"><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></a></li>
+							 <li ng-repeat="playlist in footerPlaylists track by $index"><a href="#"><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></a></li>
 						</ul>
 					</div>
 				</div><!-- Widget : Categories -->

@@ -27,6 +27,7 @@ $scope.getAllPlayLists = function() {
     } else {
       $scope.allPlayLists = playlistFilter(data.items); // an array of 48 playLists
       console.log("after filter", $scope.allPlayLists);
+      $scope.footerPlaylists = $scope.allPlayLists.slice(0,35);
       $scope.playListIndex = 0;
       $scope.numRes = data.pageInfo.totalResults;
       $scope.currentPlaylists = [];
