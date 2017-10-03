@@ -409,7 +409,7 @@ header.header {
       display: block;
     height: 75px;
     width: 100%;
-    line-height: 61px;
+    line-height: 75px;
     background-color: lightblue;
     position: relative;
 }
@@ -431,10 +431,10 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 /* Menu */
 
 .mainmenu .menu {
-    float: left;
+    /*float: left;*/
     display: block;
         margin-left: 228px;
-    letter-spacing: 1.5px;
+    letter-spacing: 2.5px;
 }
 .mainmenu .menu>ul {
     margin: 0;
@@ -3216,7 +3216,7 @@ span.psw {
     display: block!important;
 }*/
 
--
+
 
 .w3-top {
     top: 0;
