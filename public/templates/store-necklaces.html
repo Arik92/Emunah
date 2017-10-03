@@ -1,17 +1,7 @@
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.w3-sidebar a {font-family: "Roboto", sans-serif}
-body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
-</style>
-<body class="w3-content" style="max-width:1200px">
 
 <!-- Sidebar/menu -->
-<nav style="width:250px;margin-top:115px;height:415px;" id="mySidebar">
+<!-- <nav style="width:250px;margin-top:115px;height:415px;" id="mySidebar">
  
   <div id="nav-main" style="font-weight:bold">
     <ul class="sidebarstore">
@@ -26,29 +16,48 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </div>
   
 </nav>
-
-
-
-<!-- Top menu on small screens -->
-
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:250px">
-
-  <!-- Push down content on small screens -->
-  <div class="w3-hide-large" style="margin-top:83px"></div>
+ -->
+  <div class="menu" style="margin-top:75px" > 
+            <div id="res-men-btn" class="men-close" onclick="expand()">
+                <div> 
+                    <span class="line one"></span>
+                    <span class="line two"></span>
+                    <span class="line three"></span>
+                </div>                
+            </div>
+            <ul class="list-inline">
+                <li>
+                    <a ui-sref="store-necklaces">Necklaces</a>
+                </li>
+                <li>
+                    <a ui-sref="store-shirts">Shirts</a>
+                </li>
+                <li>
+                    <a ui-sref="store-hebrew">Books in Hebrew</a>
+                </li>
+                <li>
+                    <a ui-sref="store-english">Books in English</a>
+                </li>
+                <li>
+                    <a ui-sref="store-booklets">Booklets</a>
+                </li>
+                <li>
+                    <a ui-sref="store-cds">CDs</a>
+                </li>
+                <li>
+                    <a ui-sref="store-misc">Miscellaneous</a>
+                </li>
+               
+            </ul>
+        </div>
+</div>
+ <h2>CATEGORIES</h2>
   
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <br>
-    <p class="w3-left">Products: Necklaces</p>
-<!--     <p class="w3-right">
-      <i class="fa fa-shopping-cart w3-margin-right" onclick="document.getElementById('id01').style.display='block'"></i>
-      <i class="fa fa-search"></i>
-    </p> -->
+    <p>Products: Necklaces</p>
+
   </header>
 
   <!-- Image header -->
@@ -62,7 +71,3 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div id='collection-component-5c081645c5b'></div>
   <script src="js/store/necklaces.js"></script>
 
-
-
-</body>
-</html>

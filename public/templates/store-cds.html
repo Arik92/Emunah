@@ -11,7 +11,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 <body class="w3-content" style="max-width:1200px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px;margin-top:115px;height:415px;" id="mySidebar">
+<!-- <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px;margin-top:115px;height:415px;" id="mySidebar">
  
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <a ui-sref="store-necklaces" class="w3-bar-item w3-button">Necklaces</a>
@@ -23,7 +23,42 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <a ui-sref="store-misc" class="w3-bar-item w3-button">Miscellaneous</a>
   </div>
   
-</nav>
+</nav> -->
+<div class="menu" style="margin-top:75px" > 
+            <div id="res-men-btn" class="men-close" onclick="expand()">
+                <div> 
+                    <span class="line one"></span>
+                    <span class="line two"></span>
+                    <span class="line three"></span>
+                </div>                
+            </div>
+            <ul class="list-inline">
+                <li>
+                    <a ui-sref="store-necklaces">Necklaces</a>
+                </li>
+                <li>
+                    <a ui-sref="store-shirts">Shirts</a>
+                </li>
+                <li>
+                    <a ui-sref="store-hebrew">Books in Hebrew</a>
+                </li>
+                <li>
+                    <a ui-sref="store-english">Books in English</a>
+                </li>
+                <li>
+                    <a ui-sref="store-booklets">Booklets</a>
+                </li>
+                <li>
+                    <a ui-sref="store-cds">CDs</a>
+                </li>
+                <li>
+                    <a ui-sref="store-misc">Miscellaneous</a>
+                </li>
+               
+            </ul>
+        </div>
+</div>
+ <h2>CATEGORIES</h2>
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
