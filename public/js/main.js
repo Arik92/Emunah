@@ -249,3 +249,55 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+// $(function () {
+//                 (function () {
+//                     $('#res-men-btn').click(function () {
+                        
+//                         var parent = $(this).parent('#res-men-btn');
+//                         var lines = $(this).find('span');
+//                         parent.toggleClass('men-close men-open');
+//                         if (parent.hasClass('men-open')) {
+//                             lines.addClass('active');
+//                             parent.next('ul.list-inline').slideDown(400);
+//                         } else {
+//                             lines.removeClass('active');
+//                             parent.next('ul.list-inline').slideUp(400);
+//                         }
+//                     });
+//                 })();
+//             });
+
+
+        // function expand() {                                   
+        //                 var parent = $(this).parent('#res-men-btn');
+        //                 var lines = $(this).find('span');
+        //                 console.log($(this));
+        //                 console.log(parent);
+        //                 console.log(lines);
+        //                 parent.toggleClass('men-close men-open');
+        //                 if (parent.hasClass('men-open')) {
+        //                     lines.addClass('active');
+        //                     parent.next('ul.list-inline').slideDown(400);
+        //                 } else {
+        //                     lines.removeClass('active');
+        //                     parent.next('ul.list-inline').slideUp(400);
+        //                 }
+        //             }
+                
+
+      // function expand() {
+      //                   console.log("i was clicked1 ");
+      //                   var parentDiv = parent.document.getElementById('res-men-btn');
+      //                   var lines = parentDiv.children.getElementsByTagName('span');
+      //                   parentDiv.toggleClass('men-close men-open');
+      //                   if (parentDiv.hasClass('men-open')) {
+      //                       lines.addClass('active');
+      //                       parentDiv.next('ul.list-inline').slideDown(400);
+      //                   } else {
+      //                       lines.removeClass('active');
+      //                       parentDiv.next('ul.list-inline').slideUp(400);
+      //                   }
+      //               };
+      //        
