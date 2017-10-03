@@ -29,9 +29,9 @@
 
 
     <base href="/">
-   
-   
- 
+
+
+
 <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=59ae72b5c975c80011bcfd3a&product=inline-share-buttons' async='async'></script>
   </head>
   <body>
@@ -98,25 +98,8 @@
            </li>
            <li><a href="page-category.html">Articles</a></li>
            <li class="has-sub"><a href="#">Lectures</a>
-                  <ul>
-                     <li><a href="left-sidebar.html">Jewish Holidays</a></li>
-                     <li><a href="right-sidebar.html">Torah Study</a></li>
-                     <li><a href="no-sidebar.html">Torah Portion</a></li>
-                     <li><a href="left-sidebar.html">Interpersonal Relationships</a></li>
-                     <li><a href="right-sidebar.html">Prayers</a></li>
-                     <li><a href="no-sidebar.html">Emunah & Faith</a></li>
-                     <li><a href="left-sidebar.html">Personal Growth</a></li>
-                     <li><a href="right-sidebar.html">Kabbalah</a></li>
-                     <li><a href="no-sidebar.html">Mariage & Dating</a></li>
-                     <li><a href="left-sidebar.html">Outreach</a></li>
-                     <li><a href="right-sidebar.html">Money</a></li>
-                     <li><a href="no-sidebar.html">Teshuva repentance & Confessions</a></li>
-                     <li><a href="left-sidebar.html">Stories</a></li>
-                     <li><a href="right-sidebar.html">Israel & the Redemption</a></li>
-                     <li><a href="no-sidebar.html">Women</a></li>
-                     <li><a href="left-sidebar.html">Q&A</a></li>
-                     <li><a href="right-sidebar.html">Rabbi Chaim Vital</a></li>
-                
+                  <ul ng-controller="homeCtrl">
+                     <li ng-repeat="playlist in allPlayLists track by $index"><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
                   </ul>
              </li>
 <!--           <li><a href="page-category.html">Personal Growth</a></li>
@@ -325,28 +308,11 @@
                     </div>
                   </div>
                 </li>
-                 
+
                 <li><a href="#">Lectures</a>
-                 <ul style="background-color: lightblue;margin-top: 35px;display: none;">
-                        <li><a href="left-sidebar.html">Jewish Holidays</a></li>
-                     <li><a href="right-sidebar.html">Torah Study</a></li>
-                     <li><a href="no-sidebar.html">Torah Portion</a></li>
-                     <li><a href="left-sidebar.html">Interpersonal Relationships</a></li>
-                     <li><a href="right-sidebar.html">Prayers</a></li>
-                     <li><a href="no-sidebar.html">Emunah & Faith</a></li>
-                     <li><a href="left-sidebar.html">Personal Growth</a></li>
-                     <li><a href="right-sidebar.html">Kabbalah</a></li>
-                     <li><a href="no-sidebar.html">Mariage & Dating</a></li>
-                     <li><a href="left-sidebar.html">Outreach</a></li>
-                     <li><a href="right-sidebar.html">Money</a></li>
-                     <li><a href="no-sidebar.html">Teshuva repentance & Confessions</a></li>
-                     <li><a href="left-sidebar.html">Stories</a></li>
-                     <li><a href="right-sidebar.html">Israel & the Redemption</a></li>
-                     <li><a href="no-sidebar.html">Women</a></li>
-                     <li><a href="left-sidebar.html">Q&A</a></li>
-                     <li><a href="right-sidebar.html">Rabbi Chaim Vital</a></li>
-                
-                      </ul> 
+                 <ul style="background-color: lightblue;margin-top: 35px;display: none;" ng-controller="homeCtrl">
+                           <li ng-repeat="playlist in allPlayLists track by $index"><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
+                      </ul>
 </li>
                 <li><a ui-sref="articles">Articles</a>
                   <div class="megamenu">
@@ -1704,7 +1670,7 @@
       </header><!-- Header -->
       <!-- <header-directive></header-directive> -->
 
-      <div ui-view></div>
+      <div ui-view autoscroll="true"></div>
     </div><!-- Wrapper -->
     <footer-directive></footer-directive>
     <!-- Start All JavaScripts Needed -->

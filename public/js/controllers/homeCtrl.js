@@ -8,6 +8,7 @@ app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytS
     if (err) {
       console.error("controller error fetching latest videos", err);
     } else {
+      $scope.footerVids = data.items;
       $scope.topThree = data.items.splice(0,3);
       console.log("top three videos are ", $scope.topThree);
       $scope.latestVids = data.items;

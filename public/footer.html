@@ -8,94 +8,22 @@
 					</div>
 					<div class="widget-content">
 						<ul class="recent-posts">
-							<li class="post">
+							<li class="post" ng-repeat="footerVid in footerVids track by $index">
 								<div class="post-thumb">
-									<a href="post-single.html">
-										<img class="lazy" src="images/4.jpg" data-src="images/4.jpg" alt="Post Title Placeholder" />
+									<a ui-sref="post-single({videoParam: footerVid, id: footerVid.id})">
+										<img class="lazy" src={{footerVid.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  />
+										<!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
 									</a>
 								</div><!-- Post Image -->
 								<div class="post-content">
 									<h6 class="post-title">
-										<a href="post-single.html">Jewish Holidays: The High Holidays</a>
+										<a ui-sref="post-single({videoParam: footerVid, id: footerVid.id})">{{footerVid.snippet.title}}</a>
 									</h6><!-- Post Title -->
 									<ul class="post-meta">
-										<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+										<li><i class="fa fa-clock-o"></i>{{footerVid.snippet.publishedAt}}</li>
 									</ul><!-- Post Meta -->
 								</div><!-- Post Content -->
 							</li><!-- Post -->
-							<li class="post">
-								<div class="post-thumb">
-									<a href="post-single.html">
-										<img class="lazy" src="images/5.jpg" data-src="images/5.jpg" alt="Post Title Placeholder" />
-									</a>
-								</div><!-- Post Image -->
-								<div class="post-content">
-									<h6 class="post-title">
-										<a href="post-single.html">The Torah Is The Spice Of Your Life</a>
-									</h6><!-- Post Title -->
-									<ul class="post-meta">
-										<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
-									</ul><!-- Post Meta -->
-								</div><!-- Post Content -->
-							</li><!-- Post -->
-							<li class="post">
-								<div class="post-thumb">
-									<a href="post-single.html">
-										<img class="lazy" src="images/12.jpg" data-src="images/12.jpg" alt="Post Title Placeholder" />
-									</a>
-								</div><!-- Post Image -->
-								<div class="post-content">
-									<h6 class="post-title">
-										<a href="post-single.html">Jewish Holidays: The High Holidays</a>
-									</h6><!-- Post Title -->
-									<ul class="post-meta">
-										<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
-									</ul><!-- Post Meta -->
-								</div><!-- Post Content -->
-							</li><!-- Post -->
-							<li class="post">
-								<div class="post-thumb">
-									<a href="post-single.html">
-										<img class="lazy" src="images/12.jpg" data-src="images/12.jpg" alt="Post Title Placeholder" />
-									</a>
-								</div><!-- Post Image -->
-								<div class="post-content">
-									<h6 class="post-title">
-										<a href="post-single.html">Jewish Holidays: The High Holidays</a>
-									</h6><!-- Post Title -->
-									<ul class="post-meta">
-										<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
-									</ul><!-- Post Meta -->
-								</div><!-- Post Content -->
-							</li><li class="post">
-								<div class="post-thumb">
-									<a href="post-single.html">
-										<img class="lazy" src="images/12.jpg" data-src="images/12.jpg" alt="Post Title Placeholder" />
-									</a>
-								</div><!-- Post Image -->
-								<div class="post-content">
-									<h6 class="post-title">
-										<a href="post-single.html">Jewish Holidays: The High Holidays</a>
-									</h6><!-- Post Title -->
-									<ul class="post-meta">
-										<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
-									</ul><!-- Post Meta -->
-								</div><!-- Post Content -->
-							</li><li class="post">
-								<div class="post-thumb">
-									<a href="post-single.html">
-										<img class="lazy" src="images/12.jpg" data-src="images/12.jpg" alt="Post Title Placeholder" />
-									</a>
-								</div><!-- Post Image -->
-								<div class="post-content">
-									<h6 class="post-title">
-										<a href="post-single.html">Jewish Holidays: The High Holidays</a>
-									</h6><!-- Post Title -->
-									<ul class="post-meta">
-										<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
-									</ul><!-- Post Meta -->
-								</div><!-- Post Content -->
-							</li>
 						</ul>
 					</div>
 				</div><!-- Widget : Advertisment -->
@@ -107,78 +35,7 @@
 					</div>
 					<div class="widget-content list-label-widget-content">
 						<ul>
-							<li>
-								<a dir="ltr" href="page-category.html"> Halacha</a>
-								<span dir="ltr">(4)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Torah Portion</a>
-								<span dir="ltr">(4)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Jewish Holidays</a>
-								<span dir="ltr">(4)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Torah Study</a>
-								<span dir="ltr">(2)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Prayers</a>
-								<span dir="ltr">(9)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Emunah & Faith</a>
-								<span dir="ltr">(4)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Teshuva, Jewish Repentance & Confession</a>
-								<span dir="ltr">(7)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Israel & The Redemption</a>
-								<span dir="ltr">(9)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Interpersonal Relationships</a>
-								<span dir="ltr">(9)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Personal Growth
-								<span dir="ltr">(9)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Kabbalah</a>
-								<span dir="ltr">(9)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Mariage & Dating</a>
-								<span dir="ltr">(9)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Outreach</a>
-								<span dir="ltr">(9)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Money</a>
-								<span dir="ltr">(9)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Stories</a>
-								<span dir="ltr">(9)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Woman</a>
-								<span dir="ltr">(9)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Rav Chaim Vital
-								<span dir="ltr">(9)</span>
-							</li>
-							<li>
-								<a dir="ltr" href="page-category.html">Q&A</a>
-								<span dir="ltr">(9)</span>
-							</li>
+							 <li ng-repeat="playlist in allPlayLists track by $index"><a href="#"><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></a></li>
 						</ul>
 					</div>
 				</div><!-- Widget : Categories -->
@@ -188,12 +45,12 @@
 					<div class="widget-title">
 						<h2>@instagram</h2>
 					</div>
-				
+
 						<!-- SnapWidget -->
 <script src="https://snapwidget.com/js/snapwidget.js"></script>
 <iframe src="https://snapwidget.com/embed/426296" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
-					
-				
+
+
 				<div class="widget FollowByEmail" style="
     margin-top: 15px;
 ">
@@ -228,7 +85,7 @@
 						<a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
 						<a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
 						<a class="instagram" href="#"><i class="fa fa-instagram"></i></a>
-						
+
 
 						<li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
 				<li><a href="#" class="soundcloud"><i class="fa fa-soundcloud"></i></a></li>
@@ -247,7 +104,7 @@ Contact us: info@emunah.com<b></p>
 				</div><!-- Widget : About Theme -->
 			</div><!-- Footer Column -->
 			<!-- <div class="footer-col col-md-6 col-sm-6 col-xs-12"> -->
-		
+
 	<!-- </div> --><!-- Container -->
 </footer><!-- Footer -->
 <div id="copyrights">

@@ -1,5 +1,5 @@
 app.controller('playlistCtrl', function($rootScope, $scope, $stateParams, ytService, selectedFactory) {
-  //$scope.playerPlaylist = $rootScope.playlistParam;
+  $scope.playerPlaylist = $stateParams.playlistParam;
   function playlistPrep(list, privateParam) {
     /*TODO: this function attaches an src href to eac video, and also, if the user is not registered,
     hide the private videos*/
