@@ -56,7 +56,7 @@ a {
 }
 
 a, a:link, a:visited {
-    color: midnightblue;
+    color: darkgray;
     text-decoration: none;
     -webkit-backface-visibility: hidden;
 }
@@ -290,7 +290,7 @@ h6 {
 header.header {
     display: block;
     position: relative;
-    margin-bottom: 30px;
+ /**/
 }
 
 /* Top Bar */
@@ -298,12 +298,12 @@ header.header {
 .topbar {
 
     display: block;
-    height: 31px;
-    line-height: 30px;
+    height: 50px;
+    line-height: 50px;
     margin-bottom: -30px;
     clear: both;
-    border-bottom: 1px solid #eeeeee;
-    background-color: aliceblue;
+   
+    background-color: black;
 }
 .topbar .container {
     display: block;
@@ -378,6 +378,7 @@ header.header {
     float: left;
     display: flex;
     height: 10px;
+    max-width: 230px;
 }
 .logo-container .logo {
     display: block;
@@ -407,10 +408,10 @@ header.header {
 }
 .mainmenu .container {
       display: block;
-    height: 75px;
+    height: 55px;
     width: 100%;
-    line-height: 75px;
-    background-color: lightblue;
+    line-height: 55px;
+    background-color: steelblue;
     position: relative;
 }
 .mainmenu.stick-me.sticking {
@@ -591,7 +592,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     font-weight: 800;
     margin-right: 5px;
     margin-bottom: 12px;
-    color: #aaa;
+    color:steelblue;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1679,14 +1680,14 @@ header.header#layout3 .search-tigger:hover {
     border-color: #435288;
     color: #fff;
 }
-.social-counter a.snapchat {
-    background-color: #FFEB3B;
-    border-color: #FFEB3B;
+.social-counter a.youtube {
+    background-color: #ff0000;
+    border-color: #ff0000;
     color: #111;
 }
-.social-counter a.dribbble {
-    background-color: #E91E63;
-    border-color: #E91E63;
+.social-counter a.soundcloud {
+    background-color: #ff3300;
+    border-color: #ff3300;
     color: #fff;
 }
 .social-counter a:hover {
@@ -2502,7 +2503,7 @@ code {
 
 #footer {
     display: block;
-    background-color: lightblue;
+    background-color: steelblue;
     color: #848484;
 
     position: relative;
@@ -2519,7 +2520,7 @@ code {
     margin-right: 15px;
 }
 #footer .widget-title h2 {
-    background: lightblue;
+    background: steelblue;
     color: midnightblue;
 }
 #footer .widget-title:before {
@@ -2555,17 +2556,17 @@ code {
     border-color: #f44336;
 }
 .social-icons a.instagram:hover, #footer .social-icons a.instagram:hover {
-    background-color: #435288;
-    border-color: #435288;
+    background-color:  #bc2a8d;
+    border-color:  #bc2a8d;
 }
-.social-icons a.snapchat-ghost:hover, #footer .social-icons a.snapchat-ghost:hover {
-    background-color: #FFEB3B;
-    border-color: #FFEB3B;
+.social-icons a.youtube:hover, #footer .social-icons a.youtube:hover {
+    background-color: #cd201f;
+    border-color: #cd201f;
     color: #121212 !important;
 }
-.social-icons a.dribbble:hover, #footer .social-icons a.dribbble:hover {
-    background-color: #E91E63;
-    border-color: #E91E63;
+.social-icons a.soundcloud:hover, #footer .social-icons a.soundcloud:hover {
+    background-color: #ff3300;
+    border-color: #ff3300;
 }
 .social-icons a.vimeo:hover, #footer .social-icons a.vimeo:hover {
     background: #2196F3;
@@ -2638,7 +2639,7 @@ code {
     font-weight: 400;
     text-transform: capitalize;
     display: block;
-    background-color: lightblue;
+    background-color: steelblue;
     color: white;
     border-top: 1px solid white;
     padding: 30px 0;
@@ -3252,77 +3253,11 @@ span.psw {
 
 }
 
-   /*RESPONSIVE MENU BUTTON CSS*/
-            #res-men-btn{
-                display: none;
-              /*  border-bottom: 1px solid #000;*/
-            }
-            .list-inline{
-                list-style-type: none;
-                margin: 0;
-                padding:0;
-                text-align:center;
-            }
-            .list-inline > li{
-                display: inline-block;
-            }
-            .list-inline > li > a{
-                text-decoration: none;
-                display: block;
-                padding: 5px 7px;
-                color: #000;
-            }
-            .list-inline > li > a:hover{
-                background: darkblue;
-                color: #fff;
-            }
-            @media (max-width:767px){
-                #res-men-btn + ul.list-inline{display: none;}
-                .list-inline > li{
-                    display: block;
-                }
-                #res-men-btn.men-open .list-inline > li{margin-bottom: 5px;}
-                .menu-bar-inner > ul > li > a{display: block;}
-                #res-men-btn{display: table;width: 100%;padding: 5px 0;}
-              /*  #res-men-btn > div{float: right;}*/
-            }
-            #res-men-btn > div{
-                border: 1px solid lightblue;
-                height: 30px;
-                width: 35px;
-                border-radius: 6px 6px;
-                cursor: pointer;
-                padding: 6px;
-            }
-            #res-men-btn.men-open > div,
-            #res-men-btn.men-close > div:hover{
-                border-color: #000;
-            }
-            #res-men-btn .line{
-                display: block;
-                width: 100%;
-                height: 2px;
-                background-color: lightblue;
-                margin-bottom: 5px;
-                position: relative;
-                -webkit-transition: .3s;
-                -ms-transition: .3s;
-                transition: .3s;
-            }
-            #res-men-btn.men-open .line,
-            #res-men-btn.men-close > div:hover .line{
-                background-color: #000;
-            }
-            /*#res-men-btn.men-open > div:hover .line{
-                background-color: #ADC11E;
-            }*/
-            #res-men-btn .line.one.active{
-                transform: rotate(50deg);
-                top: 7px;
-            }
-            #res-men-btn .line.two.active{
-                display: none;
-            }
-            #res-men-btn .line.three.active{
-                transform: rotate(-50deg);
-            }
+
+
+.storemenu{
+    display: none;
+    width:80%;
+    height:80%;
+    transition: 1s;
+}

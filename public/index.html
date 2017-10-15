@@ -55,46 +55,9 @@
         <li>Parasha Eikev</li>
         <li>19 Tammuz 5777 - 13 July 2017</li>
            <li><a ui-sref="home">Home</a>
-<!--              <ul>
-                 <li><a href="../index.html">Homepage 1</a></li>
-                 <li><a href="home-page2.html">Homepage 2</a></li>
-                 <li><a href="home-page3.html">Homepage 3</a></li>
-                 <li><a href="home-page4.html">Homepage 4</a></li>
-              </ul> -->
+
            </li>
-         <!--   <li><a href="#">Rav Dror</a>
-             <li><a href="#">New York</a>
-               <li><a href="#">USA Campaign</a> -->
-<!--              <ul>
-                 <li class="has-sub"><a href="#">Featured Posts</a>
-                    <ul>
-                       <li><a href="featured-style1.html">Featured Full</a></li>
-                       <li><a href="featured-style2.html">Featured Grid 2</a></li>
-                       <li><a href="featured-style3.html">Featured Grid 3</a></li>
-                       <li><a href="featured-style4.html">Featured Grid 4</a></li>
-                    </ul>
-                 </li>
-                 <li class="has-sub"><a href="#">Post Layout</a>
-                    <ul>
-                       <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                       <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                       <li><a href="no-sidebar.html">No Sidebar</a></li>
-                    </ul>
-                 </li>
-                 <li class="has-sub"><a href="#">Page Templates</a>
-                    <ul>
-                       <li><a href="page-author.html">Author</a></li>
-                       <li><a href="page-category.html">Category</a></li>
-                       <li><a href="page-tag.html">Tag</a></li>
-                       <li><a href="page-archive.html">Archive</a></li>
-                       <li><a href="page-search.html">Search</a></li>
-                       <li><a href="page-error.html">Error Page</a></li>
-                    </ul>
-                 </li>
-                 <li><a href="page-typography.html">Typography</a></li>
-                 <li><a href="page-shortcodes.html">Shortcodes</a></li>
-                 <li><a href="./documentation/home-page2.html" target="_blank">Documentation</a></li>
-              </ul> -->
+         
            </li>
            <li><a href="page-category.html">Articles</a></li>
            <li class="has-sub"><a href="#">Lectures</a>
@@ -102,15 +65,7 @@
                      <li ng-repeat="playlist in allPlayLists track by $index"><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
                   </ul>
              </li>
-<!--           <li><a href="page-category.html">Personal Growth</a></li>
-           <li class="has-sub"><a href="#">More Categories</a>
-              <ul>
-                 <li><a href="page-category.html">Travel</a></li>
-                 <li><a href="page-category.html">Prayers</a></li>
-                 <li><a href="page-category.html">Jewish Holidays</a></li>
-                 <li><a href="page-tag.html">Music</a></li>
-              </ul>
-           </li> -->
+
            <li class="has-sub"><a href="page-about.html">About</a>
             <ul>
                     <li><a ui-sref="page-about">About Emunah.com</a></li>
@@ -132,35 +87,50 @@
      <!--  <div class="search-modal">
         <div class="container">
           <form action="page-search.html" method="get">
-            <input type="text" name="q" value="Search.." />
+            <input type="text" name="q" value="Search what your soul desires" />
             <span class="search-close"></span>
           </form>
         </div>
       </div> -->
       <header class="header" id="layout1" style="display:block" ng-controller="authCtrl">
         <div class="topbar">
-          <div class="container">
+         <!--  <div class="container">
+ -->            <div class="logo-container">
+              <!-- <div class="logo"> -->
+                <a href="index.html">
+                  <img src="images/emunahlogo.png" alt="Logo Image Placeholder" style="
+    max-width: 50%;
+
+    margin: 2px;
+    margin-left: 45px;
+
+">
+                </a>
+              <!--   --><!-- Logo -->
+            </div><!-- Logo Container -->
             <nav class="topmenu">
 
-              <ul>
+
+              <ul style="color:white">
 
                 <li ng-show="currentUser">Welcome, {{currentUser}}</li>
                 <li>Parasha Eikev</li>
                 <li>19 Tammuz 5777 - 13 July 2017</li>
 
 
-                <li><a ui-sref="page-contact">Subscribe</a></li>
-                <li><a ui-sref="whatsapp">WhatsApp Group</a></li>
-                <li><a ui-sref="page-contact"><b style="font-size:15px;">Donate</b></a></li>
-                <li><a ui-sref="store-necklaces"><b style="font-size:15px;">Store</b></a></li>
-                <li ng-hide="currentUser"><a ui-sref="login">Login</a></li>
-                <li ng-hide="currentUser"><a ui-sref="signup">Sign Up</a></li>
-                <li ng-show="currentUser"><a ng-click="logout()">Log out</a></li>
+                <li style="color:white"><a ui-sref="page-contact" style="color:white">Subscribe</a></li>
+                <li style="color:white"><a ui-sref="whatsapp" style="color:white">WhatsApp Group</a></li>
+                
+                <li ng-hide="currentUser"><a ui-sref="login" style="color:white">Login</a></li>
+                <li ng-hide="currentUser"><a ui-sref="signup" style="color:white">Sign Up</a></li>
+                <li ng-show="currentUser"><a ng-click="logout()" style="color:white">Log out</a></li>
+
               </ul>
             </nav><!-- Top Menu -->
+
             <nav class="social-links">
               <ul>
-                <li><a href="https://www.facebook.com/DrorMosheCassouto/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                <li style="margin-left:100px"><a href="https://www.facebook.com/DrorMosheCassouto/" class="facebook"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="https://twitter.com/emunahchannel?lang=en" class="twitter"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="https://plus.google.com/+Emunahchanneltorah" class="google"><i class="fa fa-google"></i></a></li>
 
@@ -168,9 +138,13 @@
             <li><a href="https://www.youtube.com/user/EmunahChannel" class="youtube"><i class="fa fa-youtube"></i></a></li>
             <li><a href="https://soundcloud.com/ravdror" class="soundcloud"><i class="fa fa-soundcloud"></i></a></li>
 
+    <li style="margin-left:90px"><a ui-sref="page-contact"><b style="font-size:15px;color:yellow;">Donate</b></a></li>
+            <li stt><a ui-sref="store-necklaces"><b style="font-size:15px;color:yellow;margin-right:50px;">Store</b></a></li>
               </ul>
             </nav><!-- Social Links -->
-          </div><!-- Container -->
+           
+         
+          <!-- </div> --><!-- Container -->
         </div><!-- Top Bar -->
 
             <!-- <div class="ad-container">
@@ -185,25 +159,13 @@
         </div><!-- Header Content -->
         <div class="mainmenu">
           <div class="container">
-            <div class="logo-container">
-              <div class="logo">
-                <a href="index.html">
-                  <img src="images/emunahlogo.png" alt="Logo Image Placeholder" style="
-    max-width: 72%;
-
-    margin-top: 5px;
-    margin-right: -41px;
-
-">
-                </a>
-              </div><!-- Logo -->
-            </div><!-- Logo Container -->
+            
             <nav class="menu">
               <ul>
 
-                <!-- <li><a ui-sref="home">Home</a></li> -->
+                
                   <li><a ui-sref="ravdror">Rav Dror in the USA</a>
-                  <div class="megamenu">
+                  <div class="megamenu" style="background-color:white;">
                     <div class="item-content">
                       <div class="item">
                         <div class="post">
@@ -217,11 +179,11 @@
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a ui-sref="ravdror">Jewish Holidays</a>
+                            <a ui-sref="ravdror" style="color:steelblue;">Emunah Center near you</a>
                             </div>
-                            <h6 class="post-title">
+                           <!--  <h6 class="post-title">
                               <a href="post-single.html">The High Holidays</a>
-                            </h6>
+                            </h6> -->
                           </div>
                         </div><!-- Post -->
                       </div>
@@ -237,11 +199,11 @@
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a href="page-category.html">Torah Study</a>
+                            <a href="page-category.html" style="color:steelblue;">Hitbodedut 1O1</a>
                             </div>
-                            <h6 class="post-title">
+                           <!--  <h6 class="post-title">
                               <a href="post-single.html">Toray Study </a>
-                            </h6>
+                            </h6> -->
                           </div>
                         </div><!-- Post -->
                       </div>
@@ -257,65 +219,26 @@
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a href="page-category.html">Halacha</a>
+                            <a href="page-category.html" style="color:steelblue;">Lectures in USA</a>
                             </div>
-                            <h6 class="post-title">
+                            <!-- <h6 class="post-title">
                               <a href="post-single.html">The Sulkhan Arukh</a>
-                            </h6>
+                            </h6> -->
                           </div>
                         </div><!-- Post -->
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/14.jpg" alt="Post Title Placeholder" />
-                            </a>
-                            <span class="post-format">
-                              <i class="fa fa-play"></i>
-                            </span>
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a href="page-category.html">Interpersonal Relationships</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a href="post-single.html">Parenting</a>
-                            </h6>
-                          </div>
-                        </div><!-- Post -->
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/4.jpg" alt="Post Title Placeholder" />
-                            </a>
-                            <span class="post-format">
-                              <i class="fa fa-play"></i>
-                            </span>
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a href="page-category.html">Prayer</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a href="post-single.html">Concept of prayer</a>
-                            </h6>
-                          </div>
-                        </div><!-- Post -->
+                      
                       </div>
                     </div>
                   </div>
                 </li>
 
                 <li><a href="#">Lectures</a>
-                 <ul style="background-color: lightblue;margin-top: 35px;display: none;" ng-controller="homeCtrl">
-                           <li ng-repeat="playlist in allPlayLists track by $index"><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
+                 <ul style="color:white;margin-top: 35px;display: none;" ng-controller="homeCtrl">
+                           <li style="color:steelblue;" ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
                       </ul>
 </li>
                 <li><a ui-sref="articles">Articles</a>
-                  <div class="megamenu">
+                  <div class="megamenu" style="background-color:white;color:steelblue;">
                     <div class="item-content">
                       <div class="item">
                         <div class="post">
@@ -326,10 +249,10 @@
 
                           </div>
                           <div class="post-content">
-                            <div class="post-category">
+                            <div class="post-category" style="color:steelblue;">
                               <a href="page-category.html">Parasha of the week</a>
                             </div>
-                            <h6 class="post-title">
+                            <h6 class="post-title" style="color:steelblue;">
                               <a href="post-single.html">Pinchas</a>
                             </h6>
                           </div>
@@ -412,7 +335,7 @@
                 </li>
 
                 <li><a ui-sref="page-about">About</a>
-                  <div class="megamenu">
+                  <div class="megamenu" style="background-color:white;">
                     <div class="item-content">
                       <div class="item">
                         <div class="post">
@@ -467,26 +390,7 @@
                             </h6>
                           </div>
                         </div><!-- Post -->
-                      <!-- </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/17.jpg" alt="Post Title Placeholder" />
-                            </a>
-                            <span class="post-format">
-                              <i class="fa fa-camera"></i>
-                            </span>
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a href="page-category.html">Racing</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a href="post-single.html">14 Common Misconceptions About Racing</a>
-                            </h6>
-                          </div>
-                        </div><Post -->
+                    
                       </div>
                       <div class="item">
                         <div class="post">
@@ -510,111 +414,14 @@
                     </div>
                   </div>
                 </li>
-                <li><a ui-sref="page-contact">Contact</a></li>
                 <li ng-show="currentUser"><a href="page-category.html">Emunahversity</a>
                 </li>
+                <li><a ui-sref="page-contact">Contact</a></li>
+                
                 <!-- <li ng-show="currentUser"><a href="page-category.html"><i class="fa fa-user 2x"></i> Members</a></li> -->
               </ul>
 
 
-                  <!-- <div class="megamenu"> -->
-<!--                    <div class="item-content">
-                      <div class="item"> -->
-                        <!-- <div class="post"> -->
-                          <!-- <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/8.jpg" alt="Post Title Placeholder" />
-                            </a>
-                            <span class="post-format">
-                              <i class="fa fa-play"></i>
-                            </span>
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a href="page-category.html"> Halacha</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a href="post-single.html">Seven Features Of  Halacha That Make Everyone Love It</a>
-                            </h6>
-                          </div>
-                        </div> --><!-- Post -->
-                      <!-- </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/9.jpg" alt="Post Title Placeholder" />
-                            </a>
-                            <span class="post-format">
-                              <i class="fa fa-play"></i>
-                            </span>
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a href="page-category.html"> Halacha</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a href="post-single.html">Life Style Has The Answer To Everything</a>
-                            </h6>
-                          </div>
-                        </div> --><!-- Post -->
-                      <!-- </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/6.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a href="page-category.html"> Halacha</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a href="post-single.html">Life Style Has The Answer To Everything</a>
-                            </h6>
-                          </div>
-                        </div> --><!-- Post -->
-                      <!-- </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/7.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a href="page-category.html">Womens</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a href="post-single.html">How To Win Buyers And Influence Sales with travel</a>
-                            </h6>
-                          </div>
-                        </div> --><!-- Post -->
-                      <!-- </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/10.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a href="page-category.html">Girls</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a href="post-single.html">The Ultimate Cheat Sheet On Blogging and The History Of DIY</a>
-                            </h6>
-                          </div>
-                        </div> --><!-- Post -->
-                      <!-- </div> -->
-<!--                    </div>
-                  </div> -->
 
             </nav><!-- Menu -->
             <span class="menu-tigger js-slideout-toggle">
@@ -666,12 +473,7 @@
             <nav class="menu">
               <ul>
                 <li><a ui-sref="home">Home</a>
-<!--                  <ul>
-                    <li><a href="index.html">Homepage 1</a></li>
-                    <li><a href="home-page2.html">Homepage 2</a></li>
-                    <li><a href="home-page3.html">Homepage 3</a></li>
-                    <li><a href="home-page4.html">Homepage 4</a></li>
-                  </ul> -->
+
                 </li>
                 <li><a href="#">Features</a>
                   <ul>
