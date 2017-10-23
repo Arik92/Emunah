@@ -239,7 +239,7 @@
 
 	<!-- Trending Post Section removed from here -->
 	<section id="main-area">
-		<h3 style="display: none;">Main Area</h3>		
+		<h3 style="display: none;">Main Area</h3>
 	<slider-directive></slider-directive>
 		<div class="container">
 			<div class="row">
@@ -314,14 +314,14 @@
 										<a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">
 											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  />
 											<!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
-										</a>
 										<span class="post-format">
 											<i class="fa fa-play"></i>
 										</span>
+									</a>
 									</div><!-- Post Image -->
 									<div class="post-content">
 										<h5 class="post-title">
-											<label id="playlistText"><a ui-sref="post-single">{{playlist.snippet.title}}</a></label>
+											<label id="playlistText"><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></label>
 											<br />
 										</h5><!-- Post Title -->
 										<div class="post-meta">
