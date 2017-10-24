@@ -183,4 +183,8 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/createArticle.html',
       controller: 'articleCreationCtrl'
     })
+     .state('donate', {
+      url: '/donate',
+      templateUrl: '/templates/donate.html'
+    })
 });
