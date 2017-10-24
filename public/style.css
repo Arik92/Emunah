@@ -344,9 +344,7 @@ header.header {
 
 /* Social Links */
 
-.social-links {
-    float: right;
-}
+
 .social-links ul {
     margin: 0;
     padding: 0;
@@ -410,8 +408,8 @@ header.header {
       display: block;
     height: 55px;
     width: 100%;
-    line-height: 55px;
-    background-color: steelblue;
+    line-height: 65px;
+   /* background-color: steelblue;*/
     position: relative;
 }
 .mainmenu.stick-me.sticking {
@@ -718,11 +716,11 @@ header.header#layout2 .mainmenu {
     margin-bottom: 30px;
 }
 header.header#layout2 .mainmenu .container {
-    background-color: transparent;
-    height: 70px;
+ /*   background-color: transparent;*/
+    height: 50px;
 }
 header.header#layout2 .logo-container {
-    height: 70px;
+    height: 50px;
 }
 header.header#layout2 .mainmenu .menu>ul>li>a {
     padding: 0 15px;
@@ -3261,3 +3259,6 @@ span.psw {
     height:80%;
     transition: 1s;
 }
+
+
+

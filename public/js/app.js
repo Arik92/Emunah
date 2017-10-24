@@ -178,4 +178,8 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/article-single',
       templateUrl: '/templates/single-article.html'
     })
+     .state('donate', {
+      url: '/donate',
+      templateUrl: '/templates/donate.html'
+    })
 });
