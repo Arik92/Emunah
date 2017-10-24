@@ -10,10 +10,7 @@ var User = require('./models/userModel');
 var userRoutes = require('./Routes/userRoutes');
 var app = express();
 
-//mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
-
-
-mongoose.connect(process.env.CONNECTION_STRING||"mongodb://localhost/users");
+mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
 
 
 app.use(bodyParser.json());
