@@ -14,14 +14,14 @@
           <div class="form-group">
             <label class="control-label" for="source_name">Title</label>
             <div>
-              <input id="source_name" class="form-control input-md" name="source_name" ng-model="eName" type="text" placeholder="Article Title">
+              <input id="source_name" class="form-control input-md" name="source_name" ng-model="articleTitle" type="text" placeholder="Article Title">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label" for="source_name">Article Tags:</label>
             <ul class="list-unstyled list-group" float="left">
               <li ng-repeat="tempTag in tempTags track by $index">
-                <div>{{tempTag}}                                    <button class="btn btn-danger" ng-click="deleteTag($index)"><i class="fa fa-trash-o " aria-hidden="true"></i></button>
+                <div>{{tempTag}}<button class="btn btn-danger" ng-click="deleteTag($index)"><i class="fa fa-trash-o " aria-hidden="true"></i></button>
                 </div>
               </li>
             </ul>

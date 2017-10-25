@@ -44,8 +44,7 @@ app.controller('articleCreationCtrl',['articleFactory','$scope' ,'Upload','$wind
   onSelect: function(instance) {
     // Show which date was selected.
     console.log("start date: ", instance.dateSelected);
-    $scope.startDate = instance.dateSelected;
-    console.log("as string?", $scope.startDate.toDateString());
+    $scope.customDate = instance.dateSelected;
   },
   onShow: function(instance) {
     console.log('Calendar showing.');
@@ -65,39 +64,32 @@ app.controller('articleCreationCtrl',['articleFactory','$scope' ,'Upload','$wind
 });
         $scope.upload = function () {
           var submitPic = document.getElementById('fileItem').files[0];
+          var submitDate;
           console.log("in submit! uploading...", submitPic);
-          var evt = {
-            title: $scope.eName,
-            publisher: $rootScope.userDetails.username,
-            type: $scope.selectedType,
-            location: {
-                locationMapUrl: $scope.selectedPlace.url,
-                  latlng: {
-                  lat: $scope.selectedLat,
-                  lng: $scope.selectedLng
-                 },
-                locationName: $scope.selectedPlace.formatted_address
-              },
-            image: $scope.imageName,
-            startTime: $scope.startDate.toDateString(),
-            startHr: $scope.startHr,
-            endTime: $scope.endDate.toDateString(),
-            endHr: $scope.endHr,
-            description: $scope.eDesc,
-            numTickets: $scope.totalTickets, //tickets remaining
-            isPrivate: $scope.isPrivate,
-            showRemainingTicks: $scope.showRemain
+          if ($scope.customDate) {
+            console.log("custom date");
+            submitDate = $scope.customDate;
+          } else {
+            submitDate = new Date();
+            submitDate = submitDate.toDateString();
+          }
+          var article = {
+            title: $scope.articleTitle,
+            //publisher: $rootScope.userDetails.username,
+            date: submitDate,            
+            isPrivate: $scope.isPrivate
           };// event post object
-          evt.tickets = [];
-          for (var i=0;i<$scope.tempTicks.length;i++) {
-            evt.tickets.push($scope.tempTicks[i]);
+          article.content = quill.getContents();
+          article.tags = [];
+          for (var i=0;i<$scope.tempTags.length;i++) {
+            article.tags.push($scope.tempTags[i]);
           }// for filling ticket array
           if (submitPic) {
             Upload.upload({
-                url: 'http://localhost:8000/events/upload', //webAPI exposed to upload the file
+                url: 'http://localhost:8000/articles/upload', //webAPI exposed to upload the file
                 data: {
                   file:submitPic,
-                   event: evt
+                   article: article
                  } //pass file as data, should be user ng-model
             }).then(function (resp) { //upload function returns a promise
                 console.log("controller response is", resp);
@@ -119,9 +111,9 @@ app.controller('articleCreationCtrl',['articleFactory','$scope' ,'Upload','$wind
                 console.log('Error status: ' + error);
           });
         } else {
-          createService.postEvent(evt).then(function(resp){
-            console.log("Event added successfully through service!")
-          })
+          //createService.postEvent(evt).then(function(resp){
+            console.log("article to be Added:", article);
+          //})
         }
         };//scope.upload
   //////////////////////file upload /////////////////////////////////////////////////////////////
