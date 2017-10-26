@@ -20,7 +20,7 @@ app.controller('playlistCtrl', function($rootScope, $scope, $stateParams, ytServ
       }//for
   }//plPrep
   function initPlayer() {
-    console.log("state params are now", $stateParams);
+    //console.log("state params are now", $stateParams);
     // if ($stateParams.playlistParam) {
     //   $scope.playerPlaylist = $stateParams.playlistParam;
     //   selectedFactory.setPlaylist($scope.playPlaylist);
@@ -34,7 +34,7 @@ app.controller('playlistCtrl', function($rootScope, $scope, $stateParams, ytServ
         console.error(err);
       } else {
         $scope.playlistItems = res.items;
-        console.log("playlist item response is", $scope.playlistItems);
+        //console.log("playlist item response is", $scope.playlistItems);
         playlistPrep($scope.playlistItems, "guest");
       }//else
     })//callback

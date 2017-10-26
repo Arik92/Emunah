@@ -1,5 +1,5 @@
 app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytService) {
-  console.log("auth user data to work with", authFactory.currentUser);
+  //console.log("auth user data to work with", authFactory.currentUser);
   $rootScope.currentUser = authFactory.currentUser.email;
   $scope.topThree = [];
   ////////****************************LATEST VIDEO INTERFACE ******************************8/////////////////////
@@ -10,10 +10,10 @@ app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytS
     } else {
       $scope.footerVids = data.items;
       $scope.topThree = data.items.splice(0,3);
-      console.log("top three videos are ", $scope.topThree);
+      //console.log("top three videos are ", $scope.topThree);
       $scope.latestVids = data.items;
 
-      console.log("latest vids are", data.items);
+      //console.log("latest vids are", data.items);
     }//else
   })//callback
 };//get latest videos
@@ -26,7 +26,7 @@ $scope.getAllPlayLists = function() {
       console.error("controller error fetching playlists");
     } else {
       $scope.allPlayLists = playlistFilter(data.items); // an array of 48 playLists
-      console.log("after filter", $scope.allPlayLists);
+      //console.log("after filter", $scope.allPlayLists);
       $scope.footerPlaylists = $scope.allPlayLists.slice(0,35);
       $scope.playListIndex = 0;
       $scope.numRes = data.pageInfo.totalResults;
@@ -56,7 +56,7 @@ $scope.getNextPlayLists = function() {
           $scope.allPlayLists.push(data.items[i]);
       }//for
       $scope.allPlayLists = playlistFilter($scope.allPlayLists);
-      console.log("array after fetch loop", $scope.allPlayLists);
+      //console.log("array after fetch loop", $scope.allPlayLists);
       $scope.prevToken = data.prevPageToken;
       var count = 0;
     $scope.currentPlaylists = [];
@@ -66,7 +66,7 @@ $scope.getNextPlayLists = function() {
       count++;
     }//for update playlist
     $scope.playListIndex+=6;
-    console.log("playlist index is now", $scope.playListIndex);
+    //console.log("playlist index is now", $scope.playListIndex);
     }//else
   })
 }//fetch next playlists
@@ -101,7 +101,7 @@ $scope.updatePlaylistForward = function() {
         count++;
       }//for update playlist
       $scope.playListIndex+=max;
-      console.log("playlist index is now", $scope.playListIndex);
+      //console.log("playlist index is now", $scope.playListIndex);
     }//else if update shouldnt bring the rest of the results
 }//UPF
 
@@ -139,5 +139,5 @@ $scope.inState = function(state){
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel();
 });
-console.log("state is ", $state.router.globals.current.name);
+//console.log("state is ", $state.router.globals.current.name);
 }); //controller
