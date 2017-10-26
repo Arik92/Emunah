@@ -393,7 +393,7 @@ header.header {
     margin-left: 45px;}
 
 
-.logo-container a:hover {
+ .topbar:hover .logo-container a {
    max-width: 70%;
 }
 .logo-container .logo {
