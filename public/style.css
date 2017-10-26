@@ -305,6 +305,14 @@ header.header {
    
     background-color: black;
 }
+
+.topbar:hover {
+
+    display: block;
+    height: 70px;
+    line-height: 70px;
+ 
+}
 .topbar .container {
     display: block;
     height: 32px;
@@ -377,6 +385,16 @@ header.header {
     display: flex;
     height: 10px;
     max-width: 230px;
+}
+.logo-container a {
+
+    max-width: 50%;
+    margin: 2px;
+    margin-left: 45px;}
+
+
+.logo-container a:hover {
+   max-width: 70%;
 }
 .logo-container .logo {
     display: block;
