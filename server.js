@@ -8,7 +8,7 @@ var sgTransport = require('nodemailer-sendgrid-transport');
 var localStrategy = require('passport-local').Strategy;
 var User = require('./models/userModel');
 var userRoutes = require('./Routes/userRoutes');
-//var articleRoutes = require('./Routes/articleRoutes');
+var articleRoutes = require('./Routes/articleRoutes');
 var app = express();
 
 mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
@@ -32,7 +32,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use('/users', userRoutes);
-//app.use('/articles', articleRoutes);
+app.use('/articles', articleRoutes);
 
 app.all('[^.]+', function(req, res) {
   res.sendFile(__dirname + "/public/index.html");

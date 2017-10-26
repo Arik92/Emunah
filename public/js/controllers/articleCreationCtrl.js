@@ -1,4 +1,6 @@
-app.controller('articleCreationCtrl',['articleFactory','$scope' ,'Upload','$window','$timeout','$rootScope','$location', function(articleFactory, $scope, Upload, $window, $timeout, $rootScope, $location){
+app.controller('articleCreationCtrl',['articleFactory','$scope' ,'Upload','$window','$timeout','$rootScope','$location','authFactory', function(articleFactory, $scope, Upload, $window, $timeout, $rootScope, $location, authFactory){
+  //console.log("auth user data to work with", authFactory.currentUser);
+
   $scope.tempTags = [];
 
   $scope.addTag = function() {
@@ -23,10 +25,17 @@ app.controller('articleCreationCtrl',['articleFactory','$scope' ,'Upload','$wind
     theme: 'snow',
     placeholder: 'start typing...'
   });
-  $scope.save = function(){
-    var value = JSON.stringify(quill.getContents());
-    console.log("value is ", value);
+  var delta = {
+    ops: [{
+      insert: 'Hello',
+      attributes: {
+        bold: true
+      }
+    }, {
+      insert: ' world!!'
+    }]
   }
+//quill.setContents(delta.ops); NOTE; for getting the rtf back in the editor
   ////////////////////////////////////////quill//////////////////////////////////////////
 
   //////////////////////////////////// initializing pickers ////////////////////////////////////////////
@@ -73,13 +82,16 @@ app.controller('articleCreationCtrl',['articleFactory','$scope' ,'Upload','$wind
             submitDate = new Date();
             submitDate = submitDate.toDateString();
           }
+          if (!$scope.isPrivate) {
+            $scope.isPrivate = false;
+          }// initializing vaues in case nothing is selected
           var article = {
             title: $scope.articleTitle,
             //publisher: $rootScope.userDetails.username,
-            date: submitDate,            
+            date: submitDate,
             isPrivate: $scope.isPrivate
           };// event post object
-          article.content = quill.getContents();
+          article.contentDelta = quill.getContents();
           article.tags = [];
           for (var i=0;i<$scope.tempTags.length;i++) {
             article.tags.push($scope.tempTags[i]);
@@ -111,9 +123,10 @@ app.controller('articleCreationCtrl',['articleFactory','$scope' ,'Upload','$wind
                 console.log('Error status: ' + error);
           });
         } else {
-          //createService.postEvent(evt).then(function(resp){
-            console.log("article to be Added:", article);
-          //})
+          articleFactory.postArticle(article).then(function(resp){
+          $scope.contentText = resp;
+            // console.log("article that was Added:", article);
+          })
         }
         };//scope.upload
   //////////////////////file upload /////////////////////////////////////////////////////////////

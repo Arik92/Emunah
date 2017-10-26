@@ -6,7 +6,7 @@ app.service('ytService', function($http) {
     var part = "snippet";
     var id = "UCtAh700VTIQb5Wsx_vdg-Pw";
     return $http.get('https://www.googleapis.com/youtube/v3/playlists?part=snippet&maxResults=50&channelId=UCtAh700VTIQb5Wsx_vdg-Pw&key=' + config.YOUTUBE_KEY).then(function(response){
-      console.log("response is", response);
+      //console.log("response is", response);
       return response.data;
     } ,function(error) {
       console.error("error during api request", error);
@@ -14,7 +14,7 @@ app.service('ytService', function($http) {
   }//getAllPlaylists
   serv.getNextPlayLists = function(Token) {
     return $http.get('https://www.googleapis.com/youtube/v3/playlists?pageToken='+Token+'&part=snippet&maxResults=48&channelId=UCtAh700VTIQb5Wsx_vdg-Pw&key=' + config.YOUTUBE_KEY).then(function(response){
-      console.log("next playlists are:", response.data);
+      //console.log("next playlists are:", response.data);
       return response.data;
     }, function(error){
       console.error("error fetching the next playlists");

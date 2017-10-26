@@ -16,6 +16,9 @@ var storage = multer.diskStorage({
 });
 var upload = multer({ storage: storage }).single('file');
 /////////////////////////////////////////////////////multer/////////////////////////////////////////////////////////
+///////////////////////////////////////////////render-quill/////////////////////////////////////////////////////////
+var render = require('render-quill');
+
 //TODO: use the quill-delta npm to transform the RTF's back
 router.get('/', function (req, res, next) {
   Article.find(function(error, result){
@@ -32,7 +35,8 @@ router.get('/search/:publisher', function(req, res, next){
     if (err) {
       console.log(err);
     } else {
-      res.send(resultEvents);
+        res.send(resultArticle);
+
     }//else
   })//findCb
 }) // get event by publisher
@@ -71,18 +75,27 @@ router.post('/upload', function (req, res1, next) {
      });// path for regular uploads
 
 router.post('/', function (req, res1, next) {
- var e = new Article(req.body.event);
  //e.image = req.file.filename; //TODO: save some default image
- e.save(function(error, result){
- if (error) {
- console.log("reached error route");
- console.log(error);
-  } else {
+ console.log("request article", req.body);
+ render(req.body.contentDelta, (err, output) => {
+   if (err) {
+     console.error(err);
+   } else {
+   console.log("callback: " + output);
+   var a = new Article(req.body);
+   a.contentHtml = output;
+   a.save(function(error, result){
+     if (error) {
+       console.log("reached error route");
+       console.log(error);
+     } else {
     console.log("reached result route");
-    // res.send(result);
+    render();
     res1.send(result);
     }//else
-  });
+  });//save callback
+}//else
+  })//quill-render
 })//regular uploads (for articles without a pic)
 //
 router.delete("/:id",function(req,res){
