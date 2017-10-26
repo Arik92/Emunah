@@ -727,8 +727,8 @@ header.header#layout2 .mainmenu .menu>ul>li>a {
 }
 header.header#layout2 .mainmenu .menu {
     float: none;
-    display: inline-block;
-    text-align: left;
+  /*  display: inline-block;
+    text-align: left;*/
 }
 header.header#layout2 .mainmenu .menu>ul>li ul {
     top: 70px;
