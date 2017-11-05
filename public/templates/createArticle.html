@@ -1,0 +1,82 @@
+<section id="createevent" >
+  <form enctype="multipart/form-data" name="upload_form">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="page-header"><h2>Write a new article</h2></div>
+          <div class="form-group">
+            <label class="control-label" for="source_name"><h3>publisher: {{userDetails.username}}</h3> </label>
+            <div>
+              <!-- <input id="source_name" class="form-control" name="source_name" ng-model="eDisp" type="text" placeholder="Most awesome events everr" class="form-control input-md"> -->
+              <!-- dropdown of possible organizers -->
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="source_name">Title</label>
+            <div>
+              <input id="source_name" class="form-control input-md" name="source_name" ng-model="articleTitle" type="text" placeholder="Article Title">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="source_name">Article Tags:</label>
+            <ul class="list-unstyled list-group" float="left">
+              <li ng-repeat="tempTag in tempTags track by $index">
+                <div>{{tempTag}}<button class="btn btn-danger" ng-click="deleteTag($index)"><i class="fa fa-trash-o " aria-hidden="true"></i></button>
+                </div>
+              </li>
+            </ul>
+            <div>
+              <input id="source_name" class="form-control input-md" name="source_name" ng-model="tagInput" type="text" placeholder="Add a new category">
+          <button ng-click="addTag()">Add tag</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="source_name">Enter custom publishing date: (optional) </label>
+            <div>
+              <input  id="custom_date" ng-model="customDate" class="col-md-5 input-md">
+            </div>
+          </div>
+          <br/>
+          <div class="form-group">
+            <label class="control-label" for="source_name">Description/content</label>
+            <input name="contentInfo" type="hidden">
+            <div id="editor" style="height: 130px;" ng-model="contentText">
+            </div>
+          </div>
+          <button class="btn btn-submit" ng-click="save()">save?</button>
+           <div class="form-group">
+             <label class="control-label" for="source_name">Article image</label>
+             <div>
+               <input id="fileItem" type="file" name="eventPic" ng-model="file"
+               ngf-pattern="'image/*'"
+               accept="image/*"
+               ngf-max-size="20MB" >
+             </div>
+           </div>
+           <div class="form-group">
+             <button class="btn btn-success" ng-click="preview()">preview:</button>
+             <div id="preview">
+             </div>
+           </div>
+           <br /><!--input -->
+           <div class="form-group">
+             <label class="control-label" for="source_name">Is this a public article?</label>
+             <div>
+               <input type="radio" ng-model="isPrivate" value="false"> Public
+               <input type="radio" ng-model="isPrivate" value="true"> Private(memebers only)
+             </div>
+             <!-- <button class="btn" ng-click="showPrivates()">show privates</button> -->
+           </div>
+                <Button  class="btn btn-danger" ng-click="reset()">Reset   </Button>
+          <Button class="btn btn-success" ng-click="upload()">Create Article </Button>
+          <div class="row show-hide-message" ng-show="showRedirect">
+            <div class="alert alert-success">Article added! redirecting..<span class="glyphicon glyphicon-repeat fast-right-spinner"></span></div>
+          </div>
+          <!-- <div class="row show-hide-message" ng-show="showFailure">
+            <div class="alert alert-success">{{}}<span class="glyphicon glyphicon-repeat fast-right-spinner"></span></div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
