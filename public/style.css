@@ -424,10 +424,10 @@ header.header {
 }
 .mainmenu .container {
       display: block;
-    height: 55px;
+    height: 50px;
     width: 100%;
-    line-height: 65px;
-   /* background-color: steelblue;*/
+    line-height: 50px;
+    background-color: steelblue;
     position: relative;
 }
 .mainmenu.stick-me.sticking {
@@ -587,7 +587,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     top: 0;
     right: 0;
     margin: 20px;
-    font-size: 13px;
+    font-size: 18px;
     height: 32px;
     width: 32px;
     line-height: 28px;
