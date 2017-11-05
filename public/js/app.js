@@ -17,9 +17,9 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/about-rav-dror',
       templateUrl: '/templates/page-about-rav.html'
     })
-    .state('page-category', {
+    .state('category', {
       url: '/category',
-      templateUrl: '/templates/page-category.html'
+      templateUrl: '/templates/category.html'
     })
     .state('playlist', {
       url: '/playlist/:id',
@@ -186,5 +186,21 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
      .state('donate', {
       url: '/donate',
       templateUrl: '/templates/donate.html'
+    })
+     .state('donate2', {
+      url: '/donate2',
+      templateUrl: '/templates/donate2.html'
+    })
+     .state('services', {
+      url: '/services',
+      templateUrl: '/templates/services/services.html'
+    })
+     .state('services-prayer', {
+      url: '/services-prayer',
+      templateUrl: '/templates/services/prayer.html'
+    })
+     .state('soundcloud', {
+      url: '/soundcloud',
+      templateUrl: '/templates/soundcloud.html'
     })
 });
