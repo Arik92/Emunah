@@ -305,6 +305,14 @@ header.header {
    
     background-color: black;
 }
+
+.topbar:hover {
+
+    display: block;
+    height: 70px;
+    line-height: 70px;
+ 
+}
 .topbar .container {
     display: block;
     height: 32px;
@@ -377,6 +385,16 @@ header.header {
     display: flex;
     height: 10px;
     max-width: 230px;
+}
+.logo-container a {
+
+    max-width: 50%;
+    margin: 2px;
+    margin-left: 45px;}
+
+
+ .topbar:hover .logo-container a {
+   max-width: 70%;
 }
 .logo-container .logo {
     display: block;
@@ -727,8 +745,8 @@ header.header#layout2 .mainmenu .menu>ul>li>a {
 }
 header.header#layout2 .mainmenu .menu {
     float: none;
-    display: inline-block;
-    text-align: left;
+  /*  display: inline-block;
+    text-align: left;*/
 }
 header.header#layout2 .mainmenu .menu>ul>li ul {
     top: 70px;
