@@ -71,68 +71,68 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('mitzvot', {
       url: '/mitzvot',
-      templateUrl: '/templates/mitzvot.html'
+      templateUrl: '/templates/mitzvot/mitzvot.html'
     })
     .state('generalMitzvot', {
       url: '/gmitzvot/:article',
-      templateUrl: '/templates/generalMitzvah.html',
+      templateUrl: '/templates/mitzvot/generalMitzvah.html',
       controller: 'articleCtrl'
     })
     .state('mitzvot-613', {
       url: '/mitzvot-613',
-      templateUrl: '/templates/mitzvot-613.html'
+      templateUrl: '/templates/mitzvot/mitzvot-613.html'
     })
     .state('mitzvot-skullcap', {
       url: '/mitzvot-skullcap',
-      templateUrl: '/templates/mitzvot-skullcap.html'
+      templateUrl: '/templates/mitzvot/mitzvot-skullcap.html'
     })
     .state('mitzvot-blessings', {
       url: '/mitzvot-blessings',
-      templateUrl: '/templates/mitzvot-blessings.html'
+      templateUrl: '/templates/mitzvot/mitzvot-blessings.html'
     })
     .state('mitzvot-charity', {
       url: '/mitzvot-charity',
-      templateUrl: '/templates/mitzvot-charity.html'
+      templateUrl: '/templates/mitzvot/mitzvot-charity.html'
     })
     .state('mitzvot-kosher', {
       url: '/mitzvot-kosher',
-      templateUrl: '/templates/mitzvot-kosher.html'
+      templateUrl: '/templates/mitzvot/mitzvot-kosher.html'
     })
     .state('mitzvot-mezuzah', {
       url: '/mitzvot-mezuzah',
-      templateUrl: '/templates/mitzvot-mezuzah.html'
+      templateUrl: '/templates/mitzvot/mitzvot-mezuzah.html'
     })
     .state('mitzvot-mikvah', {
       url: '/mitzvot-mikvah',
-      templateUrl: '/templates/mitzvot-mikvah.html'
+      templateUrl: '/templates/mitzvot/mitzvot-mikvah.html'
     })
     .state('mitzvot-moon', {
       url: '/mitzvot-moon',
-      templateUrl: '/templates/mitzvot-moon.html'
+      templateUrl: '/templates/mitzvot/mitzvot-moon.html'
     })
     .state('mitzvot-parents', {
       url: '/mitzvot-parents',
-      templateUrl: '/templates/mitzvot-parents.html'
+      templateUrl: '/templates/mitzvot/mitzvot-parents.html'
     })
     .state('mitzvot-prayer', {
       url: '/mitzvot-prayer',
-      templateUrl: '/templates/mitzvot-prayer.html'
+      templateUrl: '/templates/mitzvot/mitzvot-prayer.html'
     })
     .state('mitzvot-shabbat', {
       url: '/mitzvot-shabbat',
-      templateUrl: '/templates/mitzvot-shabbat.html'
+      templateUrl: '/templates/mitzvot/mitzvot-shabbat.html'
     })
     .state('mitzvot-synagogue', {
       url: '/mitzvot-synagogue',
-      templateUrl: '/templates/mitzvot-synagogue.html'
+      templateUrl: '/templates/mitzvot/mitzvot-synagogue.html'
     })
     .state('mitzvot-tefillin', {
       url: '/mitzvot-tefillin',
-      templateUrl: '/templates/mitzvot-tefillin.html'
+      templateUrl: '/templates/mitzvot/mitzvot-tefillin.html'
     })
     .state('mitzvot-tzitzit', {
       url: '/mitzvot-tzitzit',
-      templateUrl: '/templates/mitzvot-tzitzit.html'
+      templateUrl: '/templates/mitzvot/mitzvot-tzitzit.html'
     })
     .state('ravdror', {
       url: '/ravdror',
@@ -144,37 +144,37 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('store', {
       url: '/store',
-      templateUrl: '/templates/store.html'
+      templateUrl: '/templates/store/store.html'
     })
     .state('store-necklaces', {
       url: '/store-necklaces',
-      templateUrl: '/templates/store-necklaces.html'
+      templateUrl: '/templates/store/store-necklaces.html'
     })
     .state('store-shirts', {
       url: '/store-shirts',
-      templateUrl: '/templates/store-shirts.html'
+      templateUrl: '/templates/store/store-shirts.html'
     })
     .state('store-hebrew', {
       url: '/store-hebrew',
-      templateUrl: '/templates/store-hebrew.html'
+      templateUrl: '/templates/store/store-hebrew.html'
     })
     .state('store-english', {
       url: '/store-english',
-      templateUrl: '/templates/store-english.html'
+      templateUrl: '/templates/store/store-english.html'
     })
     .state('store-booklets', {
       url: '/store-booklets',
-      templateUrl: '/templates/store-booklets.html'
+      templateUrl: '/templates/store/store-booklets.html'
     })
     .state('store-cds', {
       url: '/store-cds',
-      templateUrl: '/templates/store-cds.html'
+      templateUrl: '/templates/store/store-cds.html'
     })
     .state('store-misc', {
       url: '/store-misc',
-      templateUrl: '/templates/store-misc.html'
+      templateUrl: '/templates/store/store-misc.html'
     })
-    .state('articles-single', {
+    .state('article-single', {
       url: '/article-single',
       templateUrl: '/templates/single-article.html'
     })
