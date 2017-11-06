@@ -36,9 +36,9 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/whatsapp.html',
       controller: 'authCtrl'
     })
-    .state('page-thanks', {
-      url: '/page-thanks',
-      templateUrl: '/templates/page-thanks.html',
+    .state('thanks', {
+      url: '/thanks',
+      templateUrl: '/templates/thanks.html',
     })
     .state('page-error', {
       url: '/error',
