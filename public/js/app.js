@@ -185,11 +185,11 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
      .state('donate', {
       url: '/donate',
-      templateUrl: '/templates/donate.html'
+      templateUrl: '/templates/donate2.html'
     })
      .state('donate2', {
       url: '/donate2',
-      templateUrl: '/templates/donate2.html'
+      templateUrl: '/templates/donate.html'
     })
      .state('services', {
       url: '/services',
