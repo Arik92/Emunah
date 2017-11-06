@@ -1,0 +1,46 @@
+<section id="createevent" >
+  <form enctype="multipart/form-data" name="upload_form">
+
+          <div class="container" style="max-width:40%">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title text-center">
+            <h1 style="margin-top:50px">Candle light and Shabbat times</h1>
+            <div class="form-group">
+            <div>
+              <p>Havdala is </p><input id="source_name" name="source_name" ng-model="havdala" class="form-control"><p> minutes after kidush</p>
+            </div>
+          </div>
+             <div class="form-group">
+             <label class="control-label" for="source_name"><h1>Enter a Location: </h1></label>
+             <div>
+              <p>Enter any location</p>
+                <input id="autocomplete" type="text" autocomplete="off" placeholder="Enter city">
+                <div class="form-group">
+                  <p>Or</p>
+                  <button ng-click="useOwnLocation()">Use my current location</button>
+                </div>
+             </div>
+           </div>
+           <br /><!--input -->
+
+           <br /><!--input -->
+            <button type="submit" ng-click="reset()" class="hvr-bounce-to-right" id="mybutton" style="margin: 10px; font-size:20px;padding: 6px 0px; width:22%;background-color:transparent;color:black"> Reset</button>
+               <button type="submit" ng-click="checkTimes()" class="hvr-bounce-to-right" id="mybutton" style="margin: 10px; font-size:20px;padding: 6px 0px; width:33%;background-color:black;color:white"> Create event</button>
+
+          <div class="row show-hide-message" ng-show="showResult">
+            <div class="alert alert-success">{{candleTimes}}<span class="glyphicon glyphicon-repeat fast-right-spinner"></span></div>
+          </div>
+        </div>
+          <!-- <div class="row show-hide-message" ng-show="showFailure">
+            <div class="alert alert-success">{{}}<span class="glyphicon glyphicon-repeat fast-right-spinner"></span></div>
+          </div> -->
+              </div>
+        </div>
+      </div>
+
+        </div>
+      </div>
+    </div>
+  </form>
+</section>

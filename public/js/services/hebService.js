@@ -20,15 +20,24 @@ app.service('hebService', function($http) {
       return result.data;
     })
   }//exp
-  function getSabbath() {
+  function getSabbath(lat, lng, tz, minutes) {
     //navigator.geolocation.getCurrentPosition
-    return $http.get('http://www.hebcal.com/shabbat/?cfg=json&geonameid=3448439&m=50').then(function(result){
-      console.log("Exp return is", result.data);
+    return $http.get('http://www.hebcal.com/shabbat/?cfg=json&b=18&a=on&m='+minutes+'&geo=pos&latitude='+lat+'&longitude='+lng+'&tzid='+tz).then(function(result){
+    console.log("Exp return is", result.data);
+    return result.data;
     })
-  }//exp
+  }//getSabbath
+  function getLocationTz(str)  {
+    return $http.get(str).then(function(result){
+      console.log("tz request result is", result.data);
+      return result.data;
+    })//result cb
+  }//getLocationTz
+
   return {
     exp1: exp1,
     getCurrentHebDate: getCurrentHebDate,
-    getSabbath: getSabbath
+    getSabbath: getSabbath,
+    getLocationTz: getLocationTz
   };
 });
