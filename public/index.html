@@ -130,14 +130,14 @@
                 <li style="margin-left:75px"><a href="https://www.facebook.com/DrorMosheCassouto/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="https://twitter.com/emunahchannel?lang=en" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="https://plus.google.com/+Emunahchanneltorah" class="google" target="_blank"><i class="fa fa-google"></i></a></li>
-
-            <li><a href="https://www.instagram.com/ravdror/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://www.youtube.com/user/EmunahChannel" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
-            <li><a href="https://soundcloud.com/ravdror" class="soundcloud" target="_blank"><i class="fa fa-soundcloud"></i></a></li>
-<div class="yellowbutton">
-    <li style="margin-left:90px"><a ui-sref="donate"><b style="font-size:15px;color:yellow;">Donate</b></a></li>
-            <li><a ui-sref="store-necklaces"><b style="font-size:15px;color:yellow;margin-right:50px;">Store</b></a></li>
-             </div> </ul>
+                <li><a href="https://www.instagram.com/ravdror/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/user/EmunahChannel" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://soundcloud.com/ravdror" class="soundcloud" target="_blank"><i class="fa fa-soundcloud"></i></a></li>
+                <div class="yellowbutton">
+                  <li><a ui-sref="donate"><b style="font-size:15px;color:yellow;">Donate</b></a></li>
+                  <li><a ui-sref="store-necklaces"><b style="font-size:15px;  color:yellow; margin-right:50px;">Store</b></a></li>
+                </div> 
+              </ul>
             </nav><!-- Social Links -->
 
 
@@ -225,14 +225,19 @@
                     </div>
                   </div>
                 </li>
-                <li><a ui-sref="articles">Services</a>
+                <li><a href="#">Lectures</a>
+                  <ul style="color:white; margin-top: 1px; display: none;" ng-controller="homeCtrl">
+                    <li style="color:steelblue;" ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
+                  </ul>
+                </li>
+                <li><a ui-sref="services">Services</a>
                   <div class="megamenu" style="background-color: white; color: steelblue;">
                     <div class="item-content">
                       <div class="item">
                         <div class="post">
                           <div class="post-thumb">
-                            <a ui-sref="services">
-                              <img src="images/1.jpg" alt="Post Title Placeholder" />
+                            <a ui-sref="services-prayer">
+                              <img src="images/services-prayer.jpg" alt="Post Title Placeholder" />
                             </a>
                           </div>
                           <div class="post-content">
@@ -248,17 +253,17 @@
                       <div class="item">
                         <div class="post">
                           <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/4.jpg" alt="Post Title Placeholder" />
+                            <a ui-sref="services-kaddish">
+                              <img src="images/services-kaddish.jpg" alt="Post Title Placeholder" />
                             </a>
 
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a ui-sref="article-single">Kaddish</a>
+                            <a ui-sref="services-kaddish">Kaddish</a>
                             </div>
                             <h6 class="post-title">
-                              <a ui-sref="article-single">Pinchas</a>
+                              <a ui-sref="services-kaddish">Pinchas</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -266,17 +271,17 @@
                       <div class="item">
                         <div class="post">
                           <div class="post-thumb">
-                            <a ui-sref="article-single">
-                              <img src="images/5.jpg" alt="Post Title Placeholder" />
+                            <a ui-sref="services-tehillim">
+                              <img src="images/services-tehillim.jpg" alt="Post Title Placeholder" />
                             </a>
 
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a ui-sref="article-single">Tehillim/Mishna</a>
+                            <a ui-sref="services-tehillim">Tehillim/Mishna</a>
                             </div>
                             <h6 class="post-title">
-                              <a ui-sref="article-single">Balak</a>
+                              <a uui-sref="services-tehillim">Balak</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -284,17 +289,17 @@
                       <div class="item">
                         <div class="post">
                           <div class="post-thumb">
-                            <a ui-sref="article-single">
-                              <img src="images/4.jpg" alt="Post Title Placeholder" />
+                            <a ui-sref="services-learning">
+                              <img src="images/services-learning.jpg" alt="Post Title Placeholder" />
                             </a>
 
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a ui-sref="article-single">Torah Partnership</a>
+                            <a ui-sref="services-learning">Torah Partnership</a>
                             </div>
                             <h6 class="post-title">
-                              <a ui-sref="article-single">Pin'has</a>
+                              <a ui-sref="services-learning">Pin'has</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -302,17 +307,17 @@
                       <div class="item">
                         <div class="post">
                           <div class="post-thumb">
-                            <a ui-sref="article-single">
-                              <img src="images/2.jpg" alt="Post Title Placeholder" />
+                            <a ui-sref="services-torah">
+                              <img src="images/services-torah.jpg" alt="Post Title Placeholder" />
                             </a>
 
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a ui-sref="article-single">Sefer Torah</a>
+                            <a ui-sref="services-torah">Sefer Torah</a>
                             </div>
                             <h6 class="post-title">
-                              <a ui-sref="article-single">Purim: A Lesson In Emunat Chachamim</a>
+                              <a ui-sref="services-torah">Purim: A Lesson In Emunat Chachamim</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -320,17 +325,17 @@
                       <div class="item">
                         <div class="post">
                           <div class="post-thumb">
-                            <a ui-sref="article-single">
-                              <img src="images/5.jpg" alt="Post Title Placeholder" />
+                            <a ui-sref="services-candle">
+                              <img src="images/services-candle.jpg" alt="Post Title Placeholder" />
                             </a>
 
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a ui-sref="article-single">Candle</a>
+                            <a ui-sref="services-candle">Candle</a>
                             </div>
                             <h6 class="post-title">
-                              <a ui-sref="article-single">Purim: A Lesson In Emunat Chachamim</a>
+                              <a ui-sref="services-candle">Purim: A Lesson In Emunat Chachamim</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -338,29 +343,23 @@
                       <div class="item">
                         <div class="post">
                           <div class="post-thumb">
-                            <a ui-sref="article-single">
-                              <img src="images/5.jpg" alt="Post Title Placeholder" />
+                            <a ui-sref="services-note">
+                              <img src="images/services-note.jpeg" alt="Post Title Placeholder" />
                             </a>
 
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a ui-sref="article-single">Kotel Note</a>
+                            <a ui-sref="services-note">Kotel Note</a>
                             </div>
                             <h6 class="post-title">
-                              <a ui-sref="article-single">Purim: A Lesson In Emunat Chachamim</a>
+                              <a uui-sref="services-note">Purim: A Lesson In Emunat Chachamim</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
                       </div>
                     </div>
                   </div>
-                </li>
-
-                <li><a href="#">Lectures</a>
-                  <ul style="color:white;margin-top: 35px;display: none;" ng-controller="homeCtrl">
-                    <li style="color:steelblue;" ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
-                  </ul>
                 </li>
                 <li><a ui-sref="articles">Articles</a>
                   <div class="megamenu" style="background-color: white; color: steelblue;">
@@ -1068,17 +1067,6 @@
             </span><!-- Search Tigger -->
           </div><!-- Container -->
         </div><!-- Main Menu -->
-        <div class="header-content">
-          <div class="container">
-            <div class="ad-container">
-              <div class="advertisment">
-                <a href="https://themeforest.net/user/infinyteam/portfolio?ref=infinyteam">
-                  <img src="images/banner.jpg" alt="Banner Image Placeholder" />
-                </a>
-              </div><!-- Advertisment -->
-            </div><!-- Ad Container -->
-          </div><!-- Container -->
-        </div><!-- Header Content -->
       </header><!-- Header -->
       <header class="header" id="layout3" style="display:none;">
         <div class="topbar">
