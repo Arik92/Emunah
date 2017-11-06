@@ -62,6 +62,7 @@ a, a:link, a:visited {
 }
 a:hover {
     text-decoration: none;
+    color: midnightblue;
 }
 
 /*
