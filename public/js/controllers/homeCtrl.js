@@ -1,20 +1,5 @@
 app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytService, hebService) {
   //console.log("auth user data to work with", authFactory.currentUser);
-  navigator.geolocation.getCurrentPosition(function(success){
-    console.log("success", success);
-    var latLng = {
-      'lat': success.latitude,
-      'lng': succcess.longitude
-    };
-    hebService.getSabbath(latLng).then(function(data, err) {
-      if (err) {
-        console.error(err);
-      } else {
-        console.log("sabbath data");
-      }//else
-    })
-  });
-  hebService.getCurrentHebDate();
   $rootScope.currentUser = authFactory.currentUser.email;
   $scope.topThree = [];
   ////////****************************LATEST VIDEO INTERFACE ******************************8/////////////////////

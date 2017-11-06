@@ -203,4 +203,9 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/soundcloud',
       templateUrl: '/templates/soundcloud.html'
     })
+    .state('Shabat', {
+      url: '/Shabat',
+      templateUrl: '/templates/sabbath.html',
+      controller: 'sabbathCtrl'
+    })
 });
