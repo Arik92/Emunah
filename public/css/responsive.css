@@ -96,6 +96,10 @@
 	.post-share ul li.facebook i, .post-share ul li.twitter i {
 		margin: 0;
 	}
+
+	.yellowbutton {
+		display: none;
+	}
 }
 
 /* Desktop Size : xs */

@@ -493,7 +493,8 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     padding: 0 20px;
     font-size: 11px;
     font-weight: 400;
-    color: white;
+    color: steelblue;
+    background: white;
     line-height: 34px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     text-transform: uppercase;
@@ -546,7 +547,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     transform: translateY(10px);
 }
 .mainmenu .megamenu .item {
-    width: 20%;
+    width: 14%;
     padding: 10px;
     float: left;
 }
@@ -750,8 +751,8 @@ header.header#layout2 .mainmenu .menu {
     text-align: left;*/
 }
 header.header#layout2 .mainmenu .menu>ul>li ul {
-    top: 70px;
-    margin-left: 0;
+    top: 51px;
+    margin-left: -189px;
 }
 header.header#layout2 .mainmenu .menu>ul>li>ul>li>ul {
     top: 0;
