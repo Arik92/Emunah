@@ -7,15 +7,15 @@ initial-slide="1"
 autoplay="true"
 autoplay-speed="2000"
 dots="true">
-<carousel-item class="blog-title">
-  <div padding="5px" margin="10px">
-    <a ui-sref="post-single({videoParam: item, id: item.id.videoId})">
-  <img src="{{item.snippet.thumbnails.medium.url}}" alt="Loading"  />
-    <div class="blog-title">
-      {{item.snippet.title}}
-    </div>
-  </a>
-</div>
-</carousel-item>
-</ui-carousel>
+    <carousel-item class="blog-title">
+      <div padding="5px" margin="10px">
+        <a ui-sref="post-single({videoParam: item, id: item.id.videoId})">
+        <img src="{{item.snippet.thumbnails.medium.url}}" alt="Loading"  />
+          <div class="blog-title">
+            {{item.snippet.title}}
+          </div>
+        </a>
+      </div>
+    </carousel-item>
+  </ui-carousel>
 </div>

@@ -19,11 +19,11 @@
         // Add parent class to navigation parents
         // ------------------------------------------------------
         $( ".mainmenu .menu ul > li > ul" ).parent().addClass( "parent" );
-        $( ".mainmenu .menu ul > li.parent" ).on( 'mouseenter', function() {
-            $( this ).children( ".mainmenu .menu ul > li > ul:not(.megamenu)" ).slideDown( 300 );
+        $( ".mainmenu .menu ul > li.parent" ).on( 'mouseover', function() {
+            $( this ).children( ".mainmenu .menu ul > li > ul:not(.megamenu)" ).slideDown( 0 );
         });
         $( ".mainmenu .menu ul > li.parent" ).on( 'mouseleave', function() {
-            $( this ).children( ".mainmenu .menu ul > li > ul:not(.megamenu)" ).slideUp( 300 );
+            $( this ).children( ".mainmenu .menu ul > li > ul:not(.megamenu)" ).slideUp( 1000 );
         });
         // ------------------------------------------------------
         // Header Mobile Menu
@@ -227,7 +227,7 @@ function myAccFunc() {
 }
 
 // Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
+// document.getElementById("myBtn").click();
 
 
 // Script to open and close sidebar
@@ -251,53 +251,53 @@ window.onclick = function(event) {
 }
 
 
-// $(function () {
-//                 (function () {
-//                     $('#res-men-btn').click(function () {
+$(function () {
+                (function () {
+                    $('#res-men-btn').click(function () {
                         
-//                         var parent = $(this).parent('#res-men-btn');
-//                         var lines = $(this).find('span');
-//                         parent.toggleClass('men-close men-open');
-//                         if (parent.hasClass('men-open')) {
-//                             lines.addClass('active');
-//                             parent.next('ul.list-inline').slideDown(400);
-//                         } else {
-//                             lines.removeClass('active');
-//                             parent.next('ul.list-inline').slideUp(400);
-//                         }
-//                     });
-//                 })();
-//             });
+                        var parent = $(this).parent('#res-men-btn');
+                        var lines = $(this).find('span');
+                        parent.toggleClass('men-close men-open');
+                        if (parent.hasClass('men-open')) {
+                            lines.addClass('active');
+                            parent.next('ul.list-inline').slideDown(400);
+                        } else {
+                            lines.removeClass('active');
+                            parent.next('ul.list-inline').slideUp(400);
+                        }
+                    });
+                })();
+            });
 
 
-        // function expand() {                                   
-        //                 var parent = $(this).parent('#res-men-btn');
-        //                 var lines = $(this).find('span');
-        //                 console.log($(this));
-        //                 console.log(parent);
-        //                 console.log(lines);
-        //                 parent.toggleClass('men-close men-open');
-        //                 if (parent.hasClass('men-open')) {
-        //                     lines.addClass('active');
-        //                     parent.next('ul.list-inline').slideDown(400);
-        //                 } else {
-        //                     lines.removeClass('active');
-        //                     parent.next('ul.list-inline').slideUp(400);
-        //                 }
-        //             }
+        function expand() {                                   
+                        var parent = $(this).parent('#res-men-btn');
+                        var lines = $(this).find('span');
+                        console.log($(this));
+                        console.log(parent);
+                        console.log(lines);
+                        parent.toggleClass('men-close men-open');
+                        if (parent.hasClass('men-open')) {
+                            lines.addClass('active');
+                            parent.next('ul.list-inline').slideDown(400);
+                        } else {
+                            lines.removeClass('active');
+                            parent.next('ul.list-inline').slideUp(400);
+                        }
+                    }
                 
 
-      // function expand() {
-      //                   console.log("i was clicked1 ");
-      //                   var parentDiv = parent.document.getElementById('res-men-btn');
-      //                   var lines = parentDiv.children.getElementsByTagName('span');
-      //                   parentDiv.toggleClass('men-close men-open');
-      //                   if (parentDiv.hasClass('men-open')) {
-      //                       lines.addClass('active');
-      //                       parentDiv.next('ul.list-inline').slideDown(400);
-      //                   } else {
-      //                       lines.removeClass('active');
-      //                       parentDiv.next('ul.list-inline').slideUp(400);
-      //                   }
-      //               };
-      //        
+      function expand() {
+                        console.log("i was clicked1 ");
+                        var parentDiv = parent.document.getElementById('res-men-btn');
+                        var lines = parentDiv.children.getElementsByTagName('span');
+                        parentDiv.toggleClass('men-close men-open');
+                        if (parentDiv.hasClass('men-open')) {
+                            lines.addClass('active');
+                            parentDiv.next('ul.list-inline').slideDown(400);
+                        } else {
+                            lines.removeClass('active');
+                            parentDiv.next('ul.list-inline').slideUp(400);
+                        }
+                    };
+             

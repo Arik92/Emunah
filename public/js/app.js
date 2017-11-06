@@ -199,6 +199,30 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/services-prayer',
       templateUrl: '/templates/services/prayer.html'
     })
+     .state('services-kaddish', {
+      url: '/services-kaddish',
+      templateUrl: '/templates/services/kaddish.html'
+    })
+     .state('services-tehillim', {
+      url: '/services-tehillim',
+      templateUrl: '/templates/services/tehillim.html'
+    })
+     .state('services-learning', {
+      url: '/services-learning',
+      templateUrl: '/templates/services/learning.html'
+    })
+     .state('services-torah', {
+      url: '/services-torah',
+      templateUrl: '/templates/services/torah.html'
+    })
+     .state('services-candle', {
+      url: '/services-candle',
+      templateUrl: '/templates/services/candle.html'
+    })
+     .state('services-note', {
+      url: '/services-note',
+      templateUrl: '/templates/services/note.html'
+    })
      .state('soundcloud', {
       url: '/soundcloud',
       templateUrl: '/templates/soundcloud.html'
