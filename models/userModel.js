@@ -10,7 +10,7 @@ var userSchema = new Schema ({
   email: String,
   address: String,
   city: String,
-  province: String,  
+  province: String,
   country: String,
   zip: Number
 });

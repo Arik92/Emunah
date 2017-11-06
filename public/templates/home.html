@@ -1,113 +1,4 @@
 <div  class="wide home" style="margin-top: -27px;">
-
-	<section class="featured-posts layout1" style="display:none;">
-		<div class="container">
-			<div class="slider">
-				<div class="item">
-					<div class="post has-caption" style="background-image: url(images/8.jpg);">
-						<span class="post-format">
-							<i class="fa fa-play"></i>
-						</span>
-						<div class="post-content">
-							<div class="post-category">
-							<a ui-sref="page-category">Travel</a>
-							</div>
-							<h3 class="post-title">
-								<a ui-sref="single">The Shopping Tavel Is Having A Terrible, Horrible, No Good, Very Bad Day</a>
-							</h3>
-							<ul class="post-meta">
-								<li><i class="fa fa-clock-o"></i> 16 October, 2017</li>
-								<li><i class="fa fa-comment-o"></i> 240</li>
-							</ul>
-						</div>
-					</div> <!-- Post -->
-				</div>
-				<div class="item">
-					<div class="post has-caption" style="background-image: url(images/7.jpg);">
-						<span class="post-format">
-							<i class="fa fa-play"></i>
-						</span>
-						<div class="post-content">
-							<div class="post-category">
-							<a ui-sref="category"> Halacha</a>
-							</div>
-							<h3 class="post-title">
-								<a ui-sref="single">Shavuot: The Gift Of The Torah</a>
-							</h3>
-							<ul class="post-meta">
-								<li><i class="fa fa-clock-o"></i> 10 December, 2016</li>
-								<li><i class="fa fa-comment-o"></i> 378</li>
-							</ul>
-						</div>
-					</div><!-- Post -->
-				</div>
-				<div class="item">
-					<div class="post has-caption" style="background-image: url(images/4.jpg);">
-						<span class="post-format">
-							<i class="fa fa-play"></i>
-						</span>
-						<div class="post-content">
-							<div class="post-category">
-							<a ui-sref="page-category">Life Style</a>
-							</div>
-							<h3 class="post-title">
-								<a ui-sref="post-single">Shavuot: The Gift Of The Torah</a>
-							</h3>
-							<ul class="post-meta">
-								<li><i class="fa fa-clock-o"></i> 21 October, 2016</li>
-								<li><i class="fa fa-comment-o"></i> 35</li>
-							</ul>
-						</div>
-					</div><!-- Post -->
-				</div>
-			</div>
-			<div id="featuredNav" class="slider-nav"></div>
-		</div>
-	</section>
-	<section class="featured-posts layout2" style="display:none">
-		<div class="container">
-			<div class="row-gallery">
-				<div class="first col-md-6 col-sm-6">
-					<div class="post has-caption" style="background-image: url(images/10.jpg);">
-						<span class="post-format">
-							<i class="fa fa-play"></i>
-						</span>
-						<div class="post-content">
-							<div class="post-category">
-							<a ui-sref="page-category">Travel</a>
-							</div>
-							<h3 class="post-title">
-								<a ui-sref="post-single">Shavuot: The Gift Of The Torah</a>
-							</h3>
-							<ul class="post-meta">
-								<li><i class="fa fa-clock-o"></i> 13 October, 2017</li>
-								<li><i class="fa fa-comment-o"></i> 240</li>
-							</ul>
-						</div>
-					</div><!-- Post -->
-				</div>
-				<div class="first col-md-6 col-sm-6">
-					<div class="post has-caption" style="background-image: url(images/11.jpg);">
-						<span class="post-format">
-							<i class="fa fa-play"></i>
-						</span>
-						<div class="post-content">
-							<div class="post-category">
-							<a ui-sref="page-category">Travel</a>
-							</div>
-							<h3 class="post-title">
-								<a ui-sref="post-single">Shavuot: The Gift Of The Torah</a>
-							</h3>
-							<ul class="post-meta">
-								<li><i class="fa fa-clock-o"></i> 13 October, 2017</li>
-								<li><i class="fa fa-comment-o"></i> 240</li>
-							</ul>
-						</div>
-					</div><!-- Post -->
-				</div>
-			</div>
-		</div>
-	</section>
 	<section class="featured-posts layout3" style="display:block">
 		<div class="container">
 			<div class="row-gallery">
@@ -151,91 +42,26 @@
 				</div>
 				<div class="col-md-5 col-sm-6">
 					<a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id})">
-					<div class="post has-caption" style="background-image: url({{topThree[2].snippet.thumbnails.medium.url}});">
-						<div class="post-content">
-							<div class="post-category">
-							Video category?
+						<div class="post has-caption" style="background-image: url({{topThree[2].snippet.thumbnails.medium.url}});">
+							<div class="post-content">
+								<div class="post-category">
+								Video category?
+								</div>
+								<h4 class="post-title">
+									{{topThree[2].snippet.title}}
+								</h4>
+								<ul class="post-meta">
+									<li><i class="fa fa-clock-o"></i>{{topThree[2].snippet.publishedAt}}</li>
+									<li><i class="fa fa-comment-o"></i> 240</li>
+								</ul>
 							</div>
-							<h4 class="post-title">
-								{{topThree[2].snippet.title}}
-							</h4>
-							<ul class="post-meta">
-								<li><i class="fa fa-clock-o"></i>{{topThree[2].snippet.publishedAt}}</li>
-								<li><i class="fa fa-comment-o"></i> 240</li>
-							</ul>
-						</div>
-					</div><!-- Post -->
-				</a>
+						</div><!-- Post -->
+					</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="featured-posts layout4" style="display:none">
-		<div class="container">
-			<div class="row-gallery">
-				<div class="first col-md-6 col-sm-12">
-					<div class="post has-caption" style="background-image: url(images/18.jpg);">
-						<span class="post-format">
-							<i class="fa fa-play"></i>
-						</span>
-						<div class="post-content">
-							<div class="post-category">
-							<a ui-sref="page-category">Personal Growth</a>
-							</div>
-							<h3 class="post-title">
-								<a ui-sref="post-single">Overcoming Your Past</a>
-							</h3>
-							<ul class="post-meta">
-								<li>by <strong>Infinyteam</strong></li>
-								<li><i class="fa fa-clock-o"></i> 13 October, 2017</li>
-								<li><i class="fa fa-comment-o"></i> 240</li>
-							</ul>
-						</div>
-					</div><!-- Post -->
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="post has-caption" style="background-image: url(images/17.jpg);">
-						<div class="post-content">
-							<div class="post-category">
-							<a ui-sref="page-category">Interpersonal Relationships</a>
-							</div>
-							<h5 class="post-title">
-								<a ui-sref="post-single">Damaging Relationships &amp; How To Deal With It</a>
-							</h5>
-						</div>
-					</div><!-- Post -->
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="post has-caption" style="background-image: url(images/19.jpg);">
-						<span class="post-format">
-							<i class="fa fa-camera"></i>
-						</span>
-						<div class="post-content">
-							<div class="post-category">
-							<a ui-sref="page-category">Musclation</a>
-							</div>
-							<h5 class="post-title">
-								<a ui-sref="post-single">Seven Features Of Travel That Make Everyone Love It</a>
-							</h5>
-						</div>
-					</div><!-- Post -->
-				</div>
-				<div class="col-md-6 col-sm-4">
-					<div class="post has-caption" style="background-image: url(images/20.jpg);">
-						<div class="post-content">
-							<div class="post-category">
-							<a ui-sref="page-category">Skyboard</a>
-							</div>
-							<h4 class="post-title">
-								<a ui-sref="post-single">How You Can Forcing Personal Growth To Turn In Their Galaxy Note7 Phones</a>
-							</h4>
-						</div>
-					</div><!-- Post -->
-				</div>
-			</div>
-		</div>
-	</section><!-- Featured Post -->
 
 	<!-- Trending Post Section removed from here -->
 	<section id="main-area">
@@ -244,6 +70,54 @@
 		<div class="container">
 			<div class="row">
 				<section id="main" class="main col-md-8">
+					<div class="blog-layout layout-3" style="display: block">
+						<div class="blog-title">
+							<a ui-sref="category">
+								<h2>View Playlists</h2>
+							</a>
+						</div><!-- Blog title -->
+						<div class="blog-wrapper row">
+							<div class="col col-sm-4" ng-repeat="playlist in currentPlaylists track by $index">
+								<article class="post" >
+									<div class="post-thumb">
+										<!-- <a href="{{playlist.playurl}}"> -->
+										<a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">
+											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  />
+											<!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
+										<span class="post-format">
+											<i class="fa fa-play"></i>
+										</span>
+									</a>
+									</div><!-- Post Image -->
+									<div class="post-content">
+										<h5 class="post-title">
+											<label id="playlistText"><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></label>
+											<br />
+										</h5><!-- Post Title -->
+<!-- 										<div class="post-meta">
+											<i class="fa fa-clock-o"></i>{{playlist.snippet.publishedAt}}
+										</div> --><!-- Post Meta -->
+									</div><!-- Post Content -->
+								</article><!-- Post -->
+							</div><!-- Column -->
+							<div class="blog-pagination">
+								<ul>
+									<li class="next-page"><a ng-click="updatePlaylistBackward()"><i class="fa fa-angle-left"></i> Back</a></li>
+									<li class="active"><a ui-sref="index">1</a></li>
+									<li><a ui-sref="#">2</a></li>
+									<li><a ui-sref="#">3</a></li>
+									<li><span>...</span></li>
+									<li><a ui-sref="#">20</a></li>
+									<li class="next-page"><a ng-click="updatePlaylistForward()">Next <i class="fa fa-angle-right"></i></a></li>
+									<li class="total-pages">1 page of 20</li>
+								</ul>
+							</div>
+<!-- 							<div class="col col-sm-4">
+								<Button ng-click="updatePlaylistBackward()">Prev</Button>
+								<Button ng-click="updatePlaylistForward()">Next</Button>
+							</div> --> <!-- button wrapper-->
+						</div><!-- Blog Wrapper -->
+					</div><!-- Blog Layout -->
 					<div class="blog-layout layout-4" style="display: block">
 						<div class="blog-title">
 							<h2>Latest Articles</h2>
@@ -302,41 +176,7 @@
 							</div><!-- Column -->
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->
-					<div class="blog-layout layout-3" style="display: block">
-						<div class="blog-title">
-							<h2>View Playlists</h2>
-						</div><!-- Blog title -->
-						<div class="blog-wrapper row">
-							<div class="col col-sm-4" ng-repeat="playlist in currentPlaylists track by $index">
-								<article class="post" >
-									<div class="post-thumb">
-										<!-- <a href="{{playlist.playurl}}"> -->
-										<a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">
-											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  />
-											<!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
-										<span class="post-format">
-											<i class="fa fa-play"></i>
-										</span>
-									</a>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h5 class="post-title">
-											<label id="playlistText"><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></label>
-											<br />
-										</h5><!-- Post Title -->
-										<div class="post-meta">
-											<i class="fa fa-clock-o"></i>{{playlist.snippet.publishedAt}}
-											<!-- <li><i class="fa fa-comment-o"></i> 240</li> -->
-										</div><!-- Post Meta -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
-							</div><!-- Column -->
-							<div class="col col-sm-4">
-								<Button ng-click="updatePlaylistBackward()">Prev</Button>
-								<Button ng-click="updatePlaylistForward()">Next</Button>
-							</div> <!-- button wrapper-->
-						</div><!-- Blog Wrapper -->
-					</div><!-- Blog Layout -->
+					
 					<div class="blog-layout layout-5 tiny-thumb" style="display: block">
 						<div class="blog-title">
 							<h2> Halacha</h2>
@@ -522,150 +362,25 @@
 						</div><!-- Blog title -->
 						<div class="blog-wrapper row">
 							<div class="col col-sm-12">
-								<article class="post">
+								<article class="post" ng-repeat="footerVid in footerVids track by $index">
 									<div class="post-thumb">
-										<a ui-sref="post-single">
-
-											<img class="lazy" src="images/4.jpg" data-src="images/4.jpg" alt="Post Title Placeholder" />
+										<a ui-sref="post-single({videoParam: footerVid, id: footerVid.id})">
+											<img class="lazy" src={{footerVid.snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
 									<div class="post-content">
 										<h4 class="post-title">
-											<a ui-sref="post-single">Pourim: The Miracle</a>
+											<a ui-sref="post-single({videoParam: footerVid, id: footerVid.id})">{{footerVid.snippet.title}}</a>
 										</h4><!-- Post Title -->
 										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
+											<li><i class="fa fa-clock-o"></i> {{footerVid.snippet.publishedAt}}</li>
 											<li><i class="fa fa-comment-o"></i> 240</li>
 										</ul><!-- Post Meta -->
-										<p class="post-entry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus tenetur quisquam ut, quas praesentium dolores iure ullam molestias aperiam vero, saepe inventore est veniam ipsum...</p><!-- Post Entry -->
+										<p class="post-entry">{{footerVid.snippet.description}}</p><!-- Post Entry -->
 									</div><!-- Post Content -->
 								</article><!-- Post -->
 							</div><!-- Column -->
 							<div class="col col-sm-12">
-								<article class="post">
-									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src="images/22.jpg" data-src="images/22.jpg" alt="Post Title Placeholder" />
-										</a>
-										<span class="post-format">
-											<i class="fa fa-play"></i>
-										</span>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h4 class="post-title">
-											<a ui-sref="post-single">Hanukkah: The Miracle</a>
-										</h4><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
-											<li><i class="fa fa-comment-o"></i> 240</li>
-										</ul><!-- Post Meta -->
-										<p class="post-entry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus tenetur quisquam ut, quas praesentium dolores iure ullam molestias aperiam vero, saepe inventore est veniam ipsum...</p><!-- Post Entry -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
-							</div><!-- Column -->
-							<div class="col col-sm-12">
-								<article class="post">
-									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src="images/6.jpg" data-src="images/6.jpg" alt="Post Title Placeholder" />
-										</a>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h4 class="post-title">
-											<a ui-sref="post-single">Pessah: The Miracle</a>
-										</h4><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
-											<li><i class="fa fa-comment-o"></i> 240</li>
-										</ul><!-- Post Meta -->
-										<p class="post-entry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus tenetur quisquam ut, quas praesentium dolores iure ullam molestias aperiam vero, saepe inventore est veniam ipsum...</p><!-- Post Entry -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
-							</div><!-- Column -->
-							<div class="col col-sm-12">
-								<article class="post">
-									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src="images/9.jpg" data-src="images/9.jpg" alt="Post Title Placeholder" />
-										</a>
-										<span class="post-format">
-											<i class="fa fa-soundcloud"></i>
-										</span>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h4 class="post-title">
-											<a ui-sref="post-single">Rosh Hashana: The Head Of The Year</a>
-										</h4><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
-											<li><i class="fa fa-comment-o"></i> 240</li>
-										</ul><!-- Post Meta -->
-										<p class="post-entry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus tenetur quisquam ut, quas praesentium dolores iure ullam molestias aperiam vero, saepe inventore est veniam ipsum...</p><!-- Post Entry -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
-							</div><!-- Column -->
-							<div class="col col-sm-12">
-								<article class="post">
-									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src="images/11.jpg" data-src="images/11.jpg" alt="Post Title Placeholder" />
-										</a>
-										<span class="post-format">
-											<i class="fa fa-camera"></i>
-										</span>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h4 class="post-title">
-											<a ui-sref="post-single">Yom Kippur: How To Forgive</a>
-										</h4><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
-											<li><i class="fa fa-comment-o"></i> 240</li>
-										</ul><!-- Post Meta -->
-										<p class="post-entry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus tenetur quisquam ut, quas praesentium dolores iure ullam molestias aperiam vero, saepe inventore est veniam ipsum...</p><!-- Post Entry -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
-							</div><!-- Column -->
-							<div class="col col-sm-12">
-								<article class="post">
-									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src="images/12.jpg" data-src="images/12.jpg" alt="Post Title Placeholder" />
-										</a>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h4 class="post-title">
-											<a ui-sref="post-single">Sukkot: Lulav &amp; Sukkah</a>
-										</h4><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
-											<li><i class="fa fa-comment-o"></i> 240</li>
-										</ul><!-- Post Meta -->
-										<p class="post-entry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus tenetur quisquam ut, quas praesentium dolores iure ullam molestias aperiam vero, saepe inventore est veniam ipsum...</p><!-- Post Entry -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
-							</div><!-- Column -->
-							<div class="col col-sm-12">
-								<article class="post">
-									<div class="post-thumb">
-										<a ui-sref="post-single">
-											<img class="lazy" src="images/5.jpg" data-src="images/5.jpg" alt="Post Title Placeholder" />
-										</a>
-										<span class="post-format">
-											<i class="fa fa-play"></i>
-										</span>
-									</div><!-- Post Image -->
-									<div class="post-content">
-										<h4 class="post-title">
-											<a ui-sref="post-single">Tisha Be'Av</a>
-										</h4><!-- Post Title -->
-										<ul class="post-meta">
-											<li><i class="fa fa-clock-o"></i> October 16, 2017</li>
-											<li><i class="fa fa-comment-o"></i> 240</li>
-										</ul><!-- Post Meta -->
-										<p class="post-entry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus tenetur quisquam ut, quas praesentium dolores iure ullam molestias aperiam vero, saepe inventore est veniam ipsum...</p><!-- Post Entry -->
-									</div><!-- Post Content -->
-								</article><!-- Post -->
 							</div><!-- Column -->
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->

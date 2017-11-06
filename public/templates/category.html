@@ -1,0 +1,81 @@
+<div class="wide home">
+  <div id="wrapper">
+    <div class="search-modal">
+      <div class="container">
+        <form action="page-search.html" method="get">
+          <input type="text" name="q" value="Search.." />
+          <span class="search-close"></span>
+        </form>
+      </div>
+    </div>
+    <section id="main-area">
+      <h3 style="display: none;">Main Area</h3>
+      <div class="container">
+        <div class="status-message">
+          <div class="message">
+          </br>
+        </br>
+<!--         You are seeing all the videos of the playlist: <strong>{{playerPlaylist.snippet.localized.title}}</strong> -->
+<!--           <div class="breadcumbs">
+          </br>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="page-category.html">Category</a></li>
+              <li>CATEGORY NAME</li>
+            </ul>
+          </div> -->
+        </div>
+        <h2>Categories</h2>
+        <div class="row">
+          <section id="main" class="main col-md-8">
+            <div class="blog-layout layout-2" style="display: block">
+              <div class="blog-wrapper row">
+                <div class="col col-sm-6" ng-repeat="playlist in currentPlaylists track by $index">
+                  <article class="post">
+                    <div class="post-thumb">
+                      <a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">
+                        <img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  />
+                        <!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
+                        <span class="post-format">
+                          <i class="fa fa-play"></i>
+                        </span>
+                      </a>
+                      <span class="post-format">
+                        <i class="fa fa-play"></i>
+                      </span>
+                    </div><!-- Post Image -->
+                    <div id="maxlength" class="post-content">
+                      <h4 class="post-title" maxlength="50">{{playlist.snippet.title}} </h4><!-- Post Title -->
+                      <p class="post-entry"> <b>Description: </b>{{playlistItem.snippet.description}}</p><!-- Post Entry -->
+                      <ul class="post-meta">
+                        <li><i class="fa fa-clock-o"></i>date: {{playlistItem.snippet.publishedAt}}</li>
+                        <li><i class="fa fa-comment-o"></i>? 240</li>
+                      </ul><!-- Post Meta -->
+                    </div><!-- Post Content -->
+                  </article><!-- Post -->
+                </div><!-- Column -->
+              </div><!-- Blog Wrapper -->
+            </div><!-- Blog Layout -->
+            <div class="blog-pagination">
+              <ul>
+                <li class="next-page"><a ng-click="updatePlaylistBackward()"><i class="fa fa-angle-left"></i> Back</a></li>
+                <li class="active"><a ui-sref="index">1</a></li>
+                <li><a ui-sref="#">2</a></li>
+                <li><a ui-sref="#">3</a></li>
+                <li><span>...</span></li>
+                <li><a ui-sref="#">20</a></li>
+                <li class="next-page"><a ng-click="updatePlaylistForward()">Next <i class="fa fa-angle-right"></i></a></li>
+                <li class="total-pages">1 page of 20</li>
+              </ul>
+            </div>
+          </section><!-- Main -->
+          <aside-directive></aside-directive>
+        </div><!-- Row -->
+      </div><!-- Container -->
+    </section><!-- Main Area -->
+  </div><!-- Wrapper -->
+</div>
+<script type="text/javascript">
+var myDiv = $('#maxlength');
+  myDiv.text(myDiv.text().substring(0,70))
+</script>
