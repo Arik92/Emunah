@@ -1,10 +1,31 @@
+<!-- Twitter follow us -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
 <aside id="sidebar" class="sidebar col-md-4">
 	<div class="widget LinkList">
 		<div class="widget-title">
 			<h2>Follow Us</h2>
 		</div>
 		<div class="widget-content social-counter">
-			<a ui-sref="#" class="facebook">
+			<!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_follow_toolbox"></div>
+			<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a008ebc959bcc55"></script> 
+<!-- 			<a href="https://twitter.com/ravdror?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-size="large" data-show-count="true"><i class="fa fa-twitter"></i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+<!-- 			<a ui-sref="#" class="facebook">
 				<i class="fa fa-facebook"></i>
 				<span class="count">1.42k</span>
 				<span class="label">Fans</span>
@@ -16,9 +37,9 @@
 				<span class="label">Followers</span>
 			</a>
 
-			<a ui-sref="#" class="twitter">
+			<a href="https://twitter.com/ravdror?ref_src=twsrc%5Etfw" target="_blank" class="twitter">
 				<i class="fa fa-twitter"></i>
-				<span class="count">4,13k</span>
+				<span class="count">4.8k</span>
 				<span class="label">Followers</span>
 			</a>
 
@@ -38,7 +59,7 @@
 				<i class="fa fa-soundcloud"></i>
 				<span class="count">870</span>
 				<span class="label">Followers</span>
-			</a>
+			</a> -->
 		</div>
 	</div><!-- Widget : Social Counter -->
 	
