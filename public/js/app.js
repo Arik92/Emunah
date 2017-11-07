@@ -227,8 +227,32 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/soundcloud',
       templateUrl: '/templates/soundcloud.html'
     })
-    .state('Shabat', {
-      url: '/Shabat',
+     .state('centers', {
+      url: '/emunah-centers-near-you',
+      templateUrl: '/templates/centers/emunah-centers.html'
+    })
+     .state('echt', {
+      url: '/emunah-center-humble-texas',
+      templateUrl: '/templates/centers/echumble.html'
+    })
+     .state('eci', {
+      url: '/emunah-center-israel',
+      templateUrl: '/templates/centers/ecisrael.html'
+    })
+     .state('ecny', {
+      url: '/emunah-center-new-york',
+      templateUrl: '/templates/centers/ecny.html'
+    })
+     .state('ecbc', {
+      url: '/emunah-center-bogota-colombia',
+      templateUrl: '/templates/centers/ecbogota.html'
+    })
+     .state('ecla', {
+      url: '/emunah-center-los-angeles',
+      templateUrl: '/templates/centers/ecla.html'
+    })
+    .state('shabbat', {
+      url: '/shabbat',
       templateUrl: '/templates/sabbath.html',
       controller: 'sabbathCtrl'
     })
