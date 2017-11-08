@@ -17,6 +17,7 @@
 }(document, "script", "twitter-wjs"));</script>
 
 <aside id="sidebar" class="sidebar col-md-4">
+	<classes-directive></classes-directive>
 	<div class="widget LinkList">
 		<div class="widget-title">
 			<h2>Follow Us</h2>
@@ -62,76 +63,6 @@
 			</a> -->
 		</div>
 	</div><!-- Widget : Social Counter -->
-	
-	<div class="widget HTML">
-		<div class="widget-title">
-			<h2>Recent Posts</h2>
-		</div>
-		<div class="widget-content">
-			<ul class="recent-posts">
-				<li class="post">
-					<div class="post-thumb">
-						<a ui-sref="post-single">
-							<img class="lazy" src="images/4.jpg" data-src="images/4.jpg" alt="Post Title Placeholder" />
-						</a>
-					</div><!-- Post Image -->
-					<div class="post-content">
-						<h6 class="post-title">
-							<a ui-sref="post-single">Jewish Holidays: The High Holidays</a>
-						</h6><!-- Post Title -->
-						<ul class="post-meta">
-							<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
-						</ul><!-- Post Meta -->
-					</div><!-- Post Content -->
-				</li><!-- Post -->
-				<li class="post">
-					<div class="post-thumb">
-						<a ui-sref="post-single">
-							<img class="lazy" src="images/5.jpg" data-src="images/5.jpg" alt="Post Title Placeholder" />
-						</a>
-					</div><!-- Post Image -->
-					<div class="post-content">
-						<h6 class="post-title">
-							<a ui-sref="post-single">The Torah Is The Spice Of Your Life</a>
-						</h6><!-- Post Title -->
-						<ul class="post-meta">
-							<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
-						</ul><!-- Post Meta -->
-					</div><!-- Post Content -->
-				</li><!-- Post -->
-				<li class="post">
-					<div class="post-thumb">
-						<a ui-sref="post-single">
-							<img class="lazy" src="images/12.jpg" data-src="images/12.jpg" alt="Post Title Placeholder" />
-						</a>
-					</div><!-- Post Image -->
-					<div class="post-content">
-						<h6 class="post-title">
-							<a ui-sref="post-single">Jewish Holidays: The High Holidays</a>
-						</h6><!-- Post Title -->
-						<ul class="post-meta">
-							<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
-						</ul><!-- Post Meta -->
-					</div><!-- Post Content -->
-				</li><!-- Post -->
-				<li class="post">
-					<div class="post-thumb">
-						<a ui-sref="post-single">
-							<img class="lazy" src="images/11.jpg" data-src="images/11.jpg" alt="Post Title Placeholder" />
-						</a>
-					</div><!-- Post Image -->
-					<div class="post-content">
-						<h6 class="post-title">
-							<a ui-sref="post-single">The Torah Is The Spice Of Your Life</a>
-						</h6><!-- Post Title -->
-						<ul class="post-meta">
-							<li><i class="fa fa-clock-o"></i> October 30, 2016</li>
-						</ul><!-- Post Meta -->
-					</div><!-- Post Content -->
-				</li><!-- Post -->
-			</ul>
-		</div>
-	</div><!-- Widget : Recent Posts -->
 	<div class="widget FollowByEmail">
 		<div class="widget-title">
 			<h2>Newsletter</h2>
@@ -172,6 +103,60 @@
 <li><a ui-sref="#" class="soundcloud"><i class="fa fa-soundcloud"></i></a></li>
 		</div>
 	</div><!-- Widget : Social Icons -->
+	<div class="widget HTML">
+		<div class="widget-title">
+			<h2>Recent Posts</h2>
+		</div>
+		<div class="widget-content">
+			<ul class="recent-posts">
+				<li class="post">
+					<div class="post-thumb">
+						<a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id})">
+							<img class="lazy" src="images/4.jpg" alt="Post Title Placeholder"  />
+						</a>
+					</div><!-- Post Image -->
+					<div class="post-content">
+						<h6 class="post-title">
+							<a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id})">{{topThree[0].snippet.title}}</a>
+						</h6><!-- Post Title -->
+						<ul class="post-meta">
+							<li><i class="fa fa-clock-o"></i> {{topThree[0].snippet.publishedAt}}</li>
+						</ul><!-- Post Meta -->
+					</div><!-- Post Content -->
+				</li><!-- Post -->
+				<li class="post">
+					<div class="post-thumb">
+						<a ui-sref="post-single">
+							<img class="lazy" src="images/5.jpg" data-src="images/5.jpg" alt="Post Title Placeholder" />
+						</a>
+					</div><!-- Post Image -->
+					<div class="post-content">
+						<h6 class="post-title">
+							<a ui-sref="post-single({videoParam: topThree[1], id: topThree[1].id})">{{topThree[1].snippet.title}}</a>
+						</h6><!-- Post Title -->
+						<ul class="post-meta">
+							<li><i class="fa fa-clock-o"></i> {{topThree[1].snippet.publishedAt}}</li>
+						</ul><!-- Post Meta -->
+					</div><!-- Post Content -->
+				</li><!-- Post -->
+				<li class="post">
+					<div class="post-thumb">
+						<a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id})">
+							<img class="lazy" src="images/12.jpg" data-src="images/12.jpg" alt="Post Title Placeholder" />
+						</a>
+					</div><!-- Post Image -->
+					<div class="post-content">
+						<h6 class="post-title">
+							<a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id})">{{topThree[2].snippet.title}}</a>
+						</h6><!-- Post Title -->
+						<ul class="post-meta">
+							<li><i class="fa fa-clock-o"></i> {{topThree[2].snippet.publishedAt}}</li>
+						</ul><!-- Post Meta -->
+					</div><!-- Post Content -->
+				</li><!-- Post -->
+			</ul>
+		</div>
+	</div><!-- Widget : Recent Posts -->
 	<!-- Widget : Categories -->
 	<div class="widget HTML">
 		<div class="widget-title">
@@ -192,7 +177,7 @@
 			<a class="twitter-timeline" href="https://twitter.com/RavDror" data-tweet-limit="9">by RavDror</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</div><!-- Widget : Instagram -->
 	<!-- Widget : Advertisment -->
-	<div class="widget BlogArchive">
+<!-- 	<div class="widget BlogArchive">
 		<div class="widget-title">
 			<h2>Blog Archive</h2>
 		</div>
@@ -207,7 +192,7 @@
 				</select>
 			</div>
 		</div>
-	</div><!-- Blog Archive -->
+	</div> --><!-- Blog Archive -->
 	<!-- <div class="widget Label">
 		<div class="widget-title">
 			<h2>Tags Cloud</h2>

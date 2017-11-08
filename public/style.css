@@ -3280,5 +3280,10 @@ span.psw {
     transition: 1s;
 }
 
+.box-container {
+  width: 323px;
+  margin: 0 auto;
+}
+
 
 

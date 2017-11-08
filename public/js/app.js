@@ -11,11 +11,11 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('page-about', {
       url: '/about',
-      templateUrl: '/templates/page-about.html'
+      templateUrl: '/templates/about/page-about.html'
     })
     .state('page-about-rav', {
       url: '/about-rav-dror',
-      templateUrl: '/templates/page-about-rav.html'
+      templateUrl: '/templates/about/page-about-rav.html'
     })
     .state('category', {
       url: '/category',
@@ -28,7 +28,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       controller: 'playlistCtrl'
     })
     .state('page-contact', {
-      url: '/page-contact',
+      url: '/contact',
       templateUrl: '/templates/page-contact.html',
     })
     .state('whatsapp', {
@@ -39,6 +39,14 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('thanks', {
       url: '/thanks',
       templateUrl: '/templates/thanks.html',
+    })
+    .state('hitbodedut', {
+      url: '/hitbodedut',
+      templateUrl: '/templates/hitbodedut.html',
+    })
+    .state('usa', {
+      url: '/lectures-in-usa',
+      templateUrl: '/templates/usa.html',
     })
     .state('page-error', {
       url: '/error',
