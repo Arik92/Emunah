@@ -1,70 +1,17 @@
 
 
-<!-- Sidebar/menu -->
-<!-- <nav style="width:250px;margin-top:115px;height:415px;" id="mySidebar">
- 
-  <div id="nav-main" style="font-weight:bold">
-    <ul class="sidebarstore">
-   <li> <a ui-sref="store-necklaces" class="w3-bar-item w3-button">Necklaces</a></li>
-    <li><a ui-sref="store-shirts" class="w3-bar-item w3-button">Shirts</a></li>
-    <li><a ui-sref="store-hebrew" class="w3-bar-item w3-button">Books in Hebrew</a></li>
-    <li><a ui-sref="store-english" class="w3-bar-item w3-button">Books in English</a></li>
-    <li><a ui-sref="store-booklets" class="w3-bar-item w3-button">Booklets</a></li>
-    <li><a ui-sref="store-cds" class="w3-bar-item w3-button">CDs</a></li>
-    <li><a ui-sref="store-misc" class="w3-bar-item w3-button">Miscellaneous</a></li>
-  </ul>
-  </div>
-  
-</nav>
- -->
-  <!-- <div class="menu" style="margin-top:75px" > 
-            <div id="res-men-btn" class="men-close" onclick="expand()">
-                <div> 
-                    <span class="line one"></span>
-                    <span class="line two"></span>
-                    <span class="line three"></span>
-                </div>                
-            </div>
-            <ul class="list-inline">
-                <li>
-                    <a ui-sref="store-necklaces">Necklaces</a>
-                </li>
-                <li>
-                    <a ui-sref="store-shirts">Shirts</a>
-                </li>
-                <li>
-                    <a ui-sref="store-hebrew">Books in Hebrew</a>
-                </li>
-                <li>
-                    <a ui-sref="store-english">Books in English</a>
-                </li>
-                <li>
-                    <a ui-sref="store-booklets">Booklets</a>
-                </li>
-                <li>
-                    <a ui-sref="store-cds">CDs</a>
-                </li>
-                <li>
-                    <a ui-sref="store-misc">Miscellaneous</a>
-                </li>
-               
-            </ul>
-        </div>
-</div>
- <h2>CATEGORIES</h2> -->
-  
 
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<button class="btn btn-default" id="openMenu" style="margin-top:75px;margin-left: -450px;margin-bottom: 20px;">Categories</button>
+<button class="btn btn-default" id="openMenu" style="margin-top:30px;margin-left: 140px;">Categories</button>
 
 <div class="storemenu" id="menu">
   <div class="row">
     <div class="col-md-12">
-<button class="btn btn-default form-control" id="closeMenu" style="color:red;max-width: 4%;margin-left: 655px;margin-bottom: 10px;">X</button>
+
       <ul class="list-group" style="
-    margin-left: 260px;
+  
     text-align: center;"
 >
            <li class="list-group-item">
@@ -94,10 +41,40 @@
     </div>
    </div>
 </div>
+
+
+<header class="header" id="layout3">
+      
+       
+        <div class="mainmenu stick-me sticking" style="position: fixed; top: 51px;">
+          <div class="container">
+            <nav class="menu">
+              <ul>
+                <li><a ui-sref="store-necklaces" href="/home">Necklaces</a>
+
+                </li>
+                <li class="parent"><a ui-sref="store-shirts">Shirts</a></li>
+                 
+                    <li class="parent"><a ui-sref="store-hebrew">Books in Hebrew</a>
+                     
+                    </li>
+                    <li class="parent"><a ui-sref="store-english">Books in English</a>
+                      
+                  </li>
+                    <li><a ui-sref="store-booklets">Booklets</a></li>
+                    <li><a ui-sref="store-cds">CDs</a></li>
+                    <li><a ui-sref="store-misc">Miscellaneous</a></li>
+                  </ul>
+                </li>
+                
+              </ul>
+            </nav><!-- Menu -->
+         
+      </header>
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <br>
-    <p>Products: Necklaces</p>
+    <h2>Products: Necklaces</h2>
 
   </header>
 
