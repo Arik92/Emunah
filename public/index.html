@@ -68,7 +68,7 @@
             <ul>
                     <li><a ui-sref="page-about">About Emunah.com</a></li>
                     <li><a ui-sref="page-about-rav">About Rav Dror</a></li>
-                    <li><a ui-sref="mitzvot">Jewish Practice</a></li>
+                    <li><a ui-sref="mitzvot">Mitzvot</a></li>
               </ul>
            </li>
           <li><a ui-sref="page-contact">Contact</a></li>
@@ -152,9 +152,6 @@
                             <a href="post-single.html">
                               <img src="images/11.jpg" alt="Post Title Placeholder" />
                             </a>
-                            <span class="post-format">
-                              <i class="fa fa-play"></i>
-                            </span>
                           </div>
                           <div class="post-content">
                             <div class="post-category">
@@ -172,13 +169,10 @@
                             <a href="post-single.html">
                               <img src="images/12.jpg" alt="Post Title Placeholder" />
                             </a>
-                            <span class="post-format">
-                            <i class="fa fa-play"></i>
-                            </span>
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a href="page-category.html" style="color:steelblue;">Hitbodedut 1O1</a>
+                            <a ui-sref="hitbodedut" style="color:steelblue;">Hitbodedut 1O1</a>
                             </div>
                            <!--  <h6 class="post-title">
                               <a href="post-single.html">Toray Study </a>
@@ -189,16 +183,13 @@
                       <div class="item">
                         <div class="post">
                           <div class="post-thumb">
-                            <a href="post-single.html">
+                            <a ui-sref="usa">
                               <img src="images/13.jpg" alt="Post Title Placeholder" />
                             </a>
-                            <span class="post-format">
-                            <i class="fa fa-play"></i>
-                            </span>
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a href="page-category.html" style="color:steelblue;">Lectures in USA</a>
+                            <a ui-sref="usa" style="color:steelblue;">Lectures in USA</a>
                             </div>
                             <!-- <h6 class="post-title">
                               <a href="post-single.html">The Sulkhan Arukh</a>
@@ -241,7 +232,6 @@
                             <a ui-sref="services-kaddish">
                               <img src="images/services-kaddish.jpg" alt="Post Title Placeholder" />
                             </a>
-
                           </div>
                           <div class="post-content">
                             <div class="post-category">
@@ -511,7 +501,7 @@
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a ui-sref="mitzvot">Jewish Facts</a>
+                            <a ui-sref="mitzvot">Mitzvot</a>
                             </div>
                             <!-- <h6 class="post-title">
                               <a href="post-single.html">Jewish Facts</a>
@@ -584,6 +574,7 @@
     <script src="js/directives/footerDirective.js"></script>
     <script src="js/directives/asideDirective.js"></script>
     <script src="js/directives/sliderDirective.js"></script>
+    <script src="js/directives/classesDirective.js"></script>
     <!-- End All JavaScripts Needed -->
 <!--    <script id="dsq-count-scr" src="https://infinyteam.disqus.com/count.js" async></script> -->
   </body>

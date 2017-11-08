@@ -23,7 +23,7 @@
             $( this ).children( ".mainmenu .menu ul > li > ul:not(.megamenu)" ).slideDown( 0 );
         });
         $( ".mainmenu .menu ul > li.parent" ).on( 'mouseleave', function() {
-            $( this ).children( ".mainmenu .menu ul > li > ul:not(.megamenu)" ).slideUp( 1000 );
+            $( this ).children( ".mainmenu .menu ul > li > ul:not(.megamenu)" ).slideUp( 100 );
         });
         // ------------------------------------------------------
         // Header Mobile Menu
