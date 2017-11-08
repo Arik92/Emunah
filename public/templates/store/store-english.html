@@ -1,107 +1,69 @@
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="storemenu" id="menu">
+  <div class="row">
+    <div class="col-md-12">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.w3-sidebar a {font-family: "Roboto", sans-serif}
-body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
-</style>
-<body class="w3-content" style="max-width:1200px">
-
-<!-- Sidebar/menu -->
-<!-- <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="width:250px;margin-top:115px;height:415px;" id="mySidebar">
- 
-  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <ul class="sidebarstore">
-   <li> <a ui-sref="store-necklaces" class="w3-bar-item w3-button">Necklaces</a></li>
-    <li><a ui-sref="store-shirts" class="w3-bar-item w3-button">Shirts</a></li>
-    <li><a ui-sref="store-hebrew" class="w3-bar-item w3-button">Books in Hebrew</a></li>
-    <li><a ui-sref="store-english" class="w3-bar-item w3-button">Books in English</a></li>
-    <li><a ui-sref="store-booklets" class="w3-bar-item w3-button">Booklets</a></li>
-    <li><a ui-sref="store-cds" class="w3-bar-item w3-button">CDs</a></li>
-    <li><a ui-sref="store-misc" class="w3-bar-item w3-button">Miscellaneous</a></li>
-  </ul>
-  </div>
+      <ul class="list-group" style="
   
-</nav>
- -->
-
-<div class="menu" style="margin-top:75px" > 
-            <div id="res-men-btn" class="men-close" onclick="expand()">
-                <div> 
-                    <span class="line one"></span>
-                    <span class="line two"></span>
-                    <span class="line three"></span>
-                </div>                
-            </div>
-            <ul class="list-inline">
-                <li>
+    text-align: center;"
+>
+           <li class="list-group-item">
                     <a ui-sref="store-necklaces">Necklaces</a>
                 </li>
-                <li>
+                <li class="list-group-item">
                     <a ui-sref="store-shirts">Shirts</a>
                 </li>
-                <li>
+                <li class="list-group-item">
                     <a ui-sref="store-hebrew">Books in Hebrew</a>
                 </li>
-                <li>
+                <li class="list-group-item">
                     <a ui-sref="store-english">Books in English</a>
                 </li>
-                <li>
+                <li class="list-group-item">
                     <a ui-sref="store-booklets">Booklets</a>
                 </li>
-                <li>
+                <li class="list-group-item">
                     <a ui-sref="store-cds">CDs</a>
                 </li>
-                <li>
+                <li class="list-group-item">
                     <a ui-sref="store-misc">Miscellaneous</a>
                 </li>
                
-            </ul>
-        </div>
+      </ul> 
+       
+    </div>
+   </div>
 </div>
- <h2>CATEGORIES</h2> 
-<script type="text/javascript">
-  $.fn.followTo = function (pos) {
-    var $this = this,
-        $window = $(window);
-
-    $window.scroll(function (e) {
-        if ($window.scrollTop() > pos) {
-            $this.css({
-                position: 'relative',
-                top: pos
-            });
-        } else {
-            $this.css({
-                position: 'fixed',
-                top: 0
-            });
-        }
-    });
-};
-
-$('#mySidebar').followTo(250);
-</script>
-
-<!-- Top menu on small screens -->
-
-<header class="w3-bar w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24 w3-wide">Emunah Store</div>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-</header>
 
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<header class="header" id="layout3">
+      
+       
+        <div class="mainmenu stick-me sticking" style="position: fixed; top: 51px;">
+          <div class="container">
+            <nav class="menu">
+              <ul>
+                <li><a ui-sref="store-necklaces" href="/home">Necklaces</a>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:250px">
-
-  <!-- Push down content on small screens -->
-  <div class="w3-hide-large" style="margin-top:83px"></div>
+                </li>
+                <li class="parent"><a ui-sref="store-shirts">Shirts</a></li>
+                 
+                    <li class="parent"><a ui-sref="store-hebrew">Books in Hebrew</a>
+                     
+                    </li>
+                    <li class="parent"><a ui-sref="store-english">Books in English</a>
+                      
+                  </li>
+                    <li><a ui-sref="store-booklets">Booklets</a></li>
+                    <li><a ui-sref="store-cds">CDs</a></li>
+                    <li><a ui-sref="store-misc">Miscellaneous</a></li>
+                  </ul>
+                </li>
+                
+              </ul>
+            </nav><!-- Menu -->
+         
+      </header>
   
   <!-- Top header -->
   <header class="w3-container w3-xlarge">

@@ -820,7 +820,7 @@ header.header#layout3 .mainmenu.stick-me.sticking .container {
 }
 header.header#layout3 .mainmenu .menu {
     float: none;
-    display: inline-block;
+   
     text-align: left;
 }
 header.header#layout3 .mainmenu .menu>ul>li ul {
@@ -3275,8 +3275,7 @@ span.psw {
 
 .storemenu{
     display: none;
-    width:80%;
-    height:80%;
+   
     transition: 1s;
 }
 

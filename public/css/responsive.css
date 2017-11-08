@@ -100,6 +100,9 @@
 	.yellowbutton {
 		display: none;
 	}
+	header.header#layout3 .mainmenu.stick-me.sticking {
+		display: none;
+	}
 }
 
 /* Desktop Size : xs */
@@ -477,6 +480,7 @@
 		display: inline-block;
 		margin: 0;
 	}
+
 }
 
 /* Desktop Size : sm */
@@ -525,6 +529,7 @@
 	    display: block;
 	    padding-right: 15px;
 	}
+
 }
 
 /* Desktop Size : md */
@@ -634,6 +639,7 @@
 	.social-counter a .count {
 	    font-size: inherit;
 	}
+
 }
 
 /* Desktop Size : lg */
@@ -681,5 +687,18 @@
 	}
 	.fullwdith .post-related .post .post-thumb {
 	    height: 220px;
+	}
+
+	button #openMenu {
+		display: none;
+	}
+}
+
+
+ @media only screen and (min-width : 991px) {
+) 
+button #openMenu.btn.btn-default.ng-scope {
+		display: block !important;
+
 	}
 }
