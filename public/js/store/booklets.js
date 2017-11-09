@@ -54,7 +54,7 @@
         }
       },
       "button": {
-        "background-color": "#add8e6",
+        "background-color": "steelblue",
         ":hover": {
           "background-color": "#9cc2cf"
         },
@@ -70,7 +70,7 @@
     },
     "styles": {
       "button": {
-        "background-color": "#add8e6",
+        "background-color": "steelblue",
         ":hover": {
           "background-color": "#9cc2cf"
         },
@@ -101,7 +101,7 @@
         }
       },
       "button": {
-        "background-color": "#add8e6",
+        "background-color": "steelblue",
         ":hover": {
           "background-color": "#9cc2cf"
         },
@@ -114,7 +114,7 @@
   "toggle": {
     "styles": {
       "toggle": {
-        "background-color": "#add8e6",
+        "background-color": "steelblue",
         ":hover": {
           "background-color": "#9cc2cf"
         },
