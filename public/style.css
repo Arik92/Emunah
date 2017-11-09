@@ -3290,24 +3290,32 @@ span.psw {
     background: #fff;
     text-align:center;
     position: relative;
+}
+
+.city-selected {
+    position: relative;
+    overflow: hidden;
+  
+    background: powderblue;
+    height: 335px;
+    width: 230px;
+        /*margin-top: 80px;
+    margin-left: 128px;*/
+      -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 5em;
+  border: 2px solid gray;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
 
     -webkit-box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
     -moz-box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
-    box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
+    box-shadow: 12px 3px 10px 0px rgba(207,207,207,1);
 
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;  
-}
-
-.city-selected {
-    position: relative;
-    overflow: hidden;
-    min-height: 200px;
-    background: steelblue;
-    height: 503px;
 }
 
 article .candle {
@@ -3334,11 +3342,12 @@ article .candle {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+
 }
 
 .info .city,
 .night {
-    font-size: 50px;
+    font-size: 18px;
     font-weight: 200;
     position: relative;
 
@@ -3375,7 +3384,7 @@ article .candle {
 }
 
 .night {
-    font-size: 26px;
+    font-size: 18px;
     text-transform: uppercase;
 }
 
@@ -3385,19 +3394,6 @@ svg {
     fill: currentColor;
 }
 
-
-.wind svg {
-    width: 18px;
-    height: 18px;
-    margin-top: 20px;
-    margin-right: 10px;
-    vertical-align: bottom;
-}
-
-.wind span {
-    font-size: 13px;
-    text-transform: uppercase;
-}
 
 .city-selected:hover figure {
     opacity: 0.4;
