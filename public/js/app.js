@@ -264,4 +264,9 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/sabbath.html',
       controller: 'sabbathCtrl'
     })
+    .state('faq', {
+      url: '/faq',
+      templateUrl: '/templates/about/faq.html',
+      
+    })
 });
