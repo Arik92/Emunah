@@ -1228,7 +1228,7 @@ header.header#layout3 .search-tigger:hover {
     padding: 0;
 }
 .blog-layout.tiny-thumb .post:not(.first) .post-thumb {
-    height: 90px;
+    height: 79px;
     width: 140px;
     float: left;
     margin: 0;
@@ -1277,7 +1277,8 @@ header.header#layout3 .search-tigger:hover {
     margin-bottom: 30px;
 }
 .blog-layout.layout-2 .post-thumb {
-    height: 230px;
+    height: 169px;
+    width: 300px;
 }
 
 /* Blog Layout 3 : Grid 3 Columns */
@@ -1295,7 +1296,7 @@ header.header#layout3 .search-tigger:hover {
     margin: 0;
 }
 .blog-layout.layout-3 .post-thumb {
-    height: 150px;
+    height: 126px;
 }
 .blog-layout.layout-3 .post .post-title {
     font-size: 15px;
@@ -1309,10 +1310,10 @@ header.header#layout3 .search-tigger:hover {
     margin: 0;
 }
 .blog-layout.layout-4 .post.first .post-thumb {
-    height: 318px;
+    height: 268px;
 }
 .blog-layout.layout-4 .post .post-thumb {
-    height: 149px;
+    height: 126px;
 }
 
 /* Blog Layout 5 : 1st Full Vertical then 4 Tiny Thumbs */
@@ -1331,7 +1332,7 @@ header.header#layout3 .search-tigger:hover {
     overflow: hidden;
 }
 .blog-layout.layout-6 .post.first .post-thumb {
-    height: 195px;
+    height: 165px;
     width: 40%;
     float: left;
     margin: 0;
@@ -1371,8 +1372,8 @@ header.header#layout3 .search-tigger:hover {
     margin: 0;
 }
 .blog-layout.layout-8 .post .post-thumb {
-    height: 220px;
-    width: 45%;
+    height: 169px;
+    width: 41%;
     float: left;
     margin: 0;
 }
@@ -1793,7 +1794,7 @@ header.header#layout3 .search-tigger:hover {
     padding: 0;
 }
 .recent-posts li.post .post-thumb {
-    height: 90px;
+    height: 79px;
     width: 140px;
     float: left;
     margin: 0;
