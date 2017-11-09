@@ -18,6 +18,53 @@
 
 <aside id="sidebar" class="sidebar col-md-4">
   <div class="widget LinkList">
+    
+        
+
+
+<aside id="sidebar" class="sidebar col-md-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div id="card" class="weater">
+          <div class="city-selected">
+            <article class="candle">
+
+              <div class="info">
+                <div class="night">
+                   <p style="margin-top:35px">Parasha: <b>Haye Sarah</b></p>
+                   <br>
+
+                <p>Enter any location</p>
+                <input id="autocomplete" type="text" autocomplete="off" placeholder="Enter city">
+                <div class="form-group">
+                  <p>Or</p>
+                  <button ng-click="useOwnLocation()">Use my current location</button>
+                 <br>
+                 <br>
+<p>Havdala is in <input id="source_name" name="source_name" ng-model="havdala" style="width:14%"> <br>
+  minutes after shabbat</p></div>
+              </div>
+            </div>
+            
+            <button type="submit" ng-click="checkTimes()" class="hvr-bounce-to-right" id="mybutton" style="margin: 10px; font-size:20px;padding: 6px 0px; width:33%;background-color:black;color:white"> OK</button>
+            <div class="row show-hide-message" ng-show="showResult">
+              <div class="alert alert-success">{{candleTimes}}<span class="glyphicon glyphicon-repeat fast-right-spinner"></span>  </div></div>
+              </div>
+            </div>
+
+              
+
+                
+              </div>
+
+              
+
+            </article>
+          
+          </div>
+
+  <div class="widget LinkList">
     <div class="widget-title">
       <h2>Follow Us</h2>
     </div>

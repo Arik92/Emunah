@@ -103,6 +103,8 @@
 	header.header#layout3 .mainmenu.stick-me.sticking {
 		display: none;
 	}
+
+	
 }
 
 /* Desktop Size : xs */
@@ -702,3 +704,17 @@ button #openMenu.btn.btn-default.ng-scope {
 
 	}
 }
+
+@media only screen and (min-width: 1281px) {
+  div#homevideos.container {
+max-width:73%; 
+float:left;
+margin-left:35px
+  }
+
+  div.city-selected {
+  	 margin-top: 80px; 
+     margin-left: 50px; 
+  }
+}
+
