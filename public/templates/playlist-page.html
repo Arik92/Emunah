@@ -16,14 +16,14 @@
 					</br>
 				</br>
 				You are seeing all the videos of the playlist: <strong>{{playerPlaylist.snippet.localized.title}}</strong>
-					<div class="breadcumbs">
+<!-- 					<div class="breadcumbs">
 					</br>
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="page-category.html">Category</a></li>
 							<li>CATEGORY NAME</li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 				<div class="row">
 					<section id="main" class="main col-md-8">
@@ -35,13 +35,15 @@
 											<a ui-sref="post-single({videoParam: playlistItem, id: playlistItem.id})">
 												<img class="lazy" src={{playlistItem.snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
 												<!-- <youtube-video video-url="playlistItem.playurl" player="bestPlayer" enablejsapi="true" video-id="$index" player-width="'100%'" player-vars="{autoplay: 0, start: 0.01}"></youtube-video> -->
-											</a>
 											<span class="post-format">
 												<i class="fa fa-play"></i>
 											</span>
+											
 										</div><!-- Post Image -->
 										<div class="post-content">
-											<h4 class="post-title">Video: {{playlistItem.snippet.title}} </h4><!-- Post Title -->
+											<h4 class="post-title">Video: {{playlistItem.snippet.title}} </h4>
+											</a>
+											<!-- Post Title -->
 											<!-- <p class="post-entry"> <b>Description: </b>{{playlistItem.snippet.description}}</p> --><!-- Post Entry -->
 											<ul class="post-meta">
 												<li><i class="fa fa-clock-o"></i>Date: {{playlistItem.snippet.publishedAt}}</li>
