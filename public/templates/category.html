@@ -26,6 +26,18 @@
           </div> -->
         </div>
         <h2>Categories</h2>
+          <div class="blog-pagination">
+              <ul>
+                <li class="next-page"><a ng-click="updatePlaylistBackward()"><i class="fa fa-angle-left"></i> Back</a></li>
+                <!-- <li class="active"><a ui-sref="index">1</a></li>
+                <li><a ui-sref="#">2</a></li>
+                <li><a ui-sref="#">3</a></li>
+                <li><span>...</span></li>
+                <li><a ui-sref="#">20</a></li> -->
+                <li class="next-page"><a ng-click="updatePlaylistForward()">Next <i class="fa fa-angle-right"></i></a></li>
+                <li class="total-pages">1 page of 20</li>
+              </ul>
+            </div>
         <div class="row">
           <section id="main" class="main col-md-8">
             <div class="blog-layout layout-2" style="display: block">
@@ -59,11 +71,11 @@
             <div class="blog-pagination">
               <ul>
                 <li class="next-page"><a ng-click="updatePlaylistBackward()"><i class="fa fa-angle-left"></i> Back</a></li>
-                <li class="active"><a ui-sref="index">1</a></li>
+                <!-- <li class="active"><a ui-sref="index">1</a></li>
                 <li><a ui-sref="#">2</a></li>
                 <li><a ui-sref="#">3</a></li>
                 <li><span>...</span></li>
-                <li><a ui-sref="#">20</a></li>
+                <li><a ui-sref="#">20</a></li> -->
                 <li class="next-page"><a ng-click="updatePlaylistForward()">Next <i class="fa fa-angle-right"></i></a></li>
                 <li class="total-pages">1 page of 20</li>
               </ul>
