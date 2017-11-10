@@ -267,6 +267,9 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('faq', {
       url: '/faq',
       templateUrl: '/templates/about/faq.html',
-      
+    })
+    .state('chayei-sarah', {
+      url: '/becoming-closer-to-hashem-good-eyes-a-pure-heart',
+      templateUrl: '/templates/articles/chayei-sarah.html'
     })
 });
