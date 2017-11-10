@@ -44,7 +44,7 @@ function initNavDates() {
 	var d = new Date();
 	$scope.currDate = "Today is"+ weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDay()+" , "+d.getFullYear();
 	hebService.getCurrentHebDate().then(function(result){
-		$scope.parasha = result.events[0];
+		$rootScope.parasha = result.events[0];
 		$scope.CurrentHebDate = result.hebrew;
 		$scope.currDate+= " - "+ result.hebrew;
 		console.log("currhebdate ", result);
