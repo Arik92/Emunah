@@ -50,7 +50,7 @@
       </div>
     </div>
     <!-- Mobile slider nav bar -->
-    <nav id="slide-nav" class="slide-menu">
+    <nav id="slide-nav" class="slide-menu" ng-controller="homeCtrl">
       <span class="menu-close">Close</span>
       <ul>
         <li ng-show="currentUser">Welcome, {{currentUser}}</li>
@@ -59,7 +59,7 @@
         <li><a ui-sref="home">Home</a></li>
         <li><a ui-sref="articles">Articles</a></li>
         <li class="has-sub"><a href="#">Lectures</a></li>
-          <ul ng-controller="homeCtrl">
+          <ul >
              <li ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
           </ul>
         </li>
@@ -89,7 +89,7 @@
           </form>
         </div>-->
       </div>
-      <header class="header" id="layout2" style="display:block" ng-controller="authCtrl">
+      <header class="header" id="layout2" style="display:block" ng-controller="homeCtrl">
         <div class="topbar">
          <!--  <div class="container">
  -->            <div class="logo-container">
@@ -102,8 +102,8 @@
             <nav class="topmenu">
               <ul style="color:white">
                 <li ng-show="currentUser">Welcome, {{currentUser}}</li>
-                <li>Parasha "{{parasha}}"</li>
-                <li>{{CurrentHebDate}} - {{currDate}}</li>
+                <li>{{parasha}}</li>
+                <li>{{currDate}}</li>
                 <li style="color:white"><a ui-sref="page-contact" style="color:white">Subscribe</a></li>
                 <li style="color:white"><a ui-sref="whatsapp" style="color:white">WhatsApp Group</a></li>
                 <li ng-hide="currentUser"><a ui-sref="login" style="color:white">Login</a></li>
@@ -122,7 +122,7 @@
                 <div class="yellowbutton">
                   <li style="margin-left:60px"><a ui-sref="donate"><b style="font-size:15px;color:yellow;">Donate</b></a></li>
                   <li><a ui-sref="store-necklaces"><b style="font-size:15px;  color:yellow; margin-right:50px;">Store</b></a></li>
-                </div> 
+                </div>
               </ul>
             </nav><!-- Social Links -->
           <!-- </div> --><!-- Container -->
