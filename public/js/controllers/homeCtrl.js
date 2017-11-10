@@ -42,11 +42,11 @@ function initNavDates() {
 	month[10] = "November";
 	month[11] = "December";	
 	var d = new Date();
-	$scope.currDate = "Today is"+ weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDay()+" , "+d.getFullYear();
+	$scope.currDate = weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDay()+" , "+d.getFullYear();
 	hebService.getCurrentHebDate().then(function(result){
 		$scope.parasha = result.events[0];
-		$scope.CurrentHebDate = result.hebrew;
-		$scope.currDate+= " - "+ result.hebrew;
+		$scope.CurrentHebDate = result.hd + "-" +result.hm + "-" +result.hy;
+		$scope.currDate+= " | "+ result.hd + "-" +result.hm + "-" +result.hy;
 		console.log("currhebdate ", result);
 	});
 	}
