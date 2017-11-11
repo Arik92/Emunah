@@ -110,7 +110,9 @@
  div.mainmenu.stick-me.not-sticking {
  	background-color: black;
  }
-	
+	div#mobileres.container {
+		background-color: white
+	}
 }
 
 /* Desktop Size : xs */
@@ -257,7 +259,7 @@
 }
 @media (max-width:730px) {
 	.container {
-		width: 90%;
+		width: 100%;
 	}
 	.header-content {
 		height: auto;
@@ -713,9 +715,8 @@ button #openMenu.btn.btn-default.ng-scope {
 
 @media only screen and (min-width: 1281px) {
   div#homevideos.container {
-max-width:73%; 
-float:left;
-margin-left:35px
+width:90%; 
+
   }
 
   div.city-selected {
@@ -725,7 +726,7 @@ margin-left:35px
 
   div#logonav2.logo-container {
   	display: none;
-  
+
   }
 }
 
