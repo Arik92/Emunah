@@ -104,6 +104,12 @@
 		display: none;
 	}
 
+	div.topbar {
+		display: none;
+	}
+ div.mainmenu.stick-me.not-sticking {
+ 	background-color: black;
+ }
 	
 }
 
@@ -715,6 +721,11 @@ margin-left:35px
   div.city-selected {
   	 margin-top: 80px; 
      margin-left: 50px; 
+  }
+
+  div#logonav2.logo-container {
+  	display: none;
+  
   }
 }
 
