@@ -16,17 +16,68 @@
   return t;
 }(document, "script", "twitter-wjs"));</script>
 
-<aside id="sidebar" class="sidebar col-md-4">
+
+	<aside id="sidebar" class="sidebar col-md-4" ng-controller="sabbathCtrl">
+ <div class="widget LinkList"> 
+    <div class="container"> 
+    
+        <div id="card" class="weather" style="width:305px">
+          <div class="city-selected" style="margin-left: 20px;
+    margin-bottom: 30px;">
+
+            <article class="candle">
+
+              <div class="info">
+                <div class="night">
+
+                   <p style="margin-top:35px"> <b>{{parasha}}</b></p>
+
+                   <br>
+
+                <p>Candles lighting</p>
+                <input id="autocomplete" type="text" autocomplete="off" placeholder="Enter city">
+                <div class="form-group">
+                  <p>Or</p>
+                  <button ng-click="useOwnLocation()">Use my current location</button>
+                 
+              </div>
+            </div>
+            
+            <button type="submit" ng-click="checkTimes()" class="hvr-bounce-to-right" id="mybutton" style="margin: 20px; font-size:20px;padding: 6px 0px; width:22%;background-color:midnightblue;color:white"> OK</button>
+            <div class="row show-hide-message" ng-show="showResult">
+              <div class="alert alert-success">{{candleTimes}}<span class="glyphicon glyphicon-repeat fast-right-spinner"></span>  </div></div>
+              </div>
+            </div>
+
+              
+
+                
+             </div>
+
+              
+
+            </article>
+          
+          </div>
+
+        
+
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
 	<classes-directive></classes-directive>
 	<div class="widget LinkList">
 		<div class="widget-title">
 			<h2>Follow Us</h2>
 		</div>
 		<div class="widget-content social-counter">
-			<!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_follow_toolbox"></div>
-			<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a008ebc959bcc55"></script> 
+		
 <!-- 			<a href="https://twitter.com/ravdror?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-size="large" data-show-count="true"><i class="fa fa-twitter"></i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-<!-- 			<a ui-sref="#" class="facebook">
+			<a ui-sref="#" class="facebook">
 				<i class="fa fa-facebook"></i>
 				<span class="count">1.42k</span>
 				<span class="label">Fans</span>
@@ -60,7 +111,7 @@
 				<i class="fa fa-soundcloud"></i>
 				<span class="count">870</span>
 				<span class="label">Followers</span>
-			</a> -->
+			</a>
 		</div>
 	</div><!-- Widget : Social Counter -->
 	<div class="widget FollowByEmail">
