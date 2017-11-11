@@ -57,26 +57,26 @@
         <li> {{parasha}}</li>
         <li>19 Tammuz 5777 - 13 July 2017</li>
         <li><a ui-sref="home">Home</a></li>
-        <li><a href="page-category.html">Articles</a></li>
+        <li><a ui-sref="articles">Articles</a></li>
         <li class="has-sub"><a href="#">Lectures</a></li>
           <ul >
              <li ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
           </ul>
         </li>
-        <li class="has-sub"><a href="page-about.html">About</a>
+        <li class="has-sub"><ui-sref="about.html">About</a>
           <ul>
-            <li><a ui-sref="page-about">About Emunah.com</a></li>
-            <li><a ui-sref="page-about-rav">About Rav Dror</a></li>
+            <li><a ui-sref="about-emunah">About Emunah.com</a></li>
+            <li><a ui-sref="about-rav-dror">About Rav Dror</a></li>
             <li><a ui-sref="mitzvot">Mitzvot</a></li>
           </ul>
          </li>
-        <li><a ui-sref="page-contact">Contact</a></li>
+        <li><a ui-sref="contact">Contact</a></li>
         <li ng-hide="currentUser"><a ui-sref="login">Login</a></li>
         <li ng-hide="currentUser"><a ui-sref="signup">Sign Up</a></li>
         <li ng-show="currentUser"><a ng-click="logout()">Log out</a></li>
-        <li><a ui-sref="page-contact">Subscribe</a></li>
-        <li><a ui-sref="page-contact">Store</a></li>
-        <li><a ui-sref="page-contact">Whatsapp</a></li>
+        <li><a ui-sref="signup">Subscribe</a></li>
+        <li><a ui-sref="store-necklaces">Store</a></li>
+        <li><a ui-sref="whatsapp">Whatsapp</a></li>
         <li><a ui-sref="donate">Donate</a></li>
       </ul>
     </nav>
@@ -102,8 +102,8 @@
             <nav class="topmenu">
               <ul style="color:white">
                 <li ng-show="currentUser">Welcome, {{currentUser}}</li>
-                <li>{{parasha}}</li>
-                <li>{{currDate}}</li>
+                <li style="font-size:11px;">{{parasha}}</li>
+                <li style="font-size:11px;">{{currDate}}</li>
                 <li style="color:white"><a ui-sref="page-contact" style="color:white">Subscribe</a></li>
                 <li style="color:white"><a ui-sref="whatsapp" style="color:white">WhatsApp Group</a></li>
                 <li ng-hide="currentUser"><a ui-sref="login" style="color:white">Login</a></li>
@@ -142,7 +142,7 @@
           <div class="container">
             <nav class="menu" style="margin-left:310px;">
               <ul>
-                  <li><a ui-sref="ravdror">Rav Dror in the USA</a>
+                  <li><a ui-sref="#">Rav Dror in the USA</a>
                   <div class="megamenu" style="background-color:white;">
                     <div class="item-content">
                       <div class="item">
@@ -156,9 +156,6 @@
                             <div class="post-category">
                             <a ui-sref="centers" style="color:steelblue;">Emunah Center Near You</a>
                             </div>
-                           <!--  <h6 class="post-title">
-                              <a href="post-single.html">The High Holidays</a>
-                            </h6> -->
                           </div>
                         </div><!-- Post -->
                       </div>
@@ -173,9 +170,6 @@
                             <div class="post-category">
                             <a ui-sref="hitbodedut" style="color:steelblue;">Hitbodedut 1O1</a>
                             </div>
-                           <!--  <h6 class="post-title">
-                              <a href="post-single.html">Toray Study </a>
-                            </h6> -->
                           </div>
                         </div><!-- Post -->
                       </div>
@@ -190,9 +184,6 @@
                             <div class="post-category">
                             <a ui-sref="usa" style="color:steelblue;">Lectures in USA</a>
                             </div>
-                            <!-- <h6 class="post-title">
-                              <a href="post-single.html">The Sulkhan Arukh</a>
-                            </h6> -->
                           </div>
                         </div><!-- Post -->
 
@@ -327,7 +318,7 @@
                             <a ui-sref="services-note">Kotel Note</a>
                             </div>
                             <h6 class="post-title">
-                              <a uui-sref="services-note">Purim: A Lesson In Emunat Chachamim</a>
+                              <a ui-sref="services-note">Purim: A Lesson In Emunat Chachamim</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -335,7 +326,7 @@
                     </div>
                   </div>
                 </li>
-                <li><a ui-sref="articles">Articles</a>
+                <!--<li><a ui-sref="articles">Articles</a>
                   <div class="megamenu" style="background-color: white; color: steelblue;">
                     <div class="item-content">
                       <div class="item">
@@ -354,7 +345,7 @@
                               <a ui-sref="article-single">Pinchas</a>
                             </h6>
                           </div>
-                        </div><!-- Post -->
+                        </div>
                       </div>
                       <div class="item">
                         <div class="post">
@@ -372,7 +363,7 @@
                               <a ui-sref="article-single">Pinchas</a>
                             </h6>
                           </div>
-                        </div><!-- Post -->
+                        </div>
                       </div>
                       <div class="item">
                         <div class="post">
@@ -390,7 +381,7 @@
                               <a ui-sref="article-single">Balak</a>
                             </h6>
                           </div>
-                        </div><!-- Post -->
+                        </div>
                       </div>
                       <div class="item">
                         <div class="post">
@@ -408,7 +399,7 @@
                               <a ui-sref="article-single">Pin'has</a>
                             </h6>
                           </div>
-                        </div><!-- Post -->
+                        </div>
                       </div>
                       <div class="item">
                         <div class="post">
@@ -426,26 +417,26 @@
                               <a ui-sref="article-single">Purim: A Lesson In Emunat Chachamim</a>
                             </h6>
                           </div>
-                        </div><!-- Post -->
+                        </div>
                       </div>
                     </div>
                   </div>
-                </li>
-
+                </li>-->
+                <li><a ui-sref="soundcloud">Soundcloud</a></li>
                 <li><a ui-sref="page-about">About</a>
                   <div class="megamenu" style="background-color:white;">
                     <div class="item-content">
                       <div class="item">
                         <div class="post">
                           <div class="post-thumb">
-                            <a href="post-single.html">
+                            <a ui-sref="faq">
                               <img src="images/4.jpg" alt="Post Title Placeholder" />
                             </a>
 
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a href="page-category.html">FAQ's</a>
+                            <a ui-sref="faq">FAQ's</a>
                             </div>
                             <!-- <h6 class="post-title">
                               <a href="post-single.html">FAQ's</a>
@@ -502,9 +493,7 @@
                             <div class="post-category">
                             <a ui-sref="mitzvot">Mitzvot</a>
                             </div>
-                            <!-- <h6 class="post-title">
-                              <a href="post-single.html">Jewish Facts</a>
-                            </h6> -->
+                            
                           </div>
                         </div>
                         <!-- Post -->

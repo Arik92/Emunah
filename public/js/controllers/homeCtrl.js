@@ -21,32 +21,34 @@ app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytS
 //////////////////////////////////////**************** SHABBAT *************************/////////////////////////
 function initNavDates() {
 	var weekday = new Array(7);
-	weekday[0] =  "Sunday";
-	weekday[1] = "Monday";
-	weekday[2] = "Tuesday";
-	weekday[3] = "Wednesday";
-	weekday[4] = "Thursday";
-	weekday[5] = "Friday";
-	weekday[6] = "Saturday";
+	weekday[0] =  "Sun";
+	weekday[1] = "Mon";
+	weekday[2] = "Tues";
+	weekday[3] = "Wed";
+	weekday[4] = "Thurs";
+	weekday[5] = "Fri";
+	weekday[6] = "Shabbat";
 	var month = new Array(12);
-	month[0] = "January";
-	month[1] = "February";
-	month[2] = "March";
-	month[3] = "April";
+	month[0] = "Jan";
+	month[1] = "Feb";
+	month[2] = "Mar";
+	month[3] = "Apr";
 	month[4] = "May";
-	month[5] = "June";
-	month[6] = "July";
-	month[7] = "August";
-	month[8] = "September";
-	month[9] = "October";
-	month[10] = "November";
-	month[11] = "December";	
+	month[5] = "Jun";
+	month[6] = "Jul";
+	month[7] = "Aug";
+	month[8] = "Sep";
+	month[9] = "Oct";
+	month[10] = "Nov";
+	month[11] = "Dec";	
 	var d = new Date();
-	$scope.currDate = "Today is"+ weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDay()+" , "+d.getFullYear();
+	$scope.currDate = weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDay()+" , "+d.getFullYear();
 	hebService.getCurrentHebDate().then(function(result){
-		$rootScope.parasha = result.events[0];
-		$scope.CurrentHebDate = result.hebrew;
-		$scope.currDate+= " - "+ result.hebrew;
+
+		$scope.parasha = result.events[0];
+		$scope.CurrentHebDate = result.hd + "-" +result.hm + "-" +result.hy;
+		$scope.currDate+= " | "+ result.hd + "-" +result.hm + "-" +result.hy;
+
 		console.log("currhebdate ", result);
 	});
 	}

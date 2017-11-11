@@ -26,6 +26,18 @@
           </div> -->
         </div>
         <h2>Categories</h2>
+          <div class="blog-pagination">
+              <ul>
+                <li class="next-page"><a ng-click="updatePlaylistBackward()"><i class="fa fa-angle-left"></i> Back</a></li>
+                <!-- <li class="active"><a ui-sref="index">1</a></li>
+                <li><a ui-sref="#">2</a></li>
+                <li><a ui-sref="#">3</a></li>
+                <li><span>...</span></li>
+                <li><a ui-sref="#">20</a></li> -->
+                <li class="next-page"><a ng-click="updatePlaylistForward()">Next <i class="fa fa-angle-right"></i></a></li>
+                <li class="total-pages">1 page of 20</li>
+              </ul>
+            </div>
         <div class="row">
           <section id="main" class="main col-md-8">
             <div class="blog-layout layout-2" style="display: block">
@@ -38,19 +50,18 @@
                         <!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
                         <span class="post-format">
                           <i class="fa fa-play"></i>
-                        </span>
-                      </a>
-                      <span class="post-format">
-                        <i class="fa fa-play"></i>
-                      </span>
+                        </span>             
                     </div><!-- Post Image -->
                     <div id="maxlength" class="post-content">
-                      <h4 class="post-title" maxlength="50">{{playlist.snippet.title}} </h4><!-- Post Title -->
+                      <h4 class="post-title" maxlength="50">{{playlist.snippet.title}} </h4>
+                    </a>
+                    <!-- Post Title -->
                       <p class="post-entry"> <b>Description: </b>{{playlistItem.snippet.description}}</p><!-- Post Entry -->
                       <ul class="post-meta">
                         <li><i class="fa fa-clock-o"></i>date: {{playlistItem.snippet.publishedAt}}</li>
                         <li><i class="fa fa-comment-o"></i>? 240</li>
-                      </ul><!-- Post Meta -->
+                      </ul>
+                      <!-- Post Meta -->
                     </div><!-- Post Content -->
                   </article><!-- Post -->
                 </div><!-- Column -->
@@ -59,11 +70,11 @@
             <div class="blog-pagination">
               <ul>
                 <li class="next-page"><a ng-click="updatePlaylistBackward()"><i class="fa fa-angle-left"></i> Back</a></li>
-                <li class="active"><a ui-sref="index">1</a></li>
+                <!-- <li class="active"><a ui-sref="index">1</a></li>
                 <li><a ui-sref="#">2</a></li>
                 <li><a ui-sref="#">3</a></li>
                 <li><span>...</span></li>
-                <li><a ui-sref="#">20</a></li>
+                <li><a ui-sref="#">20</a></li> -->
                 <li class="next-page"><a ng-click="updatePlaylistForward()">Next <i class="fa fa-angle-right"></i></a></li>
                 <li class="total-pages">1 page of 20</li>
               </ul>
