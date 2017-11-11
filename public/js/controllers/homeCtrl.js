@@ -44,9 +44,11 @@ function initNavDates() {
 	var d = new Date();
 	$scope.currDate = weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDay()+" , "+d.getFullYear();
 	hebService.getCurrentHebDate().then(function(result){
+
 		$scope.parasha = result.events[0];
 		$scope.CurrentHebDate = result.hd + "-" +result.hm + "-" +result.hy;
 		$scope.currDate+= " | "+ result.hd + "-" +result.hm + "-" +result.hy;
+
 		console.log("currhebdate ", result);
 	});
 	}

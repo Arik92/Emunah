@@ -61,19 +61,22 @@
 			</div>
 		</div>
 	</div>
-	<aside id="sidebar" class="sidebar col-md-4" style="max-width:310px">
+
+	<aside id="sidebar" class="sidebar col-md-4" style="max-width:310px" ng-controller="sabbathCtrl">
 <!--   <div class="widget LinkList"> -->
 <!--     <div class="container"> -->
 		
 				<div id="card" class="weather" style="width:305px">
 					<div class="city-selected" style="margin-left: 55px;
     margin-bottom: 30px;">
+
 						<article class="candle">
 
 							<div class="info">
 								<div class="night">
-									 <p style="margin-top:35px">Parasha:</br>
-									  <b>Haye Sarah</b></p>
+
+									 <p style="margin-top:35px">Parasha: <b>{{parasha}}</b></p>
+
 									 <br>
 
                 <p>Candles lighting</p>
