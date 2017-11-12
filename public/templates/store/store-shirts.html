@@ -1,96 +1,75 @@
-
-
-
-
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <button class="btn btn-default" id="openMenu" style="margin-top:30px;margin-left: 140px;">Categories</button>
-
 <div class="storemenu" id="menu">
   <div class="row">
     <div class="col-md-12">
-<button class="btn btn-default form-control" id="closeMenu" style="color:red;max-width: 11%;margin-left: 170px;margin-bottom: 10px;margin-top: 10px;">X</button>
-      <ul class="list-group" style="
-  
-    text-align: center;"
->
-           <li class="list-group-item">
-                    <a ui-sref="store-necklaces">Necklaces</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-shirts">Shirts</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-hebrew">Books in Hebrew</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-english">Books in English</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-booklets">Booklets</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-cds">CDs</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-misc">Miscellaneous</a>
-                </li>
-               
-      </ul> 
-       
+      <ul class="list-group" style="text-align: center;">
+        <li class="list-group-item">
+          <a ui-sref="store-necklaces">Necklaces</a>
+        </li>
+        <li class="list-group-item">
+          <a ui-sref="store-shirts">Shirts</a>
+        </li>
+        <li class="list-group-item">
+          <a ui-sref="store-hebrew">Books in Hebrew</a>
+        </li>
+        <li class="list-group-item">
+          <a ui-sref="store-english">Books in English</a>
+        </li>
+        <li class="list-group-item">
+          <a ui-sref="store-booklets">Booklets</a>
+        </li>
+        <li class="list-group-item">
+          <a ui-sref="store-cds">CDs</a>
+        </li>
+        <li class="list-group-item">
+          <a ui-sref="store-misc">Miscellaneous</a>
+        </li>        
+      </ul>
     </div>
-   </div>
+  </div>
 </div>
 
-
-<header class="header" id="layout3">
-      
-       
-        <div class="mainmenu stick-me sticking" style="position: fixed; top: 51px;">
-          <div class="container">
-            <nav class="menu">
-              <ul>
-                <li><a ui-sref="store-necklaces" href="/home">Necklaces</a>
-
-                </li>
-                <li class="parent"><a ui-sref="store-shirts">Shirts</a></li>
-                 
-                    <li class="parent"><a ui-sref="store-hebrew">Books in Hebrew</a>
-                     
-                    </li>
-                    <li class="parent"><a ui-sref="store-english">Books in English</a>
-                      
-                  </li>
-                    <li><a ui-sref="store-booklets">Booklets</a></li>
-                    <li><a ui-sref="store-cds">CDs</a></li>
-                    <li><a ui-sref="store-misc">Miscellaneous</a></li>
-                  </ul>
-                </li>
-                
-              </ul>
-            </nav><!-- Menu -->
-         
-      </header>
-  <!-- Top header -->
-  <header class="w3-container w3-xlarge">
-    <br>
-    <p class="w3-left">Products: Shirts</p>
-<!--     <p class="w3-right">
-      <i class="fa fa-shopping-cart w3-margin-right" onclick="document.getElementById('id01').style.display='block'"></i>
-      <i class="fa fa-search"></i>
-    </p> -->
-  </header>
-
-  <!-- Image header -->
-  
-
-  <div class="w3-container w3-text-grey" id="jeans">
-   
+<header class="header" id="layout3">   
+  <div class="mainmenu stick-me sticking" style="position: fixed; top: 51px;">
+    <div class="container">
+      <nav class="menu">
+        <ul>
+          <li><a ui-sref="store-necklaces" href="/home">Necklaces</a></li>
+          <li class="parent"><a ui-sref="store-shirts">Shirts</a></li>
+          <li class="parent"><a ui-sref="store-hebrew">Books in Hebrew</a></li>
+          <li class="parent"><a ui-sref="store-english">Books in English</a></li>
+          <li><a ui-sref="store-booklets">Booklets</a></li>
+          <li><a ui-sref="store-cds">CDs</a></li>
+          <li><a ui-sref="store-misc">Miscellaneous</a></li>
+        </ul>
+      </nav><!-- Menu -->
+    </div>
   </div>
+</header>
+  <!-- Top header -->
+<header class="w3-container w3-xlarge">
+  <br>
+  <p class="w3-left">Products: Shirts</p>
+<!--     <p class="w3-right">
+    <i class="fa fa-shopping-cart w3-margin-right" onclick="document.getElementById('id01').style.display='block'"></i>
+    <i class="fa fa-search"></i>
+  </p> -->
+</header>
+  <!-- Image header -->
+<div class="w3-container w3-text-grey" id="jeans"></div>
+<!-- Necklaces -->
+<div id='collection-component-193154a53d1'></div>
+<script src="js/store/shirts.js"></script>
+<script type="text/javascript">
 
-  <!-- Necklaces -->
-  <div id='collection-component-193154a53d1'></div>
-  <script src="js/store/shirts.js"></script>
-
-</body>
-</html>
+$(document).ready(function(){
+    $("#openMenu").click(function(){
+        $("#menu").toggle();
+    });
+    
+    $("#closeMenu").click(function(){
+        $("#menu").hide();
+    });
+});
+</script>
