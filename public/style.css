@@ -750,12 +750,19 @@ header.header#layout2 .mainmenu .menu>ul>li>a {
 }
 header.header#layout2 .mainmenu .menu {
     float: none;
+    overflow: auto;
   /*  display: inline-block;
     text-align: left;*/
 }
 header.header#layout2 .mainmenu .menu>ul>li ul {
     top: 51px;
     margin-left: -189px;
+     overflow: auto;
+     direction: rtl; /* to get the scrollbar to bottom */
+}
+header.header#layout2 .mainmenu .menu>ul:hover {
+background-color: steelblue;
+color:white;
 }
 header.header#layout2 .mainmenu .menu>ul>li>ul>li>ul {
     top: 0;
@@ -3413,4 +3420,9 @@ figure {
 div.frameshop {
     margin-right: 65px;
     margin-left: 65px;
+}
+
+
+img.lazy {
+    width: 100%;
 }
