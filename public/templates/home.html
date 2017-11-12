@@ -76,6 +76,64 @@
 		<div class="container">
 			<!-- <div class="row"> -->
 				<section id="main" class="main col-md-8">
+					<div class="blog-layout layout-4" style="display: block">
+						<div class="blog-title">
+							<h2>Latest Videos</h2>
+						</div><!-- Blog title -->
+						<div class="blog-wrapper row">
+							<div class="col col-sm-8">
+								<article class="post first">
+									<div class="post-thumb">
+										<a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id})">
+											<img class="lazy" src={{topThree[0].snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
+										</a>
+									</div><!-- Post Image -->
+									<div class="post-content">
+										<h4 class="post-title">
+											<a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id})">{{topThree[0].snippet.title}}</a>
+										</h4><!-- Post Title -->
+										<p class="post-entry">{{topThree[0].snippet.description}}</p><!-- Post Entry -->
+										<ul class="post-meta">
+											<li><i class="fa fa-clock-o"></i> {{topThree[0].snippet.publishedAt}}</li>
+											<li><i class="fa fa-comment-o"></i> 240</li>
+										</ul><!-- Post Meta -->
+									</div><!-- Post Content -->
+								</article><!-- Post -->
+							</div><!-- Column -->
+							<div class="col col-sm-4">
+								<article class="post">
+									<div class="post-thumb">
+										<a ui-sref="post-single({videoParam: topThree[1], id: topThree[1].id})">
+											<img class="lazy" src={{topThree[1].snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
+										</a>
+									</div><!-- Post Image -->
+									<div class="post-content">
+										<h6 class="post-title">
+											<a ui-sref="post-single({videoParam: topThree[1], id: topThree[1].id})">{{topThree[1].snippet.title}}</a>
+										</h6><!-- Post Title -->
+										<ul class="post-meta">
+											<li><i class="fa fa-clock-o"></i> {{topThree[1].snippet.publishedAt}}</li>
+										</ul><!-- Post Meta -->
+									</div><!-- Post Content -->
+								</article><!-- Post -->
+								<article class="post">
+									<div class="post-thumb">
+										<a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id})">
+											<img class="lazy" src={{topThree[2].snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
+										</a>
+									</div><!-- Post Image -->
+									<div class="post-content">
+										<h6 class="post-title">
+											<a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id})">{{topThree[2].snippet.title}}</a>
+										</h6><!-- Post Title -->
+										<ul class="post-meta">
+											<li><i class="fa fa-clock-o"></i> {{topThree[2].snippet.publishedAt}}</li>
+										</ul><!-- Post Meta -->
+									</div><!-- Post Content -->
+								</article><!-- Post -->
+							</div><!-- Column -->
+						</div><!-- Blog Wrapper -->
+					</div><!-- Blog Layout -->
 					<div class="blog-layout layout-3" style="display: block">
 						<div class="blog-title">
 							<a ui-sref="category">
