@@ -35,8 +35,8 @@
                    <br>
 
                 <p>Candles lighting</p>
-                <input id="autocomplete" type="text" autocomplete="off" placeholder="Enter city">
-                <div class="form-group">
+                <input id="autocomplete" type="text" autocomplete="off" placeholder="Enter city" ng-show="!showResult" ng-model="gLoc">
+                <div class="form-group" ng-show="!showResult">
                   <p>Or</p>
                   <button ng-click="useOwnLocation()">Use my current location</button>
                  

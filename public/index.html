@@ -55,11 +55,11 @@
       <ul>
         <li ng-show="currentUser">Welcome, {{currentUser}}</li>
         <li> {{parasha}}</li>
-        <li>19 Tammuz 5777 - 13 July 2017</li>
+        <li>{{currDate}}</li>
         <li><a ui-sref="home">Home</a></li>
         <li><a ui-sref="articles">Articles</a></li>
-        <li class="has-sub"><a href="#">Lectures</a></li>
-          <ul >
+        <li class="has-sub"><a href="#">Lectures</a>
+          <ul>
              <li ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
           </ul>
         </li>
