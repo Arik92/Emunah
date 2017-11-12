@@ -13,7 +13,7 @@
 								<article class="post first">
 									<div class="post-thumb">
 										<a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id})">
-											<img class="lazy" src={{topThree[0].snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
+											<img id="top" class="lazy" src={{topThree[0].snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
 									<div class="post-content">
@@ -285,9 +285,19 @@
 							</div><!-- Column -->
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->
-	
-				</section>
-				<aside-directive></aside-directive>
+<!-- 					<div class="blog-pagination">
+						<ul>
+							<li class="active"><a ui-sref="index">1</a></li>
+							<li><a ui-sref="#">2</a></li>
+							<li><a ui-sref="#">3</a></li>
+							<li><span>...</span></li>
+							<li><a ui-sref="#">10</a></li>
+							<li class="next-page"><a ui-sref="#">Page Next <i class="fa fa-angle-right"></i></a></li>
+							<li class="total-pages">1 page of 99</li>
+						</ul>
+					</div> -->
+				</section><!-- Main -->
+				<home-directive></home-directive>
 			</div><!-- Row -->
 		</div><!-- Container -->
 

@@ -193,6 +193,16 @@ img {
     max-width: 100%;
     display: block;
 }
+
+#top {
+   width: 470px;
+   height: 268px;
+}
+
+#top img {
+    width: 100%;
+}
+
 img.lazy {
    /* opacity: 1;*/
     transition: opacity .3s ease-in;
