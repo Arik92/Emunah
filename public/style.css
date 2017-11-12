@@ -150,8 +150,9 @@ h6 {
 
 .slide-menu {
     display: block;
-    width: 300px;
+    width: 186px;
     position: fixed;
+    text-align: center;
     top: 0;
     left: 0;
     bottom: 0;
@@ -200,6 +201,8 @@ h6 {
     border-bottom: 1px dotted #eee;
     position: relative;
 }
+
+
 .slide-menu>ul>li:last-child {
     display: block;
     padding-bottom: 0;
@@ -3419,3 +3422,7 @@ figure {
     transition: all 0.5s ease;
 }
 
+div.frameshop {
+    margin-right: 65px;
+    margin-left: 65px;
+}
