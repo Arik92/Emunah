@@ -55,11 +55,11 @@
       <ul>
         <li ng-show="currentUser">Welcome, {{currentUser}}</li>
         <li> {{parasha}}</li>
-        <li>19 Tammuz 5777 - 13 July 2017</li>
+        <li>{{currDate}}</li>
         <li><a ui-sref="home">Home</a></li>
         <li><a ui-sref="articles">Articles</a></li>
-        <li class="has-sub"><a href="#">Lectures</a></li>
-          <ul >
+        <li class="has-sub"><a href="#">Lectures</a>
+          <ul>
              <li ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
           </ul>
         </li>
@@ -138,9 +138,16 @@
             </div><!-- Ad Container -->
           </div><!-- Container -->
         </div><!-- Header Content -->
-        <div class="mainmenu" style="background-color:steelblue;height:50px">
-          <div class="container">
-            <nav class="menu" style="margin-left:310px;">
+        <div class="mainmenu" style="height:50px">
+          <div class="container" id="mobileres">
+             <div class="logo-container" id="logonav2" style="max-width:40%; margin-left: 91px">
+              <!-- <div class="logo"> -->
+                <a ui-sref="home">
+                  <img src="images/favicon.png" alt="Logo Image Placeholder">
+                </a>
+              <!--   --><!-- Logo -->
+            </div><!-- Logo Container -->
+            <nav class="menu" style="margin-left:145px;">
               <ul>
                   <li><a ui-sref="#">Rav Dror in the USA</a>
                   <div class="megamenu" style="background-color:white;">
@@ -512,12 +519,12 @@
 
             </nav><!-- Menu -->
             <span class="menu-tigger js-slideout-toggle">
-              <i class="fa fa-bars" style="font-size: 55px; margin-top: 9px; margin-left: 22px;"></i>
+              <i class="fa fa-bars" style="font-size: 35px; margin-top: 18px; color:steelblue"></i>
             </span><!-- Menu Tigger -->
            <!--  <span class="search-tigger">
               <i class="fa fa-search"></i>
-            </span> --><!-- Search Tigger -->
-          </div><!-- Container -->
+            </span> --><!-- Search Tigger
+          </div><! Container -->
         </div><!-- Main Menu -->
       </header><!-- Header -->
       <!-- <header-directive></header-directive> -->

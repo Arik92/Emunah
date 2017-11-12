@@ -18,7 +18,7 @@ app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytS
   })//callback
 };//get latest videos
 ////////****************************LATEST VIDEO INTERFACE ******************************8/////////////////////
-//////////////////////////////////////**************** SHABBAT *************************/////////////////////////
+//////////////////////////////////////**************** Parasha and hebrew date interface *************************/////////////////////////
 function initNavDates() {
 	var weekday = new Array(7);
 	weekday[0] =  "Sun";
@@ -42,7 +42,7 @@ function initNavDates() {
 	month[10] = "Nov";
 	month[11] = "Dec";	
 	var d = new Date();
-	$scope.currDate = weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDay()+" , "+d.getFullYear();
+	$scope.currDate = weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDate()+" , "+d.getFullYear();
 	hebService.getCurrentHebDate().then(function(result){
 
 		$scope.parasha = result.events[0];
@@ -54,7 +54,7 @@ function initNavDates() {
 	}
 initNavDates()
 // friday, nov 10 2017
-//////////////////////////////////////**************** SHABBAT *************************/////////////////////////
+//////////////////////////////////////**************** Parasha and hebrew date interface *************************/////////////////////////
 
 ////////////*************************PLAYLIST INTERFACE **********************************8////////////////////////
   $scope.getAllPlayLists = function() {

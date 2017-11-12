@@ -96,6 +96,7 @@ addScript(mapSrc);
   // hebService.getCurrentHebDate();
   // $rootScope.currentUser = authFactory.currentUser.email;
   $scope.checkTimes = function() {
+	  if (!$scope.showResult) {
     if ($scope.selectedLat) {
       var tzRequestString = "https://maps.googleapis.com/maps/api/timezone/json?location="+$scope.selectedLat+","+$scope.selectedLng+"&timestamp="+$scope.timeStamp+"&language=en&key="+timeKey;
       console.log("tzRequestString", tzRequestString);
@@ -110,7 +111,9 @@ addScript(mapSrc);
             if (error) {
               console.log(error);
             } else {
+				//TODO: make error handler for: no candle light, couldnt find time zone, etc'
               $scope.showResult = true;
+			  //NOTE might need to check if its a saturday
               $scope.candleTimes = sab.items[0].title;
               console.log("sabbath ", sab);
             }//else
@@ -122,6 +125,14 @@ addScript(mapSrc);
     } else {
 		alert("Please choose your location");
     }
+	  } else {
+		  $scope.showResult = false;
+		  //TODO reset google autocompete
+		  $scope.selectedLat = null;
+		  $scope.selectedLng = null;
+		  $scope.selectedPlace = null;
+		  $scope.gLoc = "";
+	  }//else reset show Result
   }//checkTimes
 }); //controller
 },{"../config.js":1}],3:[function(require,module,exports){
