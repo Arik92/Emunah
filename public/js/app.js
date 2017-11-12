@@ -22,7 +22,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/category.html'
     })
     .state('playlist', {
-      url: '/playlist/:id',
+      url: '/playlist/:title/:id',
       templateUrl: '/templates/playlist-page.html',
       params: {playlistParam: null},
       controller: 'playlistCtrl'
@@ -271,5 +271,15 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('chayei-sarah', {
       url: '/becoming-closer-to-hashem-good-eyes-a-pure-heart',
       templateUrl: '/templates/articles/chayei-sarah.html'
-    })
+    })	  
 });
+
+app.run(function($rootScope, authFactory, $state) {
+  var user = JSON.parse(localStorage.getItem("user"));
+  console.log("app.run user", user);
+  if (user) {
+    $rootScope.currentUser = user.username;
+	$state.go('home');
+    //$rootScope.$broadcast('fbLogin');
+  }//if 
+});//app.run

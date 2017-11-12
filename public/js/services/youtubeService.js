@@ -28,6 +28,14 @@ app.service('ytService', function($http) {
       console.error("error fetching latest vids");
     });
   }//getLatesVids
+  serv.getVideo = function(id) {
+    return $http.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+id+'&key=' + config.YOUTUBE_KEY).then(function(response) {
+      console.log('found video response', response);
+      return response.data.items[0];
+    }, function(error) {
+      console.error("error fetching specific vid");
+    });
+  }//getLatesVids
   serv.getPlaylistVideos = function(playlistId) {
     return $http.get('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId='+playlistId+'&key='+config.YOUTUBE_KEY)
     .then(function(response) {

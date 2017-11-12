@@ -60,7 +60,7 @@
         <li><a ui-sref="articles">Articles</a></li>
         <li class="has-sub"><a href="#">Lectures</a>
           <ul>
-             <li ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
+             <li ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist,  title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a></li>
           </ul>
         </li>
         <li class="has-sub"><ui-sref="about.html">About</a>
@@ -73,7 +73,7 @@
         <li><a ui-sref="contact">Contact</a></li>
         <li ng-hide="currentUser"><a ui-sref="login">Login</a></li>
         <li ng-hide="currentUser"><a ui-sref="signup">Sign Up</a></li>
-        <li ng-show="currentUser"><a ng-click="logout()">Log out</a></li>
+        <li ng-show="currentUser" ng-controller="authCtrl"><a ng-click="logout()">Log out</a></li>
         <li><a ui-sref="signup">Subscribe</a></li>
         <li><a ui-sref="store-necklaces">Store</a></li>
         <li><a ui-sref="whatsapp">Whatsapp</a></li>
@@ -199,13 +199,9 @@
                   </div>
                 </li>
                 <li><a ui-sref="category">Lectures</a>
-                
-
-                  <ul class="scrollbar" id="style-1"style="color:white; margin-top: 1px; display: none;" ng-controller="homeCtrl">
-                   
-                    <li style="color:steelblue;" ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
+                  <ul class="scrollbar" id="style-1" style="color:white; margin-top: 1px; display: none;" ng-controller="homeCtrl">
+                    <li style="color:steelblue;" ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a></li>
                   </ul>
-              
                 </li>
                 <li><a ui-sref="services">Services</a>
                   <div class="megamenu" style="background-color: white; color: steelblue;">
