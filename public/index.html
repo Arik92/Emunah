@@ -28,14 +28,7 @@
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/js-datepicker/datepicker.css"/>
     <link rel="stylesheet" href="/quill/dist/quill.snow.css"/>
-
-
-
     <base href="/">
-
-
-
-<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=59ae72b5c975c80011bcfd3a&product=inline-share-buttons' async='async'></script>
 </head>
 <body>
     <div id="loader">
@@ -101,7 +94,7 @@
             </div><!-- Logo Container -->
             <nav class="topmenu">
               <ul style="color:white">
-                <li ng-show="currentUser">Welcome, {{currentUser}}</li>
+                <li ng-show="currentUser" style="font-size:11px;">Welcome, {{currentUser}}</li>
                 <li style="font-size:11px;">{{parasha}}</li>
                 <li style="font-size:11px;">{{currDate}}</li>
                 <li style="color:white"><a ui-sref="page-contact" style="color:white">Subscribe</a></li>
@@ -508,15 +501,10 @@
                     </div>
                   </div>
                 </li>
-                <li ng-show="currentUser"><a href="page-category.html">Emunahversity</a>
-                </li>
+                <!-- <li ng-show="currentUser"><a href="page-category.html">Emunahversity</a></li> -->
                 <li><a ui-sref="page-contact">Contact</a></li>
-
                 <!-- <li ng-show="currentUser"><a href="page-category.html"><i class="fa fa-user 2x"></i> Members</a></li> -->
               </ul>
-
-
-
             </nav><!-- Menu -->
             <span class="menu-tigger js-slideout-toggle">
               <i class="fa fa-bars" style="font-size: 35px; margin-top: 18px; color:steelblue"></i>
@@ -559,7 +547,7 @@
     <script src="js/controllers/singleCtrl.js"></script>
     <script src="js/services/authFactory.js"></script>
     <script src="js/controllers/authCtrl.js"></script>
-	<script src="js/controllers/homeCtrl.js"></script>
+	  <script src="js/controllers/homeCtrl.js"></script>
     <script src="js/services/articleFactory.js"></script>
     <script src="js/controllers/articleCtrl.js"></script>
     <script src="js/controllers/playlistCtrl.js"></script>
@@ -567,11 +555,15 @@
     <script src="js/directives/navDirective.js"></script>
     <script src="js/directives/headerDirective.js"></script>
     <script src="js/directives/footerDirective.js"></script>
+    <script src="js/directives/homeDirective.js"></script>
     <script src="js/directives/asideDirective.js"></script>
     <script src="js/directives/smallasideDirective.js"></script>
+    <script src="js/directives/smallestasideDirective.js"></script>
     <script src="js/directives/sliderDirective.js"></script>
     <script src="js/directives/classesDirective.js"></script>
     <!-- End All JavaScripts Needed -->
 <!--    <script id="dsq-count-scr" src="https://infinyteam.disqus.com/count.js" async></script> -->
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a008ebc959bcc55"></script> 
   </body>
 </html>
