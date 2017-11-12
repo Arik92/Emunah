@@ -1,4 +1,3 @@
-
 	<!-- Trending Post Section removed from here -->
 	<!-- <section id="main-area"> -->
 		<h3 style="display: none;">Main Area</h3>
@@ -74,7 +73,7 @@
 								<article class="post" >
 									<div class="post-thumb">
 										<!-- <a href="{{playlist.playurl}}"> -->
-										<a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">
+										<a ui-sref="playlist({playlistParam: playlist, title: playlist.snippet.localized.title, id:playlist.id})">
 											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  />
 											<!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
 										<span class="post-format">
@@ -105,10 +104,6 @@
 									<li class="total-pages">1 page of 20</li>
 								</ul>
 							</div>
-<!-- 							<div class="col col-sm-4">
-								<Button ng-click="updatePlaylistBackward()">Prev</Button>
-								<Button ng-click="updatePlaylistForward()">Next</Button>
-							</div> --> <!-- button wrapper-->
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->
 					<div class="blog-layout layout-4" style="display: block">
@@ -290,6 +285,7 @@
 							</div><!-- Column -->
 						</div><!-- Blog Wrapper -->
 					</div><!-- Blog Layout -->
+<<<<<<< HEAD
 <!-- 					<div class="blog-pagination">
 						<ul>
 							<li class="active"><a ui-sref="index">1</a></li>
@@ -303,6 +299,11 @@
 					</div> -->
 				</section><!-- Main -->
 				<home-directive></home-directive>
+=======
+	
+				</section>
+				<aside-directive></aside-directive>
+>>>>>>> dfe1945f59195386940d74bfa21fa72a267ea52a
 			</div><!-- Row -->
 		</div><!-- Container -->
 

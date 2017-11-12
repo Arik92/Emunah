@@ -10,7 +10,7 @@ app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytS
     } else {
       $scope.footerVids = data.items;
       $scope.topThree = data.items.splice(0,3);
-      //console.log("top three videos are ", $scope.topThree);
+      console.log("top three videos are ", $scope.topThree);
       $scope.latestVids = data.items;
 
       //console.log("latest vids are", data.items);
@@ -44,11 +44,9 @@ function initNavDates() {
 	var d = new Date();
 	$scope.currDate = weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDate()+" , "+d.getFullYear();
 	hebService.getCurrentHebDate().then(function(result){
-
 		$scope.parasha = result.events[0];
 		$scope.CurrentHebDate = result.hd + "-" +result.hm + "-" +result.hy;
 		$scope.currDate+= " | "+ result.hd + "-" +result.hm + "-" +result.hy;
-
 		console.log("currhebdate ", result);
 	});
 	}
@@ -63,7 +61,7 @@ initNavDates()
         console.error("controller error fetching playlists");
       } else {
         $scope.allPlayLists = playlistFilter(data.items); // an array of 48 playLists
-        //console.log("after filter", $scope.allPlayLists);
+        console.log("after filter", $scope.allPlayLists);
         $scope.footerPlaylists = $scope.allPlayLists.slice(0,35);
         $scope.playListIndex = 0;
         $scope.numRes = data.pageInfo.totalResults;

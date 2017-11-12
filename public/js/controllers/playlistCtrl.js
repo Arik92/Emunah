@@ -1,5 +1,6 @@
 app.controller('playlistCtrl', function($rootScope, $scope, $stateParams, ytService, selectedFactory) {
   $scope.playerPlaylist = $stateParams.playlistParam;
+  $scope.title = $stateParams.title;
   function playlistPrep(list, privateParam) {
     /*TODO: this function attaches an src href to eac video, and also, if the user is not registered,
     hide the private videos*/
@@ -34,7 +35,7 @@ app.controller('playlistCtrl', function($rootScope, $scope, $stateParams, ytServ
         console.error(err);
       } else {
         $scope.playlistItems = res.items;
-        //console.log("playlist item response is", $scope.playlistItems);
+        console.log("playlist item response is", $scope.playlistItems);
         playlistPrep($scope.playlistItems, "guest");
       }//else
     })//callback
