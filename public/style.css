@@ -3206,6 +3206,7 @@ span.psw {
     top: 0;
     left: 0;
     height: 100%;
+    width: 100%;
 }
 
 
@@ -3225,19 +3226,6 @@ span.psw {
 .store-menu {
     padding: 64px 0px 205px 0px;
 }
-/*
-@media only screen {
-  .sidebarstore {
-    position: relative;
-    display: none;
-
-    
-  }
-*/
-
-/*.w3-sidebar.w3-collapse {
-    display: block!important;
-}*/
 
 
 
