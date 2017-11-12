@@ -1,5 +1,165 @@
 <-- you will see all code that was commented out or unnecessary here -->
 
+<!-- big videos on home line 1 upon loading -->
+<div  class="wide home" style="margin-top: 22px;">
+  <section class="featured-posts layout3" style="display:block">
+    <div class="container" id="homevideos">
+      <div class="row-gallery">
+        <div class="first col-md-7 col-sm-12">
+          <a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id})">
+          <div class="post has-caption" style="background-image: url({{topThree[0].snippet.thumbnails.medium.url}});">
+            <div class="post-content">
+              <div class="post-category">
+              <!-- <a ui-sref="page-category"> -->
+              Video category?
+            <!-- </a> -->
+              </div>
+              <h2 class="post-title">
+                {{topThree[0].snippet.title}}
+              </h2>
+              <ul class="post-meta">
+                <li><i class="fa fa-clock-o"></i>{{topThree[0].snippet.publishedAt}}</li>
+                <li><i class="fa fa-comment-o"></i> 240</li>
+              </ul>
+            </div>
+          </div><!-- Post -->
+        </a>
+        </div>
+        <div class="col-md-5 col-sm-6">
+          <a ui-sref="post-single({videoParam: topThree[1], id: topThree[1].id})">
+          <div class="post has-caption" style="background-image: url({{topThree[1].snippet.thumbnails.medium.url}});">
+            <div class="post-content">
+              <div class="post-category">
+              Video category
+              </div>
+              <h4 class="post-title">
+                {{topThree[1].snippet.title}}
+              </h4>
+              <ul class="post-meta">
+                <li><i class="fa fa-clock-o"></i>{{topThree[1].snippet.publishedAt}}</li>
+                <li><i class="fa fa-comment-o"></i> 240</li>
+              </ul>
+            </div>
+          </div><!-- Post -->
+        </a>
+        </div>
+        <div class="col-md-5 col-sm-6">
+          <a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id})">
+            <div class="post has-caption" style="background-image: url({{topThree[2].snippet.thumbnails.medium.url}});">
+              <div class="post-content">
+                <div class="post-category">
+                Video category?
+                </div>
+                <h4 class="post-title">
+                  {{topThree[2].snippet.title}}
+                </h4>
+                <ul class="post-meta">
+                  <li><i class="fa fa-clock-o"></i>{{topThree[2].snippet.publishedAt}}</li>
+                  <li><i class="fa fa-comment-o"></i> 240</li>
+                </ul>
+              </div>
+            </div><!-- Post -->
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<!-- </div> -->
+<!-- </div> -->
+<!--  </section> -->
+
+<!-- Personal growth from 266 on home.html -->
+<div class="blog-layout layout-6 tiny-thumb" style="display: block">
+            <div class="blog-title">
+              <h2>Personal Growth</h2>
+            </div><!-- Blog title -->
+            <div class="blog-wrapper row">
+              <div class="col col-sm-12">
+                <article class="post first">
+                  <div class="post-thumb">
+                    <a ui-sref="post-single">
+                      <img class="lazy" src="images/17.jpg" data-src="images/17.jpg" alt="Post Title Placeholder" />
+                    </a>
+                  </div><!-- Post Image -->
+                  <div class="post-content">
+                    <h4 class="post-title">
+                      <a ui-sref="post-single">Kabbalah &amp; Mysticism</a>
+                    </h4><!-- Post Title -->
+                    <p class="post-entry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus tenetur quisquam ut, quas praesentium dolores iure ullam molestias aperiam vero, saepe inventore est veniam ipsum...</p><!-- Post Entry -->
+                    <ul class="post-meta">
+                      <li><i class="fa fa-clock-o"></i> October 16, 2017</li>
+                      <li><i class="fa fa-comment-o"></i> 240</li>
+                    </ul><!-- Post Meta -->
+                  </div><!-- Post Content -->
+                </article><!-- Post -->
+              </div><!-- Column -->
+              <div class="col col-sm-12">
+                <article class="post">
+                  <div class="post-thumb">
+                    <a ui-sref="post-single">
+                      <img class="lazy" src="images/18.jpg" alt="Post Title Placeholder" />
+                    </a>
+                  </div><!-- Post Image -->
+                  <div class="post-content">
+                    <h6 class="post-title">
+                      <a ui-sref="post-single">Jewish Holidays: The High Holidays</a>
+                    </h6><!-- Post Title -->
+                    <ul class="post-meta">
+                      <li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+                    </ul><!-- Post Meta -->
+                  </div><!-- Post Content -->
+                </article><!-- Post -->
+                <article class="post">
+                  <div class="post-thumb">
+                    <a ui-sref="post-single">
+                      <img class="lazy" src="images/19.jpg" alt="Post Title Placeholder" />
+                    </a>
+                  </div><!-- Post Image -->
+                  <div class="post-content">
+                    <h6 class="post-title">
+                      <a ui-sref="post-single">The Torah Is The Spice Of Your Life</a>
+                    </h6><!-- Post Title -->
+                    <ul class="post-meta">
+                      <li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+                    </ul><!-- Post Meta -->
+                  </div><!-- Post Content -->
+                </article><!-- Post -->
+                <article class="post">
+                  <div class="post-thumb">
+                    <a ui-sref="post-single">
+                      <img class="lazy" src="images/20.jpg" alt="Post Title Placeholder" />
+                    </a>
+                  </div><!-- Post Image -->
+                  <div class="post-content">
+                    <h6 class="post-title">
+                      <a ui-sref="post-single">Jewish Holidays: The High Holidays</a>
+                    </h6><!-- Post Title -->
+                    <ul class="post-meta">
+                      <li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+                    </ul><!-- Post Meta -->
+                  </div><!-- Post Content -->
+                </article><!-- Post -->
+                <article class="post">
+                  <div class="post-thumb">
+                    <a ui-sref="post-single">
+                      <img class="lazy" src="images/15.jpg" alt="Post Title Placeholder" />
+                    </a>
+                  </div><!-- Post Image -->
+                  <div class="post-content">
+                    <h6 class="post-title">
+                      <a ui-sref="post-single">The Torah Is The Spice Of Your Life</a>
+                    </h6><!-- Post Title -->
+                    <ul class="post-meta">
+                      <li><i class="fa fa-clock-o"></i> October 30, 2016</li>
+                    </ul><!-- Post Meta -->
+                  </div><!-- Post Content -->
+                </article><!-- Post -->
+              </div><!-- Column -->
+            </div><!-- Blog Wrapper -->
+          </div><!-- Blog Layout -->
+
 <!-- layout3 taken out of 564 on index.html -->
 
       <header class="header" id="layout2" style="display:none;">

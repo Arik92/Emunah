@@ -1,5 +1,5 @@
 
-@media (max-width:390px) {
+@media (max-width:1090px) {
 	body {
 		overflow-x: hidden;
 	}
@@ -724,9 +724,13 @@ width:90%;
      margin-left: 50px; 
   }
 
-  div#logonav2.logo-container {
+ 
+}
+
+@media (min-width:730px) and (max-width: 2000px){
+
+ div#logonav2.logo-container {
   	display: none;
 
   }
 }
-

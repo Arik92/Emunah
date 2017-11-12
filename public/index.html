@@ -142,7 +142,7 @@
           <div class="container" id="mobileres">
              <div class="logo-container" id="logonav2" style="max-width:40%; margin-left: 91px">
               <!-- <div class="logo"> -->
-                <a ui-sref="home">
+                <a ui-sref="home" >
                   <img src="images/favicon.png" alt="Logo Image Placeholder">
                 </a>
               <!--   --><!-- Logo -->
@@ -199,7 +199,7 @@
                   </div>
                 </li>
                 <li><a ui-sref="category">Lectures</a>
-                  <ul style="color:white; margin-top: 1px; display: none;" ng-controller="homeCtrl">
+                  <ul class="scrollbar" id="style-1" style="color:white; margin-top: 1px; display: none;" ng-controller="homeCtrl">
                     <li style="color:steelblue;" ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a></li>
                   </ul>
                 </li>
@@ -532,6 +532,7 @@
     </div><!-- Wrapper -->
     <footer-directive></footer-directive>
     <!-- Start All JavaScripts Needed -->
+
     <script id="dsq-count-scr" src="//emunah-com.disqus.com/count.js" async></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
