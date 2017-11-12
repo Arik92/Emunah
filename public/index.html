@@ -199,9 +199,13 @@
                   </div>
                 </li>
                 <li><a ui-sref="category">Lectures</a>
-                  <ul style="color:white; margin-top: 1px; display: none;" ng-controller="homeCtrl">
+                
+
+                  <ul class="scrollbar" id="style-1"style="color:white; margin-top: 1px; display: none;" ng-controller="homeCtrl">
+                   
                     <li style="color:steelblue;" ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></li>
                   </ul>
+              
                 </li>
                 <li><a ui-sref="services">Services</a>
                   <div class="megamenu" style="background-color: white; color: steelblue;">
@@ -532,6 +536,7 @@
     </div><!-- Wrapper -->
     <footer-directive></footer-directive>
     <!-- Start All JavaScripts Needed -->
+
     <script id="dsq-count-scr" src="//emunah-com.disqus.com/count.js" async></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
