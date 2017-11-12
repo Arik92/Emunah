@@ -3,7 +3,7 @@
 		<div class="container" id="homevideos">
 			<div class="row-gallery">
 				<div class="first col-md-7 col-sm-12">
-					<a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id})">
+					<a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id.videoId})">
 					<div class="post has-caption" style="background-image: url({{topThree[0].snippet.thumbnails.medium.url}});">
 						<div class="post-content">
 							<div class="post-category">
@@ -23,7 +23,7 @@
 				</a>
 				</div>
 				<div class="col-md-5 col-sm-6">
-					<a ui-sref="post-single({videoParam: topThree[1], id: topThree[1].id})">
+					<a ui-sref="post-single({videoParam: topThree[1], id: topThree[1].id.videoId})">
 					<div class="post has-caption" style="background-image: url({{topThree[1].snippet.thumbnails.medium.url}});">
 						<div class="post-content">
 							<div class="post-category">
@@ -41,7 +41,7 @@
 				</a>
 				</div>
 				<div class="col-md-5 col-sm-6">
-					<a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id})">
+					<a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id.videoId})">
 						<div class="post has-caption" style="background-image: url({{topThree[2].snippet.thumbnails.medium.url}});">
 							<div class="post-content">
 								<div class="post-category">
@@ -87,7 +87,7 @@
 								<article class="post" >
 									<div class="post-thumb">
 										<!-- <a href="{{playlist.playurl}}"> -->
-										<a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">
+										<a ui-sref="playlist({playlistParam: playlist, title: playlist.snippet.localized.title, id:playlist.id})">
 											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  />
 											<!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
 										<span class="post-format">

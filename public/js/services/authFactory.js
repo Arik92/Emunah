@@ -1,4 +1,4 @@
-app.factory('authFactory', function($http) {
+app.factory('authFactory', function($http, $rootScope) {
   var auth = {};
   auth.currentUser = {};
   auth.join = function(user) {
@@ -14,6 +14,13 @@ app.factory('authFactory', function($http) {
       .then(function(response) {
         console.log("Successfully logged in", response.data);
         auth.currentUser = angular.copy(response.data);
+		var user = {
+			username: response.data.username,
+			email: response.data.email
+		};
+		localStorage.setItem("user", JSON.stringify(user));
+		console.log("login localstorage", localStorage.user);
+        $rootScope.currentUser = user.username;
       });
   };
 
@@ -28,8 +35,10 @@ app.factory('authFactory', function($http) {
   auth.logout = function(user) {
     return $http.get('/users/logout')
       .then(function(reponse) {
-        auth.currentUser.email = null;
-        console.log("auth logout");
+		  localStorage.removeItem("user");
+		  $rootScope.currentUser = null;
+          auth.currentUser.email = null;
+          console.log("auth logout");
       })
   }
 
