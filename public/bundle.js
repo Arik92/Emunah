@@ -120,7 +120,7 @@ addScript(mapSrc);
       //TODO make api call to hebcal to get sabbath times
 
     } else {
-
+		alert("Please choose your location");
     }
   }//checkTimes
 }); //controller

@@ -101,6 +101,7 @@ addScript(mapSrc);
               console.log(error);
             } else {
               $scope.showResult = true;
+			  //NOTE might need to check if its a saturday
               $scope.candleTimes = sab.items[0].title;
               console.log("sabbath ", sab);
             }//else
