@@ -186,7 +186,7 @@ initNavDates()
       image: 'images/usa.jpg'
     },
     {
-      image: 'images/class_nov_7.jpeg'
+      image: 'images/class1.jpeg'
     }
   ];
 
