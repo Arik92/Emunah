@@ -11,7 +11,7 @@ a:hover, a:link:hover {
 ================================================== */
 
 .spinner>div, header.header#layout2 .mainmenu, .search-modal .search-close:hover, .featured-posts .post.has-caption:hover .post-category a, .blog-layout.has-slider .post:hover .post-category a, .blog-layout.layout-1 .post:hover .post-category a, .post-header .post-category a, .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span, .featured-navigation div:hover, .FollowByEmail input.follow-by-email-submit:hover, #footer .FollowByEmail input.follow-by-email-submit:hover, .contact-form input[type="submit"], .totop:hover {
-    background-color: midnightblue;
+    background-color: steelblue;
     border-color: midnightblue;
     color: #ffffff;
 }
