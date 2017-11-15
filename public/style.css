@@ -550,7 +550,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 .mainmenu .megamenu .item-content {
     display: block;
     position: relative;
-    padding: 10px;
+    padding: 0px;
     transform: translateY(10px);
 }
 .mainmenu .megamenu .item {
@@ -571,12 +571,13 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 .megamenu .post .post-thumb {
     display: block;
     position: relative;
-    margin-bottom: 15px;
-    height: 135px;
+/*    margin-bottom: 15px;*/
+    height: 100px;
     overflow: hidden;
 }
 .megamenu .post .post-category a {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+
 }
 
 /* Posts Global */
@@ -1887,8 +1888,8 @@ header.header#layout3 .search-tigger:hover {
     display: block;
     height: 40px;
     width: 100% !important;
-    background: midnightblue;
-    color: black;
+    background: steelblue;
+    color: white;
     border: 0;
     font-weight: 800;
     text-transform: uppercase;
@@ -2852,11 +2853,12 @@ code {
     overflow: hidden;
     position: relative;
     clear: both;
+    background: #eee;
 }
 .contact-form .input-group {
     display: block;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin: 30px;
 }
 .contact-form label {
     font-size: 14px;
@@ -2864,8 +2866,8 @@ code {
 }
 .contact-form input, .contact-form textarea {
     display: block;
-    margin-top: 10px;
-    background: #eee;
+    margin-top: 2px;
+    background: white;
     border: 0;
     font-size: 14px;
     font-weight: 400;
@@ -2877,10 +2879,16 @@ code {
 .contact-form input {
     height: 40px;
     padding: 0 15px;
-    width: 400px;
+    width: 50%;
+}
+#input-group-small {
+    height: 40px;
+    padding: 0 15px;
+    width: 20%;
+    display: inline-block;
 }
 .contact-form textarea {
-    min-height: 220px;
+    min-height: 100px;
     padding: 15px;
     width: 100%;
 }
@@ -3060,7 +3068,7 @@ code {
     font-size: 24px;
     line-height: 30px;
     text-align: center;
-    background: midnightblue;
+    background: steelblue;
     color: #fff;
     position: fixed;
     bottom: 5px;
