@@ -752,6 +752,10 @@ header.header#layout2 .logo-container {
 header.header#layout2 .mainmenu .menu>ul>li>a {
     padding: 0 15px;
 }
+header.header#layout2 .mainmenu .menu>ul>li>a:hover {
+    background-color: black;
+    padding: 0 15px;
+}
 header.header#layout2 .mainmenu .menu {
     float: none;
     overflow: auto;
@@ -1840,7 +1844,7 @@ header.header#layout3 .search-tigger:hover {
 .recent-posts li.post .post-meta li {
     font-size: 11px;
     font-weight: 400;
-    color: midnightblue;
+    color: whitesmoke;
 }
 
 /* Follow By Email Widget */
@@ -1884,7 +1888,7 @@ header.header#layout3 .search-tigger:hover {
     height: 40px;
     width: 100% !important;
     background: midnightblue;
-    color: #fff;
+    color: black;
     border: 0;
     font-weight: 800;
     text-transform: uppercase;
@@ -2552,7 +2556,7 @@ code {
 }
 #footer .widget-title h2 {
     background: steelblue;
-    color: midnightblue;
+    color: whitesmoke;
 }
 #footer .widget-title:before {
     background: white;
@@ -2641,7 +2645,7 @@ code {
     border: 0;
     background: white;
     margin-bottom: 0;
-    color: #fff;
+    color: #000;
 }
 #footer .FollowByEmail input.follow-by-email-submit {
     width: 120px !important;
@@ -3121,7 +3125,11 @@ img.avatar {
     border-radius: 50%;
 }
 
-
+img.heb {
+    width: 10%;
+    border-radius: 20%;
+    display: inline-block;
+}
 
 span.psw {
     float: right;
@@ -3288,23 +3296,32 @@ span.psw {
 
 
 #card {
-    background: #fff;
-    text-align:center;
+    background: white;
+    text-align: center;
     position: relative;
+    width: 305px;
+}
+
+.card-title {
+    color: steelblue;
+}
+
+.card-result {
+    color: midnightblue;
 }
 
 .city-selected {
     position: relative;
     overflow: hidden;
   
-    background: powderblue;
-    height: 335px;
+    background: white;
+    height: 405px;
     width: 280px;
         /*margin-top: 80px;
     margin-left: 128px;*/
-      -webkit-border-radius: 99em;
-  -moz-border-radius: 99em;
-  border-radius: 2em;
+      -webkit-border-radius: 100em;
+  -moz-border-radius: 100em;
+  border-radius: 0em;
   border: 2px solid gray;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
 
