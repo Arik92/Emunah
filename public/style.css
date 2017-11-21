@@ -464,6 +464,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 .mainmenu .menu>ul>li {
     display: block;
     float: left;
+    cursor: pointer;
 }
 .mainmenu .menu>ul>li>a {
     display: block;
