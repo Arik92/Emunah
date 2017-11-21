@@ -13,7 +13,7 @@
         $( window ).on( 'load', function() {
             setTimeout( function() {
                 $( "#loader" ).css( "display", "none" );
-            }, 300 );
+            }, 100 );
         } );
         // ------------------------------------------------------
         // Add parent class to navigation parents
@@ -249,7 +249,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
 
 $(function () {
                 (function () {
