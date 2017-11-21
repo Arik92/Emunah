@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "browserify ./public/js/controllers/SabbathCtrl.js ./public/js/services/youtubeService.js -o ./public/bundle.js                                           "
+    "build": "browserify ./public/js/controllers/SabbathCtrl.js ./public/js/services/youtubeService.js -o ./public/bundle.js",
+    "server": "node server.js",
+    "buildStart": "npm run build && npm run server"
   },
   "repository": {
     "type": "git",
