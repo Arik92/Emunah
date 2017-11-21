@@ -1,4 +1,4 @@
-app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytService, hebService) {
+app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytService, hebService, $location, $anchorScroll) {
   //console.log("auth user data to work with", authFactory.currentUser);
   $rootScope.currentUser = authFactory.currentUser.email;
   $scope.topThree = [];
@@ -189,5 +189,14 @@ initNavDates()
       image: 'images/class1.jpeg'
     }
   ];
+
+  $scope.gotoTop = function($scope, $location, $anchorScroll) {
+    // set the location.hash to the id of
+    // the element you wish to scroll to.
+    $location.hash('to-top');
+
+    // call $anchorScroll()
+    $anchorScroll();
+  };
 
 }); //controller

@@ -31,6 +31,7 @@
                   <input type="hidden" name="_next" value="/templates/thanks.html" />
                   Amount:
                   <select name="amount">
+                    <option value="other">---</option>
                     <option value="$36.00">$36.00</option>
                     <option value="$72">$72.00</option>
                     <option value="$100.00">$100.00</option>
@@ -63,7 +64,7 @@
                     <img style="margin: 10px" width="100%" src="images/banner.png" alt="Image Captions" />
                   </div>
                   <hr>
-                  <input type="card" name="card" placeholder="Card Number">
+                  <input style="width:50%" type="card" name="card" placeholder="Card Number">
                   <input id="input-group-small" type="cvc" name="cvc" placeholder="CVC Security Code" style="width:25%">
                   <input id="input-group-small" type="expiration" style="width:25%" name="expiration" placeholder="Expiration Date">
                 </div>

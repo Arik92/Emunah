@@ -577,7 +577,6 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 }
 .megamenu .post .post-category a {
     margin-bottom: 0px;
-
 }
 
 /* Posts Global */
@@ -2879,12 +2878,12 @@ code {
 .contact-form input {
     height: 40px;
     padding: 0 15px;
-    width: 50%;
+    width: 75%;
 }
 #input-group-small {
     height: 40px;
     padding: 0 15px;
-    width: 20%;
+    width: 40%;
     display: inline-block;
 }
 .contact-form textarea {
