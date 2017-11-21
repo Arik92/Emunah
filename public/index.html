@@ -56,7 +56,7 @@
              <li ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist,  title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a></li>
           </ul>
         </li>
-        <li class="has-sub"><ui-sref="about.html">About</a>
+        <li class="has-sub"><a ui-sref="page-about-rav">About</a>
           <ul>
             <li><a ui-sref="about-emunah">About Emunah.com</a></li>
             <li><a ui-sref="about-rav-dror">About Rav Dror</a></li>
@@ -154,7 +154,7 @@
                           </div>
                           <div class="post-content">
                             <div class="post-category">
-                            <a ui-sref="centers" style="color:steelblue;">Emunah Center Near You</a>
+                            <a ui-sref="centers" style="color:steelblue;">Emunah Center <br/> Near You</a>
                             </div>
                           </div>
                         </div><!-- Post -->

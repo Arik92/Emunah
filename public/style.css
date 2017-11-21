@@ -537,12 +537,12 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     color: #fff;
     z-index: 99;
     opacity: 0;
-    visibility: hidden;
+    display: none;
     line-height: normal;
 }
 .mainmenu .menu>ul>li:hover>.megamenu {
     opacity: 1;
-    visibility: visible;
+    display: block;
 }
 .mainmenu ul li:hover .megamenu .item-content {
     transform: translateY(0px);
