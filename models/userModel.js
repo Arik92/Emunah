@@ -1,20 +1,31 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-var plm = require('passport-local-mongoose');
+var mongoose   = require('mongoose');
+var Schema     = mongoose.Schema;
+var bcrypt     = require('bcrypt-nodejs');
 
-var userSchema = new Schema ({
-  state: String, // NOTE: possible states are: standard, pro, premium?
-  fname: String,
-  lname: String,
-  pass: String, //NOTE: should I really store password here?
-  email: String,
-  address: String,
-  city: String,
-  province: String,
-  country: String,
-  zip: Number
+var UserSchema = new Schema({
+  username: { type: String, required: true, unique: true },
+  password: String,
+  email:   String,
+  provider: String,
+  socialId: String,
+  //tickets:  { type: Schema.Types.ObjectId, ref:"" },
 });
 
-userSchema.plugin(plm);
-var user = mongoose.model("User", userSchema);
+//encrypt password mongoose middlware
+UserSchema.pre('save', function(next) {
+  var user = this;
+  //bcrypt encrypts password
+  bcrypt.hash(user.password, null, null, function(err, hash) {
+    if (err) return next(err);
+    // Store hash in your password DB.
+    user.password = hash;
+    next();
+  });
+});
+
+UserSchema.methods.comparePassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+};
+
+var user       = mongoose.model("User", UserSchema);
 module.exports = user;
