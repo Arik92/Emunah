@@ -1,15 +1,23 @@
 (function() {
-  // your page initialization code here
-  // the DOM will be available here
+  
   const navMenu = document.getElementsByClassName("menu")[0];
-  console.log('navMenu', navMenu);
+  const menuLIs = document.querySelectorAll(".menu li");
   const megaMenus = document.querySelectorAll(".megamenu");
-  console.log('megaMenus', megaMenus);
 
+  // event delegation on navbar to hide mega menus
   navMenu.addEventListener('click', (e) => {
     console.log('menu clicked');
-    megaMenus.forEach(menu => menu.style.display = 'none');
-  }, true)
+    megaMenus.forEach(menu => menu.classList.add('display-none'));
+  }, true);
 
-
+  // remove display none class on mouseover so hover can display
+  menuLIs.forEach(li => {
+    li.addEventListener('mouseover', (e) => {
+      // debugger;
+      megaMenus.forEach((menu) => {
+        menu.classList.remove('display-none'); 
+      })
+    })
+  });
+  
 })();

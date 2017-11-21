@@ -282,4 +282,8 @@ app.run(function($rootScope, authFactory, $state) {
 	$state.go('home');
     //$rootScope.$broadcast('fbLogin');
   }//if 
+  $rootScope.$on('$stateChangeSuccess', function() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  });
 });//app.run
+

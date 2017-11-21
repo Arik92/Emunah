@@ -542,8 +542,13 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 }
 .mainmenu .menu>ul>li:hover>.megamenu {
     opacity: 1;
-    display: block !important;
+    display: block;
 }
+
+.display-none {
+    display: none !important;
+}
+
 .mainmenu ul li:hover .megamenu .item-content {
     transform: translateY(0px);
 }
