@@ -183,10 +183,16 @@ initNavDates()
       image: 'images/hitbodedut.jpg'
     },
     {
-      image: 'images/usa.jpg'
+      image: 'images/book-tour.jpeg'
     },
     {
-      image: 'images/class1.jpeg'
+      image: 'images/11-23.jpg'
+    },
+    {
+      image: 'images/11-27.jpg'
+    },
+    {
+      image: 'images/11-28.jpg'
     }
   ];
 
