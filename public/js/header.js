@@ -12,12 +12,12 @@
 
   // remove display none class on mouseover so hover can display
   menuLIs.forEach(li => {
-    li.addEventListener('mouseover', (e) => {
+    li.addEventListener('mouseenter', (e) => {
       // debugger;
       megaMenus.forEach((menu) => {
         menu.classList.remove('display-none'); 
       })
     })
   });
-  
+
 })();
