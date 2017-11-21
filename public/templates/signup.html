@@ -22,24 +22,20 @@
               <div class="post-body" >
                 <div class="container" method="POST">
                   <div class="form-group">
-                    <label for="name">First Name<i>(Required)</i>:</label>
-                    <input type="text"   placeholder="Rav" ng-model="newMember.fname" />
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Last Name<i>(Required)</i>:</label>
-                    <input type="text" placeholder="Dror" ng-model="newMember.lname" />
-                  </div>
+                    <label for="name">First nad last name<i>(Required)</i>:</label>
+                    <input type="text"   placeholder="Rav" ng-model="newMember.username" />
+                  </div>                  
                   <div class="form-group">
                     <label for="email">Your Email<i>(Required)</i>:</label>
                     <input type="email" placeholder="ravdror@emunah.com" ng-model="newMember.email" />
                   </div>
                  <div class="form-group">
                     <label for="website">Password<i>(Required)</i>:</label>
-                    <input type="password" placeholder="secret" ng-model="newMember.pass" />
+                    <input type="password" placeholder="secret" ng-model="newMember.password" />
                   </div>
                  <div class="form-group">
                     <label for="website">Confirm Password<i>(Required)</i>:</label>
-                    <input type="password"  placeholder="secret" ng-model="newMember.pass2" />
+                    <input type="password"  placeholder="secret" ng-model="pass2" />
                   </div>
                   <!-- <div class="form-group">
                     <label for="subject">Address<i>(Optional)</i>:</label>
@@ -62,7 +58,10 @@
                     <input type="text" name="subject" placeholder="91307" id="subject" ng-model="newMember.zip"/>
                   </div> -->
                   <div class="form-group">
-                    <input type="submit" ng-click="checkSignup()" value="Sign Up"/>
+                    <input type="submit" ng-click="registerUser(newMember)" value="Sign Up"/>
+                  </div>
+				  <div class="form-group">
+                  <a href="/users/facebook" target="_blank"><button type="button" class="btn-facebook">Facebook</button></a>
                   </div>
                 </form>
               </div><!-- Post Body -->

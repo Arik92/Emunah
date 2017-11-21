@@ -1,5 +1,8 @@
 var app = angular.module("emunApp", ['ui.router','ui.carousel', 'youtube-embed', 'ngFileUpload']);
 
+app.config(function($httpProvider) {
+  $httpProvider.interceptors.push('authServiceInterceptors');
+})
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/home');
@@ -65,18 +68,14 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('signup', {
       url: '/signup',
       templateUrl: '/templates/signup.html',
-      controller: 'authCtrl'
+      controller: 'authCtrl',
+	  authenticated: false
     })
     .state('login', {
       url: '/login',
       templateUrl: '/templates/login.html',
       controller: 'authCtrl'
-    })
-    .state('logout', {
-      url: '/logout',
-      templateUrl: '/templates/home.html',
-      controller: 'authCtrl'
-    })
+    })    
     .state('mitzvot', {
       url: '/mitzvot',
       templateUrl: '/templates/mitzvot/mitzvot.html'
@@ -272,6 +271,23 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/becoming-closer-to-hashem-good-eyes-a-pure-heart',
       templateUrl: '/templates/articles/chayei-sarah.html'
     })	  
+	.state('auth', {
+      url: '/authorization?token&name',
+      controller: function($stateParams, $state, $rootScope, $http) {
+        console.log("state params are", $stateParams);
+        if ($stateParams.token) {
+          var user = {
+            name: $stateParams.name,
+            token: $stateParams.token
+          }
+          localStorage.setItem("user", JSON.stringify(user));
+          $rootScope.currentUser = user.name;
+          //$rootScope.$broadcast('fbLogin');
+          $http.defaults.headers.common.Authorization = 'Bearer ' + user.token;
+          $state.go('home');
+        }
+      }//controller
+    })
 });
 
 app.run(function($rootScope, authFactory, $state) {

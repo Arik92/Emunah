@@ -6,8 +6,6 @@ var passport    = require('./models/passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 var nodemailer = require('nodemailer');
 var sgTransport = require('nodemailer-sendgrid-transport');
-var localStrategy = require('passport-local').Strategy;
-var User = require('./models/userModel');
 var userRoutes = require('./Routes/userRoutes');
 var articleRoutes = require('./Routes/articleRoutes');
 var app = express();
@@ -31,7 +29,11 @@ app.use(express.static('node_modules'));
 /*passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser()); */
-
+app.use(function(req, res, next) {
+        res.header("Access-Control-Allow-Origin", "https://localhost:8000");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        next();
+  });
 app.use('/users', userRoutes);
 app.use('/articles', articleRoutes);
 
