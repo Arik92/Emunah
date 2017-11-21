@@ -302,21 +302,21 @@ header.header {
 .topbar {
 
     display: block;
-    height: 50px;
-    line-height: 50px;
+    height: 65px;
+    line-height: 65px;
     margin-bottom: -30px;
     clear: both;
+    transition: 0.2s;
    
     background-color: black;
 }
 
-.topbar:hover {
-
+/* .topbar:hover {
     display: block;
     height: 70px;
     line-height: 70px;
- 
-}
+} */
+
 .topbar .container {
     display: block;
     height: 32px;
@@ -394,7 +394,9 @@ header.header {
 
     max-width: 50%;
     margin: 2px;
-    margin-left: 45px;}
+    margin-left: 45px;
+    transition: 0.2s;
+}
 
 
  .topbar:hover .logo-container a {
@@ -450,6 +452,18 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 }
 
 /* Menu */
+
+.yellowbutton > li > a {
+    border-style: solid;
+    border-color: yellow;
+    padding: 0.7rem 2rem;
+    border-radius: 5%;
+    background-color: #01579B;
+}
+
+.yellowbutton > li:nth-child(2) > a {
+    background-color: #E65100;
+}
 
 .mainmenu .menu {
     /*float: left;*/
@@ -540,6 +554,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     opacity: 0;
     display: none;
     line-height: normal;
+    transition: 0.2s;
 }
 .mainmenu .menu>ul>li:hover>.megamenu {
     opacity: 1;
