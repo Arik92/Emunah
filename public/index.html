@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="/quill/dist/quill.snow.css" />
   <base href="/">
 </head>
+<!-- Loader -->
 
 <body>
   <div id="loader">
@@ -105,76 +106,60 @@
       </li>
     </ul>
   </nav>
-  <div id="wrapper">
-    <!--  <div class="search-modal">
-        <div class="container">
-          <form action="page-search.html" method="get">
-            <input type="text" name="q" value="Search what your soul desires" />
-            <span class="search-close"></span>
-          </form>
-        </div>-->
-  </div>
+
   <header class="header" id="layout2" style="display:block" ng-controller="homeCtrl">
     <div class="topbar">
       <!--  <div class="container">
  -->
-      <div class="logo-container">
-        <!-- <div class="logo"> -->
-        <a ui-sref="home">
-          <img src="images/emunahlogo.png" alt="Logo Image Placeholder">
-        </a>
-        <!--   -->
-        <!-- Logo -->
-      </div>
-      <!-- Logo Container -->
-      <nav class="topmenu">
-        <ul style="color:white">
-          <li ng-show="currentUser" style="font-size:11px;">Welcome, {{currentUser}}</li>
-          <li style="font-size:11px;">{{parasha}}</li>
-          <li style="font-size:11px;">{{currDate}}</li>
-          <li style="color:white">
-            <a ui-sref="page-contact" style="color:white">Subscribe</a>
-          </li>
-          <li style="color:white">
-            <a ui-sref="whatsapp" style="color:white">WhatsApp Group</a>
-          </li>
-          <li ng-hide="currentUser">
-            <a ui-sref="login" style="color:white">Login</a>
-          </li>
-          <li ng-hide="currentUser">
-            <a ui-sref="signup" style="color:white">Sign Up</a>
-          </li>
-          <li ng-show="currentUser">
-            <a ng-click="logout()" style="color:white">Log out</a>
-          </li>
-        </ul>
-      </nav>
-      <!-- Top Menu -->
-      <nav class="social-links">
-        <ul>
-          <!-- <li style="margin-left:75px"><a href="https://www.facebook.com/DrorMosheCassouto/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/emunahchannel?lang=en" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://plus.google.com/+Emunahchanneltorah" class="google" target="_blank"><i class="fa fa-google"></i></a></li>
-                <li><a href="https://www.instagram.com/ravdror/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/user/EmunahChannel" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="https://soundcloud.com/ravdror" class="soundcloud" target="_blank"><i class="fa fa-soundcloud"></i></a></li> -->
-          <div class="yellowbutton">
-            <li class="hvr-grow">
+      <div class="top-nav-container page-content-wrapper">
+        <div class="logo-container">
+          <!-- <div class="logo"> -->
+          <a ui-sref="home">
+            <img src="images/emunahlogo.png" alt="Logo Image Placeholder">
+          </a>
+          <!--   -->
+          <!-- Logo -->
+        </div>
+        <!-- Logo Container -->
+        <nav class="topmenu">
+          <ul style="color:white">
+            <li ng-show="currentUser" style="font-size:11px;">Welcome, {{currentUser}}</li>
+            <li style="font-size:11px;">{{parasha}}</li>
+            <li style="font-size:11px;">{{currDate}}</li>
+            <li style="color:white">
+              <a ui-sref="page-contact" style="color:white">Subscribe</a>
+            </li>
+            <li style="color:white">
+              <a ui-sref="whatsapp" style="color:white">WhatsApp Group</a>
+            </li>
+            <li ng-hide="currentUser">
+              <a ui-sref="login" style="color:white">Login</a>
+            </li>
+            <li ng-hide="currentUser">
+              <a ui-sref="signup" style="color:white">Sign Up</a>
+            </li>
+            <li ng-show="currentUser">
+              <a ng-click="logout()" style="color:white">Log out</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Top Menu -->
+        <nav class="donate-btns">
+          <ul class="yellowbutton">
+            <li class="hvr-grow donate-link">
               <a ui-sref="donate">
-                <b style="font-size:15px;color:yellow;">Donate</b>
+                <b style="font-size:15px;color:yellow">Donate</b>
               </a>
             </li>
-            <li class="hvr-grow">
+            <li class="hvr-grow store-link">
               <a ui-sref="store-necklaces">
                 <b style="font-size:15px;  color:yellow">Store</b>
               </a>
             </li>
-          </div>
-        </ul>
-      </nav>
-      <!-- Social Links -->
-      <!-- </div> -->
-      <!-- Container -->
+          </ul>
+        </nav>
+      </div>
+      <!-- content wrapper -->
     </div>
     <!-- Top Bar -->
 
@@ -192,7 +177,7 @@
     </div>
     <!-- Header Content -->
     <div class="mainmenu" style="height:50px">
-      <div class="container" id="mobileres">
+      <div class="container page-content-wrapper" id="mobileres">
         <div class="logo-container" id="logonav2" style="max-width:40%; margin-left: 91px">
           <!-- <div class="logo"> -->
           <a ui-sref="home">
