@@ -1,6 +1,6 @@
-var app = angular.module("emunApp", ['ui.router','ui.carousel', 'youtube-embed', 'ngFileUpload']);
+var app = angular.module("emunApp", ['ui.router', 'ui.carousel', 'youtube-embed', 'ngFileUpload']);
 
-app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
+app.config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/home');
   $stateProvider
@@ -24,7 +24,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('playlist', {
       url: '/playlist/:title/:id',
       templateUrl: '/templates/playlist-page.html',
-      params: {playlistParam: null},
+      params: { playlistParam: null },
       controller: 'playlistCtrl'
     })
     .state('page-contact', {
@@ -62,7 +62,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('post-single', {
       url: '/single/:id',
-        params: {videoParam: null},
+      params: { videoParam: null },
       templateUrl: '/templates/post-single.html',
       controller: 'singleCtrl'
     })
@@ -195,71 +195,71 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/createArticle.html',
       controller: 'articleCreationCtrl'
     })
-     .state('donate', {
+    .state('donate', {
       url: '/donate',
       templateUrl: '/templates/donate2.html'
     })
-     .state('donate2', {
+    .state('donate2', {
       url: '/donate2',
       templateUrl: '/templates/donate.html'
     })
-     .state('services', {
+    .state('services', {
       url: '/services',
       templateUrl: '/templates/services/services.html'
     })
-     .state('services-prayer', {
+    .state('services-prayer', {
       url: '/services-prayer',
       templateUrl: '/templates/services/prayer.html'
     })
-     .state('services-kaddish', {
+    .state('services-kaddish', {
       url: '/services-kaddish',
       templateUrl: '/templates/services/kaddish.html'
     })
-     .state('services-tehillim', {
+    .state('services-tehillim', {
       url: '/services-tehillim',
       templateUrl: '/templates/services/tehillim.html'
     })
-     .state('services-learning', {
+    .state('services-learning', {
       url: '/services-learning',
       templateUrl: '/templates/services/learning.html'
     })
-     .state('services-torah', {
+    .state('services-torah', {
       url: '/services-torah',
       templateUrl: '/templates/services/torah.html'
     })
-     .state('services-candle', {
+    .state('services-candle', {
       url: '/services-candle',
       templateUrl: '/templates/services/candle.html'
     })
-     .state('services-note', {
+    .state('services-note', {
       url: '/services-note',
       templateUrl: '/templates/services/note.html'
     })
-     .state('soundcloud', {
+    .state('soundcloud', {
       url: '/soundcloud',
       templateUrl: '/templates/soundcloud.html'
     })
-     .state('centers', {
+    .state('centers', {
       url: '/emunah-centers-near-you',
       templateUrl: '/templates/centers/emunah-centers.html'
     })
-     .state('echt', {
+    .state('echt', {
       url: '/emunah-center-humble-texas',
       templateUrl: '/templates/centers/echumble.html'
     })
-     .state('eci', {
+    .state('eci', {
       url: '/emunah-center-israel',
       templateUrl: '/templates/centers/ecisrael.html'
     })
-     .state('ecny', {
+    .state('ecny', {
       url: '/emunah-center-new-york',
       templateUrl: '/templates/centers/ecny.html'
     })
-     .state('ecbc', {
+    .state('ecbc', {
       url: '/emunah-center-bogota-colombia',
       templateUrl: '/templates/centers/ecbogota.html'
     })
-     .state('ecla', {
+    .state('ecla', {
       url: '/emunah-center-los-angeles',
       templateUrl: '/templates/centers/ecla.html'
     })
@@ -275,15 +275,20 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('chayei-sarah', {
       url: '/becoming-closer-to-hashem-good-eyes-a-pure-heart',
       templateUrl: '/templates/articles/chayei-sarah.html'
-    })	  
+    })
 });
 
-app.run(function($rootScope, authFactory, $state) {
+app.run(function ($rootScope, authFactory, $state, $anchorScroll) {
   var user = JSON.parse(localStorage.getItem("user"));
   console.log("app.run user", user);
   if (user) {
     $rootScope.currentUser = user.username;
-	$state.go('home');
+    $state.go('home');
     //$rootScope.$broadcast('fbLogin');
-  }//if 
+  }//if s
+  $rootScope.$on('$stateChangeStart', function () {
+    $anchorScroll();
+});
 });//app.run
+
+
