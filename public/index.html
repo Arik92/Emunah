@@ -50,27 +50,46 @@
         <li> {{parasha}}</li>
         <li> {{currDate}}</li>
         <li><a ui-sref="home">Home</a></li>
-        <li><a ui-sref="articles">Articles</a></li>
-        <li class="has-sub"><a href="#">Lectures</a>
+        <li><a ui-sref="store-english">Store</a></li>
+        <li><a ui-sref="donate">Donate</a></li>
+        <li class="has-sub"><a ui-sref="ravusa">Rav Dror In USA</a>
+          <ul>
+            <li><a ui-sref="centers">Emunah Center Near You</a></li>
+            <li><a ui-sref="hitbodedut">Hitbodedut 1O1</a></li>
+            <li><a ui-sref="usa">Lectures in USA</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="category">Lectures</a>
           <ul>
              <li ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist,  title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a></li>
           </ul>
         </li>
+        <li class="has-sub"><a ui-sref="page-about-rav">Services</a>
+          <ul>
+            <li><a ui-sref="services-prayer">Prayer</a></li>
+            <li><a ui-sref="services-kaddish">Kaddish</a></li>
+            <li><a ui-sref="services-tehillim">Tehillim/Mishna</a></li>
+            <li><a ui-sref="services-torah">Sefer Torah</a></li>
+            <li><a ui-sref="services-learning">Torah Partnership</a></li>
+            <li><a ui-sref="services-candle">Candle</a></li>
+            <li><a ui-sref="services-note">Kotel Note</a></li>
+          </ul>
+        </li>
+        <li><a ui-sref="soundcloud">Soundcloud</a></li>
         <li class="has-sub"><a ui-sref="page-about-rav">About</a>
           <ul>
+            <li><a ui-sref="faq">FAQ's</a></li>
             <li><a ui-sref="about-emunah">About Emunah.com</a></li>
             <li><a ui-sref="about-rav-dror">About Rav Dror</a></li>
             <li><a ui-sref="mitzvot">Mitzvot</a></li>
           </ul>
-         </li>
-        <li><a ui-sref="contact">Contact</a></li>
+        </li>
+        <li><a ui-sref="page-contact">Contact</a></li>
         <li ng-hide="currentUser"><a ui-sref="login">Login</a></li>
         <li ng-hide="currentUser"><a ui-sref="signup">Sign Up</a></li>
         <li ng-show="currentUser" ng-controller="authCtrl"><a ng-click="logout()">Log out</a></li>
-        <li><a ui-sref="signup">Subscribe</a></li>
-        <li><a ui-sref="store-necklaces">Store</a></li>
+        <li><a ui-sref="page-contact">Subscribe</a></li>
         <li><a ui-sref="whatsapp">Whatsapp</a></li>
-        <li><a ui-sref="donate">Donate</a></li>
       </ul>
     </nav>
     <div id="wrapper">
@@ -142,7 +161,7 @@
             </div><!-- Logo Container -->
             <nav class="menu" style="margin-left:145px;">
               <ul>
-                  <li><a ui-sref="#">Rav Dror in the USA</a>
+                  <li><a ui-sref="ravusa">Rav Dror in the USA</a>
                   <div class="megamenu" style="background-color:white;">
                     <div class="item-content">
                       <div class="item">
@@ -211,7 +230,7 @@
                               <a ui-sref="services-prayer">Prayer</a>
                             </div>
                             <h6 class="post-title" style="color:steelblue;">
-                              <a ui-sref="services-prayer">Pinchas</a>
+                              <a ui-sref="services-prayer">Prayer</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -228,7 +247,7 @@
                             <a ui-sref="services-kaddish">Kaddish</a>
                             </div>
                             <h6 class="post-title">
-                              <a ui-sref="services-kaddish">Pinchas</a>
+                              <a ui-sref="services-kaddish">Kaddish</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -246,7 +265,7 @@
                             <a ui-sref="services-tehillim">Tehillim/Mishna</a>
                             </div>
                             <h6 class="post-title">
-                              <a uui-sref="services-tehillim">Balak</a>
+                              <a uui-sref="services-tehillim">Tehillim/Mishna</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -264,7 +283,7 @@
                             <a ui-sref="services-learning">Torah Partnership</a>
                             </div>
                             <h6 class="post-title">
-                              <a ui-sref="services-learning">Pin'has</a>
+                              <a ui-sref="services-learning">Torah Partnership</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -282,7 +301,7 @@
                             <a ui-sref="services-torah">Sefer Torah</a>
                             </div>
                             <h6 class="post-title">
-                              <a ui-sref="services-torah">Purim: A Lesson In Emunat Chachamim</a>
+                              <a ui-sref="services-torah">Sefer Torah</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -300,7 +319,7 @@
                             <a ui-sref="services-candle">Candle</a>
                             </div>
                             <h6 class="post-title">
-                              <a ui-sref="services-candle">Purim: A Lesson In Emunat Chachamim</a>
+                              <a ui-sref="services-candle">Candle</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -318,7 +337,7 @@
                             <a ui-sref="services-note">Kotel Note</a>
                             </div>
                             <h6 class="post-title">
-                              <a ui-sref="services-note">Purim: A Lesson In Emunat Chachamim</a>
+                              <a ui-sref="services-note">Kotel Note</a>
                             </h6>
                           </div>
                         </div><!-- Post -->
@@ -563,6 +582,9 @@
     <script src="js/directives/smallestasideDirective.js"></script>
     <script src="js/directives/sliderDirective.js"></script>
     <script src="js/directives/classesDirective.js"></script>
+    <script type="text/javascript">
+      window.onbeforeunload = function() {window.scrollTo(0,0);}
+    </script>
     <!-- End All JavaScripts Needed -->
 <!--    <script id="dsq-count-scr" src="https://infinyteam.disqus.com/count.js" async></script> -->
     <!-- Go to www.addthis.com/dashboard to customize your tools --> 

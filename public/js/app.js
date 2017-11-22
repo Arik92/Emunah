@@ -51,6 +51,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/lectures-in-usa',
       templateUrl: '/templates/usa.html',
     })
+    .state('ravusa', {
+      url: '/rav-dror-in-usa',
+      templateUrl: '/templates/rav-dror-in-usa.html',
+    })
     .state('page-error', {
       url: '/error',
       templateUrl: '/templates/page-error.html'

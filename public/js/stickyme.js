@@ -14,10 +14,10 @@
             position = 0,
             $elem = this,
             $elemHeight = $elem.innerHeight(),
-            $win_center = $window.height() / 14,
+            $win_center = $window.height() / 85,
             $pos,
             settings = $.extend({
-                transitionDuration: 1,
+                transitionDuration: 0,
                 shadow: false,
                 shadowOpacity: 0.3,
                 animate: true,
