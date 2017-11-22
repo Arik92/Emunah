@@ -297,6 +297,30 @@ header.header {
  /**/
 }
 
+.page-content-wrapper {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.flex-spacer {
+
+}
+
+.top-nav-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav.donate-btns {
+    /* width: 15%; */
+    /* padding */
+}
+
+.donate-btns .donate-link {
+    margin-right: 0.3em;
+}
+
+
 /* Top Bar */
 
 .topbar {
@@ -1759,12 +1783,17 @@ header.header#layout3 .search-tigger:hover {
 
 /* Social Icons */
 
+.social-icons {
+    display: flex;
+    margin: auto;
+}
+
 .social-icons a {
     display: block;
     width: 48px;
     height: 48px;
     font-size: 14px;
-    float: left;
+    /* float: left; */
     line-height: 47px;
     text-align: center;
     border: 1px solid #eee;
@@ -2587,6 +2616,10 @@ code {
 }
 #footer p {
     margin: 15px 0 0;
+}
+
+.social-container {
+    margin: auto;
 }
 
 /* Social Icons */
