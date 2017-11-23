@@ -1,351 +1,395 @@
 <!DOCTYPE html>
 <html lang="zxx" ng-app="emunApp">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width"/>
-    <meta name="theme-color" content="#f20e0e"/>
-    <meta name="msapplication-navbutton-color" content="#f20e0e"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-    <meta name="mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link rel="icon" type="image/x-icon" href="images/favicon.png"/>
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
-    <link rel="apple-touch-icon-precomposed" href="images/favicon.png"/>
-    <link rel="icon" type="image/png" href="images/favicon-192x192.png" sizes="192x192"/>
-    <title>Emunah</title>
-    <link rel="stylesheet" href="css/grid.css" media="all"/>
-    <link rel="stylesheet" href="css/framework.css" media="all"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass:400,400i,600,700,800" media="all"/>
-    <link rel="stylesheet" href="css/fontawesome.css" media="all"/>
-    <link rel="stylesheet" href="css/normalize.css" media="all"/>
-    <link rel="stylesheet" href="css/owl.carousel.css" media="all"/>
-    <link rel="stylesheet" href="css/justifiedGallery.css" media="all"/>
-    <link rel="stylesheet" href="css/colorbox.css" media="all"/>
-    <link rel="stylesheet" href="style.css" media="all"/>
-    <link rel="stylesheet" href="css/customizer.css" media="all"/>
-    <link rel="stylesheet" href="css/responsive.css" media="all"/>
-    <link rel="stylesheet" href="/angular-ui-carousel/dist/ui-carousel.min.css"/>
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/js-datepicker/datepicker.css"/>
-    <link rel="stylesheet" href="/quill/dist/quill.snow.css"/>
-    <base href="/">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="theme-color" content="#f20e0e" />
+  <meta name="msapplication-navbutton-color" content="#f20e0e" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+  <link rel="apple-touch-icon-precomposed" href="images/favicon.png" />
+  <link rel="icon" type="image/png" href="images/favicon-192x192.png" sizes="192x192" />
+  <title>Emunah</title>
+  <link rel="stylesheet" href="css/grid.css" media="all" />
+  <link rel="stylesheet" href="css/framework.css" media="all" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass:400,400i,600,700,800" media="all" />
+  <link rel="stylesheet" href="css/fontawesome.css" media="all" />
+  <link rel="stylesheet" href="css/normalize.css" media="all" />
+  <link rel="stylesheet" href="css/owl.carousel.css" media="all" />
+  <link rel="stylesheet" href="css/justifiedGallery.css" media="all" />
+  <link rel="stylesheet" href="css/colorbox.css" media="all" />
+  <link rel="stylesheet" href="style.css" media="all" />
+  <link rel="stylesheet" href="css/customizer.css" media="all" />
+  <link rel="stylesheet" href="css/responsive.css" media="all" />
+  <link rel="stylesheet" href="/angular-ui-carousel/dist/ui-carousel.min.css" />
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/js-datepicker/datepicker.css" />
+  <link rel="stylesheet" href="/quill/dist/quill.snow.css" />
+  <base href="/">
 </head>
+<!-- Loader -->
+
 <body>
-    <div id="loader">
-      <div class="loading">
-        <div class="spinner">
-          <div class="rect1"></div>
-          <div class="rect2"></div>
-          <div class="rect3"></div>
-          <div class="rect4"></div>
-          <div class="rect5"></div>
-        </div>
+  <div id="loader">
+    <div class="loading">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
       </div>
     </div>
-    <!-- Mobile slider nav bar -->
-    <nav id="slide-nav" class="slide-menu" ng-controller="homeCtrl">
-      <span class="menu-close">Close</span>
-      <ul>
-        <li ng-show="currentUser">Welcome, {{currentUser}}</li>
-        <li> {{parasha}}</li>
-        <li> {{currDate}}</li>
-        <li><a ui-sref="home">Home</a></li>
-        <li><a ui-sref="store-english">Store</a></li>
-        <li><a ui-sref="donate">Donate</a></li>
-        <li class="has-sub"><a ui-sref="ravusa">Rav Dror In USA</a>
-          <ul>
-            <li><a ui-sref="centers">Emunah Center Near You</a></li>
-            <li><a ui-sref="hitbodedut">Hitbodedut 1O1</a></li>
-            <li><a ui-sref="usa">Lectures in USA</a></li>
-          </ul>
-        </li>
-        <li class="has-sub"><a href="category">Lectures</a>
-          <ul>
-             <li ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist,  title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a></li>
-          </ul>
-        </li>
-        <li class="has-sub"><a ui-sref="page-about-rav">Services</a>
-          <ul>
-            <li><a ui-sref="services-prayer">Prayer</a></li>
-            <li><a ui-sref="services-kaddish">Kaddish</a></li>
-            <li><a ui-sref="services-tehillim">Tehillim/Mishna</a></li>
-            <li><a ui-sref="services-torah">Sefer Torah</a></li>
-            <li><a ui-sref="services-learning">Torah Partnership</a></li>
-            <li><a ui-sref="services-candle">Candle</a></li>
-            <li><a ui-sref="services-note">Kotel Note</a></li>
-          </ul>
-        </li>
-        <li><a ui-sref="soundcloud">Soundcloud</a></li>
-        <li class="has-sub"><a ui-sref="page-about-rav">About</a>
-          <ul>
-            <li><a ui-sref="faq">FAQ's</a></li>
-            <li><a ui-sref="about-emunah">About Emunah.com</a></li>
-            <li><a ui-sref="about-rav-dror">About Rav Dror</a></li>
-            <li><a ui-sref="mitzvot">Mitzvot</a></li>
-          </ul>
-        </li>
-        <li><a ui-sref="page-contact">Contact</a></li>
-        <li ng-hide="currentUser"><a ui-sref="login">Login</a></li>
-        <li ng-hide="currentUser"><a ui-sref="signup">Sign Up</a></li>
-        <li ng-show="currentUser" ng-controller="authCtrl"><a ng-click="logout()">Log out</a></li>
-        <li><a ui-sref="page-contact">Subscribe</a></li>
-        <li><a ui-sref="whatsapp">Whatsapp</a></li>
-      </ul>
-    </nav>
-    <div id="wrapper">
-     <!--  <div class="search-modal">
-        <div class="container">
-          <form action="page-search.html" method="get">
-            <input type="text" name="q" value="Search what your soul desires" />
-            <span class="search-close"></span>
-          </form>
-        </div>-->
-      </div>
-      <header class="header" id="layout2" style="display:block" ng-controller="homeCtrl">
-        <div class="topbar">
-         <!--  <div class="container">
- -->            <div class="logo-container">
-              <!-- <div class="logo"> -->
-                <a ui-sref="home">
-                  <img src="images/emunahlogo.png" alt="Logo Image Placeholder">
-                </a>
-              <!--   --><!-- Logo -->
-            </div><!-- Logo Container -->
-            <nav class="topmenu">
-              <ul style="color:white">
-                <li ng-show="currentUser" style="font-size:11px;">Welcome, {{currentUser}}</li>
-                <li style="font-size:11px;">{{parasha}}</li>
-                <li style="font-size:11px;">{{currDate}}</li>
-                <li style="color:white"><a ui-sref="page-contact" style="color:white">Subscribe</a></li>
-                <li style="color:white"><a ui-sref="whatsapp" style="color:white">WhatsApp Group</a></li>
-                <li ng-hide="currentUser"><a ui-sref="login" style="color:white">Login</a></li>
-                <li ng-hide="currentUser"><a ui-sref="signup" style="color:white">Sign Up</a></li>
-                <li ng-show="currentUser"><a ng-click="logout()" style="color:white">Log out</a></li>
-              </ul>
-            </nav><!-- Top Menu -->
-            <nav class="social-links">
-              <ul>
-                <!-- <li style="margin-left:75px"><a href="https://www.facebook.com/DrorMosheCassouto/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/emunahchannel?lang=en" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://plus.google.com/+Emunahchanneltorah" class="google" target="_blank"><i class="fa fa-google"></i></a></li>
-                <li><a href="https://www.instagram.com/ravdror/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/user/EmunahChannel" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="https://soundcloud.com/ravdror" class="soundcloud" target="_blank"><i class="fa fa-soundcloud"></i></a></li> -->
-                <div class="yellowbutton">
-                  <li><a ui-sref="donate"><b style="font-size:15px;color:yellow;">Donate</b></a></li>
-                  <li><a ui-sref="store-necklaces"><b style="font-size:15px;  color:yellow; margin-right:50px;">Store</b></a></li>
-                </div>
-              </ul>
-            </nav><!-- Social Links -->
-          <!-- </div> --><!-- Container -->
-        </div><!-- Top Bar -->
+  </div>
+  <!-- Mobile slider nav bar -->
+  <nav id="slide-nav" class="slide-menu" ng-controller="homeCtrl">
+    <span class="menu-close">Close</span>
+    <ul>
+      <li ng-show="currentUser">Welcome, {{currentUser}}</li>
+      <li> {{parasha}}</li>
+      <li> {{currDate}}</li>
+      <li>
+        <a ui-sref="home">Home</a>
+      </li>
+      <li>
+        <a ui-sref="articles">Articles</a>
+      </li>
+      <li class="has-sub">
+        <a href="#">Lectures</a>
+        <ul>
+          <li ng-repeat="playlist in allPlayLists track by $index">
+            <a ui-sref="playlist({playlistParam: playlist,  title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a>
+          </li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a ui-sref="page-about-rav">About</a>
+        <ul>
+          <li>
+            <a ui-sref="about-emunah">About Emunah.com</a>
+          </li>
+          <li>
+            <a ui-sref="about-rav-dror">About Rav Dror</a>
+          </li>
+          <li>
+            <a ui-sref="mitzvot">Mitzvot</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a ui-sref="contact">Contact</a>
+      </li>
+      <li ng-hide="currentUser">
+        <a ui-sref="login">Login</a>
+      </li>
+      <li ng-hide="currentUser">
+        <a ui-sref="signup">Sign Up</a>
+      </li>
+      <li ng-show="currentUser" ng-controller="authCtrl">
+        <a ng-click="logout()">Log out</a>
+      </li>
+      <li>
+        <a ui-sref="signup">Subscribe</a>
+      </li>
+      <li>
+        <a ui-sref="store-necklaces">Store</a>
+      </li>
+      <li>
+        <a ui-sref="whatsapp">Whatsapp</a>
+      </li>
+      <li>
+        <a ui-sref="donate">Donate</a>
+      </li>
+    </ul>
+  </nav>
 
-            <!-- <div class="ad-container">
+  <header class="header" id="layout2" style="display:block" ng-controller="homeCtrl">
+    <div class="topbar">
+      <!--  <div class="container">
+ -->
+      <div class="top-nav-container page-content-wrapper">
+        <div class="logo-container">
+          <!-- <div class="logo"> -->
+          <a ui-sref="home">
+            <img src="images/emunahlogo.png" alt="Logo Image Placeholder">
+          </a>
+          <!--   -->
+          <!-- Logo -->
+        </div>
+        <!-- Logo Container -->
+        <nav class="topmenu">
+          <ul style="color:white">
+            <li ng-show="currentUser" style="font-size:11px;">Welcome, {{currentUser}}</li>
+            <li style="font-size:11px;">{{parasha}}</li>
+            <li style="font-size:11px;">{{currDate}}</li>
+            <li style="color:white">
+              <a ui-sref="page-contact" style="color:white">Subscribe</a>
+            </li>
+            <li style="color:white">
+              <a ui-sref="whatsapp" style="color:white">WhatsApp Group</a>
+            </li>
+            <li ng-hide="currentUser">
+              <a ui-sref="login" style="color:white">Login</a>
+            </li>
+            <li ng-hide="currentUser">
+              <a ui-sref="signup" style="color:white">Sign Up</a>
+            </li>
+            <li ng-show="currentUser">
+              <a ng-click="logout()" style="color:white">Log out</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Top Menu -->
+        <nav class="donate-btns">
+          <ul class="yellowbutton">
+            <li class="hvr-grow donate-link">
+              <a ui-sref="donate">
+                <b style="font-size:15px;color:yellow">Donate</b>
+              </a>
+            </li>
+            <li class="hvr-grow store-link">
+              <a ui-sref="store-necklaces">
+                <b style="font-size:15px;  color:yellow">Store</b>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- content wrapper -->
+    </div>
+    <!-- Top Bar -->
+
+    <!-- <div class="ad-container">
               <div class="advertisment">
                 <a href="https://themeforest.net/user/infinyteam/portfolio?ref=infinyteam
                 ">
                   <img src="images/banner.jpg" alt="Banner Image Placeholder" />
                 </a>
               </div><!Advertisment -->
-            </div><!-- Ad Container -->
-          </div><!-- Container -->
-        </div><!-- Header Content -->
-        <div class="mainmenu" style="height:50px">
-          <div class="container" id="mobileres">
-             <div class="logo-container" id="logonav2" style="max-width:40%; margin-left: 91px">
-              <!-- <div class="logo"> -->
-                <a ui-sref="home" >
-                  <img src="images/favicon.png" alt="Logo Image Placeholder">
-                </a>
-              <!--   --><!-- Logo -->
-            </div><!-- Logo Container -->
-            <nav class="menu" style="margin-left:145px;">
-              <ul>
-                  <li><a ui-sref="ravusa">Rav Dror in the USA</a>
-                  <div class="megamenu" style="background-color:white;">
-                    <div class="item-content">
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/11.jpg" alt="Post Title Placeholder" />
-                            </a>
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="centers" style="color:steelblue;">Emunah Center <br/> Near You</a>
-                            </div>
-                          </div>
-                        </div><!-- Post -->
+    </div>
+    <!-- Ad Container -->
+    </div>
+    <!-- Container -->
+    </div>
+    <!-- Header Content -->
+    <div class="mainmenu" style="height:50px">
+      <div class="container page-content-wrapper" id="mobileres">
+        <div class="logo-container" id="logonav2" style="max-width:40%; margin-left: 91px">
+          <!-- <div class="logo"> -->
+          <a ui-sref="home">
+            <img src="images/favicon.png" alt="Logo Image Placeholder">
+          </a>
+          <!--   -->
+          <!-- Logo -->
+        </div>
+        <!-- Logo Container -->
+        <nav class="menu" style="margin-left:145px;">
+          <ul>
+            <li>
+              <a ui-sref="#">Rav Dror in the USA</a>
+              <div class="megamenu" style="background-color:white;">
+                <div class="item-content">
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a href="post-single.html">
+                          <img src="images/11.jpg" alt="Post Title Placeholder" />
+                        </a>
                       </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/12.jpg" alt="Post Title Placeholder" />
-                            </a>
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="hitbodedut" style="color:steelblue;">Hitbodedut 1O1</a>
-                            </div>
-                          </div>
-                        </div><!-- Post -->
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="usa">
-                              <img src="images/13.jpg" alt="Post Title Placeholder" />
-                            </a>
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="usa" style="color:steelblue;">Lectures in USA</a>
-                            </div>
-                          </div>
-                        </div><!-- Post -->
-
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="centers" style="color:steelblue;">Emunah Center
+                            <br/> Near You</a>
+                        </div>
                       </div>
                     </div>
+                    <!-- Post -->
                   </div>
-                </li>
-                <li><a ui-sref="category">Lectures</a>
-                  <ul class="scrollbar" id="style-1" style="color:white; margin-top: 1px; display: none;" ng-controller="homeCtrl">
-                    <li style="color:steelblue;" ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist, title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a></li>
-                  </ul>
-                </li>
-                <li><a ui-sref="services">Services</a>
-                  <div class="megamenu" style="background-color: white; color: steelblue;">
-                    <div class="item-content">
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="services-prayer">
-                              <img src="images/services-prayer.jpg" alt="Post Title Placeholder" />
-                            </a>
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category" style="color:steelblue;">
-                              <a ui-sref="services-prayer">Prayer</a>
-                            </div>
-                            <h6 class="post-title" style="color:steelblue;">
-                              <a ui-sref="services-prayer">Prayer</a>
-                            </h6>
-                          </div>
-                        </div><!-- Post -->
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a href="post-single.html">
+                          <img src="images/12.jpg" alt="Post Title Placeholder" />
+                        </a>
                       </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="services-kaddish">
-                              <img src="images/services-kaddish.jpg" alt="Post Title Placeholder" />
-                            </a>
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="services-kaddish">Kaddish</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a ui-sref="services-kaddish">Kaddish</a>
-                            </h6>
-                          </div>
-                        </div><!-- Post -->
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="services-tehillim">
-                              <img src="images/services-tehillim.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="services-tehillim">Tehillim/Mishna</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a uui-sref="services-tehillim">Tehillim/Mishna</a>
-                            </h6>
-                          </div>
-                        </div><!-- Post -->
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="services-learning">
-                              <img src="images/services-learning.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="services-learning">Torah Partnership</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a ui-sref="services-learning">Torah Partnership</a>
-                            </h6>
-                          </div>
-                        </div><!-- Post -->
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="services-torah">
-                              <img src="images/services-torah.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="services-torah">Sefer Torah</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a ui-sref="services-torah">Sefer Torah</a>
-                            </h6>
-                          </div>
-                        </div><!-- Post -->
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="services-candle">
-                              <img src="images/services-candle.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="services-candle">Candle</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a ui-sref="services-candle">Candle</a>
-                            </h6>
-                          </div>
-                        </div><!-- Post -->
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="services-note">
-                              <img src="images/services-note.jpeg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="services-note">Kotel Note</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a ui-sref="services-note">Kotel Note</a>
-                            </h6>
-                          </div>
-                        </div><!-- Post -->
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="hitbodedut" style="color:steelblue;">Hitbodedut 1O1</a>
+                        </div>
                       </div>
                     </div>
+                    <!-- Post -->
                   </div>
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="usa">
+                          <img src="images/13.jpg" alt="Post Title Placeholder" />
+                        </a>
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="usa" style="color:steelblue;">Lectures in USA</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Post -->
+
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a ui-sref="category">Lectures</a>
+              <ul class="scrollbar" id="style-1" style="color:white; margin-top: 1px; display: none;" ng-controller="homeCtrl">
+                <li style="color:steelblue;" ng-repeat="playlist in allPlayLists track by $index">
+                  <a ui-sref="playlist({playlistParam: playlist, title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a>
                 </li>
-                <!--<li><a ui-sref="articles">Articles</a>
+              </ul>
+            </li>
+            <li>
+              <a ui-sref="services">Services</a>
+              <div class="megamenu" style="background-color: white; color: steelblue;">
+                <div class="item-content">
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="services-prayer">
+                          <img src="images/services-prayer.jpg" alt="Post Title Placeholder" />
+                        </a>
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category" style="color:steelblue;">
+                          <a ui-sref="services-prayer">Prayer</a>
+                        </div>
+                        <h6 class="post-title" style="color:steelblue;">
+                          <a ui-sref="services-prayer">Pinchas</a>
+                        </h6>
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="services-kaddish">
+                          <img src="images/services-kaddish.jpg" alt="Post Title Placeholder" />
+                        </a>
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="services-kaddish">Kaddish</a>
+                        </div>
+                        <h6 class="post-title">
+                          <a ui-sref="services-kaddish">Pinchas</a>
+                        </h6>
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="services-tehillim">
+                          <img src="images/services-tehillim.jpg" alt="Post Title Placeholder" />
+                        </a>
+
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="services-tehillim">Tehillim/Mishna</a>
+                        </div>
+                        <h6 class="post-title">
+                          <a uui-sref="services-tehillim">Balak</a>
+                        </h6>
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="services-learning">
+                          <img src="images/services-learning.jpg" alt="Post Title Placeholder" />
+                        </a>
+
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="services-learning">Torah Partnership</a>
+                        </div>
+                        <h6 class="post-title">
+                          <a ui-sref="services-learning">Pin'has</a>
+                        </h6>
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="services-torah">
+                          <img src="images/services-torah.jpg" alt="Post Title Placeholder" />
+                        </a>
+
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="services-torah">Sefer Torah</a>
+                        </div>
+                        <h6 class="post-title">
+                          <a ui-sref="services-torah">Purim: A Lesson In Emunat Chachamim</a>
+                        </h6>
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="services-candle">
+                          <img src="images/services-candle.jpg" alt="Post Title Placeholder" />
+                        </a>
+
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="services-candle">Candle</a>
+                        </div>
+                        <h6 class="post-title">
+                          <a ui-sref="services-candle">Purim: A Lesson In Emunat Chachamim</a>
+                        </h6>
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="services-note">
+                          <img src="images/services-note.jpeg" alt="Post Title Placeholder" />
+                        </a>
+
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="services-note">Kotel Note</a>
+                        </div>
+                        <h6 class="post-title">
+                          <a ui-sref="services-note">Purim: A Lesson In Emunat Chachamim</a>
+                        </h6>
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!--<li><a ui-sref="articles">Articles</a>
                   <div class="megamenu" style="background-color: white; color: steelblue;">
                     <div class="item-content">
                       <div class="item">
@@ -441,105 +485,118 @@
                     </div>
                   </div>
                 </li>-->
-                <li><a ui-sref="soundcloud">Soundcloud</a></li>
-                <li><a ui-sref="page-about">About</a>
-                  <div class="megamenu" style="background-color:white;">
-                    <div class="item-content">
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="faq">
-                              <img src="images/4.jpg" alt="Post Title Placeholder" />
-                            </a>
+            <li>
+              <a ui-sref="soundcloud">Soundcloud</a>
+            </li>
+            <li>
+              <a ui-sref="page-about">About</a>
+              <div class="megamenu" style="background-color:white;">
+                <div class="item-content">
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="faq">
+                          <img src="images/4.jpg" alt="Post Title Placeholder" />
+                        </a>
 
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="faq">FAQ's</a>
-                            </div>
-                            <!-- <h6 class="post-title">
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="faq">FAQ's</a>
+                        </div>
+                        <!-- <h6 class="post-title">
                               <a href="post-single.html">FAQ's</a>
                             </h6> -->
-                          </div>
-                        </div><!-- Post -->
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="page-about">
-                              <img src="images/5.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="page-about">About Emunah.com</a>
-                            </div>
-                            <!-- <h6 class="post-title">
-                              <a href="post-single.html">Emunah.com</a>
-                            </h6> -->
-                          </div>
-                        </div><!-- Post -->
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="page-about-rav">
-                              <img src="images/author.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="page-about-rav">About Rav Dror</a>
-                            </div>
-                            <h6 class="post-title">
-                              <!-- <a href="post-single.html">Rav Dror</a> -->
-                            </h6>
-                          </div>
-                        </div><!-- Post -->
-
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="mitzvot">
-                              <img src="images/18.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="mitzvot">Mitzvot</a>
-                            </div>
-                            
-                          </div>
-                        </div>
-                        <!-- Post -->
                       </div>
                     </div>
+                    <!-- Post -->
                   </div>
-                </li>
-                <!-- <li ng-show="currentUser"><a href="page-category.html">Emunahversity</a></li> -->
-                <li><a ui-sref="page-contact">Contact</a></li>
-                <!-- <li ng-show="currentUser"><a href="page-category.html"><i class="fa fa-user 2x"></i> Members</a></li> -->
-              </ul>
-            </nav><!-- Menu -->
-            <span class="menu-tigger js-slideout-toggle">
-              <i class="fa fa-bars" style="font-size: 35px; margin-top: 18px; color:steelblue"></i>
-            </span><!-- Menu Tigger -->
-           <!--  <span class="search-tigger">
-              <i class="fa fa-search"></i>
-            </span> --><!-- Search Tigger
-          </div><! Container -->
-        </div><!-- Main Menu -->
-      </header><!-- Header -->
-      <!-- <header-directive></header-directive> -->
-      <div ui-view autoscroll="true"></div>
-    </div><!-- Wrapper -->
-    <footer-directive></footer-directive>
-    <!-- Start All JavaScripts Needed -->
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="page-about">
+                          <img src="images/5.jpg" alt="Post Title Placeholder" />
+                        </a>
 
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="page-about">About Emunah.com</a>
+                        </div>
+                        <!-- <h6 class="post-title">
+                              <a href="post-single.html">Emunah.com</a>
+                            </h6> -->
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="page-about-rav">
+                          <img src="images/author.jpg" alt="Post Title Placeholder" />
+                        </a>
+
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="page-about-rav">About Rav Dror</a>
+                        </div>
+                        <h6 class="post-title">
+                          <!-- <a href="post-single.html">Rav Dror</a> -->
+                        </h6>
+                      </div>
+                    </div>
+                    <!-- Post -->
+
+                  </div>
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="mitzvot">
+                          <img src="images/18.jpg" alt="Post Title Placeholder" />
+                        </a>
+
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="mitzvot">Mitzvot</a>
+                        </div>
+
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- <li ng-show="currentUser"><a href="page-category.html">Emunahversity</a></li> -->
+            <li>
+              <a ui-sref="page-contact">Contact</a>
+            </li>
+            <!-- <li ng-show="currentUser"><a href="page-category.html"><i class="fa fa-user 2x"></i> Members</a></li> -->
+          </ul>
+        </nav>
+        <!-- Menu -->
+        <span class="menu-tigger js-slideout-toggle">
+          <i class="fa fa-bars" style="font-size: 35px; margin-top: 18px; color:steelblue"></i>
+        </span>
+        <!-- Menu Tigger -->
+        <!--  <span class="search-tigger">
+              <i class="fa fa-search"></i>
+            </span> -->
+        <!-- Search Tigger
+          </div><! Container -->
+      </div>
+      <!-- Main Menu -->
+  </header>
+  <!-- Header -->
+  <!-- <header-directive></header-directive> -->
+  <div ui-view autoscroll="false"></div>
+  </div>
+  <!-- Wrapper -->
+  <footer-directive></footer-directive>
+  <!-- Start All JavaScripts Needed -->
     <script id="dsq-count-scr" src="//emunah-com.disqus.com/count.js" async></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
@@ -591,3 +648,4 @@
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a008ebc959bcc55"></script> 
   </body>
 </html>
+

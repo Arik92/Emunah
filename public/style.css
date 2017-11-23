@@ -297,26 +297,50 @@ header.header {
  /**/
 }
 
+.page-content-wrapper {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.flex-spacer {
+
+}
+
+.top-nav-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav.donate-btns {
+    /* width: 15%; */
+    /* padding */
+}
+
+.donate-btns .donate-link {
+    margin-right: 0.3em;
+}
+
+
 /* Top Bar */
 
 .topbar {
 
     display: block;
-    height: 50px;
-    line-height: 50px;
+    height: 65px;
+    line-height: 65px;
     margin-bottom: -30px;
     clear: both;
+    transition: 0.2s;
    
     background-color: black;
 }
 
-.topbar:hover {
-
+/* .topbar:hover {
     display: block;
     height: 70px;
     line-height: 70px;
- 
-}
+} */
+
 .topbar .container {
     display: block;
     height: 32px;
@@ -394,7 +418,9 @@ header.header {
 
     max-width: 50%;
     margin: 2px;
-    margin-left: 45px;}
+    margin-left: 45px;
+    transition: 0.2s;
+}
 
 
  .topbar:hover .logo-container a {
@@ -451,6 +477,18 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 
 /* Menu */
 
+.yellowbutton > li > a {
+    border-style: solid;
+    border-color: yellow;
+    padding: 0.7rem 2rem;
+    border-radius: 5%;
+    background-color: #01579B;
+}
+
+.yellowbutton > li:nth-child(2) > a {
+    background-color: #E65100;
+}
+
 .mainmenu .menu {
     /*float: left;*/
     display: block;
@@ -464,6 +502,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 .mainmenu .menu>ul>li {
     display: block;
     float: left;
+    cursor: pointer;
 }
 .mainmenu .menu>ul>li>a {
     display: block;
@@ -539,11 +578,17 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     opacity: 0;
     display: none;
     line-height: normal;
+    transition: 0.2s;
 }
 .mainmenu .menu>ul>li:hover>.megamenu {
     opacity: 1;
     display: block;
 }
+
+.display-none {
+    display: none !important;
+}
+
 .mainmenu ul li:hover .megamenu .item-content {
     transform: translateY(0px);
 }
@@ -1738,12 +1783,17 @@ header.header#layout3 .search-tigger:hover {
 
 /* Social Icons */
 
+.social-icons {
+    display: flex;
+    margin: auto;
+}
+
 .social-icons a {
     display: block;
     width: 48px;
     height: 48px;
     font-size: 14px;
-    float: left;
+    /* float: left; */
     line-height: 47px;
     text-align: center;
     border: 1px solid #eee;
@@ -2566,6 +2616,10 @@ code {
 }
 #footer p {
     margin: 15px 0 0;
+}
+
+.social-container {
+    margin: auto;
 }
 
 /* Social Icons */
