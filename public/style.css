@@ -574,7 +574,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     padding: 0;
     background: #ADD8E6;
     color: #fff;
-    z-index: 99;
+    z-index: 999999999999999 !important;
     opacity: 0;
     display: none;
     line-height: normal;
@@ -3303,6 +3303,12 @@ span.psw {
 }
 .store-menu {
     padding: 64px 0px 205px 0px;
+}
+
+.store-menu-overlay {
+    position: fixed; 
+    top: 65px;
+    z-index: 0 !important;
 }
 
 
