@@ -1,6 +1,5 @@
 (function() {
   
-  console.log('yo from header.js');
   const navMenu = document.getElementsByClassName("menu")[0];
   const menuLIs = document.querySelectorAll(".menu li");
   const megaMenus = document.querySelectorAll(".megamenu");
