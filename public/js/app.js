@@ -1,8 +1,8 @@
 var app = angular.module("emunApp", ['ui.router','ui.carousel', 'youtube-embed', 'ngFileUpload']);
 
-app.config(function($httpProvider) {
+/*app.config(function($httpProvider) {
   $httpProvider.interceptors.push('authServiceInterceptors');
-})
+})*/
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/home');
