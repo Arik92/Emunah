@@ -1,28 +1,8 @@
-app.controller('authCtrl', function($scope, authFactory, $state) {
-  $scope.join = function() {
-    console.log("joining control user is", $scope.newMember);
-      authFactory.join($scope.newMember)
-      .then(function() {
-        $state.go('home');
-      }, function(err) {
-        alert(err.data.message);
-      });
-  }
-  $scope.login = function() {
-    // $scope.checkFail = validateLogin();
-    // if (!$scope.checkFail) {
-    console.log("login control user is", $scope.user);
-    authFactory.login($scope.user) //how do I know where this user comes from? where does it come from in emunah??
-      .then(function() {
-        $state.go('home')
-      }, function(err) {
-        alert("We cant sign you in with what you entered");
-        $scope.user = {};//reset user creds
-        console.log(err);
-      });
-    //}//if
-  }//login
-  function validateLogin() {
+app.controller('authCtrl', function($scope, authFactory, userService, $state, $timeout, $location) {	
+	this.$onInit = () => {
+	 $scope.newMember = {};
+ }
+  /*function validateLogin() {
     var patt = /\w{8}/;
     console.log("user is", $scope.user);
     if (!checkEmail($scope.user.username)) {
@@ -34,18 +14,7 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
       return false;
     }
   }//validateLogin
-  $scope.logout = function() {
-    console.log("logging out");
-    authFactory.logout($scope.user)
-      .then(function() {
-        console.log("logged out");
-        $state.go('home', {}, {
-          reload: true
-        });
-      }, function(err) {
-        alert(err.data);
-      });
-  }
+  
   function checkNames() {
     var patt = /[a-zA-Z]/;
     console.log("first name is", $scope.newMember.fname);
@@ -100,8 +69,65 @@ app.controller('authCtrl', function($scope, authFactory, $state) {
       console.log("user has been added", $scope.newMember);
       $scope.join($scope.user);
     }
-  }//checkInput
-
+  }//checkInput */
+  $scope.registerUser = function (newMember) {
+   // app.loading = true;
+   // app.errorMsg = false;
+    userService.create(newMember).then(function(data) {
+		console.log("data for signup", data.config.data.username);
+		var loginObj = {
+			"username": data.config.data.username,
+			"password": data.config.data.password
+		};
+      if (data.data.success) {
+        app.loading = false;
+        //create success message
+        //redirect to home page
+        app.successMsg = data.data.message + ' ...Redirecting';
+		authService.login(loginObj).then(function(result){
+			$timeout(function() {			
+          $location.path('/');
+        }, 2000);
+		});        
+      } else {
+        //app.loading = false;
+        //create error message
+        //app.errorMsg = data.data.message;
+		console.log("an error occured");
+      }
+    });
+  }; //registerUser
+  $scope.login = function (loginData) {
+	  //console.log("login data looks like", loginData);
+    //msg.loading = true;
+    //msg.errorMsg = false;
+		authService.login(msg.loginData).then(function(data) {
+      if (data.data.success) {
+        msg.loading = false;
+        //create success message
+        //redirect to home page
+        msg.successMsg = data.data.message + ' ...Redirecting';
+        $timeout(function() {
+          $location.path('/');
+          msg.loginData = '';
+          msg.successMsg = false;
+        }, 2000);
+      }  else {
+        //msg.loading = false;
+        //create error message
+        //msg.errorMsg = data.data.message;
+      }
+    });
+  };
+	this.logout = function() {
+    localStorage.removeItem("user");
+    $rootScope.currentUser = null;
+     delete $http.defaults.headers.common.Authorization;
+    authService.logout();
+    $location.path('/');
+  }//logout
+      
+	
 $scope.joinWhatsapp = function() {
   var patt = /^\+[1-9][0-9]{0,2}\.?[0-9]{1,14}$/; //no country code starts with 0
   if (patt.test($scope.phone)) {
@@ -116,8 +142,8 @@ $scope.joinWhatsapp = function() {
     alert("Please enter a phone number in international format(see example) ");
   }//else patt test
 }//joinWhatsapp
-$scope.newMember = {};
 }); //authCtrl
+
 // <script>
 //   window.fbAsyncInit = function() {
 //     FB.init({

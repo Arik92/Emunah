@@ -574,7 +574,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     padding: 0;
     background: #ADD8E6;
     color: #fff;
-    z-index: 99;
+    z-index: 999999999999999 !important;
     opacity: 0;
     display: none;
     line-height: normal;
@@ -2906,7 +2906,7 @@ code {
     overflow: hidden;
     position: relative;
     clear: both;
-    background: #eee;
+    background: #90CAF9;
 }
 .contact-form .input-group {
     display: block;
@@ -2946,7 +2946,7 @@ code {
     width: 100%;
 }
 .contact-form i {
-    color: #aaa;
+    color: blue;
     margin: 0 5px;
 }
 .contact-form input:focus, .contact-form textarea:focus {
@@ -3303,6 +3303,12 @@ span.psw {
 }
 .store-menu {
     padding: 64px 0px 205px 0px;
+}
+
+.store-menu-overlay {
+    position: fixed; 
+    top: 65px;
+    z-index: 0 !important;
 }
 
 

@@ -1,53 +1,70 @@
-app.factory('authFactory', function($http, $rootScope) {
-  var auth = {};
-  auth.currentUser = {};
-  auth.join = function(user) {
-    return $http.post('/users/register', user)
-      .then(function(response) {
-        console.log("Successfully registered", response.data);
-        auth.currentUser = angular.copy(response.data);
-      });
+app.factory('authFactory', function($http, $rootScope, userService, authToken) {
+  var authFactory = {};
+
+  authFactory.login = function(loginData) {
+	  console.log("login data service is", loginData);
+    return $http.post('/users/authenticate', loginData).then(function(data){
+      authToken.setToken(data.data.token);
+      return data;
+    })
+  }
+//authService.isLoggedIn()
+  authFactory.isLoggedIn = function() {
+    if (authToken.getToken()) {
+      return true;
+    } else {
+      return false;
+    }
   };
 
-  auth.login = function(user) {
-    return $http.post('/users/login', user)
-      .then(function(response) {
-        console.log("Successfully logged in", response.data);
-        auth.currentUser = angular.copy(response.data);
-		var user = {
-			username: response.data.username,
-			email: response.data.email
-		};
-		localStorage.setItem("user", JSON.stringify(user));
-		console.log("login localstorage", localStorage.user);
-        $rootScope.currentUser = user.username;
-      });
+//authService.getUser();
+  authFactory.getUser = function() {
+    if (authToken.getToken) {
+      return $http.post('/users/currentUser');
+    } else {
+      $q.reject({ message: 'User has no token' });
+    }
   };
+  
+ authFactory.logout = function() {    
+		  authToken.setToken();		  
+          console.log("auth factory logout");
+      }
+  
 
-  auth.getCurrentUser = function() {
-    return $http.get('/users/currentUser')
-      .then(function(response) {
-        auth.currentUser = angular.copy(response.data);
-        return response.data;
-      })
-  }
-
-  auth.logout = function(user) {
-    return $http.get('/users/logout')
-      .then(function(reponse) {
-		  localStorage.removeItem("user");
-		  $rootScope.currentUser = null;
-          auth.currentUser.email = null;
-          console.log("auth logout");
-      })
-  }
-
-  auth.joinWhatsapp = function(phone) {
+  authFactory.joinWhatsapp = function(phone) {
     console.log("phone factory:", phone);
     return $http.post('/users/whatsapp/:'+phone).then(function(response) {
       console.log("whatsapp phone factory passed");
     });
   }//joinWhatsapp
 
-  return auth;
+  return authFactory;
 });
+
+app.factory('authToken', function($window) {
+  var authTokenFactory = {};
+  //authToken.setToken(token)
+  authTokenFactory.setToken = function(token) {
+    if (token) {
+      $window.localStorage.setItem('token', token);
+    } else {
+      $window.localStorage.removeItem('token');
+    }
+  };
+  //authToken.getToken()
+  authTokenFactory.getToken = function() {
+    return $window.localStorage.getItem('token');
+  };
+  return authTokenFactory;
+})
+
+app.factory('authServiceInterceptors', function(authToken) {
+  var authServiceInterceptors = {};
+  authServiceInterceptors.request = function(config) {
+    var token = authToken.getToken();
+    //if (token) config.headers['x-access-token'] = token;
+    return config;
+  }
+  return authServiceInterceptors;
+})

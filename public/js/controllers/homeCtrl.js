@@ -1,6 +1,6 @@
 app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytService, hebService, $location, $anchorScroll) {
   //console.log("auth user data to work with", authFactory.currentUser);
-  $rootScope.currentUser = authFactory.currentUser.email;
+  //$rootScope.currentUser = authFactory.currentUser.email;
   $scope.topThree = [];
   ////////****************************LATEST VIDEO INTERFACE ******************************8/////////////////////
   $scope.getLatestVids = function(num) {
