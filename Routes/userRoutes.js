@@ -48,6 +48,7 @@ router.get('/facebook', passport.authenticate('facebook', { scope: 'email' }));
 //////////////////////////////////////////// facebook routes ///////////////////////////////////////////////////////
 router.post('/users', function(req, res){
     var user = new User();
+	console.log("user routes user request obj, ", req.body);
     user.username = req.body.username;
     user.password = req.body.password;
     user.email = req.body.email;
@@ -113,7 +114,7 @@ router.get('/searchByName/:name', function(req, res, next){
   }) // get user by name
   
 router.post('/register', function(req, res, next) {
-  User.register(new User({ username: req.body.email, email: req.body.fname }), req.body.pass, function(err, user) {
+  User.register(new User({ username: req.body.username, password: req.body.password, email: req.body.email }), req.body.pass, function(err, user) {
     if (err) {
       console.log('Error registering!', err);
       return next(err);
@@ -126,18 +127,11 @@ router.post('/register', function(req, res, next) {
     });
   });
 });
-router.get('/currentUser', function(req, res){
-  if (req.user) {
-    res.send(req.user);
-  } else {
-    res.send(null);
-  }
 
-});
  router.post('/currentUser', function(req, res) {
+	 console.log("REQUEST");
     res.send(req.decoded);
   });
-
 router.post('/login', passport.authenticate('local'), function(req, res) {
   // If this function gets called, authentication was successful.
   // `req.user` contains the authenticated user.

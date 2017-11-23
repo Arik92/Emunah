@@ -39,8 +39,7 @@ app.use(function(req, res, next) {
 	    res.header("Access-Control-Allow-Origin", "localhost, https://localhost:8000, hebcal.com");          		
 		res.header("Access-Control-Allow-Credentials", "true");
 		res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");   
-		res.header("Access-Control-Allow-Headers", "Authorization, Origin ,Accept, x-access-token, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers");
-		console.log(res.header());
+		res.header("Access-Control-Allow-Headers", " Authorization, Origin ,Accept, x-access-token, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers");		
         next();
   }); 
 app.all('[^.]+', function(req, res) {

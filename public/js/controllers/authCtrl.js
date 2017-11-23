@@ -1,4 +1,4 @@
-app.controller('authCtrl', function($scope, authFactory, userService, $state, $timeout, $location) {	
+app.controller('authCtrl', function($scope,$rootScope, $http, authFactory, userService, $state, $timeout, $location) {	
 	this.$onInit = () => {
 	 $scope.newMember = {};
  }
@@ -70,11 +70,15 @@ app.controller('authCtrl', function($scope, authFactory, userService, $state, $t
       $scope.join($scope.user);
     }
   }//checkInput */
-  $scope.registerUser = function (newMember) {
+  $scope.registerUser = function () {
+	  $scope.newMember.username = $scope.username;
+	  $scope.newMember.password = $scope.password;
+	  $scope.newMember.email = $scope.email;
+	  console.log("new member is, ", $scope.newMember);
    // app.loading = true;
    // app.errorMsg = false;
-    userService.create(newMember).then(function(data) {
-		console.log("data for signup", data.config.data.username);
+    userService.create($scope.newMember).then(function(data) {
+		console.log("data from registering", data);
 		var loginObj = {
 			"username": data.config.data.username,
 			"password": data.config.data.password
@@ -84,7 +88,7 @@ app.controller('authCtrl', function($scope, authFactory, userService, $state, $t
         //create success message
         //redirect to home page
         app.successMsg = data.data.message + ' ...Redirecting';
-		authService.login(loginObj).then(function(result){
+		authFactory.login(loginObj).then(function(result){
 			$timeout(function() {			
           $location.path('/');
         }, 2000);
@@ -93,7 +97,7 @@ app.controller('authCtrl', function($scope, authFactory, userService, $state, $t
         //app.loading = false;
         //create error message
         //app.errorMsg = data.data.message;
-		console.log("an error occured");
+		console.log("an error occured", data.data.message);
       }
     });
   }; //registerUser
@@ -101,16 +105,17 @@ app.controller('authCtrl', function($scope, authFactory, userService, $state, $t
 	  //console.log("login data looks like", loginData);
     //msg.loading = true;
     //msg.errorMsg = false;
-		authService.login(msg.loginData).then(function(data) {
+	console.log("login data", loginData);
+	authFactory.login(loginData).then(function(data) {
       if (data.data.success) {
-        msg.loading = false;
+        //msg.loading = false;
         //create success message
         //redirect to home page
-        msg.successMsg = data.data.message + ' ...Redirecting';
+        //msg.successMsg = data.data.message + ' ...Redirecting';
         $timeout(function() {
           $location.path('/');
-          msg.loginData = '';
-          msg.successMsg = false;
+         //msg.loginData = '';
+         // msg.successMsg = false;
         }, 2000);
       }  else {
         //msg.loading = false;
@@ -119,11 +124,46 @@ app.controller('authCtrl', function($scope, authFactory, userService, $state, $t
       }
     });
   };
-	this.logout = function() {
+  $rootScope.$on('$locationChangeStart', function() {
+    console.log("I have reached logincrtl, and rootscope current user is", $rootScope.currentUser);
+    if (authFactory.isLoggedIn()) {
+		console.log("I recognize the user is logged IN");
+		authFactory.getUser().then(function(data) {
+        //msg.username = data.data.username;
+        //msg.email = data.data.email;
+        //msg.loader = true;
+        //msg.id = data.data.id;
+        //console.log('you are now logged in! msg is ', app);
+        //just to be sure
+		console.log("LOGGED data", data);
+        $rootScope.userDetails = {};
+        $rootScope.currentUser = data.data.username; // for fb auth as well
+        $rootScope.userDetails.username = data.data.username;
+        $rootScope.userDetails.email = data.data.email;
+        $rootScope.userDetails.id = data.data.id;
+      });
+     }
+    //  else  if ($rootScope.currentUser){
+    //   msg.username = $rootScope.currentUser;
+    // }
+     else {
+       if (!$rootScope.currentUser) {
+         console.log("resetting");
+        msg.username = '';
+        msg.loader = true;
+      } else {
+        msg.username =$rootScope.currentUser;
+        msg.loader = true;
+      }
+
+    }  //else
+  });
+	$scope.logout = function() {
+	console.log("see ya");
     localStorage.removeItem("user");
     $rootScope.currentUser = null;
      delete $http.defaults.headers.common.Authorization;
-    authService.logout();
+    authFactory.logout();
     $location.path('/');
   }//logout
       
