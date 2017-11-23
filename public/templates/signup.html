@@ -22,16 +22,16 @@
               <div class="post-body" >
                 <div class="container" method="POST">
                   <div class="form-group">
-                    <label for="name">First nad last name<i>(Required)</i>:</label>
-                    <input type="text"   placeholder="Rav" ng-model="newMember.username" />
+                    <label for="name">First and last name<i>(Required)</i>:</label>
+                    <input type="text"   placeholder="Rav" ng-model="username" />
                   </div>                  
                   <div class="form-group">
                     <label for="email">Your Email<i>(Required)</i>:</label>
-                    <input type="email" placeholder="ravdror@emunah.com" ng-model="newMember.email" />
+                    <input type="text" placeholder="ravdror@emunah.com" ng-model="email" />
                   </div>
                  <div class="form-group">
                     <label for="website">Password<i>(Required)</i>:</label>
-                    <input type="password" placeholder="secret" ng-model="newMember.password" />
+                    <input type="password" placeholder="secret" ng-model="password" />
                   </div>
                  <div class="form-group">
                     <label for="website">Confirm Password<i>(Required)</i>:</label>
@@ -58,7 +58,7 @@
                     <input type="text" name="subject" placeholder="91307" id="subject" ng-model="newMember.zip"/>
                   </div> -->
                   <div class="form-group">
-                    <input type="submit" ng-click="registerUser(newMember)" value="Sign Up"/>
+                    <input type="submit" ng-click="registerUser()" value="Sign Up"/>
                   </div>
 				  <div class="form-group">
                   <a href="/users/facebook" target="_blank"><button type="button" class="btn-facebook">Facebook</button></a>

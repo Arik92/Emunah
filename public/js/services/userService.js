@@ -3,7 +3,10 @@ app.factory('userService', function($http){
 
   //userService.create(regData);
   userFactory.create = function(regData) {
-    return $http.post('/users/users', regData);
+    return $http.post('/users/users', regData).then(function(result){
+		console.log("result from registering,", result);
+		return result;
+	});
   };
 
   userFactory.getUserByName = function(userName) {

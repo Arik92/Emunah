@@ -300,7 +300,7 @@ app.run(function ($rootScope, authFactory, $state, $anchorScroll) {
   var user = JSON.parse(localStorage.getItem("user"));
   console.log("app.run user", user);
   if (user) {
-    $rootScope.currentUser = user.username;
+    $rootScope.currentUser = user.name;
     $state.go('home');
     //$rootScope.$broadcast('fbLogin');
   }//if s

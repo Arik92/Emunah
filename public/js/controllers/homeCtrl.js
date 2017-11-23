@@ -6,11 +6,11 @@ app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytS
   $scope.getLatestVids = function(num) {
   ytService.getLatestVids(num).then(function(data, err){
     if (err) {
-      console.error("controller error fetching latest videos", err);
+      //console.error("controller error fetching latest videos", err);
     } else {
       $scope.footerVids = data.items;
       $scope.topThree = data.items.splice(0,3);
-      console.log("top three videos are ", $scope.topThree);
+      //console.log("top three videos are ", $scope.topThree);
       $scope.latestVids = data.items;
 
       //console.log("latest vids are", data.items);
@@ -61,7 +61,7 @@ initNavDates()
         console.error("controller error fetching playlists");
       } else {
         $scope.allPlayLists = playlistFilter(data.items); // an array of 48 playLists
-        console.log("after filter", $scope.allPlayLists);
+        //console.log("after filter", $scope.allPlayLists);
         $scope.footerPlaylists = $scope.allPlayLists.slice(0,35);
         $scope.playListIndex = 0;
         $scope.numRes = data.pageInfo.totalResults;
@@ -151,7 +151,7 @@ initNavDates()
       count++;
     }//for update playlist
     $scope.playListIndex+=6;
-    console.log("playlist index is now", $scope.playListIndex);
+    //console.log("playlist index is now", $scope.playListIndex);
   }//uplb
 
   $scope.setCurr = function(obj, type) {
