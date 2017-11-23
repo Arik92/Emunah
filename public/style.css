@@ -2906,7 +2906,7 @@ code {
     overflow: hidden;
     position: relative;
     clear: both;
-    background: #eee;
+    background: #90CAF9;
 }
 .contact-form .input-group {
     display: block;
@@ -2946,7 +2946,7 @@ code {
     width: 100%;
 }
 .contact-form i {
-    color: #aaa;
+    color: blue;
     margin: 0 5px;
 }
 .contact-form input:focus, .contact-form textarea:focus {
