@@ -413,18 +413,19 @@ nav.donate-btns {
     display: flex;
     height: 10px;
     max-width: 230px;
+    padding-top: 7px;
 }
 .logo-container a {
 
-    max-width: 50%;
+    max-width: 70%;
     margin: 2px;
     margin-left: 45px;
     transition: 0.2s;
 }
 
 
- .topbar:hover .logo-container a {
-   max-width: 70%;
+.logo-container:hover a {
+   max-width: 100%;
 }
 .logo-container .logo {
     display: block;
