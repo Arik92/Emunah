@@ -47,7 +47,7 @@ function initNavDates() {
 		$scope.parasha = result.events[0];
 		$scope.CurrentHebDate = result.hd + "-" +result.hm + "-" +result.hy;
 		$scope.currDate+= " | "+ result.hd + "-" +result.hm + "-" +result.hy;
-		console.log("currhebdate ", result);
+		//console.log("currhebdate ", result);
 	});
 	}
 initNavDates()
