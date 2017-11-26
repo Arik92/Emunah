@@ -149,11 +149,11 @@ app.controller('authCtrl', function($scope,$rootScope, $http, authFactory, userS
      else {
        if (!$rootScope.currentUser) {
          console.log("resetting");
-        msg.username = '';
-        msg.loader = true;
+        //msg.username = '';
+        //msg.loader = true;
       } else {
-        msg.username =$rootScope.currentUser;
-        msg.loader = true;
+        //msg.username =$rootScope.currentUser;
+        //msg.loader = true;
       }
 
     }  //else
