@@ -1,5 +1,6 @@
-var app = angular.module("emunApp", ['ui.router', 'ui.carousel', 'youtube-embed', 'ngFileUpload']);
+var app = angular.module("emunApp", ['ui.router', 'ui.carousel', 'youtube-embed', 'ngFileUpload', 'ngLodash']);
 
+app.constant()
 
 app.config(function($httpProvider) {
   $httpProvider.interceptors.push('authServiceInterceptors');
