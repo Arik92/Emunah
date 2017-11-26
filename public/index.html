@@ -115,7 +115,7 @@
         <div class="logo-container">
           <!-- <div class="logo"> -->
           <a ui-sref="home">
-            <img src="images/emunahlogo.png" alt="Logo Image Placeholder">
+            <img src="images/emunahlogo2.png" alt="Logo Image Placeholder">
           </a>
           <!--   -->
           <!-- Logo -->
@@ -138,9 +138,9 @@
             <li ng-hide="currentUser">
               <a ui-sref="signup" style="color:white">Sign Up</a>
             </li>
-			<li ng-show="currentUser" ng-controller="authCtrl">
-			<button ng-click="logout()">Log out</button>
-			</li>            
+      			<li ng-show="currentUser" ng-controller="authCtrl">
+      			  <a href="#" ng-click="logout()" style="color:white">Log out</a>
+      			</li>            
           </ul>
         </nav>
         <!-- Top Menu -->
