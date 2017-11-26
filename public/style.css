@@ -432,6 +432,10 @@ nav.donate-btns {
     margin: auto 0;
 }
 
+.transform {
+    transform: translateY(-15px);
+}
+
 /* Advertisment */
 
 .ad-container {
@@ -3310,6 +3314,7 @@ span.psw {
     position: fixed; 
     top: 65px;
     z-index: 0 !important;
+    transition: 0.5s;
 }
 
 

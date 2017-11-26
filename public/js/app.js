@@ -161,31 +161,38 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('store-necklaces', {
       url: '/store-necklaces',
-      templateUrl: '/templates/store/store-necklaces.html'
+      templateUrl: '/templates/store/store-necklaces.html',
+      controller: 'storeCtrl'
     })
     .state('store-shirts', {
       url: '/store-shirts',
-      templateUrl: '/templates/store/store-shirts.html'
+      templateUrl: '/templates/store/store-shirts.html',
+      controller: 'storeCtrl'
     })
     .state('store-hebrew', {
       url: '/store-hebrew',
-      templateUrl: '/templates/store/store-hebrew.html'
+      templateUrl: '/templates/store/store-hebrew.html',
+      controller: 'storeCtrl'
     })
     .state('store-english', {
       url: '/store-english',
-      templateUrl: '/templates/store/store-english.html'
+      templateUrl: '/templates/store/store-english.html',
+      controller: 'storeCtrl'
     })
     .state('store-booklets', {
       url: '/store-booklets',
-      templateUrl: '/templates/store/store-booklets.html'
+      templateUrl: '/templates/store/store-booklets.html',
+      controller: 'storeCtrl'
     })
     .state('store-cds', {
       url: '/store-cds',
-      templateUrl: '/templates/store/store-cds.html'
+      templateUrl: '/templates/store/store-cds.html',
+      controller: 'storeCtrl'
     })
     .state('store-misc', {
       url: '/store-misc',
-      templateUrl: '/templates/store/store-misc.html'
+      templateUrl: '/templates/store/store-misc.html',
+      controller: 'storeCtrl'
     })
     .state('article-single', {
       url: '/article-single',
