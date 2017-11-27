@@ -113,21 +113,21 @@
         <nav class="topmenu">
           <ul style="color:white">
             <li ng-show="currentUser" style="font-size:11px;">Welcome, {{currentUser}}</li>
-            <li style="font-size:11px;">{{parasha}}</li>
+            <li >{{parasha}}</li>
             <li style="font-size:11px;">{{currDate}}</li>
-            <li style="color:white">
+            <li class="top-menu-link soft-trans" style="color:white">
               <a ui-sref="page-contact" style="color:white">Subscribe</a>
             </li>
-            <li style="color:white">
+            <li id="whatsapp-menu-link" class="soft-trans" style="color:white">
               <a ui-sref="whatsapp" style="color:white">WhatsApp Group</a>
             </li>
-            <li ng-hide="currentUser">
+            <li class="top-menu-link soft-trans" ng-hide="currentUser">
               <a ui-sref="login" style="color:white">Login</a>
             </li>
-            <li ng-hide="currentUser">
+            <li class="top-menu-link soft-trans" ng-hide="currentUser">
               <a ui-sref="signup" style="color:white">Sign Up</a>
             </li>
-      			<li ng-show="currentUser" ng-controller="authCtrl">
+      			<li id="top-menu-logout" class="soft-trans" ng-show="currentUser" ng-controller="authCtrl">
       			  <a href="#" ng-click="logout()" style="color:white">Log out</a>
       			</li>            
           </ul>
