@@ -512,12 +512,11 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 
 .donate-btns a {
     border-style: solid;
-    border-color: blue;
+    border-color: steelblue;
     border-width: 3px;
     padding: 0.7rem 2rem;
-    border-radius: 5px;
     font-size: 1em;
-    background-color: whitesmoke;
+    background-color: white;
     color: black;
 }
 
