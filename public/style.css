@@ -378,6 +378,31 @@ nav.donate-btns {
     display: none;
 }
 
+
+
+.top-menu-link:hover {
+    background: steelblue;
+    text-align: center;
+    padding-left: 10px;
+    text-decoration: none;
+    
+}
+
+#whatsapp-menu-link:hover {
+    background: green;
+    text-align: center;
+    text-decoration: none;
+    padding-left: 10px;
+    
+}
+
+#top-menu-logout:hover {
+    background: red;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
 /* Social Links */
 
 
@@ -420,7 +445,7 @@ nav.donate-btns {
     max-width: 75%;
     margin: 2px;
     margin-left: 45px;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 
@@ -3315,6 +3340,14 @@ span.psw {
     top: 65px;
     z-index: 0 !important;
     transition: 0.5s;
+}
+
+.store-menu-overlay li:hover {
+    background: lightblue;
+}
+
+.store-menu-overlay li:hover {
+    transition: 0.3s;
 }
 
 
