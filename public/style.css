@@ -510,17 +510,22 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 
 /* Menu */
 
-.yellowbutton > li > a {
+.donate-btns a {
     border-style: solid;
-    border-color: yellow;
+    border-color: blue;
+    border-width: 3px;
     padding: 0.7rem 2rem;
-    border-radius: 5%;
-    background-color: #01579B;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: whitesmoke;
+    color: black;
 }
 
-.yellowbutton > li:nth-child(2) > a {
-    background-color: #E65100;
+.donate-btns a:hover {
+    text-decoration: none;
+
 }
+
 
 .mainmenu .menu {
     /*float: left;*/
