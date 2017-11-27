@@ -94,6 +94,7 @@ router.post('/users', function(req, res){
         if (err) {
           res.json({ success: false, message: 'token invalid' });
         } else {
+			console.log("decoded", decoded);
           req.decoded = decoded;
           next();
         }

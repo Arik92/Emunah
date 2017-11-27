@@ -413,22 +413,27 @@ nav.donate-btns {
     display: flex;
     height: 10px;
     max-width: 230px;
+    padding-top: 7px;
 }
 .logo-container a {
 
-    max-width: 50%;
+    max-width: 70%;
     margin: 2px;
     margin-left: 45px;
     transition: 0.2s;
 }
 
 
- .topbar:hover .logo-container a {
-   max-width: 70%;
+.logo-container:hover a {
+   max-width: 100%;
 }
 .logo-container .logo {
     display: block;
     margin: auto 0;
+}
+
+.transform {
+    transform: translateY(-15px);
 }
 
 /* Advertisment */
@@ -3309,6 +3314,7 @@ span.psw {
     position: fixed; 
     top: 65px;
     z-index: 0 !important;
+    transition: 0.5s;
 }
 
 
