@@ -378,13 +378,16 @@ nav.donate-btns {
     display: none;
 }
 
+.soft-trans {
+    transition: 0.7s;
+}
 
 
 .top-menu-link:hover {
     background: steelblue;
     text-align: center;
     padding-left: 10px;
-    text-decoration: none;
+    text-decoration: none !important;
     
 }
 
