@@ -440,12 +440,12 @@ nav.donate-btns {
     float: left;
     display: flex;
     height: 10px;
-    max-width: 230px;
-    padding-top: 7px;
+    max-width: 270px;
+    padding-top: 9px;
 }
 .logo-container a {
 
-    max-width: 70%;
+    max-width: 75%;
     margin: 2px;
     margin-left: 45px;
     transition: 0.5s;
