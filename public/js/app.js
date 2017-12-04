@@ -302,7 +302,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
 });
 
-app.run(function ($rootScope, authFactory, $state, $anchorScroll) {
+app.run(function ($rootScope, authFactory, $state, $anchorScroll, $location) {
   var user = JSON.parse(localStorage.getItem("user"));
   console.log("app.run user", user);
   if (user) {
@@ -310,8 +310,15 @@ app.run(function ($rootScope, authFactory, $state, $anchorScroll) {
     $state.go('home');
     //$rootScope.$broadcast('fbLogin');
   }//if s
-  $rootScope.$on('$stateChangeStart', function () {
+/*  $rootScope.$on('$stateChangeStart', function () {
+	  //$location.hash('layout2');
     $anchorScroll();
+});
+$rootScope.$on('$stateChangeSuccess', function () {
+	document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;}); */
+	$rootScope.$on('$locationChangeStart', function() {
+   document.body.scrollTop = document.documentElement.scrollTop = 0;
 });
 });//app.run
 
