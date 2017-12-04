@@ -44,13 +44,26 @@ function initNavDates() {
 	var d = new Date();
 	$scope.currDate = weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDate()+" , "+d.getFullYear();
 	hebService.getCurrentHebDate().then(function(result){
+		console.log("hebdate data: ",result);
 		$scope.parasha = result.events[0];
 		$scope.CurrentHebDate = result.hd + "-" +result.hm + "-" +result.hy;
 		$scope.currDate+= " | "+ result.hd + "-" +result.hm + "-" +result.hy;
 		//console.log("currhebdate ", result);
 	});
 	}
-initNavDates()
+	function getAllHolidays() {
+		hebService.getHolidays().then(function(result){
+			console.log("holiday service result", result);
+			$scope.nextHolidayName = result.items[0].title;
+			var holidayDate = new Date(result.items[0].date);			
+			holidayDate = holidayDate.toUTCString();
+			var patt = /\w+\s\w+\s\w+/;
+			$scope.nextHolidayDate = patt.exec(holidayDate)[0];
+			console.log("regdate:", $scope.nextHolidayDate);			
+		})//hebcal cb
+	}//getholidays
+initNavDates();
+getAllHolidays();
 // friday, nov 10 2017
 //////////////////////////////////////**************** Parasha and hebrew date interface *************************/////////////////////////
 
