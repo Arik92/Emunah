@@ -822,7 +822,7 @@ header.header#layout2 .mainmenu {
     height: 70px;
     line-height: 70px;
     text-align: center;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 }
 header.header#layout2 .mainmenu .container {
  /*   background-color: transparent;*/
