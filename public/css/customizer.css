@@ -55,3 +55,19 @@ header.header#layout2 .mainmenu, .mainmenu .menu>ul>li ul, .mainmenu .menu>ul>li
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+
+  /* bootstrap custom */
+
+  .panel-footer.panel-footer-custom {
+    background: steelblue;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.margin-bottom {
+    margin-bottom: 5px;
+}
+
+.margin-top {
+    margin-top: 2px;
+}
