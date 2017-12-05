@@ -85,7 +85,7 @@
 								<article class="post" >
 									<div class="post-thumb">
 										<!-- <a href="{{playlist.playurl}}"> -->
-										<a ui-sref="playlist({playlistParam: playlist, title: playlist.snippet.localized.title, id:playlist.id})">
+										<a ui-sref="playlist({title: playlist.snippet.localized.title, id:playlist.id})">
 											<img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  />
 											<!-- <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe> -->
 										<span class="post-format">
@@ -95,7 +95,7 @@
 									</div><!-- Post Image -->
 									<div class="post-content">
 										<h5 class="post-title">
-											<label id="playlistText"><a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a></label>
+											<label id="playlistText"><a ui-sref="playlist({title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a></label>
 											<br />
 										</h5><!-- Post Title -->
 <!-- 										<div class="post-meta">

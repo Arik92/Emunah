@@ -53,13 +53,13 @@ function initNavDates() {
 	}
 	function getAllHolidays() {
 		hebService.getHolidays().then(function(result){
-			console.log("holiday service result", result);
+			//console.log("holiday service result", result);
 			$scope.nextHolidayName = result.items[0].title;
 			var holidayDate = new Date(result.items[0].date);			
 			holidayDate = holidayDate.toUTCString();
-			var patt = /\w+\s\w+\s\w+/;
+			var patt = /\w+\s\w+\s\w+/; // pattern of recognition - capture first word+space=2second word=space+third word
 			$scope.nextHolidayDate = patt.exec(holidayDate)[0];
-			console.log("regdate:", $scope.nextHolidayDate);			
+			//console.log("regdate:", $scope.nextHolidayDate);			
 		})//hebcal cb
 	}//getholidays
 initNavDates();
@@ -219,3 +219,4 @@ getAllHolidays();
   };
 
 }); //controller
+
