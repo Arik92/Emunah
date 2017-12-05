@@ -44,5 +44,21 @@ app.service('ytService', function($http) {
       console.error("error fetching playlist item");
     })
   }//getPlaylistVideos
+  serv.getPlaylistsByQuery = function(query) {
+	  var id = "UCtAh700VTIQb5Wsx_vdg-Pw";
+	return $http.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=23&channelId='+id+'&type=playlist&q='+query+'&key='+config.YOUTUBE_KEY).then(function(response){
+	return response.data;	
+	}, function(err){
+		console.error("error while searching for "+query+" playlists");
+	});  
+  }
+  serv.getPageQueryPlaylists = function(query, token) {
+	  var id = "UCtAh700VTIQb5Wsx_vdg-Pw";
+	return $http.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=23&pageToken='+token+'&channelId='+id+'&type=playlist&q='+query+'&key='+config.YOUTUBE_KEY).then(function(response){
+	return response.data;	
+	}, function(err){
+		console.error("error while searching for "+query+" playlists");
+	});  
+  }
   return serv;
 })//service
