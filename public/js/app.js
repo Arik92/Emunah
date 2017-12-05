@@ -212,7 +212,8 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('services', {
       url: '/services',
-      templateUrl: '/templates/services/services.html'
+      templateUrl: '/templates/services/services.html',
+      controller: 'serviceCtrl'
     })
     .state('services-prayer', {
       url: '/services-prayer',
