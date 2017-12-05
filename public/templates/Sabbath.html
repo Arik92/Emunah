@@ -23,10 +23,10 @@
             </div>
             <br /><!--input -->
             <br /><!--input -->
-            <button type="submit" ng-click="reset()" class="hvr-bounce-to-right" id="mybutton" style="margin: 10px; font-size:20px;padding: 6px 0px; width:22%;background-color:transparent;color:black"> Reset</button>
-            <button type="submit" ng-click="checkTimes()" class="hvr-bounce-to-right" id="mybutton" style="margin: 10px; font-size:20px;padding: 6px 0px; width:33%;background-color:black;color:white"> Create event</button>
+            <button type="submit" ng-click="reset()" class="hvr-bounce-to-right" id="mybutton" style="margin: 10px; font-size:20px;padding: 6px 0px; width:22%;background-color:transparent;color:black" ng-hide="showResult"> Reset</button>
+            <button type="submit" ng-click="checkTimes()" class="hvr-bounce-to-right" id="mybutton" style="margin: 10px; font-size:20px;padding: 6px 0px; width:33%;background-color:black;color:white" ng-hide="showResult"> Create event</button>
             <div class="row show-hide-message" ng-show="showResult">
-              <div class="alert alert-success">{{candleTimes}}<span class="glyphicon glyphicon-repeat fast-right-spinner"></span></div>
+              <div class="alert alert-success">{{candleTimes}}</div>
               </div>
             </div>
           <!-- <div class="row show-hide-message" ng-show="showFailure">
