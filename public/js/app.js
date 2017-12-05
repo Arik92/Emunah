@@ -27,8 +27,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('playlist', {
       url: '/playlist/:title/:id',
-      templateUrl: '/templates/playlist-page.html',
-      params: { playlistParam: null },
+      templateUrl: '/templates/playlist-page.html',      
       controller: 'playlistCtrl'
     })
     .state('page-contact', {
@@ -299,6 +298,16 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
           $state.go('home');
         }
       }//controller
+    })
+	.state('full', {
+      url: '/full-lectures',
+      templateUrl: '/templates/full.html',
+      controller: 'longPlCtrl'
+    })
+	.state('short', {
+      url: '/short-lectures',
+      templateUrl: '/templates/short.html',
+      controller: 'shortPlCtrl'
     })
 });
 

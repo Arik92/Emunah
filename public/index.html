@@ -64,7 +64,8 @@
         </li>
         <li class="has-sub"><a href="category">Lectures</a>
           <ul>
-             <li ng-repeat="playlist in allPlayLists track by $index" ><a ui-sref="playlist({playlistParam: playlist,  title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a></li>
+			<li><a ui-sref="short">Short lectures</a></li>
+            <li><a ui-sref="full">Full Lectures</a></li>
           </ul>
         </li>
         <li class="has-sub"><a ui-sref="page-about-rav">Services</a>
@@ -232,13 +233,43 @@
                 </div>
               </div>
             </li>
-            <li>
-              <a ui-sref="category">Lectures</a>
-              <ul class="scrollbar" id="style-1" style="color:white; margin-top: 1px; display: none;" ng-controller="homeCtrl">
-                <li style="color:steelblue;" ng-repeat="playlist in allPlayLists track by $index">
-                  <a ui-sref="playlist({playlistParam: playlist, title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a>
-                </li>
-              </ul>
+             <li>
+              <a ui-sref="ravusa">Lectures</a>
+              <div class="megamenu" style="background-color:white;">
+                <div class="item-content">
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                       <a ui-sref="short" style="color:steelblue;">
+                          <img src="images/11.jpg" alt="Post Title Placeholder" />
+                        </a>
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="short" style="color:steelblue;">Short Lectures</a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="full" style="color:steelblue;">
+                          <img src="images/12.jpg" alt="Post Title Placeholder" />
+                        </a>
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="full" style="color:steelblue;">Full Lectures</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>                  
+                </div>
+              </div>
             </li>
             <li>
               <a ui-sref="services">Services</a>
@@ -600,6 +631,8 @@
     <script src="js/controllers/playlistCtrl.js"></script>
     <script src="js/controllers/articleCreationCtrl.js"></script>
     <script src="js/controllers/storeCtrl.js"></script>
+    <script src="js/controllers/longPlCtrl.js"></script>
+    <script src="js/controllers/shortPlCtrl.js"></script>
     <script src="js/directives/navDirective.js"></script>
     <script src="js/directives/headerDirective.js"></script>
     <script src="js/directives/footerDirective.js"></script>
