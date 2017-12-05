@@ -1,139 +1,67 @@
 <footer id="footer">
-	<div class="container">
-		<div class="footer-columns row" style="margin-top:35px;">
-			<div class="footer-col col-md-4">
-
-				<!-- <div class="widget HTML">
-					<div class="widget-title">
-						<h2>Recent Posts</h2>
-					</div>
-					<div class="widget-content">
-						<ul class="recent-posts">
-							<li class="post" ng-repeat="footerVid in footerVids track by $index">
-								<div class="post-thumb">
-									<a ui-sref="post-single({videoParam: footerVid, id: footerVid.id})">
-										<img class="lazy" src={{footerVid.snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
-									</a>
-								</div>
-								<div class="post-content">
-									<h6 class="post-title">
-										<a ui-sref="post-single({videoParam: footerVid, id: footerVid.id})">{{footerVid.snippet.title}}</a>
-									</h6>
-									<ul class="post-meta">
-										<li>
-											<i class="fa fa-clock-o"></i>{{footerVid.snippet.publishedAt}}</li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div> -->
-
-				<!-- Widget : Advertisment -->
-			</div>
-			<!-- Footer Column -->
-			<!-- <div class="footer-col col-md-4">
-				<div class="widget Label">
-					<div class="widget-title">
-						<h2>Categories</h2>
-					</div>
-					<div class="widget-content list-label-widget-content">
-						<ul>
-							<li ng-repeat="playlist in footerPlaylists track by $index">
-								<a href="#">
-									<a ui-sref="playlist({playlistParam: playlist, id:playlist.id})">{{playlist.snippet.title}}</a>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div> -->
-
-			<!-- Footer Column -->
-			<!-- <div class="footer-col col-md-4">
-				<div class="widget HTML">
-					<div class="widget-title">
-						<h2>@instagram</h2>
-					</div> -->
-
-			<!-- SnapWidget -->
-			<!--<script src="https://snapwidget.com/js/snapwidget.js"></script>
-					<iframe src="https://snapwidget.com/embed/426296" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>-->
-
-			<!-- </div> -->
-			<!-- <div class="widget FollowByEmail" style="margin-top: 15px;">
-				<div class="widget-title">
-					<h2>Follow By Email</h2>
-				</div>
-				<div class="widget-content">
-					<div class="follow-by-email-inner">
-						<form action="https://feedburner.google.com/fb/a/mailverify" method="post" onsubmit="window.open(&quot;https://feedburner.google.com/fb/a/mailverify?uri=TheStyle-LifeStyleBloggerTemplate&quot;, &quot;popupwindow&quot;, &quot;scrollbars=yes,width=550,height=520&quot;); return true"
-						 target="popupwindow">
-							<table>
-								<tbody>
-									<tr>
-										<td>
-											<input class="follow-by-email-address" name="email" placeholder="Your Email Adress..." type="text">
-										</td>
-										<td>
-											<input class="follow-by-email-submit" type="submit" value="Subscribe">
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<input name="uri" type="hidden" value="TheStyle-LifeStyleBloggerTemplate">
-							<input name="loc" type="hidden" value="en_US">
-						</form>
-					</div>
-				</div>
-			</div> -->
-			<!-- Widget : Follow By Email -->
-			<!-- <div class="social-container">
-				<div class="widget-title">
-					<h2>Connect With Us</h2>
-				</div>
-				<div class="widget-content social-icons">
-					<a class="facebook" href="https://www.facebook.com/RavDror/" target="_blank">
-						<i class="fa fa-facebook"></i>
-					</a>
-					<a class="twitter" href="https://twitter.com/ravdror" target="_blank">
-						<i class="fa fa-twitter"></i>
-					</a>
-					<a class="google" href="https://plus.google.com/u/0/109950438712204531834" target="_blank">
-						<i class="fa fa-google"></i>
-					</a>
-					<a class="instagram" href="https://www.instagram.com/ravdror/" target="_blank">
-						<i class="fa fa-instagram"></i>
-					</a>
-					<a href="https://www.youtube.com/user/EmunahChannel" target="_blank" class="youtube">
-						<i class="fa fa-youtube"></i>
-					</a>
-					<a href="https://soundcloud.com/ravdror" target="_blank" class="soundcloud">
-						<i class="fa fa-soundcloud"></i>
-					</a>
-				</div>
-			</div> -->
-
-		</div>
-	</div>
-	<!-- Footer Column -->
-	</div>
 	<!-- Row -->
 	<div class="footer-columns row">
 		<div class="footer-col col-md-offset-2 col-md-8 col-sm-6 col-xs-12">
 			<div class="widget Text">
 				<div class="widget-content about-widget">
+
+					<div class="link-container border-lines">
+
+						<ul class="footer-links flex-around" >
+							<li ng-repeat="column in footerLinkColumns">
+								<ul>
+									<h4><i class="{{ column.icon }}"></i>
+									<span class="chabad-gold">{{ column.header}}</span>
+									</h4>
+									<li ng-repeat="link in column.links" 
+											ui-sref="{{ link.uiSref }}"
+											href="{{ link.hRef }}"
+											style="cursor: pointer">
+										{{ link.title }}
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						
+
+							<div id="footer-subscribe" class="flex-center" style="margin: 30px 0; padding: 15px 0; background: #2b506e">
+								<h4 class="chabad-gold" style="margin-right: 30px">Subscribe to our Weekly Stuff!</h4>
+								<div class="input-group" style="width: 30%">
+									<input type="text" class="form-control" placeholder="Enter Email">
+									<span class="input-group-btn">
+										<button class="btn btn-default" 
+														style="background: #ffcc66; border: solid #ffcc66" 
+														type="button">
+											Subscribe!
+										</button>
+									</span>
+								</div><!-- /input-group -->
+							</div><!-- /.col-lg-6 -->
+
+							<ul class="footer-social-media flex-center">
+									<li ng-repeat="link in socialMedia" style="padding: 0 1em;">
+										<a href="{{ link.hRef }}" style="display: block; width: 100%">
+											<i class="{{ link.faIcon }}"></i>
+										</a>
+									</li>
+							</ul>
+
+					</div>
+
 					<div>
 						<a href="index.html">
-							<img src="images/footer.png" alt="Logo Footer" style="margin: auto">
+							<img src="images/footer.png" alt="Logo Footer" style="margin: auto; width: 60%">
 						</a>
 					</div>
 					<p style="color: white; font-size: 1.5em;">
-						<b>Rabbi Dror Moshe Cassouto spreads a message of Happiness, Simplicity, Faith, 
-							and the understanding that it is okay to fail and fall.
+						<b>Rabbi Dror Moshe Cassouto spreads a message of Happiness, Simplicity, Faith, and the understanding that it is okay
+							to fail and fall.
 							<br> We are human beings – it’s our nature to get back up and start over again.
 							<br>
-							<br> <strong><em>Contact us:</em> info@emunah.com</strong>
+							<br>
+							<strong>
+								<em>Contact us:</em> info@emunah.com</strong>
 							<b>
 					</p>
 				</div>
