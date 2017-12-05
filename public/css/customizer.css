@@ -29,6 +29,9 @@ header.header#layout2 .mainmenu,
 }
 
 
+
+
+
 /* BOXSHADOWS & BORDER COLORS
 ================================================== */
 
@@ -50,6 +53,9 @@ header.header#layout2 .mainmenu,
   -o-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
+
+
+
 
 
 /* TRANSITIONS
@@ -84,6 +90,9 @@ header.header#layout3 .mainmenu .menu>ul>li>a:before,
 }
 
 
+
+
+
 /* hover-animations */
 
 
@@ -107,6 +116,9 @@ header.header#layout3 .mainmenu .menu>ul>li>a:before,
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+
+
 
 
 /* bootstrap custom */
@@ -133,6 +145,45 @@ header.header#layout3 .mainmenu .menu>ul>li>a:before,
 }
 
 .service-main-area {
-    margin: 20px 0 !important;
-    border-top-color: transparent !important;
+  margin: 20px 0 !important;
+  border-top-color: transparent !important;
+}
+
+.footer-links {
+  color: white;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.border-lines {
+  margin: 30px 0;
+  padding: 50px 0;
+  border-top: solid white;
+  border-bottom: solid white;
+}
+
+.footer-social-media li:hover {
+  background: black;
+  transition: 0.5s;
+}
+
+.footer-links ul li {
+  line-height: 1.7em;
+}
+
+.chabad-gold {
+  color: #ffcc66;
+}
+
+.footer-links ul li:hover {
+  text-decoration: underline;
+  transition: 0.5s;
 }
