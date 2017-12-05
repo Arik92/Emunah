@@ -1,151 +1,54 @@
 <div class="wide home">
   <div id="wrapper">
-    <div class="search-modal">
-      <div class="container">
-        <form action="page-search.html" method="get">
-          <input type="text" name="q" value="Search.." />
-          <span class="search-close"></span>
-        </form>
-      </div>
-    </div>
-    <section id="main-area">
-      <h3 style="display: none;">Main Area</h3>
-      <div class="container">
-        <div class="status-message">
-          <div class="message">
-          </br>
-        </br>
 
-        <h1 style="margin-left:290px">SERVICES</h1>
-      </div>
-          
-        </div>
+
+
+    <section id="main-area" class="service-main-area">
+      <div class="container">
         <div class="row">
-          <section id="main" class="main col-md-8" style="text-align:center;font-size:16px">
-            <p>As the sages tell us, the actions we do in this world have a profound effect in heaven that can help not only those still living in this world and those who have gone to Olam Haba. While we know that there is no place without The Creator and The Creator is always attentive to us wherever we are, the sages also say that the power of the Land of Israel is far greater than any other place in the world.</p>
+          
+          <service-nav-directive></service-nav-directive>
 
-<p style="margin-bottom:20px">The only problem is that if you live outside of Eretz Yisrael, you do not have immediate access to that special power. That is why the Emunah Team has decided to help those who are still living outside The Land by offering special services that will be performed in your merit or in the merit of a loved one.</p>
-            <div class="blog-layout layout-2" style="display: block">
-              <div class="blog-wrapper row">
-                <div class="col col-sm-6">
+          <section id="main" class="main col-md-8 col-md-offset-4 service-main-container" >
+            <div ui-view=""></div>
+            <h1 style="margin-top: 0">Services</h1>
+            <p>
+              As the sages tell us, the actions we do in this world have a profound effect in heaven that can help not only those still
+              living in this world and those who have gone to Olam Haba. While we know that there is no place without The
+              Creator and The Creator is always attentive to us wherever we are, the sages also say that the power of the
+              Land of Israel is far greater than any other place in the world.
+            </p>
 
-                  <article class="post">
-                    
-                    <div class="post-thumb">
+            <p style="margin-bottom:20px">The only problem is that if you live outside of Eretz Yisrael, you do not have immediate access to that special
+              power. That is why the Emunah Team has decided to help those who are still living outside The Land by offering
+              special services that will be performed in your merit or in the merit of a loved one.
+            </p>
 
-                      <a ui-sref="prayer">
-                        <img class="lazy" src="images/services-prayer.jpg" data-src="images/12.jpg" alt="Post Title Placeholder" />
-                      </a>
-                    </div><!-- Post Image -->
-                    <div class="post-content">
-                      <h4 class="post-title">
-                        <!-- <a ui-sref="generalMitzvot({article: 'kosher'})">Kosher</a> -->
-                        <a ui-sref="prayer">Prayer</a>
-                      </h4><!-- Post Title -->
-                      
-                    </div><!-- Post Content -->
-                  </article><!-- Post -->
-                </div><!-- Column -->
-                <div class="col col-sm-6">
-                  <article class="post">
-                    <div class="post-thumb">
-                      <a ui-sref="kaddish">
-                        <img class="lazy" src="images/services-kaddish.jpg" data-src="images/services-kaddish.jpg" />
-                      </a>
-                    </div><!-- Post Image -->
-                    <div class="post-content">
-                      <h4 class="post-title">
-                        <a ui-sref="mitzvot-shabbat">Kaddish</a>
-                      </h4><!-- Post Title -->
-                      
-                    </div><!-- Post Content -->
-                  </article><!-- Post -->
-                </div><!-- Column -->
-                <div class="col col-sm-6">
-                  <article class="post">
-                    <div class="post-thumb">
-                      <a ui-sref="tehillim">
-                        <img class="lazy" src="images/services-tehillim.jpg" data-src="images/services-tehillim.jpg" alt="Post Title Placeholder" />
-                      </a>
-                    </div><!-- Post Image -->
-                    <div class="post-content">
-                      <h4 class="post-title">
-                        <a ui-sref="mitzvot-tefillin">Tehillim / Mishnah</a>
-                      </h4><!-- Post Title -->
-                     
-                    </div><!-- Post Content -->
-                  </article><!-- Post -->
-                </div><!-- Column -->
-                <div class="col col-sm-6">
-                  <article class="post">
-                    <div class="post-thumb">
-                      <a ui-sref="torah">
-                        <img class="lazy" src="images/services-torah.jpg" data-src="images/services-torah.jpg" alt="Post Title Placeholder" />
-                      </a>
-                    </div><!-- Post Image -->
-                    <div class="post-content">
-                      <h4 class="post-title">
-                        <a ui-sref="mitzvot-mezuzah">Sefer Torah</a>
-                      </h4><!-- Post Title -->
-                      
-                    </div><!-- Post Content -->
-                  </article><!-- Post -->
-                </div><!-- Column -->
-                <div class="col col-sm-6">
-                  <article class="post">
-                    <div class="post-thumb">
-                      <a ui-sref="learning">
-                        <img class="lazy" src="images/yahudi.jpg" data-src="images/yahudi.jpg" alt="Post Title Placeholder" />
-                      </a>
-                    </div><!-- Post Image -->
-                    <div class="post-content">
-                      <h4 class="post-title">
-                        <a ui-sref="learning">Torah Partnership</a>
-                      </h4><!-- Post Title -->
-                      
-                    </div><!-- Post Content -->
-                  </article><!-- Post -->
-                </div><!-- Column -->
-                <div class="col col-sm-6">
-                  <article class="post">
-                    <div class="post-thumb">
-                      <a ui-sref="candle">
-                        <img class="lazy" src="images/services-candle.jpg" data-src="images/services-candle.jpg" alt="Post Title Placeholder" />
-                      </a>
-                    </div><!-- Post Image -->
-                    <div class="post-content">
-                      <h4 class="post-title">
-                        <a ui-sref="mitzvot-blessings">Candle</a>
-                      </h4><!-- Post Title -->
-                     
-                    </div><!-- Post Content -->
-                  </article><!-- Post -->
-                </div><!-- Column -->
-                <div class="col col-sm-6">
-                  <article class="post">
-                    <div class="post-thumb">
-                      <a ui-sref="note">
-                        <img class="lazy" src="images/services-note.jpeg" data-src="images/services-note.jpg" alt="Post Title Placeholder" />
-                      </a>
-                    </div><!-- Post Image -->
-                    <div class="post-content">
-                      <h4 class="post-title">
-                        <a ui-sref="mitzvot-charity">Kotel Note</a>
-                      </h4><!-- Post Title -->
-                    
-                    </div><!-- Post Content -->
-                  </article><!-- Post -->
-                </div><!-- Column -->
-               
-                
- 
-              </div><!-- Blog Wrapper -->
-            </div><!-- Blog Layout -->
-        
-          </section><!-- Main -->
-          <smallaside-directive></smallaside-directive>
-        </div><!-- Row -->
-      </div><!-- Container -->
-    </section><!-- Main Area -->
-  </div><!-- Wrapper -->
+            <div class="row">
+              <div class="col-sm-6 col-md-4" 
+                   ng-repeat="thumb in thumbnails track by $index" 
+                   ui-sref="{{thumb.uiSref}}"
+                   style="cursor: pointer">
+                <div class="thumbnail">
+                  <div class="img-container" style="height: 145px; overflow: hidden">
+                    <img src="{{thumb.imgSrc}}" alt="{{thumb.caption}}" style="width: 100%">
+                  </div>
+                  <div class="caption" style="background: lightgrey; margin-top: 2px; text-align: center">
+                    <h4>{{thumb.caption}}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+          <!-- Main -->
+          <!-- <smallaside-directive></smallaside-directive> -->
+        </div>
+        <!-- Row -->
+      </div>
+      <!-- Container -->
+    </section>
+    <!-- Main Area -->
+  </div>
+  <!-- Wrapper -->
 </div>

@@ -1,4 +1,4 @@
-.controller('carouselCtrl', function() {
+app.controller('carouselCtrl', function() {
     this.title = 'Here is the carousel demo';
   
     this.slides = [
