@@ -27,18 +27,18 @@ app.controller('serviceCtrl', function($scope, lodash) {
     },
     { 
       imgSrc: "images/yahudi.jpg",
-      caption: "Torah Partnerhship",
+      caption: "Torah Partnership",
       uiSref: "services-torah"
     },
     { 
       imgSrc: "images/services-candle.jpg",
-      caption: "Remembrance Candle",
+      caption: "Candle",
       uiSref: "services-candle"
     },
     { 
       imgSrc: "images/kotel-note.jpg",
       caption: "Kotel Note",
-      uiSref: "services-kotel"
+      uiSref: "services-note"
     }
   ]
 

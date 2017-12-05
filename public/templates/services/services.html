@@ -3,25 +3,15 @@
 
 
 
-    <section id="main-area">
+    <section id="main-area" class="service-main-area">
       <div class="container">
         <div class="row">
+          
+          <service-nav-directive></service-nav-directive>
 
-          <div class="col-md-4">
-            <div class="panel panel-primary">
-              <div class="panel-heading">Services</div>
-              <div class="panel-body">
-                <ul>
-                  <li ng-repeat="thumb in thumbnails track by $index">
-                    <a uisref="{{thumb.uiSref}}">{{thumb.caption}}</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <section id="main" class="main col-md-8" style="font-size:16px; border-right-color: transparent; border-left: solid #eee">
-            <h1>Services</h1>
+          <section id="main" class="main col-md-8 col-md-offset-4 service-main-container" >
+            <div ui-view=""></div>
+            <h1 style="margin-top: 0">Services</h1>
             <p>
               As the sages tell us, the actions we do in this world have a profound effect in heaven that can help not only those still
               living in this world and those who have gone to Olam Haba. While we know that there is no place without The
@@ -35,12 +25,15 @@
             </p>
 
             <div class="row">
-              <div class="col-sm-6 col-md-4" ng-repeat="thumb in thumbnails track by $index" ui-sref="{{thumb.uiSref}}">
+              <div class="col-sm-6 col-md-4" 
+                   ng-repeat="thumb in thumbnails track by $index" 
+                   ui-sref="{{thumb.uiSref}}"
+                   style="cursor: pointer">
                 <div class="thumbnail">
                   <div class="img-container" style="height: 145px; overflow: hidden">
                     <img src="{{thumb.imgSrc}}" alt="{{thumb.caption}}" style="width: 100%">
                   </div>
-                  <div class="caption" style="background: lightgrey; margin-top: 2px">
+                  <div class="caption" style="background: lightgrey; margin-top: 2px; text-align: center">
                     <h4>{{thumb.caption}}</h4>
                   </div>
                 </div>
