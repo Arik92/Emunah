@@ -712,6 +712,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 }
 .post .post-title {
     margin: 0;
+    font-size: 12px;
 }
 .post .post-entry {
     letter-spacing: normal;
@@ -1327,11 +1328,7 @@ header.header#layout3 .search-tigger:hover {
     margin-bottom: 15px;
     padding-bottom: 15px;
 }
-.blog-layout.tiny-thumb .post:not(.first):last-child {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+
 .blog-layout.tiny-thumb .post:not(.first) .post-thumb {
     height: 79px;
     width: 140px;
@@ -1383,7 +1380,7 @@ header.header#layout3 .search-tigger:hover {
 }
 .blog-layout.layout-2 .post-thumb {
     height: 169px;
-    width: 300px;
+    width: 100%;
 }
 
 /* Blog Layout 3 : Grid 3 Columns */
