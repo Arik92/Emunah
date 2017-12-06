@@ -212,3 +212,7 @@ header.header#layout3 .mainmenu .menu>ul>li>a:before,
   font-family: "Book Antiqua", Georgia, 'Times New Roman', Times, serif;
   align-self: center;
 }
+
+.thumbnail {
+  background: #eee !important;
+}
