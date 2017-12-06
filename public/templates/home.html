@@ -10,13 +10,13 @@
 
 						<div class="blog-wrapper row">
 							<div class="col col-sm-8">
-								<article class="post first">
+								<article class="post first thumbnail">
 									<div class="post-thumb">
 										<a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id})">
 											<img id="top" class="lazy" src={{topThree[0].snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h4 class="post-title">
 											<a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id})">{{topThree[0].snippet.title}}</a>
 										</h4><!-- Post Title -->
@@ -29,13 +29,13 @@
 								</article><!-- Post -->
 							</div><!-- Column -->
 							<div class="col col-sm-4">
-								<article class="post">
+								<article class="post thumbnail">
 									<div class="post-thumb">
 										<a ui-sref="post-single({videoParam: topThree[1], id: topThree[1].id})">
 											<img class="lazy" src={{topThree[1].snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h6 class="post-title">
 											<a ui-sref="post-single({videoParam: topThree[1], id: topThree[1].id})">{{topThree[1].snippet.title}}</a>
 										</h6><!-- Post Title -->
@@ -44,13 +44,13 @@
 										</ul><!-- Post Meta -->
 									</div><!-- Post Content -->
 								</article><!-- Post -->
-								<article class="post">
+								<article class="post thumbnail">
 									<div class="post-thumb">
 										<a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id})">
 											<img class="lazy" src={{topThree[2].snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h6 class="post-title">
 											<a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id})">{{topThree[2].snippet.title}}</a>
 										</h6><!-- Post Title -->
@@ -82,7 +82,7 @@
 								</ul>
 							</div>
 							<div class="col col-sm-4" ng-repeat="playlist in currentPlaylists track by $index">
-								<article class="post" >
+								<article class="post thumbnail" >
 									<div class="post-thumb">
 										<!-- <a href="{{playlist.playurl}}"> -->
 										<a ui-sref="playlist({title: playlist.snippet.localized.title, id:playlist.id})">
@@ -93,7 +93,7 @@
 										</span>
 									</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h5 class="post-title">
 											<label id="playlistText"><a ui-sref="playlist({title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a></label>
 											<br />
@@ -124,13 +124,13 @@
 						</div><!-- Blog title -->
 						<div class="blog-wrapper row">
 							<div class="col col-sm-8">
-								<article class="post first">
+								<article class="post first thumbnail">
 									<div class="post-thumb">
 										<a ui-sref="chayei-sarah">
 											<img class="lazy" src="images/chayei-sarah1.jpg" data-src="images/3.jpg" alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h4 class="post-title">
 											<a ui-sref="chayei-sarah">Becoming Closer to Hashem: Good Eyes, a Pure Heart!</a>
 										</h4><!-- Post Title -->
@@ -144,13 +144,13 @@
 								</article><!-- Post -->
 							</div><!-- Column -->
 							<div class="col col-sm-4">
-								<article class="post">
+								<article class="post thumbnail">
 									<div class="post-thumb">
 										<a ui-sref="post-single">
 											<img class="lazy" src="images/2.jpg" data-src="images/2.jpg" alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h6 class="post-title">
 											<a ui-sref="post-single">Israel &amp; The Redemption</a>
 										</h6><!-- Post Title -->
@@ -159,13 +159,13 @@
 										</ul><!-- Post Meta -->
 									</div><!-- Post Content -->
 								</article><!-- Post -->
-								<article class="post">
+								<article class="post thumbnail">
 									<div class="post-thumb">
 										<a ui-sref="post-single">
 											<img class="lazy" src="images/1.jpg" data-src="images/1.jpg" alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h6 class="post-title">
 											<a ui-sref="post-single">Mariage &amp; Dating</a>
 										</h6><!-- Post Title -->
@@ -186,13 +186,13 @@
 						</div><!-- Blog title -->
 						<div class="blog-wrapper row">
 							<div class="col col-sm-6">
-								<article class="post first">
+								<article class="post first thumbnail">
 									<div class="post-thumb">
 										<a ui-sref="mitzvot-shabbat">
 											<img class="lazy" src="images/woman.jpg" data-src="images/woman.jpg" alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h4 class="post-title">
 											<a ui-sref="mitzvot-shabbat">Shabbat</a>
 										</h4><!-- Post Title -->
@@ -205,13 +205,13 @@
 								</article><!-- Post -->
 							</div><!-- Column -->
 							<div class="col col-sm-6">
-								<article class="post">
+								<article class="post thumbnail">
 									<div class="post-thumb">
 										<a ui-sref="mitzvot-kosher">
 											<img class="lazy" src="images/kosher.jpg" data-src="images/12.jpg" alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h6 class="post-title">
 											<a ui-sref="mitzvot-kosher">Kosher</a>
 										</h6><!-- Post Title -->
@@ -220,13 +220,13 @@
 										</ul><!-- Post Meta -->
 									</div><!-- Post Content -->
 								</article><!-- Post -->
-								<article class="post">
+								<article class="post thumbnail">
 									<div class="post-thumb">
 										<a ui-sref="mitzvot-tefillin">
 											<img class="lazy" src="images/13.jpg" data-src="images/13.jpg" alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h6 class="post-title">
 											<a ui-sref="mitzvot-tefillin">Tefillin</a>
 										</h6><!-- Post Title -->
@@ -235,13 +235,13 @@
 										</ul><!-- Post Meta -->
 									</div><!-- Post Content -->
 								</article><!-- Post -->
-								<article class="post">
+								<article class="post thumbnail">
 									<div class="post-thumb">
 										<a ui-sref="mitzvot-prayer">
 											<img class="lazy" src="images/yahudi.jpg" data-src="images/yahudi.jpg" alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h6 class="post-title">
 											<a ui-sref="mitzvot-prayer">Prayer</a>
 										</h6><!-- Post Title -->
@@ -250,13 +250,13 @@
 										</ul><!-- Post Meta -->
 									</div><!-- Post Content -->
 								</article><!-- Post -->
-								<article class="post">
+								<article class="post thumbnail">
 									<div class="post-thumb">
 										<a ui-sref="mitzvot-blessings">
 											<img class="lazy" src="images/10.jpg" data-src="images/10.jpg" alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h6 class="post-title">
 											<a ui-sref="mitzvot-blessings">Blessings</a>
 										</h6><!-- Post Title -->
@@ -275,13 +275,13 @@
 						</div><!-- Blog title -->
 						<div class="blog-wrapper row">
 							<div class="col col-sm-12">
-								<article class="post" ng-repeat="footerVid in footerVids track by $index">
+								<article class="post thumbnail" ng-repeat="footerVid in footerVids track by $index">
 									<div class="post-thumb">
 										<a ui-sref="post-single({videoParam: footerVid, id: footerVid.id})">
 											<img class="lazy" src={{footerVid.snippet.thumbnails.medium.url}} alt="Post Title Placeholder" />
 										</a>
 									</div><!-- Post Image -->
-									<div class="post-content">
+									<div class="post-content caption">
 										<h4 class="post-title">
 											<a ui-sref="post-single({videoParam: footerVid, id: footerVid.id})">{{footerVid.snippet.title}}</a>
 										</h4><!-- Post Title -->

@@ -30,7 +30,7 @@
 						<div class="blog-layout layout-2" style="display: block">
 							<div class="blog-wrapper row">							
 								<div class="col col-md-4" ng-repeat="playList in playLists track by $index">
-									<article class="post">
+									<article class="post thumbnail">
 										<div class="post-thumb">
 											<a ui-sref="playlist({title: playList.snippet.title, id: playList.id.playlistId})">
 												<img class="lazy" src={{playList.snippet.thumbnails.high.url}} alt="Post Title Placeholder" />
@@ -40,7 +40,7 @@
 											</span>
 											
 										</div><!-- Post Image -->
-										<div class="post-content">
+										<div class="post-content caption">
 											<label id="playlistText"><h4 class="post-title">{{playList.snippet.title}} </h4></label>
 											</a>
 											<!-- Post Title -->
