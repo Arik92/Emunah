@@ -14,7 +14,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       controller: 'homeCtrl'
     })
     .state('page-about', {
-      url: '/about',
+      url: '/about-emunah',
       templateUrl: '/templates/about/page-about.html'
     })
     .state('page-about-rav', {
@@ -278,6 +278,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('faq', {
       url: '/faq',
       templateUrl: '/templates/about/faq.html',
+    })
+    .state('about', {
+      url: '/about',
+      templateUrl: '/templates/about/about.html',
     })
     .state('chayei-sarah', {
       url: '/becoming-closer-to-hashem-good-eyes-a-pure-heart',
