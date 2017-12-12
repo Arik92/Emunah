@@ -15,7 +15,7 @@
 					<div class="message">
 					</br>
 				</br>
-				You are seeing all the videos of the lecture: <strong>{{title}}</strong>
+				Here you can view Full lectures by Rav Dror(click on one to expand)
 <!-- 					<div class="breadcumbs">
 					</br>
 						<ul>
@@ -28,30 +28,42 @@
 				<div class="row">
 					<section id="main" class="main col-md-8">
 						<div class="blog-layout layout-2" style="display: block">
-							<div class="blog-wrapper row">
-								<div class="col col-sm-6" ng-repeat="playlistItem in playlistItems track by $index">
-									<article class="post">
+							<div class="blog-wrapper row">							
+								<div class="col col-md-4" ng-repeat="playList in playLists track by $index">
+									<article class="post thumbnail">
 										<div class="post-thumb">
-											<a ui-sref="post-single({videoParam: playlistItem, id: playlistItem.id})">
-												<img class="lazy" src={{playlistItem.snippet.thumbnails.high.url}} alt="Post Title Placeholder" />
+											<a ui-sref="playlist({title: playList.snippet.title, id: playList.id.playlistId})">
+												<img class="lazy" src={{playList.snippet.thumbnails.high.url}} alt="Post Title Placeholder" />
 												<!-- <youtube-video video-url="playlistItem.playurl" player="bestPlayer" enablejsapi="true" video-id="$index" player-width="'100%'" player-vars="{autoplay: 0, start: 0.01}"></youtube-video> -->
 											<span class="post-format">
 												<i class="fa fa-play"></i>
 											</span>
 											
 										</div><!-- Post Image -->
-										<div class="post-content">
-											<label id="playlistText"><h4 class="post-title">{{playlistItem.snippet.title}} </h4></label>
+										<div class="post-content caption">
+											<label id="playlistText"><h4 class="post-title">{{playList.snippet.title}} </h4></label>
 											</a>
 											<!-- Post Title -->
 											<!-- <p class="post-entry"> <b>Description: </b>{{playlistItem.snippet.description}}</p> --><!-- Post Entry -->
 											<ul class="post-meta">
-												<li><i class="fa fa-clock-o"></i>Date: {{playlistItem.snippet.publishedAt}}</li>
+												<li><i class="fa fa-clock-o"></i>Date: {{playList.snippet.publishedAt}}</li>
 												<!-- <li><i class="fa fa-comment-o"></i>? 240</li> -->
 											</ul><!-- Post Meta -->
 										</div><!-- Post Content -->
 									</article><!-- Post -->
 								</div><!-- Column -->
+								<div class="blog-pagination">
+								<ul>
+									<li class="next-page"><a ng-click="updatePlayListBackward()"><i class="fa fa-angle-left"></i> Back</a></li>
+									<!-- <li class="active"><a ui-sref="index">1</a></li>
+									<li><a ui-sref="#">2</a></li>
+									<li><a ui-sref="#">3</a></li>
+									<li><span>...</span></li>
+									<li><a ui-sref="#">20</a></li> -->
+									<li class="next-page"><a ng-click="updatePlayListForward()">Next <i class="fa fa-angle-right"></i></a></li>
+									<!-- <li class="total-pages">1 page of 20</li> -->
+								</ul>
+							</div>
 							</div><!-- Blog Wrapper -->
 						</div><!-- Blog Layout -->
 						<!-- <div class="blog-pagination">
@@ -71,4 +83,5 @@
 			</div><!-- Container -->
 		</section><!-- Main Area -->
 	</div><!-- Wrapper -->
+	</div> -->
 </div>

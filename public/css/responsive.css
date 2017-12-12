@@ -552,7 +552,7 @@
 	#main-area:not(.fullwidth) #main {
 		border-right: 1px solid #eee;
 		padding-right: 30px;
-		padding-top: 30px;
+		padding-top: 0px;
 		padding-bottom: 30px;
 	}
 	#main-area:not(.fullwidth) #sidebar {
@@ -719,7 +719,7 @@ width:90%;
   }
 
   div.city-selected {
-  	 margin-top: 80px; 
+  	 /*margin-top: 80px;*/ 
      margin-left: 50px; 
   }
 

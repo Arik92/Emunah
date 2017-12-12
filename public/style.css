@@ -317,7 +317,7 @@ nav.donate-btns {
 }
 
 .donate-btns .donate-link {
-    margin-right: 0.3em;
+    margin-right: 1.2em;
 }
 
 
@@ -378,6 +378,34 @@ nav.donate-btns {
     display: none;
 }
 
+.soft-trans {
+    transition: 0.7s;
+}
+
+
+.top-menu-link:hover {
+    background: steelblue;
+    text-align: center;
+    padding-left: 10px;
+    text-decoration: none !important;
+    
+}
+
+#whatsapp-menu-link:hover {
+    background: green;
+    text-align: center;
+    text-decoration: none;
+    padding-left: 10px;
+    
+}
+
+#top-menu-logout:hover {
+    background: red;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
 /* Social Links */
 
 
@@ -412,15 +440,15 @@ nav.donate-btns {
     float: left;
     display: flex;
     height: 10px;
-    max-width: 230px;
-    padding-top: 7px;
+    max-width: 360px;
+    padding-top: 2px;
 }
 .logo-container a {
 
-    max-width: 70%;
+    max-width: 75%;
     margin: 2px;
     margin-left: 45px;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 
@@ -482,17 +510,22 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 
 /* Menu */
 
-.yellowbutton > li > a {
+.donate-btns a {
     border-style: solid;
-    border-color: yellow;
-    padding: 0.7rem 2rem;
-    border-radius: 5%;
-    background-color: #01579B;
+    border-color: steelblue;
+    border-width: 3px;
+    padding: .7rem 2rem;
+    margin: 2px;
+    font-size: 1em;
+    background-color: white;
+    color: black;
 }
 
-.yellowbutton > li:nth-child(2) > a {
-    background-color: #E65100;
+.donate-btns a:hover {
+    text-decoration: none;
+
 }
+
 
 .mainmenu .menu {
     /*float: left;*/
@@ -576,6 +609,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     left: 0;
     right: 0;
     width: 100%;
+    height: 145px;
     padding: 0;
     background: #ADD8E6;
     color: #fff;
@@ -588,6 +622,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 .mainmenu .menu>ul>li:hover>.megamenu {
     opacity: 1;
     display: block;
+    background-color: black;
 }
 
 .display-none {
@@ -605,8 +640,12 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 }
 .mainmenu .megamenu .item {
     width: 14%;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     float: left;
+}
+.mainmenu .megamenu .item:hover {
+    background-color: black;
+    height: 145px;
 }
 
 /* Mega Menu Posts */
@@ -673,6 +712,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 }
 .post .post-title {
     margin: 0;
+    font-size: 12px;
 }
 .post .post-entry {
     letter-spacing: normal;
@@ -790,7 +830,7 @@ header.header#layout2 .mainmenu {
     height: 70px;
     line-height: 70px;
     text-align: center;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 }
 header.header#layout2 .mainmenu .container {
  /*   background-color: transparent;*/
@@ -1288,11 +1328,7 @@ header.header#layout3 .search-tigger:hover {
     margin-bottom: 15px;
     padding-bottom: 15px;
 }
-.blog-layout.tiny-thumb .post:not(.first):last-child {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+
 .blog-layout.tiny-thumb .post:not(.first) .post-thumb {
     height: 79px;
     width: 140px;
@@ -1344,7 +1380,7 @@ header.header#layout3 .search-tigger:hover {
 }
 .blog-layout.layout-2 .post-thumb {
     height: 169px;
-    width: 300px;
+    width: 100%;
 }
 
 /* Blog Layout 3 : Grid 3 Columns */
@@ -1768,7 +1804,7 @@ header.header#layout3 .search-tigger:hover {
 .social-counter a.youtube {
     background-color: #ff0000;
     border-color: #ff0000;
-    color: #111;
+    color: #fff;
 }
 .social-counter a.soundcloud {
     background-color: #ff3300;
@@ -3317,6 +3353,14 @@ span.psw {
     transition: 0.5s;
 }
 
+.store-menu-overlay li:hover {
+    background: lightblue;
+}
+
+.store-menu-overlay li:hover {
+    transition: 0.3s;
+}
+
 
 
 .w3-top {
@@ -3377,6 +3421,7 @@ span.psw {
 
 .card-title {
     color: steelblue;
+    margin-bottom: 1px !important; 
 }
 
 .card-result {
@@ -3386,9 +3431,8 @@ span.psw {
 .city-selected {
     position: relative;
     overflow: hidden;
-  
     background: white;
-    height: 405px;
+    height: 310px;
     width: 280px;
         /*margin-top: 80px;
     margin-left: 128px;*/
@@ -3570,5 +3614,39 @@ ul.scrollbar
   height: auto;
   max-width: 100%;
   vertical-align: middle;
+}
+
+.searchform div {
+height: 26px;
+width: 193px;
+}
+
+.searchboxwrapper {
+position: relative;
+}
+.searchbox {
+border: 1px solid #dadada;
+outline: none;
+font: 11px 'Montserrat', sans-serif;
+color: #777;
+width: 182px;
+height: 26px;
+background: #fff;
+padding-left: 10px;
+}
+
+.searchsubmit {
+font-family: 'FontAwesome';
+width: 29px;
+height: 29px;
+border: 1px solid #dadada;
+font-size: 12px;
+position: absolute;
+top: 0;
+right: 0;
+background: #dadada;
+border: none;
+color: #5d3250;
+cursor: hand; cursor: pointer;
 }
 

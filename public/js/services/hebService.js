@@ -1,9 +1,13 @@
 app.service('hebService', function($http) {
   //this service is responsible for everything regarding the hebrew calender
 
-  function exp1() {
-    return $http.get('https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year=now&month=x&ss=on&mf=on&c=on&geo=geoname&geonameid=3448439&m=50&s=on').then(function(result){
-      //console.log("Exp return is", result.data);
+  function getHolidays() {
+	  var d = new Date();
+	  var currentMonth = d.getMonth()+1;
+	  //console.log("current date for ",currentMonth);
+    return $http.get('https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year=now&month='+currentMonth+'&ss=on&c=off&s=off').then(function(result){
+      //console.log("Holiday general result is", result.data);
+	  return result.data;
     })
   }//exp
   function getCurrentHebDate() {
@@ -35,7 +39,7 @@ app.service('hebService', function($http) {
   }//getLocationTz
 
   return {
-    exp1: exp1,
+    getHolidays: getHolidays,
     getCurrentHebDate: getCurrentHebDate,
     getSabbath: getSabbath,
     getLocationTz: getLocationTz

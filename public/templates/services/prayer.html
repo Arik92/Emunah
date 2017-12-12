@@ -1,17 +1,18 @@
 <div class="wide home">
-<section id="main-area">
+<section id="main-area" class="service-main-area">
   <h3 style="display: none;">Main Area</h3>
   <div class="container">
     <div class="row">
-      <section id="main" class="main col-md-8">
+      <service-nav-directive></service-nav-directive>
+      <section id="main" class="main col-md-8 col-md-offset-4 service-main-container">
         <h2 style="display: none;">Main</h2>
         <div class="blog-posts hfeed">
           <article class="post single-post">
-            <div class="post-header">
               
-              <!-- <div class="sharethis-inline-share-buttons"></div> -->
-              <h1 class="post-title" style="margin-top:50px;">Services - Prayer</h1><!-- Post Title -->
-            </div><!-- Post Header -->
+              <div class="service-header">
+                <img src="images/emunahlogosmall.jpg" alt="emunah-logo">
+                <h1 class="post-title">Services - Prayer</h1>
+              </div><!-- Post Title -->
             <div class="post-share" style="padding:4px">
 
                 <!-- <span class="counter"><strong>24k</strong>Shares</span> -->
@@ -93,7 +94,7 @@
             </article><!-- Post -->
           </div><!-- Blog posts -->
         </section><!-- Main -->
-      <smallaside-directive></smallaside-directive>
+      <!-- <smallaside-directive></smallaside-directive> -->
       </div><!-- Row -->
     </div><!-- Container -->
   </section><!-- Main Area -->

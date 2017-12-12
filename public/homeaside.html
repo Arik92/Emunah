@@ -18,6 +18,34 @@
 
 
 <aside id="sidebar" class="sidebar col-md-4" ng-controller="sabbathCtrl">
+<div class="widget LinkList"> 
+    <div class="container"> 
+        <div id="card" class="weather">
+          <div class="city-selected" style="margin-left: 20px;">
+            <article class="candle">
+              <div class="info" >
+                
+                  <h6 class="card-title" style="padding-bottom: -1px">
+                    <img class="heb" src="images/icon-torah.png"> WEEKLY TORAH PORTION
+                  </h6>
+                  <h4 class="card-result"><b>{{parasha}}</b></h4>
+                  <br>
+                  <h6 class="card-title">
+                    <img class="heb" src="images/icon-calendar.png"> NEXT HOLIDAY
+                  </h6>
+                  <h4 class="card-result"><b>{{nextHolidayName}}<b></h4>
+                  <h4><b>{{nextHolidayDate}}</b></h4> 
+                  <br>
+                  <h6 class="card-title"><img class="heb" src="images/icon-candle.png">CANDLE LIGHTING TIMES</h6>
+                  <h4 class="card-title">
+                    <a ui-sref="shabbat">Check Times</a>
+                  </h4>  
+                </div>
+                </article> 
+              </div>
+            </div>
+          </div>
+             </div>        
     <div class="widget LinkList">
     <div class="widget-title">
       <h2>Follow Us</h2>
@@ -54,48 +82,7 @@
         <span class="label">Followers</span>
       </a>
     </div>
-  </div><!-- Widget : Social Counter -->
-  <div class="widget LinkList"> 
-    <div class="container"> 
-        <div id="card" class="weather">
-          <div class="city-selected" style="margin-left: 20px;">
-            <article class="candle">
-              <div class="info" style="margin-top: 30px;">
-                
-                  <p class="card-title">
-                    <img class="heb" src="images/icon-torah.png"> WEEKLY TORAH PORTION
-                  </p>
-                  <p class="card-result"><b>{{parasha}}</b></p>
-                  <p class="card-title">
-                    <img class="heb" src="images/icon-calendar.png"> NEXT HOLIDAY
-                  </p>
-                  <p class="card-result"><b>Chanukah</b></p>
-                  <p class="card-result">Dec 12-Dec 20</p>
-                  <p class="card-title"><img class="heb" src="images/icon-candle.png">CANDLE LIGHTING TIMES</p>
-                  <input id="autocomplete" type="text" autocomplete="off" placeholder="Enter City or USA Zip" ng-show="!showResult" ng-model="gLoc">
-                <div class="form-group" ng-show="!showResult">
-                  <p ng-show="!selectedLat">Or</p>
-                  <button ng-show="!selectedLat" ng-click="useOwnLocation()">Use my current location</button>
-                  <br ng-show="selectedLat">
-                  <p ng-show="selectedLat">Location Found</p>        
-                </div>
-                <div class="row show-hide-message" ng-show="showResult">
-                  <p class="card-result"><b>{{candleTimes}}</b></p>
-                  <a href="" ng-click="checkTimes()" ng-show="showResult">Change Location</a>
-                </div>
-              </div>
-              <button type="submit" ng-click="checkTimes()" ng-show="!showResult" class="hvr-bounce-to-right" id="mybutton" style="font-size:20px;padding: 6px 0px; width:22%;background-color:steelblue;color:white"> OK</button>
-            </div>
-          </div>
-             </div>
-            </article>         
-          </div>
-            </div>
-         </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </div><!-- Widget : Social Counter -->    
   <classes-directive></classes-directive>
   <div class="widget FollowByEmail">
     <div class="widget-title">
@@ -122,8 +109,8 @@
         </form>
       </div>
     </div>
-  </div><!-- Widget : Follow By Email -->
-  <div class="widget LinkList">
+ </div><!-- Widget : Follow By Email -->
+  <!-- <div class="widget LinkList">
     <div class="widget-title">
       <h2>Stay Connected</h2>
     </div>
@@ -135,7 +122,7 @@
       <a class="youtube" href="https://www.youtube.com/user/EmunahChannel" target="_blank"><i class="fa fa-youtube"></i></a>
       <a class="soundcloud" href="https://soundcloud.com/ravdror" target="_blank"><i class="fa fa-soundcloud"></i></a>
     </div>
-  </div><!-- Widget : Social Icons -->
+  </div -->><!-- Widget : Social Icons -->
   <div class="widget HTML">
     <div class="widget-title">
       <h2>Recent Posts</h2>

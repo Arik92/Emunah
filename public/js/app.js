@@ -1,5 +1,4 @@
-var app = angular.module("emunApp", ['ui.router', 'ui.carousel', 'youtube-embed', 'ngFileUpload']);
-
+var app = angular.module("emunApp", ['ui.router', 'ui.carousel', 'youtube-embed', 'ngFileUpload', 'ngLodash']);
 
 app.config(function($httpProvider) {
   $httpProvider.interceptors.push('authServiceInterceptors');
@@ -15,7 +14,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       controller: 'homeCtrl'
     })
     .state('page-about', {
-      url: '/about',
+      url: '/about-emunah',
       templateUrl: '/templates/about/page-about.html'
     })
     .state('page-about-rav', {
@@ -28,8 +27,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('playlist', {
       url: '/playlist/:title/:id',
-      templateUrl: '/templates/playlist-page.html',
-      params: { playlistParam: null },
+      templateUrl: '/templates/playlist-page.html',      
       controller: 'playlistCtrl'
     })
     .state('page-contact', {
@@ -213,7 +211,8 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('services', {
       url: '/services',
-      templateUrl: '/templates/services/services.html'
+      templateUrl: '/templates/services/services.html',
+      controller: 'serviceCtrl'
     })
     .state('services-prayer', {
       url: '/services-prayer',
@@ -280,6 +279,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/faq',
       templateUrl: '/templates/about/faq.html',
     })
+    .state('about', {
+      url: '/about',
+      templateUrl: '/templates/about/about.html',
+    })
     .state('chayei-sarah', {
       url: '/becoming-closer-to-hashem-good-eyes-a-pure-heart',
       templateUrl: '/templates/articles/chayei-sarah.html'
@@ -301,9 +304,19 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
         }
       }//controller
     })
+	.state('full', {
+      url: '/full-lectures',
+      templateUrl: '/templates/full.html',
+      controller: 'longPlCtrl'
+    })
+	.state('short', {
+      url: '/short-lectures',
+      templateUrl: '/templates/short.html',
+      controller: 'shortPlCtrl'
+    })
 });
 
-app.run(function ($rootScope, authFactory, $state, $anchorScroll) {
+app.run(function ($rootScope, authFactory, $state, $anchorScroll, $location) {
   var user = JSON.parse(localStorage.getItem("user"));
   console.log("app.run user", user);
   if (user) {
@@ -311,8 +324,15 @@ app.run(function ($rootScope, authFactory, $state, $anchorScroll) {
     $state.go('home');
     //$rootScope.$broadcast('fbLogin');
   }//if s
-  $rootScope.$on('$stateChangeStart', function () {
+/*  $rootScope.$on('$stateChangeStart', function () {
+	  //$location.hash('layout2');
     $anchorScroll();
+});
+$rootScope.$on('$stateChangeSuccess', function () {
+	document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;}); */
+	$rootScope.$on('$locationChangeStart', function() {
+   document.body.scrollTop = document.documentElement.scrollTop = 0;
 });
 });//app.run
 

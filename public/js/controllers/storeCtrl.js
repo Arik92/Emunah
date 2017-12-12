@@ -1,8 +1,7 @@
-app.controller('storeCtrl', function($scope, $stateParams) {
-	console.log("state params here be", $stateParams);
+app.controller('storeCtrl', function($scope, $stateParams, lodash) {
   console.log('yo from storeCtrl');
-
-  document.addEventListener("scroll", transform);
+  
+  document.addEventListener("scroll", lodash.throttle(transform, 1000));
   
   function transform(e) {
     console.log('fired transform');
@@ -16,4 +15,5 @@ app.controller('storeCtrl', function($scope, $stateParams) {
     }
   }
 });//singleCtrl
+
 
