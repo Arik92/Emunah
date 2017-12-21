@@ -1195,3 +1195,61 @@
         <li class="whatsapp"><a href=""><i class="fa fa-whatsapp"></i></a></li>
         <li class="email"><a href=""><i class="fa fa-envelope-o"></i></a></li>
       </ul>
+
+<!-- Playlist code from home -->
+          <div class="blog-layout layout-3" style="display: block">
+            <div class="blog-title">
+              <a ui-sref="category">
+                <h2>View Lectures(might move)</h2>
+              </a>
+            </div><!-- Blog title -->
+            <div class="blog-wrapper row">
+              <div class="blog-pagination">
+                <ul>
+                  <li class="next-page"><a ng-click="updatePlaylistBackward()"><i class="fa fa-angle-left"></i> Back</a></li>
+                  <!-- <li class="active"><a ui-sref="index">1</a></li>
+                  <li><a ui-sref="#">2</a></li>
+                  <li><a ui-sref="#">3</a></li>
+                  <li><span>...</span></li>
+                  <li><a ui-sref="#">20</a></li> -->
+                  <li class="next-page"><a ng-click="updatePlaylistForward()">Next <i class="fa fa-angle-right"></i></a></li>
+                  <!-- <li class="total-pages">1 page of 20</li> -->
+                </ul>
+              </div>
+              <div class="col col-sm-4" ng-repeat="playlist in currentPlaylists track by $index">
+                <article class="post thumbnail" >
+                  <div class="post-thumb">
+                    <!-- <a href="{{playlist.playurl}}"> -->
+                    <a ui-sref="playlist({title: playlist.snippet.localized.title, id:playlist.id})">
+                      <img class="lazy" src={{playlist.snippet.thumbnails.medium.url}} alt="Post Title Placeholder"  />
+                      <iframe width="560" height="315" src="{playlist.playurl}" frameborder="0" allowfullscreen></iframe>
+                    <span class="post-format">
+                      <i class="fa fa-play"></i>
+                    </span>
+                  </a>
+                  </div><!-- Post Image -->
+                  <div class="post-content caption">
+                    <h5 class="post-title">
+                      <label id="playlistText"><a ui-sref="playlist({title: playlist.snippet.localized.title, id:playlist.id})">{{playlist.snippet.title}}</a></label>
+                      <br />
+                    </h5><!-- Post Title -->
+<!--                    <div class="post-meta">
+                      <i class="fa fa-clock-o"></i>{{playlist.snippet.publishedAt}}
+                    </div> --><!-- Post Meta -->
+                  </div><!-- Post Content -->
+                </article><!-- Post -->
+              </div><!-- Column -->
+              <div class="blog-pagination">
+                <ul>
+                  <li class="next-page"><a ng-click="updatePlaylistBackward()"><i class="fa fa-angle-left"></i> Back</a></li>
+                  <!-- <li class="active"><a ui-sref="index">1</a></li>
+                  <li><a ui-sref="#">2</a></li>
+                  <li><a ui-sref="#">3</a></li>
+                  <li><span>...</span></li>
+                  <li><a ui-sref="#">20</a></li> -->
+                  <li class="next-page"><a ng-click="updatePlaylistForward()">Next <i class="fa fa-angle-right"></i></a></li>
+                  <!-- <li class="total-pages">1 page of 20</li> -->
+                </ul>
+              </div>
+            </div><!-- Blog Wrapper -->
+          </div><!-- Blog Layout -->
