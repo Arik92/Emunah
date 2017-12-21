@@ -26,7 +26,9 @@
 /*
  * 01. Body & Wrapper
  * ================================================================= */
-
+html {
+    overflow-x: hidden;
+}
 body {
     background-color: #f0f0f0;
     color: #222222;
@@ -2653,7 +2655,7 @@ code {
     color: #fff;
 }
 #footer p {
-    margin: 15px 0 0;
+    padding: 1em;
 }
 
 .social-container {
@@ -3403,7 +3405,8 @@ span.psw {
 }
 
 .box-container {
-  width: 323px;
+  /* width: 323px; */
+  width: 95%;
   margin: 0 auto;
 }
 

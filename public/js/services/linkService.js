@@ -31,7 +31,7 @@ app.service('linkService', function(){
     { title: 'Women Of Emunah', hRef: 'https://www.facebook.com/WomenofEmuna' },
     { title: 'Breslov Nation', hRef: 'https://www.facebook.com/BreslovNation/' },
     { title: 'Emunah Deutsch', hRef: 'https://www.facebook.com/EmunahDeutsch/' },
-    { title: 'Emunah Center Los Angeles', hRef: 'https://www.facebook.com/EmunahCenterLA/' },
+    { title: 'Emunah Los Angeles', hRef: 'https://www.facebook.com/EmunahCenterLA/' },
     { title: 'Emunah Español', hRef: 'https://www.facebook.com/EmunahEspanol/' },
   ]
 
