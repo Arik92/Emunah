@@ -222,13 +222,16 @@
 		overflow: hidden;
 	}
 	header.header#layout2 .mainmenu .container {
-		height: auto;
+		height: 10vh;
 	}
 	header.header#layout2 .mainmenu .menu {
 		display: none;
 	}
 	header.header#layout2 .mainmenu .menu-tigger {
-		float: right;
+		/* float: right; */
+		position: absolute;
+		top: -5px;
+		left: 0;
 		height: 70px;
 		padding: 0;
 		margin-left: 20px;
