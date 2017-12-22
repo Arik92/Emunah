@@ -152,32 +152,24 @@
       <!-- content wrapper -->
     </div>
     <!-- Top Bar -->
-
-    <!-- <div class="ad-container">
-              <div class="advertisment">
-                <a href="https://themeforest.net/user/infinyteam/portfolio?ref=infinyteam
-                ">
-                  <img src="images/banner.jpg" alt="Banner Image Placeholder" />
-                </a>
-              </div><!Advertisment -->
     </div>
     <!-- Ad Container -->
     </div>
     <!-- Container -->
     </div>
     <!-- Header Content -->
-    <div class="mainmenu" style="height:50px">
+    <div class="mainmenu">
       <div class="container page-content-wrapper" id="mobileres">
         <div class="logo-container" id="logonav2" style="max-width:40%; margin-left: 91px">
           <!-- <div class="logo"> -->
           <a ui-sref="home">
-            <img src="images/favicon.png" alt="Logo Image Placeholder">
+            <img src="images/favicon.png"  alt="Logo Image Placeholder">
           </a>
           <!--   -->
           <!-- Logo -->
         </div>
         <!-- Logo Container -->
-        <nav class="menu" style="margin-left:145px;">
+        <nav class="menu">
           <ul>
             <li>
               <a ui-sref="ravusa">Rav Dror in the USA</a>
@@ -387,102 +379,6 @@
                 </div>
               </div>
             </li>
-            <!--<li><a ui-sref="articles">Articles</a>
-                  <div class="megamenu" style="background-color: white; color: steelblue;">
-                    <div class="item-content">
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/1.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category" style="color:steelblue;">
-                              <a ui-sref="article-single">Parasha of the week</a>
-                            </div>
-                            <h6 class="post-title" style="color:steelblue;">
-                              <a ui-sref="article-single">Pinchas</a>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a href="post-single.html">
-                              <img src="images/2.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="article-single">Parasha of the week</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a ui-sref="article-single">Pinchas</a>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="article-single">
-                              <img src="images/3.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="article-single">Parasha of the week</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a ui-sref="article-single">Balak</a>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="article-single">
-                              <img src="images/4.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="article-single">Parasha of the week</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a ui-sref="article-single">Pin'has</a>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="post">
-                          <div class="post-thumb">
-                            <a ui-sref="article-single">
-                              <img src="images/5.jpg" alt="Post Title Placeholder" />
-                            </a>
-
-                          </div>
-                          <div class="post-content">
-                            <div class="post-category">
-                            <a ui-sref="article-single">General</a>
-                            </div>
-                            <h6 class="post-title">
-                              <a ui-sref="article-single">Purim: A Lesson In Emunat Chachamim</a>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>-->
             <li>
               <a ui-sref="soundcloud">Soundcloud</a>
             </li>
@@ -573,15 +469,14 @@
               <a ui-sref="page-contact">Contact</a>
             </li>
 			<li>
-			<form role="search" method="get" id="searchform" class="searchform" action="#" _lpchecked="1">
-				<div class="searchboxwrapper">  
-					<input class="searchbox" type="text" value="" name="s" placeholder="Search for" id="s"> 					
-					<!--<input class="searchsubmit" type="submit" id="searchsubmit" value="">   -->
-				</div>				
-			</form>	
-			</li>
-			<li>
-			<a><i class="fa fa-search" aria-hidden="true"></i></a>
+      <form class="navbar-form" role="search" method="get" action="#" _lpchecked="1">
+        <div class="input-group add-on">
+          <input class="form-control" placeholder="Search" name="s" id="s" type="text">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+          </div>
+        </div>
+      </form>
 			</li>
             <!-- <li ng-show="currentUser"><a href="page-category.html"><i class="fa fa-user 2x"></i> Members</a></li> -->
           </ul>
@@ -590,21 +485,14 @@
         <span class="menu-tigger js-slideout-toggle">
           <i class="fa fa-bars" style="font-size: 35px; margin-top: 18px; color:steelblue"></i>
         </span>
-        <!-- Menu Tigger -->
-        <!--  <span class="search-tigger">
-              <i class="fa fa-search"></i>
-            </span> -->
-        <!-- Search Tigger
-          </div><! Container -->
+      
       </div>
-      <!-- Main Menu -->
   </header>
-  <!-- Header -->
-  <!-- <header-directive></header-directive> -->
   <div ui-view autoscroll="false"></div>
   </div>
-  <!-- Wrapper -->
+
   <footer-directive></footer-directive>
+
   <!-- Start All JavaScripts Needed -->
     <script id="dsq-count-scr" src="//emunah-com.disqus.com/count.js" async></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>

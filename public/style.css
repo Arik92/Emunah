@@ -453,6 +453,7 @@ nav.donate-btns {
 }
 
 
+
 .logo-container:hover a {
    max-width: 100%;
 }
@@ -482,15 +483,10 @@ nav.donate-btns {
 .mainmenu {
     display: block;
     position: relative;
-    height: 40px;
-    line-height: 40px;
-    clear: both;
 }
 .mainmenu .container {
       display: block;
-    height: 50px;
     width: 100%;
-    line-height: 50px;
     background-color: steelblue;
     position: relative;
 }
@@ -529,18 +525,18 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 
 
 .mainmenu .menu {
-    /*float: left;*/
     display: block;
-        margin-left: 228px;
     letter-spacing: 2.5px;
 }
 .mainmenu .menu>ul {
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .mainmenu .menu>ul>li {
     display: block;
-    float: left;
     cursor: pointer;
 }
 .mainmenu .menu>ul>li>a {
@@ -610,7 +606,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     left: 0;
     right: 0;
     width: 100%;
-    height: 145px;
+    height: 155px;
     padding: 0;
     background: #ADD8E6;
     color: #fff;
@@ -827,25 +823,17 @@ header.header#layout2 .topbar {
     margin: 0;
     border: 0;
 }
-header.header#layout2 .mainmenu {
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
-    /*margin-bottom: 30px;*/
-}
+
 header.header#layout2 .mainmenu .container {
- /*   background-color: transparent;*/
-    height: 50px;
 }
 header.header#layout2 .logo-container {
-    height: 50px;
+    height: 10vh;
 }
 header.header#layout2 .mainmenu .menu>ul>li>a {
-    padding: 0 15px;
+    padding: 1em 1.2em;
 }
 header.header#layout2 .mainmenu .menu>ul>li>a:hover {
     background-color: black;
-    padding: 0 15px;
 }
 header.header#layout2 .mainmenu .menu {
     float: none;
@@ -1733,7 +1721,7 @@ header.header#layout3 .search-tigger:hover {
     letter-spacing: -.02em;
     text-transform: uppercase;
     /* background-color: #fff; */
-    color: midnightblue
+    color: midnightblue;
     padding-right: 20px;
     display: inline-block;
     position: relative;
@@ -1741,7 +1729,9 @@ header.header#layout3 .search-tigger:hover {
     line-height: 1;
 }
 .widget .widget-content {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     position: relative;
     overflow: hidden;
     clear: both;
@@ -1757,8 +1747,7 @@ header.header#layout3 .search-tigger:hover {
     text-decoration: none;
     background-color: #b1bec6;
     color: #fff;
-    width: 31%;
-    float: left;
+    width: 47%;
     margin: 0 8px 10px 0;
     border-radius: 3px;
 }
@@ -3413,8 +3402,6 @@ span.psw {
 
 
 #card {
-    /* background: white; */
-    text-align: center;
     position: relative;
     width: 305px;
 }
@@ -3432,10 +3419,8 @@ span.psw {
     position: relative;
     overflow: hidden;
     background: white;
-    height: 310px;
-    width: 280px;
-        /*margin-top: 80px;
-    margin-left: 128px;*/
+    width: 235px;
+    margin: auto;
       -webkit-border-radius: 100em;
   -moz-border-radius: 100em;
   border-radius: 0em;
@@ -3478,6 +3463,14 @@ article .candle {
     -ms-flex-align: start;
     align-items: flex-start;
 
+}
+
+article.candle .info {
+    padding: 2em;
+}
+
+article.candle .info h4{
+    padding-left: 2em;
 }
 
 .info .city,
@@ -3655,4 +3648,6 @@ cursor: hand; cursor: pointer;
 section#main-area {
     background: #eee;
 }
+
+/* mobile header */
 

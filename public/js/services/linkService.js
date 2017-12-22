@@ -25,7 +25,7 @@ app.service('linkService', function(){
     { title: 'Portuguese', hRef: 'http://emunah.com/pt'},
   ];
   
-  this.associatedFacebook.header = 'Associated FB ';
+  this.associatedFacebook.header = 'Associated Facebook ';
   this.associatedFacebook.icon = "fa fa-facebook-square";
   this.associatedFacebook.links = [
     { title: 'Women Of Emunah', hRef: 'https://www.facebook.com/WomenofEmuna' },
@@ -35,7 +35,7 @@ app.service('linkService', function(){
     { title: 'Emunah Español', hRef: 'https://www.facebook.com/EmunahEspanol/' },
   ]
 
-  this.associatedYT.header = 'Associated YT';
+  this.associatedYT.header = 'Associated Youtube';
   this.associatedYT.icon = "fa fa-youtube-square ";
   this.associatedYT.links = [
     { title: 'Breslov Nation', hRef: 'https://www.youtube.com/channel/UCGsKGecGeQI82Uxr_grd5dw' },
