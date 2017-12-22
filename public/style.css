@@ -452,9 +452,6 @@ nav.donate-btns {
     transition: 0.5s;
 }
 
-.logo-container img {
-    max-width: 80%;
-}
 
 
 .logo-container:hover a {
@@ -830,7 +827,7 @@ header.header#layout2 .topbar {
 header.header#layout2 .mainmenu .container {
 }
 header.header#layout2 .logo-container {
-    height: 50px;
+    height: 10vh;
 }
 header.header#layout2 .mainmenu .menu>ul>li>a {
     padding: 1em 1.2em;
@@ -3651,4 +3648,6 @@ cursor: hand; cursor: pointer;
 section#main-area {
     background: #eee;
 }
+
+/* mobile header */
 
