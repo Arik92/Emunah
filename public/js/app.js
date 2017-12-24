@@ -153,6 +153,11 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/articles',
       templateUrl: '/templates/articles.html'
     })
+	 .state('free', {
+      url: '/free-trip-to-israel',
+      templateUrl: '/templates/freeisrael.html',
+      controller: 'freeCtrl'
+    })
     .state('store', {
       url: '/store',
       templateUrl: '/templates/store/store.html'

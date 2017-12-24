@@ -56,8 +56,10 @@
         <li><a ui-sref="home">Home</a></li>
         <li><a ui-sref="store-english">Store</a></li>
         <li><a ui-sref="donate">Donate</a></li>
-		        <li class="has-sub"><a ui-sref="ravusa">Rav Dror In USA</a>
-          <ul>
+		        <li class="has-sub" style="background-color: green">Upcoming Events<a ui-sref="ravusa"></a>
+          <ul>		                        
+            <li><a ui-sref="free">Win a free trip to Israel</a></li>
+		    <li><a ui-sref="ravusa" >Rav Dror In USA</a></li>
             <li><a ui-sref="centers">Emunah Center Near You</a></li>
             <li><a ui-sref="hitbodedut">Hitbodedut 1O1</a></li>
             <li><a ui-sref="usa">Lectures in USA</a></li>
@@ -170,11 +172,11 @@
         </div>
         <!-- Logo Container -->
         <nav class="menu">
-          <ul>
-            <li>
-              <a ui-sref="ravusa">Rav Dror in the USA</a>
+          <ul> 
+			<li>
+			<a style="background-color: green">Upcoming Events</a>
               <div class="megamenu" style="background-color:white;">
-                <div class="item-content">
+                <div class="item-content">						 
                   <div class="item">
                     <div class="post">
                       <div class="post-thumb">
@@ -185,6 +187,21 @@
                       <div class="post-content">
                         <div class="post-category">
                           <a ui-sref="centers" style="color:steelblue;">Emunah Center<br/>Near You</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
+				  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="free">
+                          <img src="images/services-prayer.jpg" alt="Post Title Placeholder" />
+                        </a>
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category" style="color:steelblue;">
+                          <a ui-sref="free">Win a free trip to Israel</a>
                         </div>
                       </div>
                     </div>
@@ -265,7 +282,7 @@
             <li>
               <a ui-sref="services">Services</a>
               <div class="megamenu" style="background-color: white; color: steelblue;">
-                <div class="item-content">
+                <div class="item-content">				
                   <div class="item">
                     <div class="post">
                       <div class="post-thumb">
@@ -527,6 +544,7 @@
 	  <script src="js/controllers/homeCtrl.js"></script>
     <script src="js/services/articleFactory.js"></script>
     <script src="js/controllers/articleCtrl.js"></script>
+    <script src="js/controllers/freeCtrl.js"></script>	
     <script src="js/controllers/playlistCtrl.js"></script>
     <script src="js/controllers/articleCreationCtrl.js"></script>
     <script src="js/controllers/storeCtrl.js"></script>

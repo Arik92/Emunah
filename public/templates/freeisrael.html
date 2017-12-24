@@ -1,0 +1,61 @@
+<section id="createevent" >
+  <form enctype="multipart/form-data" name="upload_form">
+    
+          <div class="container" style="max-width:40%">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title text-center">
+            <h1 style="margin-top:50px">Win a free trip to Israel</h1>
+          </div>           
+          <div class="form-group">
+            <div>
+              <input id="source_name" class="form-control input-md" name="source_name" ng-model="entry.firstName" type="text" placeholder="First Name" required>
+			  <input id="source_name" class="form-control input-md" name="source_name" ng-model="entry.lastName" type="text" placeholder="Last Name" required>
+  			  <input id="source_name" class="form-control input-md" name="source_name" ng-model="entry.address" type="text" placeholder="Your address" required>
+			  <input id="source_name" class="form-control input-md" name="source_name" ng-model="entry.city" type="text" placeholder="City, state" required>
+  			  <input id="source_name" class="form-control input-md" name="source_name" ng-model="entry.zip" type="text" placeholder="Zip Code" required>
+            </div>
+          </div>          
+          <div class="form-group">
+            <label class="control-label" for="source_name">Date of birth: </label>
+            <div>
+              <input  id="create_start_date_picker" class="col-md-5 input-md" required>              
+            </div>
+          </div>
+          <br/>               
+          <!-- <button class="btn btn-submit" ng-click="compareDates()">Check dates</button> -->
+		  <div class="form-group">
+           <div>
+  			  <input id="source_name" class="form-control input-md" name="source_name" ng-model="entry.email" type="text" placeholder="Your Email" required>
+  			  <input id="source_name" class="form-control input-md" name="source_name" ng-model="entry.phone" type="text" placeholder="Your Phone Number" required>
+  			  <input id="source_name" class="form-control input-md" name="source_name" ng-model="entry.last_visited" type="text" placeholder="When did you last visit Israel" required>
+  			  <input id="source_name" class="form-control input-md" name="source_name" ng-model="entry.has_family" type="text" placeholder="Do you have family members in Israel?" required>
+            </div>
+          </div>           
+           <br /><!--input -->
+          <div class="form-group">
+            <div>
+              <textarea id="source_name" class="form-control" name="source_name" ng-model="entry.why" placeholder="Why do you want to visit Israel?" class="form-control input-md"></textarea>
+              <textarea id="source_name" class="form-control" name="source_name" ng-model="entry.how" placeholder="How did you hear about Rav Dror?" class="form-control input-md"></textarea>
+              <textarea id="source_name" class="form-control" name="source_name" ng-model="entry.what" placeholder="What are your thoughts about Rav Dror?" class="form-control input-md"></textarea>
+            </div>
+          </div>           
+           <br /><!--input -->          
+               <button type="submit" ng-click="reset()" class="hvr-bounce-to-right my-btn" style="margin: 10px; font-size:20px;padding: 6px 0px; width:22%;background-color:transparent;color:black"> Reset</button>
+               <button type="submit" ng-click="upload()" class="hvr-bounce-to-right my-btn" style="margin: 10px; font-size:20px;padding: 6px 0px; width:33%;background-color:black;color:white"> Submit</button>
+          <div class="row show-hide-message" ng-show="showRedirect">
+            <div class="alert alert-success">Entry received! redirecting..<span class="glyphicon glyphicon-repeat fast-right-spinner"></span></div>
+          </div>
+        </div>
+          <!-- <div class="row show-hide-message" ng-show="showFailure">
+            <div class="alert alert-success">{{}}<span class="glyphicon glyphicon-repeat fast-right-spinner"></span></div>
+          </div> -->
+              </div>
+        </div>
+      </div>
+          
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
