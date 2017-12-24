@@ -145,6 +145,17 @@ header.header#layout3 .mainmenu .menu>ul>li>a:before,
   border-right-color: transparent !important;
   border-left: solid #eee !important;
   padding-left: 30px !important;
+  background: white;
+  border-radius: 4px;
+}
+
+.service-main-container .thumbnail {
+  background: steelblue !important;
+  padding: 0.5em !important;
+}
+
+.service-main-container h4 {
+  font-weight: bold;
 }
 
 .service-main-area {

@@ -713,7 +713,9 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 }
 .post .post-title {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: var(--fancy-font);
 }
 .post .post-entry {
     letter-spacing: normal;
@@ -1198,7 +1200,7 @@ header.header#layout3 .search-tigger:hover {
     display: block;
     position: relative;
     /* overflow: hidden; */
-    margin-bottom: 60px;
+    margin-bottom: 2em;
     clear: both;
 }
 .blog-layout .blog-title {
@@ -1222,6 +1224,7 @@ header.header#layout3 .search-tigger:hover {
     position: relative;
     z-index: 2;
     line-height: 1;
+    font-family: var(--fancy-font);
 }
 .blog-layout .post {
     display: block;
@@ -1701,7 +1704,6 @@ header.header#layout3 .search-tigger:hover {
     overflow: hidden;
     margin-bottom: 40px;
     clear: both;
-    background: white;
     padding: 0.5em;
     border-radius: 4px;
 }
@@ -2104,11 +2106,7 @@ header.header#layout3 .search-tigger:hover {
     float: left;
     margin-right: 5px;
 }
-.post-header .post-title {
-    font-size: 35pt;
-    line-height: 35pt;
-    letter-spacing: -0.04em;
-}
+
 .post-header .post-meta {
     border-top: 1px dotted #eee;
     padding-top: 10px;
@@ -2140,6 +2138,12 @@ header.header#layout3 .search-tigger:hover {
     border-bottom: 1px dotted #eee;
     padding-bottom: 30px;
     margin-bottom: 30px;
+}
+
+#about-rav-dror .post-body p {
+    padding: 0.3em;
+    text-indent: 1em;
+    
 }
 .post-body h1 {
     font-size: 35pt;
@@ -2948,7 +2952,7 @@ code {
     overflow: hidden;
     position: relative;
     clear: both;
-    background: #90CAF9;
+    /* background: #90CAF9; */
 }
 .contact-form .input-group {
     display: block;
@@ -2974,7 +2978,8 @@ code {
 .contact-form input {
     height: 40px;
     padding: 0 15px;
-    width: 75%;
+    width: 100%;
+    border: solid 1px #eee;
 }
 #input-group-small {
     height: 40px;
@@ -2986,6 +2991,7 @@ code {
     min-height: 100px;
     padding: 15px;
     width: 100%;
+    border: solid 1px #eee;
 }
 .contact-form i {
     color: blue;
@@ -3664,12 +3670,19 @@ color: #5d3250;
 cursor: hand; cursor: pointer;
 }
 
-/* main-area */
-
-
-section#main-area {
-    /* background: #eee; */
+section.service-main-container article.single-post {
+    background: white;
+    padding: 1em;
+    border-radius: 4px;
 }
 
-/* mobile header */
+section.service-main-container .post-body {
+    margin-bottom: 0;
+}
 
+#main .post {
+    background: white;
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
