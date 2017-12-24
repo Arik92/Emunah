@@ -16,10 +16,10 @@
           <h2 style="display: none;">Main</h2>
           <div class="blog-posts hfeed">
             <article class="post single-post">
-              <div class="post-header">
-                <h1 class="post-title">Log In</h1><!-- Post Title -->
-                <br>
-              </div><!-- Post Header -->
+                <div class="service-header" style="text-align: center; width: 50%; margin: 2em auto">
+                  <img src="images/emunahlogosmall.jpg" alt="emunah-logo">
+                  <h1 class="post-title">Log In To Emunah!</h1>
+                </div><!-- Post Title -->
               <div class="contact-form">
                 <form ng-submit="login(user)" method="post">
                   <div class="input-group">
@@ -33,7 +33,11 @@
                   <div class="input-group">
                     <input type="submit" name="submit" value="Log In"/>
 					<p>Or login w/ FB</p>
-                  <a href="/users/facebook" target="_self"><button type="button" class="btn-facebook">Facebook</button></a>
+                  <a href="/users/facebook" target="_self">
+                    <button type="button" class="btn-facebook" style="background: #3b5998; color: white" >
+                      Facebook
+                    </button>
+                  </a>
 
                   </div>
                 </form>

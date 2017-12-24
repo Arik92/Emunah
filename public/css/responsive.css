@@ -761,6 +761,10 @@ header.header#layout2 .mainmenu .menu-tigger {
   div#logonav2.logo-container {
     display: none;
   }
+
+  #mobile-store-menu {
+    display: none;
+  }
 }
 
 
@@ -783,4 +787,11 @@ header.header#layout2 .mainmenu .menu-tigger {
 			left: 50%;
 			transform: translateX(-50%);
 	}
-	}
+  }
+  
+  @media only screen and ( min-width: 992px) {
+    #card {
+      position: relative;
+      width: 300px;
+  }
+  }

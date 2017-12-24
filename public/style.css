@@ -26,11 +26,16 @@
 /*
  * 01. Body & Wrapper
  * ================================================================= */
-html {
+:root {
+    --fancy-font: "Palatino Linotype"
+}
+
+ html {
     overflow-x: hidden;
 }
+
 body {
-    background-color: #f0f0f0;
+    background-color: #eee !important;
     color: #222222;
     position: relative;
     margin: 0;
@@ -44,7 +49,6 @@ body {
     -webkit-backface-visibility: hidden;
 }
 #wrapper {
-    background: #fff;
     overflow: hidden;
     clear: both;
     position: relative;
@@ -203,6 +207,15 @@ h6 {
     position: relative;
 }
 
+#slider-backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 .slide-menu>ul>li:last-child {
     display: block;
@@ -494,7 +507,7 @@ nav.donate-btns {
     display: block;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 50;
     -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
@@ -587,7 +600,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     min-width: 200px;
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     background: #121212;
-    z-index: 99;
+    z-index: 30;
 }
 .mainmenu .menu>ul>li>ul>li.parent>a:after {
     content: "\f105";
@@ -610,7 +623,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     padding: 0;
     background: #ADD8E6;
     color: #fff;
-    z-index: 999999999999999 !important;
+    z-index: 100 !important;
     opacity: 0;
     display: none;
     line-height: normal;
@@ -670,7 +683,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 .post {
     display: block;
     position: relative;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     overflow: hidden;
 }
 .post .post-thumb {
@@ -709,7 +722,9 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 }
 .post .post-title {
     margin: 0;
-    font-size: 12px;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: var(--fancy-font);
 }
 .post .post-entry {
     letter-spacing: normal;
@@ -746,7 +761,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     background: rgba(255, 255, 255, 0.99);
     height: 100vh;
     width: 100%;
-    z-index: 99999;
+    z-index: 100;
     opacity: 0;
     visibility: hidden;
 }
@@ -897,13 +912,14 @@ header.header#layout3 .logo-container {
     margin: auto;
 }
 header.header#layout3 .mainmenu {
-    height: 50px;
+    height: 69px;
     line-height: 50px;
     text-align: center;
     margin-bottom: 30px;
 }
 header.header#layout3 .mainmenu.stick-me.sticking {
     background-color: #fff;
+    z-index: 25 !important;
 }
 header.header#layout3 .mainmenu .container {
     background-color: transparent;
@@ -912,6 +928,7 @@ header.header#layout3 .mainmenu .container {
 }
 header.header#layout3 .mainmenu.stick-me.sticking .container {
     border-top: 0;
+    margin-top: 10px;
 }
 header.header#layout3 .mainmenu .menu {
     float: none;
@@ -1193,8 +1210,8 @@ header.header#layout3 .search-tigger:hover {
 .blog-layout {
     display: block;
     position: relative;
-    overflow: hidden;
-    margin-bottom: 60px;
+    /* overflow: hidden; */
+    margin-bottom: 2em;
     clear: both;
 }
 .blog-layout .blog-title {
@@ -1218,11 +1235,12 @@ header.header#layout3 .search-tigger:hover {
     position: relative;
     z-index: 2;
     line-height: 1;
+    font-family: var(--fancy-font);
 }
 .blog-layout .post {
     display: block;
     position: relative;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 .blog-layout .post .post-thumb {
     background-color: #111;
@@ -1265,7 +1283,7 @@ header.header#layout3 .search-tigger:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 999;
+    z-index: 30;
     background: #111;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
     padding: 20px;
@@ -1456,7 +1474,7 @@ header.header#layout3 .search-tigger:hover {
 /* Blog Layout 8 : 1st Full Horizontal */
 
 .blog-layout.layout-8 .post {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     overflow: hidden;
 }
 .blog-layout.layout-8 .col:last-child .post {
@@ -1499,7 +1517,7 @@ header.header#layout3 .search-tigger:hover {
     left: 0;
     right: 0;
     bottom: -70px;
-    z-index: 999;
+    z-index: 30;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     transition: .35s;
@@ -1532,7 +1550,7 @@ header.header#layout3 .search-tigger:hover {
     background: #fff;
     overflow: hidden;
     padding: 30px;
-    z-index: 99;
+    z-index: 30;
     text-align: center;
 }
 .blog-layout.has-slider .post .post-category {
@@ -1561,7 +1579,7 @@ header.header#layout3 .search-tigger:hover {
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     margin-top: -60px;
     border-radius: 50%;
-    z-index: 999;
+    z-index: 100;
 }
 #slideNav div.owl-prev {
     left: 0;
@@ -1622,6 +1640,7 @@ header.header#layout3 .search-tigger:hover {
     line-height: normal;
     border-bottom: 1px solid #eee;
     overflow: hidden;
+    font-family: var(--fancy-font);
 }
 .fullwidth .status-message {
     margin-bottom: 30px;
@@ -1631,6 +1650,7 @@ header.header#layout3 .search-tigger:hover {
     position: relative;
     z-index: 1;
     line-height: 1;
+    font-size: 1.5em;
 }
 .status-message strong {
     text-transform: capitalize;
@@ -1695,6 +1715,8 @@ header.header#layout3 .search-tigger:hover {
     overflow: hidden;
     margin-bottom: 40px;
     clear: both;
+    padding: 0.5em;
+    border-radius: 4px;
 }
 .widget .widget-title {
     display: block;
@@ -1709,9 +1731,9 @@ header.header#layout3 .search-tigger:hover {
     display: block;
     height: 5px;
     width: 100%;
-    background: #f0f0f0;
+    background: #eee;
     position: absolute;
-    top: 10px;
+    top: 18px;
     z-index: 1;
     border-radius: 5px;
 }
@@ -1900,8 +1922,8 @@ header.header#layout3 .search-tigger:hover {
     margin-left: 160px;
 }
 .recent-posts li.post .post-title {
-    max-height: 38px;
-    overflow: hidden;
+    font-size: 1em;
+    line-height: 1.5em;
 }
 .recent-posts li.post .post-meta {
     overflow: hidden;
@@ -1928,11 +1950,15 @@ header.header#layout3 .search-tigger:hover {
 
 /* Follow By Email Widget */
 
+.FollowByEmail .widget-title {
+    margin-bottom: 0px;
+}
+
 .FollowByEmail .follow-by-email-inner {
     display: block;
     overflow: hidden;
     position: relative;
-    background: #f8f8f8;
+    background: white;
     padding: 30px;
 }
 .FollowByEmail .follow-by-email-inner:before {
@@ -2091,11 +2117,7 @@ header.header#layout3 .search-tigger:hover {
     float: left;
     margin-right: 5px;
 }
-.post-header .post-title {
-    font-size: 35pt;
-    line-height: 35pt;
-    letter-spacing: -0.04em;
-}
+
 .post-header .post-meta {
     border-top: 1px dotted #eee;
     padding-top: 10px;
@@ -2127,6 +2149,12 @@ header.header#layout3 .search-tigger:hover {
     border-bottom: 1px dotted #eee;
     padding-bottom: 30px;
     margin-bottom: 30px;
+}
+
+#about-rav-dror .post-body p {
+    padding: 0.3em;
+    text-indent: 1em;
+    
 }
 .post-body h1 {
     font-size: 35pt;
@@ -2935,7 +2963,7 @@ code {
     overflow: hidden;
     position: relative;
     clear: both;
-    background: #90CAF9;
+    /* background: #90CAF9; */
 }
 .contact-form .input-group {
     display: block;
@@ -2961,7 +2989,8 @@ code {
 .contact-form input {
     height: 40px;
     padding: 0 15px;
-    width: 75%;
+    width: 100%;
+    border: solid 1px #eee;
 }
 #input-group-small {
     height: 40px;
@@ -2973,6 +3002,7 @@ code {
     min-height: 100px;
     padding: 15px;
     width: 100%;
+    border: solid 1px #eee;
 }
 .contact-form i {
     color: blue;
@@ -3268,7 +3298,7 @@ span.psw {
 /* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
+    animation: animatezoom 0.6s;
 }
 
 @-webkit-keyframes animatezoom {
@@ -3337,6 +3367,7 @@ span.psw {
 .store-menu-overlay {
     position: fixed; 
     top: 65px;
+    /* top: 81px; */
     z-index: 0 !important;
     transition: 0.5s;
 }
@@ -3388,7 +3419,7 @@ span.psw {
 
 
 .storemenu{
-    display: none;
+    /* display: none; */
    
     transition: 1s;
 }
@@ -3397,13 +3428,21 @@ span.psw {
   /* width: 323px; */
   width: 95%;
   margin: 0 auto;
+  background: white;
+  padding: 1em;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.box-container img {
+    margin: auto;
 }
 
 
 
 #card {
     position: relative;
-    width: 305px;
+    /* width: 305px; */
 }
 
 .card-title {
@@ -3420,7 +3459,7 @@ span.psw {
     overflow: hidden;
     background: white;
     width: 235px;
-    margin: auto;
+    /* margin: auto; */
       -webkit-border-radius: 100em;
   -moz-border-radius: 100em;
   border-radius: 0em;
@@ -3643,11 +3682,50 @@ color: #5d3250;
 cursor: hand; cursor: pointer;
 }
 
-/* main-area */
-
-section#main-area {
-    background: #eee;
+section.service-main-container article.single-post {
+    background: white;
+    padding: 1em;
+    border-radius: 4px;
 }
 
-/* mobile header */
+section.service-main-container .post-body {
+    margin-bottom: 0;
+}
 
+#main .post {
+    background: white;
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+.mobile-store-ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mobile-store-ul li {
+    width: 50%;
+}
+
+.mobile-store-ul li.misc {
+    width: 100%;
+}
+
+#mobile-store-header {
+    font-size: 1.5em;
+    padding: 1em;
+    font-family: var(--fancy-font);
+    text-align: center;
+}
+
+/* shopify shit */
+.shopify-buy__layout-vertical.has-image {
+    padding: 1em;
+    background: lightblue;
+}
+
+.has-image {
+    padding: 1em;
+    background: lightblue;
+}
