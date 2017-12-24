@@ -67,12 +67,21 @@ app.controller('freeCtrl', ['$scope', '$window', '$timeout', '$rootScope', '$loc
 
   
   /////////////////////////////////////////// Map interface /////////////////////////////////////////////////////////
-  /////////////////////////////////////////// Image handling /////////////////////////////////////////////////////////
+  /////////////////////////////////////////// regex validation proofing /////////////////////////////////////////////////////////
   
-
-  function checkNames() {
+  function checkEmail(email) {
+      var patt = /[\w.]+@\w+\.\w+/;//(com|net)
+      if (!patt.test(email)) {
+        alert("Must have a valid email address")
+          return false;
+      }//if
+        return true;
+      // regex pattern: one or more word characters, followed by @, followed by one or more word characters, followed by '.'
+      //and by one or more word expressions
+  }//checkEmail  
+  function checkTextFields(text) {
     var patt = /w+/;
-    if (!$scope.eName) {
+    if (!patt.test) {
       alert("fill enter an event name");
       return false;
     }
