@@ -30,7 +30,7 @@
         // ------------------------------------------------------
         const sliderBackdrop = $("#slider-backdrop");
         const slideMenu = $(".slide-menu");
-        const slideMenuItems = $(".slide-menu li");
+        const slideMenuItems = $(".slide-menu li").not('.has-sub');
         const menuClose = $(".menu-close");
         const menuHamburger = $(".menu-tigger");
         function closeSlideMenu() {
