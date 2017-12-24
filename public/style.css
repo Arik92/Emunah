@@ -507,7 +507,7 @@ nav.donate-btns {
     display: block;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 50;
     -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
@@ -600,7 +600,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     min-width: 200px;
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     background: #121212;
-    z-index: 99;
+    z-index: 30;
 }
 .mainmenu .menu>ul>li>ul>li.parent>a:after {
     content: "\f105";
@@ -623,7 +623,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     padding: 0;
     background: #ADD8E6;
     color: #fff;
-    z-index: 999999999999999 !important;
+    z-index: 100 !important;
     opacity: 0;
     display: none;
     line-height: normal;
@@ -761,7 +761,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
     background: rgba(255, 255, 255, 0.99);
     height: 100vh;
     width: 100%;
-    z-index: 99999;
+    z-index: 100;
     opacity: 0;
     visibility: hidden;
 }
@@ -912,13 +912,14 @@ header.header#layout3 .logo-container {
     margin: auto;
 }
 header.header#layout3 .mainmenu {
-    height: 50px;
+    height: 69px;
     line-height: 50px;
     text-align: center;
     margin-bottom: 30px;
 }
 header.header#layout3 .mainmenu.stick-me.sticking {
     background-color: #fff;
+    z-index: 25 !important;
 }
 header.header#layout3 .mainmenu .container {
     background-color: transparent;
@@ -927,6 +928,7 @@ header.header#layout3 .mainmenu .container {
 }
 header.header#layout3 .mainmenu.stick-me.sticking .container {
     border-top: 0;
+    margin-top: 10px;
 }
 header.header#layout3 .mainmenu .menu {
     float: none;
@@ -1281,7 +1283,7 @@ header.header#layout3 .search-tigger:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 999;
+    z-index: 30;
     background: #111;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
     padding: 20px;
@@ -1515,7 +1517,7 @@ header.header#layout3 .search-tigger:hover {
     left: 0;
     right: 0;
     bottom: -70px;
-    z-index: 999;
+    z-index: 30;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     transition: .35s;
@@ -1548,7 +1550,7 @@ header.header#layout3 .search-tigger:hover {
     background: #fff;
     overflow: hidden;
     padding: 30px;
-    z-index: 99;
+    z-index: 30;
     text-align: center;
 }
 .blog-layout.has-slider .post .post-category {
@@ -1577,7 +1579,7 @@ header.header#layout3 .search-tigger:hover {
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     margin-top: -60px;
     border-radius: 50%;
-    z-index: 999;
+    z-index: 100;
 }
 #slideNav div.owl-prev {
     left: 0;
@@ -3365,6 +3367,7 @@ span.psw {
 .store-menu-overlay {
     position: fixed; 
     top: 65px;
+    /* top: 81px; */
     z-index: 0 !important;
     transition: 0.5s;
 }
@@ -3416,7 +3419,7 @@ span.psw {
 
 
 .storemenu{
-    display: none;
+    /* display: none; */
    
     transition: 1s;
 }
@@ -3694,4 +3697,35 @@ section.service-main-container .post-body {
     padding: 1em;
     border-radius: 4px;
     margin-bottom: 1em;
+}
+
+.mobile-store-ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mobile-store-ul li {
+    width: 50%;
+}
+
+.mobile-store-ul li.misc {
+    width: 100%;
+}
+
+#mobile-store-header {
+    font-size: 1.5em;
+    padding: 1em;
+    font-family: var(--fancy-font);
+    text-align: center;
+}
+
+/* shopify shit */
+.shopify-buy__layout-vertical.has-image {
+    padding: 1em;
+    background: lightblue;
+}
+
+.has-image {
+    padding: 1em;
+    background: lightblue;
 }
