@@ -173,4 +173,11 @@ header.header#layout3 .mainmenu .menu>ul>li>a:before,
 
 .thumbnail {
   background: white !important;
+  padding: 1em !important;
+}
+
+ul.recent-posts li {
+  background: white !important;
+  padding: 0.5em !important;
+  margin-bottom: 0.5em;
 }

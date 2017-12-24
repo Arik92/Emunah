@@ -26,11 +26,16 @@
 /*
  * 01. Body & Wrapper
  * ================================================================= */
-html {
+:root {
+    --fancy-font: "Palatino Linotype"
+}
+
+ html {
     overflow-x: hidden;
 }
+
 body {
-    background-color: #f0f0f0;
+    background-color: #eee !important;
     color: #222222;
     position: relative;
     margin: 0;
@@ -44,7 +49,6 @@ body {
     -webkit-backface-visibility: hidden;
 }
 #wrapper {
-    background: #fff;
     overflow: hidden;
     clear: both;
     position: relative;
@@ -670,7 +674,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 .post {
     display: block;
     position: relative;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     overflow: hidden;
 }
 .post .post-thumb {
@@ -709,7 +713,7 @@ header.header#layout1 .mainmenu.stick-me.sticking {
 }
 .post .post-title {
     margin: 0;
-    font-size: 12px;
+    font-size: 1.2em;
 }
 .post .post-entry {
     letter-spacing: normal;
@@ -1193,7 +1197,7 @@ header.header#layout3 .search-tigger:hover {
 .blog-layout {
     display: block;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-bottom: 60px;
     clear: both;
 }
@@ -1222,7 +1226,7 @@ header.header#layout3 .search-tigger:hover {
 .blog-layout .post {
     display: block;
     position: relative;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 .blog-layout .post .post-thumb {
     background-color: #111;
@@ -1456,7 +1460,7 @@ header.header#layout3 .search-tigger:hover {
 /* Blog Layout 8 : 1st Full Horizontal */
 
 .blog-layout.layout-8 .post {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     overflow: hidden;
 }
 .blog-layout.layout-8 .col:last-child .post {
@@ -1622,6 +1626,7 @@ header.header#layout3 .search-tigger:hover {
     line-height: normal;
     border-bottom: 1px solid #eee;
     overflow: hidden;
+    font-family: var(--fancy-font);
 }
 .fullwidth .status-message {
     margin-bottom: 30px;
@@ -1631,6 +1636,7 @@ header.header#layout3 .search-tigger:hover {
     position: relative;
     z-index: 1;
     line-height: 1;
+    font-size: 1.5em;
 }
 .status-message strong {
     text-transform: capitalize;
@@ -1695,6 +1701,9 @@ header.header#layout3 .search-tigger:hover {
     overflow: hidden;
     margin-bottom: 40px;
     clear: both;
+    background: white;
+    padding: 0.5em;
+    border-radius: 4px;
 }
 .widget .widget-title {
     display: block;
@@ -1709,9 +1718,9 @@ header.header#layout3 .search-tigger:hover {
     display: block;
     height: 5px;
     width: 100%;
-    background: #f0f0f0;
+    background: #eee;
     position: absolute;
-    top: 10px;
+    top: 18px;
     z-index: 1;
     border-radius: 5px;
 }
@@ -1900,8 +1909,8 @@ header.header#layout3 .search-tigger:hover {
     margin-left: 160px;
 }
 .recent-posts li.post .post-title {
-    max-height: 38px;
-    overflow: hidden;
+    font-size: 1em;
+    line-height: 1.5em;
 }
 .recent-posts li.post .post-meta {
     overflow: hidden;
@@ -1928,11 +1937,15 @@ header.header#layout3 .search-tigger:hover {
 
 /* Follow By Email Widget */
 
+.FollowByEmail .widget-title {
+    margin-bottom: 0px;
+}
+
 .FollowByEmail .follow-by-email-inner {
     display: block;
     overflow: hidden;
     position: relative;
-    background: #f8f8f8;
+    background: white;
     padding: 30px;
 }
 .FollowByEmail .follow-by-email-inner:before {
@@ -3268,7 +3281,7 @@ span.psw {
 /* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
+    animation: animatezoom 0.6s;
 }
 
 @-webkit-keyframes animatezoom {
@@ -3397,13 +3410,21 @@ span.psw {
   /* width: 323px; */
   width: 95%;
   margin: 0 auto;
+  background: white;
+  padding: 1em;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.box-container img {
+    margin: auto;
 }
 
 
 
 #card {
     position: relative;
-    width: 305px;
+    /* width: 305px; */
 }
 
 .card-title {
@@ -3420,7 +3441,7 @@ span.psw {
     overflow: hidden;
     background: white;
     width: 235px;
-    margin: auto;
+    /* margin: auto; */
       -webkit-border-radius: 100em;
   -moz-border-radius: 100em;
   border-radius: 0em;
@@ -3645,8 +3666,9 @@ cursor: hand; cursor: pointer;
 
 /* main-area */
 
+
 section#main-area {
-    background: #eee;
+    /* background: #eee; */
 }
 
 /* mobile header */
