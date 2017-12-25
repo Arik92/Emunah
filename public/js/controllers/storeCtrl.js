@@ -1,19 +1,30 @@
-app.controller('storeCtrl', function ($scope, $stateParams, $location, lodash) {
+app.controller('storeCtrl', function ($scope, $stateParams, $location, $timeout, lodash, storeService) {
   console.log('yo from storeCtrl');
   let throttleScroll;
   this.$onInit = () => {
     console.log('hello from oninit');
-    throttleScroll = lodash.throttle(transform, 1000);
+    $scope.spinnerShow = true;
+    hideSpinner();
+    $scope.products = storeService.products;
+    console.log($scope.products);
+
+    /* throttleScroll = lodash.throttle(transform, 1000);
     if (screen.width > 1090) {
       document.addEventListener("scroll", throttleScroll );
-    }
+    } */
   }
 
-  $scope.$on("$destroy", removeMe);
+  // $scope.$on("$destroy", removeMe);
 
   $scope.isActive = function (route) {
     const isItActive = route === $location.path();
     return isItActive;
+  }
+
+  function hideSpinner() {
+    $timeout(() => {
+      $scope.spinnerShow = false;
+    }, 500)
   }
 
   function removeMe() {

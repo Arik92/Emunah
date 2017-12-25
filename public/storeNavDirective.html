@@ -1,0 +1,13 @@
+<div class="" style="position: fixed; min-width: 250px; max-width: 300px; left: 5vw">
+  <div class="panel panel-primary">
+    <div class="panel-heading" ui-sref="services" style="cursor: pointer">Products</div>
+    <div class="panel-body">
+      <ul>
+        <li ng-repeat="product in products track by $index" style="font-size: 1em; cursor: pointer">
+          <a ui-sref="{{product.uiSref}}">{{product.name}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

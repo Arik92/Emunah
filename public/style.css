@@ -307,7 +307,7 @@ h6 {
 
 header.header {
     display: block;
-    position: relative;
+    /* position: relative; */
  /**/
 }
 
@@ -3366,9 +3366,9 @@ span.psw {
 
 .store-menu-overlay {
     position: fixed; 
-    top: 65px;
+    top: 200px;
     /* top: 81px; */
-    z-index: 0 !important;
+    z-index: 99999999 !important;
     transition: 0.5s;
 }
 
@@ -3586,8 +3586,8 @@ figure {
 }
 
 div.frameshop {
-    margin-right: 65px;
-    margin-left: 65px;
+    /* margin-right: 65px; */
+    /* margin-left: 65px; */
 }
 
 
@@ -3718,7 +3718,7 @@ section.service-main-container .post-body {
 
 #mobile-store-header {
     font-size: 1.5em;
-    padding: 1em;
+    padding: 0.5em;
     font-family: var(--fancy-font);
     text-align: center;
 }
@@ -3732,4 +3732,11 @@ section.service-main-container .post-body {
 .has-image {
     padding: 1em;
     background: lightblue;
+}
+
+.main-site-header {
+    position: fixed;
+    width: 100vw;
+    display: block;
+    z-index: 500;
 }

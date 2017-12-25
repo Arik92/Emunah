@@ -8,9 +8,6 @@ header.header#layout2 .mainmenu .menu-tigger {
 }
 
 
-
-
-
 @media (max-width:1090px) {
   body {
     overflow-x: hidden;
@@ -756,16 +753,7 @@ header.header#layout2 .mainmenu .menu-tigger {
   }
 }
 
-@media screen and (min-width:1091px) {
 
-  div#logonav2.logo-container {
-    display: none;
-  }
-
-  #mobile-store-menu {
-    display: none;
-  }
-}
 
 
 @media only screen and (min-width: 991px) {
@@ -794,4 +782,30 @@ header.header#layout2 .mainmenu .menu-tigger {
       position: relative;
       width: 300px;
   }
+  }
+
+  store-nav-directive {
+    display: none;
+  }
+  
+  @media screen and (min-width:1091px) {
+
+    div#logonav2.logo-container {
+      display: none;
+    }
+  
+    #mobile-store-menu {
+      display: none;
+    }
+
+    div.frameshop {
+      max-width: 800px;
+      margin-left: 30vw;
+    }
+
+    store-nav-directive {
+      display: block;
+    }
+
+
   }
