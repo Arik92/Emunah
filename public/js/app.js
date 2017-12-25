@@ -167,6 +167,26 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/store/store-necklaces.html',
       controller: 'storeCtrl'
     })
+    .state('store-illustrations', {
+      url: '/store-illustrations',
+      templateUrl: '/templates/store/store-illustrations.html',
+      controller: 'storeCtrl'
+    })
+    .state('store-paintings', {
+      url: '/store-paintings',
+      templateUrl: '/templates/store/store-paintings.html',
+      controller: 'storeCtrl'
+    })
+    .state('store-mp3s', {
+      url: '/store-mp3s',
+      templateUrl: '/templates/store/store-mp3s.html',
+      controller: 'storeCtrl'
+    })
+    .state('store-pdf', {
+      url: '/store-pdf',
+      templateUrl: '/templates/store/store-pdf.html',
+      controller: 'storeCtrl'
+    })
     .state('store-shirts', {
       url: '/store-shirts',
       templateUrl: '/templates/store/store-shirts.html',
