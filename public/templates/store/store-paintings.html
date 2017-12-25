@@ -1,55 +1,14 @@
 <mobile-store-directive></mobile-store-directive>
 
-<!-- <header class="header" id="layout3">
-        <div class="store-menu-overlay mainmenu stick-me sticking">
-          <div class="container">
-            <nav class="menu">
-              <ul>
-                <li ng-class="{lightBlue: isActive('/store-paintings')}"><a ui-sref="store-paintings">Necklaces</a>
+<div class="w3-container w3-text-grey" id="jeans"></div>
 
-                </li>
-                <li class="parent"><a ui-sref="store-shirts">Shirts</a></li>
-                 
-                    <li class="parent"><a ui-sref="store-hebrew">Books in Hebrew</a>
-                     
-                    </li>
-                    <li class="parent"><a ui-sref="store-english">Books in English</a>
-                      
-                  </li>
-                    <li><a ui-sref="store-booklets">Booklets</a></li>
-                    <li><a ui-sref="store-cds">CDs</a></li>
-                    <li><a ui-sref="store-misc">Miscellaneous</a></li>
-                  </ul>
-                </li>
-                
-              </ul>
-            </nav>
-         
-      </header> -->
+<store-nav-directive></store-nav-directive>
 
-  <!-- Image header -->
-  
+<spinner-directive></spinner-directive>
 
-  
-  <div class="w3-container w3-text-grey" id="jeans">
-   </div>
-   <store-nav-directive></store-nav-directive>
-     <div class="frameshop">
-       <!-- Necklaces -->
-         <div id='collection-component-67b37b97967'></div>
-          </div>
-           <script src="js/store/paintings.js"></script>
-            <script type="text/javascript">
-                $(document).ready(function(){
-    $("#openMenu").click(function(){
-        $("#menu").toggle();
-    });
-    
-    $("#closeMenu").click(function(){
-        $("#menu").hide();
-    });
-});
-  </script>
-   
+<div class="frameshop">
+  <!-- Necklaces -->
+  <div id='collection-component-67b37b97967'></div>
+</div>
 
-
+<script src="js/store/paintings.js"></script>

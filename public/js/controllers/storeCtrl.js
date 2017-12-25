@@ -1,8 +1,10 @@
-app.controller('storeCtrl', function ($scope, $stateParams, $location, lodash, storeService) {
+app.controller('storeCtrl', function ($scope, $stateParams, $location, $timeout, lodash, storeService) {
   console.log('yo from storeCtrl');
   let throttleScroll;
   this.$onInit = () => {
     console.log('hello from oninit');
+    $scope.spinnerShow = true;
+    hideSpinner();
     $scope.products = storeService.products;
     console.log($scope.products);
 
@@ -17,6 +19,12 @@ app.controller('storeCtrl', function ($scope, $stateParams, $location, lodash, s
   $scope.isActive = function (route) {
     const isItActive = route === $location.path();
     return isItActive;
+  }
+
+  function hideSpinner() {
+    $timeout(() => {
+      $scope.spinnerShow = false;
+    }, 500)
   }
 
   function removeMe() {
