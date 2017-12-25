@@ -3712,6 +3712,10 @@ section.service-main-container .post-body {
     width: 100%;
 }
 
+.lightBlue {
+    background: lightblue !important;
+}
+
 #mobile-store-header {
     font-size: 1.5em;
     padding: 1em;
