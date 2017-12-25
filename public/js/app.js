@@ -153,8 +153,8 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/articles',
       templateUrl: '/templates/articles.html'
     })
-	 .state('free', {
-      url: '/free-trip-to-israel',
+	 .state('free1', {
+      url: '/free-trip-to-israel1',
       templateUrl: '/templates/freeisrael.html',
       controller: 'freeCtrl'
     })
@@ -287,6 +287,14 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('about', {
       url: '/about',
       templateUrl: '/templates/about/about.html',
+    })
+    .state('free', {
+      url: '/free-trip-to-israel',
+      templateUrl: '/templates/temp/freeisrael.html',
+    })
+    .state('visitisrael', {
+      url: '/visit-israel-rav-dror',
+      templateUrl: '/templates/temp/israeltrip.html',
     })
     .state('chayei-sarah', {
       url: '/becoming-closer-to-hashem-good-eyes-a-pure-heart',
