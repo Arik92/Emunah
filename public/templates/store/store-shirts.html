@@ -6,7 +6,7 @@
       <nav class="menu">
         <ul>
           <li><a ui-sref="store-necklaces" href="/home">Necklaces</a></li>
-          <li class="parent"><a ui-sref="store-shirts">Shirts</a></li>
+          <li class="parent" ng-class="{lightBlue: isActive('/store-shirts')}"><a ui-sref="store-shirts">Shirts</a></li>
           <li class="parent"><a ui-sref="store-hebrew">Books in Hebrew</a></li>
           <li class="parent"><a ui-sref="store-english">Books in English</a></li>
           <li><a ui-sref="store-booklets">Booklets</a></li>

@@ -1,4 +1,4 @@
-app.controller('storeCtrl', function ($scope, $stateParams, lodash) {
+app.controller('storeCtrl', function ($scope, $stateParams, $location, lodash) {
   console.log('yo from storeCtrl');
   let throttleScroll;
   this.$onInit = () => {
@@ -10,6 +10,11 @@ app.controller('storeCtrl', function ($scope, $stateParams, lodash) {
   }
 
   $scope.$on("$destroy", removeMe);
+
+  $scope.isActive = function (route) {
+    const isItActive = route === $location.path();
+    return isItActive;
+  }
 
   function removeMe() {
     console.log('storeCtrl was destroyed');
