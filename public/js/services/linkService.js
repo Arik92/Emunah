@@ -25,17 +25,17 @@ app.service('linkService', function(){
     { title: 'Portuguese', hRef: 'http://emunah.com/pt'},
   ];
   
-  this.associatedFacebook.header = 'Associated Facebooks ';
+  this.associatedFacebook.header = 'Associated Facebook ';
   this.associatedFacebook.icon = "fa fa-facebook-square";
   this.associatedFacebook.links = [
     { title: 'Women Of Emunah', hRef: 'https://www.facebook.com/WomenofEmuna' },
     { title: 'Breslov Nation', hRef: 'https://www.facebook.com/BreslovNation/' },
     { title: 'Emunah Deutsch', hRef: 'https://www.facebook.com/EmunahDeutsch/' },
-    { title: 'Emunah Center Los Angeles', hRef: 'https://www.facebook.com/EmunahCenterLA/' },
+    { title: 'Emunah Los Angeles', hRef: 'https://www.facebook.com/EmunahCenterLA/' },
     { title: 'Emunah Español', hRef: 'https://www.facebook.com/EmunahEspanol/' },
   ]
 
-  this.associatedYT.header = 'Associated Youtubes';
+  this.associatedYT.header = 'Associated Youtube';
   this.associatedYT.icon = "fa fa-youtube-square ";
   this.associatedYT.links = [
     { title: 'Breslov Nation', hRef: 'https://www.youtube.com/channel/UCGsKGecGeQI82Uxr_grd5dw' },
@@ -53,9 +53,7 @@ app.service('linkService', function(){
     { title: 'twitter', hRef: 'https://www.twitter.com/ravdror', faIcon: 'fa fa fa-twitter-square fa-2x' },
     { title: 'instagram', hRef: 'https://www.instagram.com/ravdror', faIcon: 'fa fa-instagram fa-2x' },
     { title: 'youtube', hRef: 'https://www.youtube.com/EmunahChannel', faIcon: 'fa fa-youtube fa-2x' },
-    { title: 'soundcloud', hRef: 'https://www.soundcloud.com/ravdror', faIcon: 'fa fa-soundcloud fa-2x' },
-    { title: 'snapchat', hRef: 'https://www.snapchat.com/add/emunahproject', faIcon: 'fa fa-snapchat-square fa-2x' },
-    { title: 'reddit', hRef: 'https://www.reddit.com/RavDror', faIcon: 'fa fa-reddit-square fa-2x' },
+    { title: 'soundcloud', hRef: 'https://www.soundcloud.com/ravdror', faIcon: 'fa fa-soundcloud fa-2x' }
   ];
 
 

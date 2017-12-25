@@ -124,11 +124,6 @@ header.header#layout3 .mainmenu .menu>ul>li>a:before,
 }
 
 
-
-
-
-
-
 /* bootstrap custom */
 
 .panel-footer.panel-footer-custom {
@@ -150,6 +145,17 @@ header.header#layout3 .mainmenu .menu>ul>li>a:before,
   border-right-color: transparent !important;
   border-left: solid #eee !important;
   padding-left: 30px !important;
+  background: white;
+  border-radius: 4px;
+}
+
+.service-main-container .thumbnail {
+  background: steelblue !important;
+  padding: 0.5em !important;
+}
+
+.service-main-container h4 {
+  font-weight: bold;
 }
 
 .service-main-area {
@@ -157,44 +163,7 @@ header.header#layout3 .mainmenu .menu>ul>li>a:before,
   border-top-color: transparent !important;
 }
 
-.footer-links {
-  color: white;
-}
 
-.flex-around {
-  display: flex;
-  justify-content: space-around;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-}
-
-.border-lines {
-  margin: 30px 0;
-  padding: 50px 0;
-  border-top: solid white;
-  border-bottom: solid white;
-}
-
-.footer-social-media li:hover {
-  background: black;
-  transition: 0.5s;
-}
-
-.footer-links ul li {
-  line-height: 1.7em;
-}
-
-.chabad-gold {
-  color: #ffcc66;
-}
-
-.footer-links ul li:hover {
-  text-decoration: underline;
-  transition: 0.5s;
-}
 
 .service-header {
   display: flex;
@@ -214,5 +183,12 @@ header.header#layout3 .mainmenu .menu>ul>li>a:before,
 }
 
 .thumbnail {
-  background: #eee !important;
+  background: white !important;
+  padding: 1em !important;
+}
+
+ul.recent-posts li {
+  background: white !important;
+  padding: 0.5em !important;
+  margin-bottom: 0.5em;
 }
