@@ -1,15 +1,18 @@
-app.controller('storeCtrl', function ($scope, $stateParams, $location, lodash) {
+app.controller('storeCtrl', function ($scope, $stateParams, $location, lodash, storeService) {
   console.log('yo from storeCtrl');
   let throttleScroll;
   this.$onInit = () => {
     console.log('hello from oninit');
-    throttleScroll = lodash.throttle(transform, 1000);
+    $scope.products = storeService.products;
+    console.log($scope.products);
+
+    /* throttleScroll = lodash.throttle(transform, 1000);
     if (screen.width > 1090) {
       document.addEventListener("scroll", throttleScroll );
-    }
+    } */
   }
 
-  $scope.$on("$destroy", removeMe);
+  // $scope.$on("$destroy", removeMe);
 
   $scope.isActive = function (route) {
     const isItActive = route === $location.path();
