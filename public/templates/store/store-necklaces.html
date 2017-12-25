@@ -1,53 +1,11 @@
-
-
-
-
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<button class="btn btn-default" id="openMenu" style="margin-top:30px;margin-left: 140px;">Categories</button>
-
-<div class="storemenu" id="menu">
-  <div class="row">
-    <div class="col-md-12">
-
-      <ul class="list-group" style="text-align: center;">
-           <li class="list-group-item">
-                    <a ui-sref="store-necklaces">Necklaces</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-shirts">Shirts</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-hebrew">Books in Hebrew</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-english">Books in English</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-booklets">Booklets</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-cds">CDs</a>
-                </li>
-                <li class="list-group-item">
-                    <a ui-sref="store-misc">Miscellaneous</a>
-                </li>
-               
-      </ul> 
-       
-    </div>
-   </div>
-</div>
-
+<mobile-store-directive></mobile-store-directive>
 
 <header class="header" id="layout3">
-      
-       
         <div class="store-menu-overlay mainmenu stick-me sticking">
           <div class="container">
             <nav class="menu">
               <ul>
-                <li><a ui-sref="store-necklaces" href="/home">Necklaces</a>
+                <li ng-class="{lightBlue: isActive('/store-necklaces')}"><a ui-sref="store-necklaces" href="/home">Necklaces</a>
 
                 </li>
                 <li class="parent"><a ui-sref="store-shirts">Shirts</a></li>
@@ -68,12 +26,6 @@
             </nav><!-- Menu -->
          
       </header>
-  <!-- Top header -->
-  <header class="w3-container w3-xlarge">
-    <br>
-    <h2>Products: Necklaces</h2>
-
-  </header>
 
   <!-- Image header -->
   
