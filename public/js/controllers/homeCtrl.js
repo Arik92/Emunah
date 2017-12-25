@@ -53,7 +53,7 @@ function initNavDates() {
 	}
 	function getAllHolidays() {
 		hebService.getHolidays().then(function(result){
-			//console.log("holiday service result", result);
+			console.log("holiday service result", result);
 			$scope.nextHolidayName = result.items[0].title;
 			var holidayDate = new Date(result.items[0].date);			
 			holidayDate = holidayDate.toUTCString();
