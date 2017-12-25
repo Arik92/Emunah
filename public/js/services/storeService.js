@@ -9,7 +9,7 @@ app.service('storeService', function(){
     { name: 'CDs', uiSref: 'store-cds' },
     { name: 'Illustrations', uiSref: 'store-illustrations' },
     { name: 'Paintings', uiSref: 'store-paintings' },
-    { name: 'MP3', uiSref: 'store-mp3' },
+    { name: 'MP3', uiSref: 'store-mp3s' },
     { name: 'PDF', uiSref: 'store-pdf' }
   ];
 
