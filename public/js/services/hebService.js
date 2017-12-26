@@ -4,11 +4,11 @@ app.service('hebService', function($http) {
   function findNextHoliday(date, holidays) {
 	  //function receives a date in miliseconds and array of holidays with date strings
 	  //returns the first indice of a date with higer miliseconds than date. otherwise return -1
-	  console.log(" holidays ", holidays);
+	  //console.log(" holidays ", holidays);
 	  //console.log("date "+date+" holidays "+holidays);
 	  for (var i=0;i<holidays.length;i++) {
 		  var dateToCompare = new Date(holidays[i].date);
-		  console.log("holiday date as a date:",dateToCompare+"and as time"+ dateToCompare.getTime())
+		  //console.log("holiday date as a date:",dateToCompare+"and as time"+ dateToCompare.getTime())
 		  //console.log("comparing "+dateToCompare+" and "+date);
 		  if (dateToCompare>=date) {
 			  return i;
@@ -31,9 +31,9 @@ app.service('hebService', function($http) {
 		  if (currentMonth===12) {
 			  currentYear++;
 			  return $http.get('https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year='+currentYear+'&month=0&mf=on&ss=on&c=off&s=off').then(function(yearResult){
-			  console.log("year result ", yearResult);
+			  //console.log("year result ", yearResult);
 			  nextHolidayIndex = findNextHoliday(currentDateTime, yearResult.data.items);
-			  console.log("the next holiday's index is" , nextHolidayIndex);
+			  //console.log("the next holiday's index is" , nextHolidayIndex);
 			  console.log("went into next year's holidays. returning "+yearResult.data.items[nextHolidayIndex]);
 			  return yearResult.data.items[nextHolidayIndex];			  
 			  });

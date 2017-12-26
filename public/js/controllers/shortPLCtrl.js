@@ -39,4 +39,5 @@ app.controller('shortPlCtrl', function($scope, ytService, $stateParams) {
 		 })
 		 };
 	 }//updateplaylistbackward
-});//singleCtrl
+}
+);//singleCtrl

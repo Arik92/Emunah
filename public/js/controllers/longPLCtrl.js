@@ -10,7 +10,7 @@ app.controller('longPlCtrl', function($scope, ytService, $stateParams) {
 			 }//if
 			 console.log("long lectures are ",result);
 		 });
-	 }
+	 }//getPlayLists
 	 $scope.updatePlayListForward = function(){
 		 if ($scope.nextPageToken) {
 		 ytService.getPageQueryPlaylists('full',$scope.nextPageToken).then(function(result){
@@ -25,8 +25,7 @@ app.controller('longPlCtrl', function($scope, ytService, $stateParams) {
 		 })
 		 }
 	 };//updateplaylistForward
-	 $scope.updatePlayListBackward = function(){
-		 		 console.log("prev page token", $scope.prevPageToken);
+	 $scope.updatePlayListBackward = function(){		 		 console.log("prev page token", $scope.prevPageToken);
 		 if ($scope.prevPageToken) {
 		 ytService.getPageQueryPlaylists('full',$scope.prevPageToken).then(function(result){
 			 console.log("Prev result",result);
@@ -38,7 +37,8 @@ app.controller('longPlCtrl', function($scope, ytService, $stateParams) {
 			 $scope.prevPageToken = result.prevPageToken;
 			 }
 		 })
-		 };
+		 }
 	 }//updateplaylistbackward
   
-});//singleCtrl
+}
+);//singleCtrl
