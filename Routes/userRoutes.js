@@ -18,7 +18,7 @@ var phonesArray = ['+972509717677','+18182884886'];
   client.messages.create(
     {
       to: phonesArray[i],
-      from: '+12248084204',
+      from: '+13158474678',
       body: "Hey please add '"+req.params.phone+"' to the awesome group :)",
     },
     (err, message) => {
