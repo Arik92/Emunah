@@ -2,11 +2,15 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 var passport = require('passport');
 var User   = require('./userModel');
 var jwt    = require('jsonwebtoken');
-
+if (process.env.NODE_ENV === 'production') {
+   callbackURL = "https://emunah.com/users/facebook/callback";
+  } else {
+   callbackURL = "http://localhost:8000/users/facebook/callback";
+  }
 passport.use(new FacebookStrategy({
       clientID: '969749053191443',
       clientSecret: '44d30070ff0521f8a3b9e2da5c21faf7',
-      callbackURL: "https://emunah.herokuapp.com/users/facebook/callback",
+      callbackURL: callbackURL,
       profileFields: ['id', 'displayName', 'photos', 'email']
     },
     function(accessToken, refreshToken, profile, done) {
