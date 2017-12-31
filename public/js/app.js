@@ -297,7 +297,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('shabbat', {
       url: '/shabbat',
-      templateUrl: '/templates/sabbath.html',
+      templateUrl: '/templates/Sabbath.html',
       controller: 'sabbathCtrl'
     })
     .state('faq', {

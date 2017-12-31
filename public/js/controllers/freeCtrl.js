@@ -69,7 +69,7 @@ app.controller('freeCtrl', ['$scope', '$window', '$timeout', '$rootScope', '$loc
   /////////////////////////////////////////// Map interface /////////////////////////////////////////////////////////
   /////////////////////////////////////////// regex validation proofing /////////////////////////////////////////////////////////
   
-  function checkEmail(email) {
+  /*function checkEmail(email) {
       var patt = /[\w.]+@\w+\.\w+/;//(com|net)
       if (!patt.test(email)) {
         alert("Must have a valid email address")
@@ -87,4 +87,7 @@ app.controller('freeCtrl', ['$scope', '$window', '$timeout', '$rootScope', '$loc
     }
     return true;
   }//checkNames
+  $scope.validate = function() {
+	  checkEmail($scope.entry.email);
+  } Appearently, these arent needed because the form validates itself*/
 }]);
