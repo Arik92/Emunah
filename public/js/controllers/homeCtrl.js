@@ -44,7 +44,7 @@ function initNavDates() {
 	var d = new Date();
 	$scope.currDate = weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDate()+" , "+d.getFullYear();
 	hebService.getCurrentHebDate().then(function(result){
-		console.log("hebdate data: ",result);
+		//console.log("hebdate data: ",result);
 		$scope.parasha = result.events[0];
 		$scope.CurrentHebDate = result.hd + "-" +result.hm + "-" +result.hy;
 		$scope.currDate+= " | "+ result.hd + "-" +result.hm + "-" +result.hy;
@@ -53,7 +53,7 @@ function initNavDates() {
 	}
 	function getAllHolidays() {
 		hebService.getHolidays().then(function(result){
-			console.log("holiday service result", result);			
+			//console.log("holiday service result", result);			
 			$scope.nextHolidayName = result.title;
 			var holidayDate = new Date(result.date);			
 			holidayDate = holidayDate.toUTCString();
