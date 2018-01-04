@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'production') {
 passport.use(new FacebookStrategy({
       clientID: '969749053191443',
       clientSecret: '44d30070ff0521f8a3b9e2da5c21faf7',
-      callbackURL: callbackURL,
+      callbackURL: "https://emunah.com/users/facebook/callback",
       profileFields: ['id', 'displayName', 'photos', 'email']
     },
     function(accessToken, refreshToken, profile, done) {

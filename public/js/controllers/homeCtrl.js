@@ -44,7 +44,7 @@ function initNavDates() {
 	var d = new Date();
 	$scope.currDate = weekday[d.getDay()]+", "+month[d.getMonth()]+ " "+d.getDate()+" , "+d.getFullYear();
 	hebService.getCurrentHebDate().then(function(result){
-		console.log("hebdate data: ",result);
+		//console.log("hebdate data: ",result);
 		$scope.parasha = result.events[0];
 		$scope.CurrentHebDate = result.hd + "-" +result.hm + "-" +result.hy;
 		$scope.currDate+= " | "+ result.hd + "-" +result.hm + "-" +result.hy;
@@ -53,7 +53,7 @@ function initNavDates() {
 	}
 	function getAllHolidays() {
 		hebService.getHolidays().then(function(result){
-			console.log("holiday service result", result);			
+			//console.log("holiday service result", result);			
 			$scope.nextHolidayName = result.title;
 			var holidayDate = new Date(result.date);			
 			holidayDate = holidayDate.toUTCString();
@@ -193,19 +193,16 @@ getAllHolidays();
   $scope.myInterval = 3000;
   $scope.slides = [
     {
+      image: 'images/cali.jpg'
+    },
+    {
       image: 'images/hitbodedut.jpg'
     },
     {
-      image: 'images/book-tour.jpeg'
+      image: 'images/1-7.jpeg'
     },
     {
-      image: 'images/11-23.jpg'
-    },
-    {
-      image: 'images/11-27.jpg'
-    },
-    {
-      image: 'images/11-28.jpg'
+      image: 'images/1-9.jpeg'
     }
   ];
 
