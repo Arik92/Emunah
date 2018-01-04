@@ -1,3 +1,4 @@
+var compression = require('compression');
 var express = require('express');
 var expressSession = require('express-session');
 var cors = require('cors');
@@ -10,6 +11,8 @@ var sgTransport = require('nodemailer-sendgrid-transport');
 var userRoutes = require('./Routes/userRoutes');
 var articleRoutes = require('./Routes/articleRoutes');
 var app = express();
+app.use(compression());
+
 //app.use(cors());
 //app.options('*', cors());
 
