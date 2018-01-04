@@ -193,19 +193,16 @@ getAllHolidays();
   $scope.myInterval = 3000;
   $scope.slides = [
     {
+      image: 'images/cali.jpg'
+    },
+    {
       image: 'images/hitbodedut.jpg'
     },
     {
-      image: 'images/book-tour.jpeg'
+      image: 'images/1-7.jpeg'
     },
     {
-      image: 'images/11-23.jpg'
-    },
-    {
-      image: 'images/11-27.jpg'
-    },
-    {
-      image: 'images/11-28.jpg'
+      image: 'images/1-9.jpeg'
     }
   ];
 
