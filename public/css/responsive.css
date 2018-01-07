@@ -1,10 +1,16 @@
-header.header#layout2 .mainmenu .menu-tigger {
+header.header#layout2 .mainmenu .container {
+  height: 15vh;
+}
+
+#menu-trigger {
 	position: absolute;
-	top: 10px;
-	left: 5px;
-	height: 70px;
+	top: 15px;
+	left: 20px;
 	padding: 0;
-	margin-left: 20px;
+}
+
+.header-margin-holder {
+  margin-bottom: 50px;
 }
 
 
@@ -47,15 +53,13 @@ header.header#layout2 .mainmenu .menu-tigger {
     display: block;
   }
   header.header#layout2 .mainmenu .container {
-    height: auto;
+    /* height: auto; */
   }
   header.header#layout2 .mainmenu .menu {
     display: none;
   }
   header.header#layout2 .mainmenu .menu-tigger {
-    float: right;
-    height: 70px;
-    padding: 0;
+    
   }
   header.header#layout3 .mainmenu .container {
     height: auto;
@@ -248,7 +252,7 @@ header.header#layout2 .mainmenu .menu-tigger {
     overflow: hidden;
   }
   header.header#layout2 .mainmenu .container {
-    height: 10vh;
+    height: 15vh;
   }
   header.header#layout2 .mainmenu .menu {
     display: none;
@@ -437,9 +441,7 @@ header.header#layout2 .mainmenu .menu-tigger {
   .mainmenu .menu-tigger {
     display: block;
   }
-  header.header#layout2 .mainmenu .container {
-    /* height: auto; */
-  }
+  
   header.header#layout2 .mainmenu .menu {
     display: none;
   }
@@ -543,7 +545,7 @@ header.header#layout2 .mainmenu .menu-tigger {
     height: 80px;
   }
   header.header#layout2 .mainmenu .container {
-    height: auto;
+    /* height: auto; */
   }
   header.header#layout2 .mainmenu .menu {
     display: none;
@@ -757,6 +759,10 @@ header.header#layout2 .mainmenu .menu-tigger {
 
 
 @media only screen and (min-width: 991px) {
+
+  .header-margin-holder {
+    margin-bottom: 100px;
+  }
 	
 		button #openMenu.btn.btn-default.ng-scope {
 			display: block !important;
@@ -770,7 +776,7 @@ header.header#layout2 .mainmenu .menu-tigger {
 	@media only screen and (max-width: 1091px) {
 		.logo-container img {
 			position: absolute;
-			height: 8vh;
+			height: 12vh;
 			top: 10%;
 			left: 50%;
 			transform: translateX(-50%);
@@ -790,6 +796,10 @@ header.header#layout2 .mainmenu .menu-tigger {
   
   @media screen and (min-width:1091px) {
 
+    header.header#layout2 .mainmenu .container {
+      height: auto;
+    }
+
     div#logonav2.logo-container {
       display: none;
     }
@@ -806,6 +816,4 @@ header.header#layout2 .mainmenu .menu-tigger {
     store-nav-directive {
       display: block;
     }
-
-
   }
