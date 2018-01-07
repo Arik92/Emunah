@@ -1,3 +1,4 @@
+var compression = require('compression');
 var express = require('express');
 var expressSession = require('express-session');
 var cors = require('cors');
@@ -12,6 +13,8 @@ var articleRoutes = require('./Routes/articleRoutes');
 var app = express();
 var https = require('https');
 var fs = require('fs');
+
+
 //app.use(cors());
 //app.options('*', cors());
 
@@ -26,7 +29,7 @@ var https_options = {
 };
 mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
 
-
+app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
