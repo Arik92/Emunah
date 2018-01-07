@@ -49,6 +49,7 @@ app.all('[^.]+', function(req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
+const devPort = '80';
 app.listen(process.env.PORT || '80', function(){
-  console.log("8000. Baruh Hashem!")
+  console.log("listening on port "+devPort+". Baruh Hashem!")
 });
