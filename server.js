@@ -11,14 +11,25 @@ var sgTransport = require('nodemailer-sendgrid-transport');
 var userRoutes = require('./Routes/userRoutes');
 var articleRoutes = require('./Routes/articleRoutes');
 var app = express();
-app.use(compression());
+var https = require('https');
+var fs = require('fs');
+
 
 //app.use(cors());
 //app.options('*', cors());
 
+/*var https_options = {
+  key: fs.readFileSync("./ssl/private/www.emunah.com.key"),
+  cert: fs.readFileSync("./ssl/certs/_wildcard__emunahchannel_com_a4b5d_07cd9_1527379199_78a339de7dcaa3117c1eb45b2f3647cf.crt"),
+  ca: [
+          fs.readFileSync('./ssl/certs/emunah_com_c59a4_d82cf_1507939199_dc96dbbca4e29f8fea2c739b236cd50c.crt'),
+          fs.readFileSync('./ssl/certs/emunah_com_d35ca_52989_1546387199_356128196545f8e79624ac9487c209ac.crt') 
+       ]
+
+}; */
 mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
 
-
+app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -48,7 +59,10 @@ app.use(function(req, res, next) {
 app.all('[^.]+', function(req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
-
+/*https.createServer(https_options, function (req, res) {
+ res.writeHead(200);
+ res.end("Welcome to Node.js HTTPS Servern");
+}).listen(8443)*/
 app.listen(process.env.PORT || '80', function(){
   console.log("8000. Baruh Hashem!")
 });
