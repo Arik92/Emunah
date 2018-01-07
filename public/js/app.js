@@ -228,10 +228,6 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('donate', {
       url: '/donate',
-      templateUrl: '/templates/donate2.html'
-    })
-    .state('donate2', {
-      url: '/donate2',
       templateUrl: '/templates/donate.html'
     })
     .state('services', {
