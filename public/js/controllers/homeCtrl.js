@@ -210,10 +210,10 @@ getAllHolidays();
     // set the location.hash to the id of
     // the element you wish to scroll to.
     $location.hash('to-top');
-
     // call $anchorScroll()
     $anchorScroll();
   };
+
 
 }); //controller
 
