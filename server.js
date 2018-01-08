@@ -21,7 +21,7 @@ var fs = require('fs');
 var https_options = {
   key: fs.readFileSync("./ssl/www.emunah.com.key"),
   cert: fs.readFileSync("./ssl/www_emunah_com.crt"),
-  ca: fs.readFileSync("www_emunah_com.ca-bundle")
+  ca: fs.readFileSync("./ssl/www_emunah_com.ca-bundle")
 }; 
 mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
 
