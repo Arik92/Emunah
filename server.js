@@ -56,10 +56,11 @@ app.all('[^.]+', function(req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-https.createServer(https_options, function (req, res) {
+https.createServer(https_options, app).listen(443)
+/*https.createServer(https_options, function (req, res) {
  res.writeHead(200);
  //res.end("Welcome to Node.js HTTPS Servern");
-}).listen(443)
+}).listen(443)*/
 
 
 const devPort = '80';
