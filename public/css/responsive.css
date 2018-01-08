@@ -9,8 +9,34 @@ header.header#layout2 .mainmenu .container {
 	padding: 0;
 }
 
+ul#mobile-store-btns {
+  position: absolute; 
+  top: 8px; 
+  right: 20px;
+}
+
+#mobile-store-btns li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  border: solid 2px steelblue;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#mobile-store-btns li:first-child {
+  margin-bottom: 0.5rem;
+}
+
+#mobile-store-btns a {
+  display: block;
+  width: 100%;
+  padding: 0.3rem 0;
+}
+
 .header-margin-holder {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 
@@ -553,7 +579,7 @@ header.header#layout2 .mainmenu .container {
   header.header#layout2 .mainmenu .menu-tigger {
     display: block;
     float: right;
-    height: 70px;
+    /* height: 70px; */
     padding: 0;
     margin-left: 20px;
   }
@@ -795,6 +821,10 @@ header.header#layout2 .mainmenu .container {
   }
   
   @media screen and (min-width:1091px) {
+
+    #mobile-store-btns {
+      display: none;
+    }
 
     header.header#layout2 .mainmenu .container {
       height: auto;

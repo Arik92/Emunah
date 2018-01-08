@@ -12,8 +12,9 @@
 								<i class="{{ column.icon }}"></i>
 								<span class="chabad-gold">{{ column.header}}</span>
 							</h4>
-							<li ng-repeat="link in column.links" ui-sref="{{ link.uiSref }}" href="{{ link.hRef }}" style="cursor: pointer">
-								{{ link.title }}
+							<li ng-repeat="link in column.links" style="cursor: pointer">
+								<a ng-if="link.hRef" href="{{ link.hRef }}" target="_blank">{{ link.title }}</a>
+								<a ng-if="link.uiSref" ui-sref="{{ link.uiSref }}" >{{ link.title }}</a>
 							</li>
 						</ul>
 					</li>
@@ -77,7 +78,7 @@
 				</div>
 				<!-- Widget : Pages -->
 			</div>
-			<div class="totop">
+			<div ng-click="toTop()" class="totop">
 				<i class="fa fa-angle-up"></i>
 			</div>
 		</div>
