@@ -19,8 +19,8 @@ var fs = require('fs');
 //app.options('*', cors());
 
 var https_options = {
-  key: fs.readFileSync('/www.emunah.com.key'),
   cert: fs.readFileSync('/www_emunah_com.crt'),
+  key: fs.readFileSync('/www.emunah.com.key'),
   ca: fs.readFileSync('/www_emunah_com.ca-bundle')
 }; 
 mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
