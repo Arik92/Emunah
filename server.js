@@ -20,7 +20,7 @@ var fs = require('fs');
 
 var https_options = {
   cert: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.crt'),
-  key: fs.readFileSync('/home/emunahadmin/Emunah/www.emunah.com.key.key'),
+  key: fs.readFileSync('/home/emunahadmin/Emunah/emunah.com.key'),
   ca: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.ca-bundle')
 }; 
 mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
