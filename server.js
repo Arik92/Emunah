@@ -55,10 +55,17 @@ app.use(function(req, res, next) {
 app.all('[^.]+', function(req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
+
 https.createServer(https_options, function (req, res) {
  res.writeHead(200);
  res.end("Welcome to Node.js HTTPS Servern");
 }).listen(443)
-app.listen(process.env.PORT || '80', function(){
-  console.log("8000. Baruh Hashem!")
+
+const devPort = '80';
+/*https.createServer(https_options, function (req, res) {
+ res.writeHead(200);
+ res.end("Welcome to Node.js HTTPS Servern");
+}).listen(8443)*/
+app.listen(process.env.PORT || devPort, function(){
+  console.log("listening on port "+devPort+". Baruh Hashem!")
 });

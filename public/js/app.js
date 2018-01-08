@@ -177,6 +177,11 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/store/store-paintings.html',
       controller: 'storeCtrl'
     })
+    .state('store-judaica', {
+      url: '/store-judaica',
+      templateUrl: '/templates/store/store-judaica.html',
+      controller: 'storeCtrl'
+    })
     .state('store-mp3s', {
       url: '/store-mp3s',
       templateUrl: '/templates/store/store-mp3s.html',
@@ -228,10 +233,6 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('donate', {
       url: '/donate',
-      templateUrl: '/templates/donate2.html'
-    })
-    .state('donate2', {
-      url: '/donate2',
       templateUrl: '/templates/donate.html'
     })
     .state('services', {

@@ -13,7 +13,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
   <link rel="apple-touch-icon-precomposed" href="images/favicon.png" />
   <link rel="icon" type="image/png" href="images/favicon-192x192.png" sizes="192x192" />
-  <title>Emunah</title>
+  <title>Emunah.com - Teachings on Faith by Rav Dror Moshe Cassouto</title>
   <link rel="stylesheet" href="css/grid.css" media="all" />
   <link rel="stylesheet" href="css/framework.css" media="all" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass:400,400i,600,700,800" media="all" />
@@ -90,7 +90,7 @@
         </ul>
       </li>
       <li class="has-sub">
-        <a ui-sref="page-about-rav">Services</a>
+        <a ui-sref="services">Services</a>
         <ul>
           <li>
             <a ui-sref="services-prayer">Prayer</a>
@@ -481,14 +481,14 @@
                   <div class="item">
                     <div class="post">
                       <div class="post-thumb">
-                        <a ui-sref="about">
+                        <a ui-sref="about-emunah">
                           <img src="images/5.jpg" alt="Post Title Placeholder" />
                         </a>
 
                       </div>
                       <div class="post-content">
                         <div class="post-category">
-                          <a ui-sref="pabout">About Emunah.com</a>
+                          <a ui-sref="about-emunah">About Emunah.com</a>
                         </div>
                         <!-- <h6 class="post-title">
                               <a href="post-single.html">Emunah.com</a>
@@ -557,13 +557,13 @@
           </ul>
         </nav>
         <!-- Menu -->
-        <span class="menu-tigger js-slideout-toggle">
-          <i class="fa fa-bars" style="font-size: 35px; margin-top: 18px; color:steelblue"></i>
+        <span id="menu-trigger" class="menu-tigger js-slideout-toggle">
+          <i class="fa fa-bars" style="font-size: 35px; color:steelblue"></i>
         </span>
 
       </div>
   </header>
-  <div class="header-margin-holder" style="margin-bottom: 115px;"></div>
+  <div class="header-margin-holder"></div>
   <div ui-view autoscroll="false"></div>
   </div>
 
