@@ -59,7 +59,7 @@ app.all('[^.]+', function(req, res) {
 https.createServer(https_options, function (req, res) {
  res.writeHead(200);
  res.end("Welcome to Node.js HTTPS Servern");
-}).listen(80)
+}).listen(443)
 
 
 const devPort = '80';
