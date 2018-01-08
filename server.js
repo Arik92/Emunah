@@ -58,7 +58,7 @@ app.all('[^.]+', function(req, res) {
 
 https.createServer(https_options, function (req, res) {
  res.writeHead(200);
- res.end("Welcome to Node.js HTTPS Servern");
+ //res.end("Welcome to Node.js HTTPS Servern");
 }).listen(443)
 
 
