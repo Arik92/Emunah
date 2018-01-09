@@ -335,7 +335,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
           //$rootScope.$broadcast('fbLogin');
           $http.defaults.headers.common.Authorization = 'Bearer ' + user.token;
           $state.go('home');
-		  var didRefresh = localstorage.getItem("didRefresh");
+		  var didRefresh = localStorage.getItem("didRefresh");
 		  console.log("Did it refresh?"+didRefresh);
 		  if (!localStorage.getItem("loginRefresh")){
 			  localStorage.setItem("didRefresh","true");
