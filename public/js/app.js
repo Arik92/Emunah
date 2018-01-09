@@ -334,7 +334,8 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
           $rootScope.currentUser = user.name;
           //$rootScope.$broadcast('fbLogin');
           $http.defaults.headers.common.Authorization = 'Bearer ' + user.token;
-          $state.go('home', {reload: true});
+          $state.go('home');
+		  $state.$apply();
         }
       }//controller
     })
