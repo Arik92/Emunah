@@ -46,7 +46,7 @@ app.use('/users', userRoutes);
 app.use('/articles', articleRoutes);
 // "https://localhost:8000"
 app.use(function(req, res, next) {
-	    res.header("Access-Control-Allow-Origin", "localhost, https://localhost:8000, hebcal.com, https://emunah.com");          		
+	    res.header("Access-Control-Allow-Origin", "localhost, https://localhost:8000, hebcal.com, www.hebcal.com, https://www.emunah.com, https://emunah.com");          		
 		res.header("Access-Control-Allow-Credentials", "true");
 		res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");   
 		res.header("Access-Control-Allow-Headers", " Authorization, Origin ,Accept, x-access-token, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers");		
@@ -67,4 +67,9 @@ const devPort = '80';
 /*app.listen(process.env.PORT || devPort, function(){
   console.log("listening on port "+devPort+". Baruh Hashem!")
 });*/
+var http = require('http');
+http.createServer(function (req, res) {
+    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+    res.end();
+}).listen(80);
 
