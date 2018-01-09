@@ -334,14 +334,14 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
           $rootScope.currentUser = user.name;
           //$rootScope.$broadcast('fbLogin');
           $http.defaults.headers.common.Authorization = 'Bearer ' + user.token;
-		  $http.defaults.headers.common.Access-Control-Allow-Origin = "localhost, https://localhost:8000, hebcal.com, www.hebcal.com, https://www.hebcal.com, https://www.emunah.com, https://emunah.com";
+		  /*$http.defaults.headers.common.Access-Control-Allow-Origin = "localhost, https://localhost:8000, hebcal.com, www.hebcal.com, https://www.hebcal.com, https://www.emunah.com, https://emunah.com";
 		  //res.setHeader("Access-Control-Allow-Origin", "localhost, https://localhost:8000, hebcal.com, www.hebcal.com, https://www.hebcal.com, https://www.emunah.com, https://emunah.com");          		
 		  $http.defaults.headers.common.Access-Control-Allow-Credentials = "true"
 		//res.setHeader("Access-Control-Allow-Credentials", "true");
 		$http.defaults.headers.common.Access-Control-Allow-Methods = "GET,HEAD,OPTIONS,POST,PUT";
 		//res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");   
 		$http.defaults.headers.common.Access-Control-Allow-Headers = " Authorization, Origin ,Accept, x-access-token, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers"'
-		//res.setHeader("Access-Control-Allow-Headers", " Authorization, Origin ,Accept, x-access-token, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers");		
+		//res.setHeader("Access-Control-Allow-Headers", " Authorization, Origin ,Accept, x-access-token, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers");		*/
         next();
           $state.go('ravusa');
 		  /*var didRefresh = localStorage.getItem("didRefresh");
