@@ -323,7 +323,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })	  
 	.state('auth', {
       url: '/authorization?token&name',
-      controller: function($stateParams, $state, $rootScope, $http) {
+      controller: function($stateParams, $scope, $state, $rootScope, $http) {
         console.log("state params are", $stateParams);
         if ($stateParams.token) {
           var user = {
@@ -335,7 +335,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
           //$rootScope.$broadcast('fbLogin');
           $http.defaults.headers.common.Authorization = 'Bearer ' + user.token;
           $state.go('home');
-		  $state.$apply();
+		  $scope.$apply();
         }
       }//controller
     })
