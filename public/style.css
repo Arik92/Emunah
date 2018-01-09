@@ -378,12 +378,14 @@ nav.donate-btns {
     display: block;
     float: left;
     font-size: 12px;
+    font-family: "Open Sans" arial;
 }
 .topmenu ul li::after {
     content: "";
     display: block;
     width: 1px;
     height: 12px;
+    font-family: "Open Sans" arial;
     background: rgba(0, 0, 0, 0.1);
     float: left;
     margin: auto 12px;
@@ -3011,9 +3013,23 @@ code {
 .contact-form input:focus, .contact-form textarea:focus {
     box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
 }
+.contact-form button[type="submit"] {
+    width: 200px;
+    background: steelblue;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    box-shadow: none;
+}
+.contact-form button[type="submit"]:hover {
+    box-shadow: inset 0 40px 0 rgba(0, 0, 0, 0.03);
+}
+.contact-form button[type="submit"]:focus {
+    box-shadow: inset 0 4px 5px rgba(0, 0, 0, 0.1);
+}
 .contact-form input[type="submit"] {
     width: 200px;
-    background: #aaa;
+    background: steelblue;
     color: #fff;
     text-transform: uppercase;
     font-weight: 800;
@@ -3718,7 +3734,14 @@ section.service-main-container .post-body {
 
 #mobile-store-header {
     font-size: 1.5em;
-    padding: 0.5em;
+    padding: 0.2em;
+    font-family: var(--fancy-font);
+    text-align: center;
+}
+
+#mobile-store-subheader {
+    font-size: 1.1em;
+    /*padding: 0.05em;*/
     font-family: var(--fancy-font);
     text-align: center;
 }
