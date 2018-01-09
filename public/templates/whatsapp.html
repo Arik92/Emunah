@@ -37,10 +37,13 @@
 									    <label>What is 2+2? (Anti-spam) <i>(Required)</i> :</label>
 										<input name="human" placeholder="Type the answer here"/>
 									</div> -->
-									<div class="input-group">
+									<div class="input-group" ng-show="!showSubmit>
 										<input type="submit" ng-click="joinWhatsapp()" class="bt btn-success">
 									</div>
 								</form>
+								<div class="row show-hide-message" ng-show="showSubmit">
+								<div class="alert alert-success">Phone number submitted</div>
+								</div>
 							</div><!-- Post Body -->
 						</article><!-- Post -->
 					</div><!-- Blog posts -->
