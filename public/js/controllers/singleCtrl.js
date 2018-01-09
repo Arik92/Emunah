@@ -1,4 +1,4 @@
-app.controller('singleCtrl', function($scope, $stateParams, ytService) {
+app.controller('singleCtrl', ['$scope', '$stateParams', 'ytService', function($scope, $stateParams, ytService) {
 	console.log("state params here be", $stateParams);
   $scope.video = $stateParams.videoParam;
   if (!$scope.video) {
@@ -12,4 +12,4 @@ app.controller('singleCtrl', function($scope, $stateParams, ytService) {
     console.log("selected video is ", $scope.video);  
    $scope.video.playurl = "https://www.youtube.com/embed/"+$scope.video.id.videoId;
   }//else 
-});//singleCtrl
+}]);//singleCtrl

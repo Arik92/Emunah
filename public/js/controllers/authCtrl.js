@@ -1,4 +1,4 @@
-app.controller('authCtrl', function($scope,$rootScope, $http, authFactory, userService, $state, $timeout, $location) {	
+app.controller('authCtrl', ['$scope', '$rootScope', '$http', 'authFactory', 'userService', '$state', '$timeout', '$location', function($scope, $rootScope, $http, authFactory, userService, $state, $timeout, $location) {	
 	this.$onInit = () => {
 	 $scope.newMember = {};
 	 $scope.showSubmit = true;
@@ -184,7 +184,7 @@ $scope.joinWhatsapp = function() {
     alert("Please enter a phone number in international format(see example) ");
   }//else patt test
 }//joinWhatsapp
-}); //authCtrl
+}]); //authCtrl
 
 // <script>
 //   window.fbAsyncInit = function() {

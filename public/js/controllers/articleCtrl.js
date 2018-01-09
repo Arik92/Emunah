@@ -1,4 +1,4 @@
-app.controller('articleCtrl', function($scope, $state, $stateParams, articleFactory,) {
+app.controller('articleCtrl', ['$scope', '$state', '$stateParams', 'articleFactory' , function($scope, $state, $stateParams, articleFactory) {
   console.log("factory is", articleFactory);
   $scope.articleName = $stateParams.article;
 
@@ -8,4 +8,4 @@ app.controller('articleCtrl', function($scope, $state, $stateParams, articleFact
 
   $scope.renderArticle($scope.articleName);
   console.log("current  controller article: ", $scope.article);
-}); //NOTE: might need to foolproof this.see beerlist stateparams
+}]); //NOTE: might need to foolproof this.see beerlist stateparams

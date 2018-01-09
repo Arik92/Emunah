@@ -1,4 +1,4 @@
-app.factory('selectedFactory', function($http) {
+app.factory('selectedFactory', [ '$http', function($http) {
   var selectedVideo = {};
   var selectedPlaylist = {};
   function getPlaylist() {
@@ -19,4 +19,4 @@ app.factory('selectedFactory', function($http) {
     getVideo: getVideo,
     getPlaylist: getPlaylist
   };
-});
+}]);

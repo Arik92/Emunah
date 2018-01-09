@@ -1,4 +1,4 @@
-app.factory('userService', function($http){
+app.factory('userService', ['$http', function($http){
   userFactory = {};
 
   //userService.create(regData);
@@ -17,4 +17,4 @@ app.factory('userService', function($http){
   };
 
   return userFactory;
-});
+}]);
