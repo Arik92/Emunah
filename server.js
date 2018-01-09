@@ -62,14 +62,13 @@ https.createServer(https_options, app).listen(443)
  //res.end("Welcome to Node.js HTTPS Servern");
 }).listen(443)*/
 
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+  res.end();
+}).listen(80);
 
 const devPort = '80';
 /*app.listen(process.env.PORT || devPort, function(){
   console.log("listening on port "+devPort+". Baruh Hashem!")
 });*/
-var http = require('http');
-http.createServer(function (req, res) {
-    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
-    res.end();
-}).listen(80);
-

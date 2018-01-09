@@ -1,4 +1,4 @@
-app.controller('footerCtrl', function ($scope, linkService) {
+app.controller('footerCtrl', [ '$scope', 'linkService', function ($scope, linkService) {
   $scope.footerLinkColumns = [];
   $scope.socialMedia = [];
 
@@ -15,6 +15,6 @@ app.controller('footerCtrl', function ($scope, linkService) {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-});//singleCtrl
+}]);//singleCtrl
 
 

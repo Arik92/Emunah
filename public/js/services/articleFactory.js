@@ -1,4 +1,4 @@
-app.factory('articleFactory', function($http) {
+app.factory('articleFactory', ['$http', function($http) {
 
 // var getArticle = function(name) {
 //   console.log("name before splitting: ", name);
@@ -22,4 +22,4 @@ app.factory('articleFactory', function($http) {
   return {
     postArticle: postArticle
   }
-});
+}]);

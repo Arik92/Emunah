@@ -1,4 +1,4 @@
-app.service('linkService', function(){
+app.service('linkService', [function(){
 
   this.quickLinks = {};
   this.languages = {};
@@ -60,7 +60,7 @@ app.service('linkService', function(){
   this.footerLinkColumns = [ this.quickLinks, this.languages, this.associatedFacebook, this.associatedYT];
 
   
-});
+}]);
 
 
 /* this.social.links = [

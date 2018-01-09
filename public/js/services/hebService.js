@@ -1,4 +1,4 @@
-app.service('hebService', function($http) {
+app.service('hebService', ['$http', function($http) {
   //this service is responsible for everything regarding the hebrew calender
 
   function findNextHoliday(date, holidays) {
@@ -88,4 +88,4 @@ app.service('hebService', function($http) {
     getSabbath: getSabbath,
     getLocationTz: getLocationTz
   };
-});
+}]);

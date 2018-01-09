@@ -1,4 +1,4 @@
-app.controller('storeCtrl', function ($scope, $stateParams, $location, $timeout, lodash, storeService) {
+app.controller('storeCtrl', ['$scope', '$stateParams', '$location', '$timeout', 'lodash', 'storeService', function ($scope, $stateParams, $location, $timeout, lodash, storeService) {
   console.log('yo from storeCtrl');
   let throttleScroll;
   this.$onInit = () => {
@@ -42,6 +42,6 @@ app.controller('storeCtrl', function ($scope, $stateParams, $location, $timeout,
       storeMenu.classList.remove('transform');
     }
   }
-});//singleCtrl
+}]);//singleCtrl
 
 

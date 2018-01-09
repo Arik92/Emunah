@@ -1,4 +1,4 @@
-app.service('ytService', function($http) {
+app.service('ytService', ['$http', function($http) {
   var serv= {};
   var config = require('../config.js');
 
@@ -61,4 +61,4 @@ app.service('ytService', function($http) {
 	});  
   }
   return serv;
-})//service
+}])//service
