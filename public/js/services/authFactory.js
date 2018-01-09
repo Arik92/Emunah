@@ -73,7 +73,7 @@ app.factory('authServiceInterceptors', function(authToken) {
   var authServiceInterceptors = {};
   authServiceInterceptors.request = function(config) {
     var token = authToken.getToken();
-    if (token) config.headers['x-access-token'] = token;
+    //if (token) config.headers['x-access-token'] = token;
     return config;
   }
   return authServiceInterceptors;
