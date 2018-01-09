@@ -335,7 +335,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
           //$rootScope.$broadcast('fbLogin');
           $http.defaults.headers.common.Authorization = 'Bearer ' + user.token;
           $state.go('home');		  
-		  window.location.reload();
+		  //window.location.reload(); - triggers infinite loop
         }
       }//controller
     })
