@@ -334,9 +334,16 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
           $rootScope.currentUser = user.name;
           //$rootScope.$broadcast('fbLogin');
           $http.defaults.headers.common.Authorization = 'Bearer ' + user.token;
-          $state.go('home');		  
-		  //window.location.reload(); - triggers infinite loop
-        }
+          $state.go('home');
+		  var didRefresh = localstorage.getItem("didRefresh");
+		  console.log("Did it refresh?"+didRefresh);
+		  if (!localStorage.getItem("loginRefresh"){
+			  localStorage.setItem("didRefresh","true");
+		  window.location.reload(); - triggers infinite loop
+		  } else {
+			  localStorage.deleteItem("didRefresh");
+		  }//else 
+        }//if $stateParams
       }//controller
     })
 	.state('full', {
