@@ -339,7 +339,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
 		  console.log("Did it refresh?"+didRefresh);
 		  if (!localStorage.getItem("loginRefresh"){
 			  localStorage.setItem("didRefresh","true");
-		  window.location.reload(); - triggers infinite loop
+		  window.location.reload(); //- triggers infinite loop
 		  } else {
 			  localStorage.deleteItem("didRefresh");
 		  }//else 
