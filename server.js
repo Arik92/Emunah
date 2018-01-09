@@ -64,7 +64,7 @@ https.createServer(https_options, app).listen(443)
 
 
 const devPort = '80';
-/*app.listen(process.env.PORT || devPort, function(){
-  console.log("listening on port "+devPort+". Baruh Hashem!")
-});*/
+// app.listen(process.env.PORT || devPort, function(){
+//   console.log("listening on port "+devPort+". Baruh Hashem!")
+// });
 

@@ -8,6 +8,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/home');
   $stateProvider
+    .state('formspree-verify.txt', {
+      url: 'formspree-verify.txt',
+      templateUrl: 'formspree-verify.txt'
+    })
     .state('home', {
       url: '/home',
       templateUrl: '/templates/home.html',
