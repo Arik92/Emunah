@@ -3,6 +3,7 @@ app.factory('authFactory', function($http, $rootScope, userService, authToken) {
 
   authFactory.login = function(loginData) {
 	  console.log("login data service is", loginData);
+	  delete $http.defaults.headers.common["x-access-token"];
     return $http.post('/users/authenticate', loginData).then(function(data){
 		console.log("authentication data", data);
       authToken.setToken(data.data.token);
