@@ -19,7 +19,7 @@ app.service('hebService', ['$http', function($http) {
   }//findNextHoliday
   
   function getHolidays() {
-	  delete $http.defaults.headers.common["x-access-token"];
+	  delete $http.defaults.headers.common['x-access-token'];
 	  var d = new Date();
 	  var currentDateTime = d.getTime();
 	  var currentMonth = d.getMonth()+1;
