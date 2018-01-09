@@ -1,7 +1,7 @@
 app.controller('authCtrl', function($scope,$rootScope, $http, authFactory, userService, $state, $timeout, $location) {	
 	this.$onInit = () => {
 	 $scope.newMember = {};
-	 $scope.showSubmit = false;
+	 $scope.showSubmit = true;
  }
   /*function validateLogin() {
     var patt = /\w{8}/;
@@ -172,7 +172,7 @@ app.controller('authCtrl', function($scope,$rootScope, $http, authFactory, userS
 $scope.joinWhatsapp = function() {
   var patt = /^\+[1-9][0-9]{0,2}\.?[0-9]{1,14}$/; //no country code starts with 0
   if (patt.test($scope.phone)) {
-	  $scope.showSubmit = true;
+	  $scope.showSubmit = false;
     authFactory.joinWhatsapp($scope.phone).then(function(err, res){
       if (err) {
         console.log(err);
