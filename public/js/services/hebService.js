@@ -25,13 +25,13 @@ app.service('hebService', function($http) {
 	  var currentYear = d.getFullYear();
 	  //console.log("current date for ",currentMonth);
 	  //TODO: if its the last month of the year, get next year's holidays of the first month. year = currentYear+1, month = 0; 
-    return $http.get('https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year='+currentYear+'&month='+currentMonth+'&mf=on&ss=on&c=off&s=off').then(function(result){
+    return $http.get("https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year="+currentYear+"&month="+currentMonth+"&mf=on&ss=on&c=off&s=off").then(function(result){
       //console.log("Holiday general result is", result.data);
 	  var nextHolidayIndex = findNextHoliday(currentDateTime, result.data.items);
 	  if (nextHolidayIndex===-1) {		  
 		  if (currentMonth===12) {
 			  currentYear++;
-			  return $http.get('https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year='+currentYear+'&month=0&mf=on&ss=on&c=off&s=off').then(function(yearResult){
+			  return $http.get("https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year="+currentYear+"&month=0&mf=on&ss=on&c=off&s=off").then(function(yearResult){
 			  //console.log("year result ", yearResult);
 			  nextHolidayIndex = findNextHoliday(currentDateTime, yearResult.data.items);
 			  //console.log("the next holiday's index is" , nextHolidayIndex);
@@ -40,7 +40,7 @@ app.service('hebService', function($http) {
 			  });
 		  } else {
 			  currentMonth++;
-			  return $http.get('https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year='+currentYear+'&month='+currentMonth+'&mf=on&ss=on&c=off&s=off').then(function(monthResult){
+			  return $http.get("https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year="+currentYear+"&month="+currentMonth+"&mf=on&ss=on&c=off&s=off").then(function(monthResult){
 			  nextHolidayIndex = findNextHoliday(currentDateTime, monthResult.data.items);	
 			  console.log("went into next month's holidays. returning "+monthResult.data.items[nextHolidayIndex]);
 			  return monthResult.data.items[nextHolidayIndex];
