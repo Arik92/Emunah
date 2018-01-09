@@ -3474,7 +3474,7 @@ span.psw {
     position: relative;
     overflow: hidden;
     background: white;
-    width: 235px;
+    /* width: 235px; */
     /* margin: auto; */
       -webkit-border-radius: 100em;
   -moz-border-radius: 100em;
