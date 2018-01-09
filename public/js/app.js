@@ -341,7 +341,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
 			  localStorage.setItem("didRefresh","true");
 		  window.location.reload(); //- triggers infinite loop
 		  } else {
-			  localStorage.deleteItem("didRefresh");
+			  localStorage.removeItem("didRefresh");
 		  }//else 
         }//if $stateParams
       }//controller
