@@ -17,13 +17,13 @@ var fs = require('fs');
 
 //app.use(cors());
 //app.options('*', cors());
-if (process.env.NODE_ENV === 'production') {
+// if (process.env.NODE_ENV === 'production') {
   var https_options = {
     cert: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.crt'),
     key: fs.readFileSync('/home/emunahadmin/Emunah/emunah.com.key'),
     ca: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.ca-bundle')
   }; 
-}
+// }
 
 mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
 
@@ -59,7 +59,7 @@ app.all('[^.]+', function(req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-if (process.env.NODE_ENV === 'production') {
+// if (process.env.NODE_ENV === 'production') {
   https.createServer(https_options, app).listen(443)
   /*https.createServer(https_options, function (req, res) {
    res.writeHead(200);
@@ -71,12 +71,12 @@ if (process.env.NODE_ENV === 'production') {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
     res.end();
   }).listen(80);
-} else {
+// } else {
   // local dev settings
-  const devPort = '80';
-  app.listen(process.env.PORT || devPort, function(){
-    console.log("listening on port "+devPort+". Baruh Hashem!")
-  });
-}
+  // const devPort = '80';
+  // app.listen(process.env.PORT || devPort, function(){
+  //   console.log("listening on port "+devPort+". Baruh Hashem!")
+  // });
+// }
 
 
