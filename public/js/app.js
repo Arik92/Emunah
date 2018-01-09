@@ -340,7 +340,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
 		//res.setHeader("Access-Control-Allow-Credentials", "true");
 		$http.defaults.headers.common['Access-Control-Allow-Methods'] = "GET,HEAD,OPTIONS,POST,PUT";
 		//res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");   
-		$http.defaults.headers.common['Access-Control-Allow-Headers'] = " Authorization, Origin ,Accept, x-access-token, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers"'
+		$http.defaults.headers.common['Access-Control-Allow-Headers'] = " Authorization, Origin ,Accept, x-access-token, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers";
 		//res.setHeader("Access-Control-Allow-Headers", " Authorization, Origin ,Accept, x-access-token, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers");		*/
         next();
           $state.go('ravusa');
