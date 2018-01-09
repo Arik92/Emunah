@@ -337,7 +337,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
           $state.go('ravusa');
 		  var didRefresh = localStorage.getItem("didRefresh");
 		  console.log("Did it refresh?"+didRefresh);
-		  /*if (!localStorage.getItem("didRefresh")){
+		  if (!localStorage.getItem("didRefresh")){
 			  localStorage.setItem("didRefresh","true");
 		  window.location.reload(); //- triggers infinite loop
 		  } else {
