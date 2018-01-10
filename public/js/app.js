@@ -162,12 +162,12 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/freeisrael.html',
       controller: 'freeCtrl'
     })
-    .state('store', {
-      url: '/store',
-      templateUrl: '/templates/store/store.html'
-    })
+    // .state('store', {
+    //   url: '/store',
+    //   templateUrl: '/templates/store/store.html'
+    // })
     .state('store-necklaces', {
-      url: '/store-necklaces',
+      url: '/store',
       templateUrl: '/templates/store/store-necklaces.html',
       controller: 'storeCtrl'
     })
