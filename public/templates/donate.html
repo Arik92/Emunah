@@ -72,27 +72,100 @@
                             <option value="monthly">Monthly</option>
                           </select>
                           <br><br>
-                          Full Name <i>(Required)</i>:
-                          <input type="name" name="name" placeholder="Rav Dror" required>
-                          You Email <i>(Required)</i>:
-                          <input type="email" name="email" placeholder="me@email.com" required>
-                          You Phone <i>(Required)</i>:
-                          <input type="tel" name="phone" placeholder="123-456-7890" required>
-                          Referrer <i>(Optional)</i>:
-                          <input type="name" name="referrer">
-                          Please dedicate my service in someone's memory, honor or merit:
-                          <textarea name="message" placeholder="Dedication (Optional)"></textarea>
+                          <div class="form-group">Full Name <i>(Required)</i>:
+                            <input type="name" name="name" placeholder="Rav Dror" required>
+                          </div>
+                          <div class="form-group">You Email <i>(Required)</i>:
+                            <input type="email" name="email" placeholder="me@email.com" required>
+                          </div>
+                          <div class="form-group">You Phone <i>(Required)</i>:</div>
+                            <input type="tel" name="phone" placeholder="123-456-7890" required>
+                          <div class="form-group">Referrer <i>(Optional)</i>:
+                            <input type="name" name="referrer">
+                          </div>
+                          <div class="form-group">Please dedicate my service in someone's memory, honor or merit:
+                            <textarea name="message" placeholder="Dedication (Optional)"></textarea>
+                          </div>
                           <div class="form-thumb">
                             <img style="margin: 10px" width="100%" src="images/banner.png" alt="Image Captions" />
                           </div>
-                        <input style="width:50%" type="card" name="card" placeholder="Card Number" required>
-                        <input id="input-group-small" type="cvc" name="cvc" placeholder="CVC Security Code" style="width:25%" required>
-                        <input id="input-group-small" type="expiration" style="width:25%" name="expiration" placeholder="Expiration Date" required>
-                      </div>  
-                      <div class="input-group">
-                        <!-- <input type="submit" value="Send" class="bt btn-success"> -->
-                        <button type="submit">Send</button> 
-                      </div>
+                          <!-- CREDIT CARD FORM STARTS HERE -->
+                          <div class="panel panel-default credit-card-box">
+                              <div class="panel-heading display-table" >
+                                  <div class="row display-tr" >
+                                      <h3 class="panel-title display-td" >Payment Details</h3>
+                                      <div class="display-td" >                            
+                                          <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                                      </div>
+                                  </div>                    
+                              </div>
+                              <div class="panel-body" id="payment-form" method="POST">
+                                  
+                                      <div class="row">
+                                          <div class="col-xs-12">
+                                              <div class="form-group">
+                                                  <label for="cardNumber">CARD NUMBER</label>
+                                                  <div class="input-group">
+                                                      <input 
+                                                          type="tel"
+                                                          class="form-control"
+                                                          name="cardNumber"
+                                                          placeholder="Valid Card Number"
+                                                          autocomplete="cc-number"
+                                                          required autofocus 
+                                                      />
+                                                      <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                                  </div>
+                                              </div>                            
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-xs-7 col-md-7">
+                                              <div class="form-group">
+                                                  <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                                  <input 
+                                                      type="tel" 
+                                                      class="form-control" 
+                                                      name="cardExpiry"
+                                                      placeholder="MM / YY"
+                                                      autocomplete="cc-exp"
+                                                      required 
+                                                  />
+                                              </div>
+                                          </div>
+                                          <div class="col-xs-5 col-md-5 pull-right">
+                                              <div class="form-group">
+                                                  <label for="cardCVC">CV CODE</label>
+                                                  <input 
+                                                      type="tel" 
+                                                      class="form-control"
+                                                      name="cardCVC"
+                                                      placeholder="CVC"
+                                                      autocomplete="cc-csc"
+                                                      required
+                                                  />
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <br>
+                                      <div class="row">
+                                          <div class="col-xs-12">
+                                              <button class="subscribe btn btn-success btn-lg btn-block" style="background-color:   steelblue" type="button">Donate</button>
+                                          </div>
+                                      </div>
+                                      <div class="row" style="text-align:   center">
+                                          <div class="col-xs-12">
+                                              <p>Please click submit only once.</p>
+                                              <p><i class="fa fa-lock" aria-hidden="true"></i>This page uses 128 bit SSL encryption to keep your data secure.</p>
+                                          </div>
+                                      </div>
+                                 
+                              </div>
+                          </div>            
+                          <!-- CREDIT CARD FORM ENDS HERE -->
+            
+            
+        </div> 
                     </form>
                   </div>
 
@@ -140,25 +213,3 @@
     </div><!-- Container -->
   </section><!-- Main Area -->
 </div>
-<script type="text/javascript">
-  function openCity(evt, cityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-</script>
