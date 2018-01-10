@@ -19,9 +19,9 @@ var fs = require('fs');
 //app.options('*', cors());
 
 var https_options = {
-  // cert: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.crt'),
-  // key: fs.readFileSync('/home/emunahadmin/Emunah/emunah.com.key'),
-  // ca: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.ca-bundle')
+  cert: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.crt'),
+  key: fs.readFileSync('/home/emunahadmin/Emunah/emunah.com.key'),
+  ca: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.ca-bundle')
 }; 
 mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
 
@@ -64,12 +64,12 @@ https.createServer(https_options, app).listen(443)
 
 
 const devPort = '80';
-app.listen(process.env.PORT || devPort, function(){
+/*app.listen(process.env.PORT || devPort, function(){
   console.log("listening on port "+devPort+". Baruh Hashem!")
-});
-// var http = require('http');
-// http.createServer(function (req, res) {
-//     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
-//     res.end();
-// }).listen(80);
+});*/
+var http = require('http');
+http.createServer(function (req, res) {
+    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+    res.end();
+}).listen(80);
 
