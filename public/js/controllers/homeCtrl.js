@@ -196,10 +196,13 @@ getAllHolidays();
       image: 'images/cali.jpg'
     },
     {
+      image: 'images/calitour.jpg'
+    },
+    {
       image: 'images/hitbodedut.jpg'
     },
     {
-      image: 'images/1-7.jpeg'
+      image: 'images/1-7.jpg'
     },
     {
       image: 'images/1-9.jpeg'
