@@ -3721,7 +3721,7 @@ section.service-main-container .post-body {
 }
 
 .mobile-store-ul li {
-    width: 50%;
+    width: 100%;
 }
 
 .mobile-store-ul li.misc {
@@ -3740,6 +3740,33 @@ section.service-main-container .post-body {
 }
 
 #mobile-store-subheader {
+    font-size: 1.1em;
+    /*padding: 0.05em;*/
+    font-family: var(--fancy-font);
+    text-align: center;
+}
+
+.donate-ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.donate-ul li {
+    width: 50%;
+}
+
+.donate-ul li.misc {
+    width: 100%;
+}
+
+#donate-header {
+    font-size: 1.5em;
+    padding: 0.2em;
+    font-family: var(--fancy-font);
+    text-align: center;
+}
+
+#donate-subheader {
     font-size: 1.1em;
     /*padding: 0.05em;*/
     font-family: var(--fancy-font);

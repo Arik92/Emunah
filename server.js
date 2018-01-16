@@ -17,12 +17,14 @@ var fs = require('fs');
 
 //app.use(cors());
 //app.options('*', cors());
+// if (process.env.NODE_ENV === 'production') {
+  var https_options = {
+    cert: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.crt'),
+    key: fs.readFileSync('/home/emunahadmin/Emunah/emunah.com.key'),
+    ca: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.ca-bundle')
+  }; 
+// }
 
-var https_options = {
-  cert: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.crt'),
-  key: fs.readFileSync('/home/emunahadmin/Emunah/emunah.com.key'),
-  ca: fs.readFileSync('/home/emunahadmin/Emunah/www_emunah_com.ca-bundle')
-}; 
 mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/emunah');
 
 app.use(compression());
@@ -44,32 +46,35 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser()); */
 app.use('/users', userRoutes);
 app.use('/articles', articleRoutes);
+
 // "https://localhost:8000"
 app.use(function(req, res, next) {
-	    res.setHeader("Access-Control-Allow-Origin", "localhost, https://localhost:8000, hebcal.com, www.hebcal.com, https://www.hebcal.com, https://www.emunah.com, https://emunah.com");          		
-		res.setHeader("Access-Control-Allow-Credentials", "true");
-		res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");   
-		res.setHeader("Access-Control-Allow-Headers", " Authorization, Origin ,Accept, x-access-token, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers");		
+      res.setHeader("Access-Control-Allow-Origin", "localhost, https://localhost:8000, hebcal.com, www.hebcal.com, https://www.hebcal.com, https://www.emunah.com, https://emunah.com");              
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");   
+    res.setHeader("Access-Control-Allow-Headers", " Authorization, Origin ,Accept, x-access-token, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers");    
         next();
   }); 
 app.all('[^.]+', function(req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-https.createServer(https_options, app).listen(443)
-/*https.createServer(https_options, function (req, res) {
- res.writeHead(200);
- //res.end("Welcome to Node.js HTTPS Servern");
-}).listen(443)*/
-
-
-const devPort = '80';
-/*app.listen(process.env.PORT || devPort, function(){
-  console.log("listening on port "+devPort+". Baruh Hashem!")
-});*/
-var http = require('http');
-http.createServer(function (req, res) {
+// if (process.env.NODE_ENV === 'production') {
+  https.createServer(https_options, app).listen(443)
+  /*https.createServer(https_options, function (req, res) {
+   res.writeHead(200);
+   //res.end("Welcome to Node.js HTTPS Servern");
+  }).listen(443)*/
+  
+  var http = require('http');
+  http.createServer(function (req, res) {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
     res.end();
-}).listen(80);
-
+  }).listen(80);
+// } else {
+  // local dev settings
+  // const devPort = '80';
+  // app.listen(process.env.PORT || devPort, function(){
+  //   console.log("listening on port "+devPort+". Baruh Hashem!")
+  // });
+// }
