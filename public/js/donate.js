@@ -43,7 +43,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 var $form = $('#payment-form');
-$form.find('.subscribe').on('click', payWithStripe);
+$form.find('subscribe').on('click', payWithStripe);
 
 /* If you're using Stripe for payments */
 function payWithStripe(e) {

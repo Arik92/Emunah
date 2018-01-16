@@ -1,4 +1,12 @@
-<div class="wide page single-page">
+<donate-directive></donate-directive>
+
+<div class="w3-container w3-text-grey" id="jeans"></div>
+
+<donate-nav-directive></donate-nav-directive>
+
+<spinner-directive></spinner-directive>
+<!-- <div class="wide page single-page"> -->
+<div class="frameshop">
   <section class="search-modal">
     <h3 style="display: none;">Search Modal</h3>
     <div class="container">
@@ -22,32 +30,13 @@
                     <img width="250" src="images/rav-dror.jpg" alt="Image Captions" />
                 </div>
                 <p>Join the Emunah.com family today! Your donation helps us spread the light of faith to countless people around the world.</p>
-                <p>I would like to contribute using:</p>
                   <hr>
-                  <ul class="nav nav-pills">
-                    <li>
-                      <a onclick="openCity(event, 'Card')" active>Credit Card</a>
-                    </li>
-                    <li>
-                      <a class="nav-link" onclick="openCity(event, 'PayPal')">PayPal</a>
-                    </li>
-                    <li>
-                      <a class="nav-link" onclick="openCity(event, 'Mail')">Mail</a>
-                    </li>
-                    <li>
-                      <a class="nav-link" onclick="openCity(event, 'Phone')">Phone</a>
-                    </li>
-                    <li>
-                      <a class="nav-link" onclick="openCity(event, 'Transfer')">Wire Transfer</a>
-                    </li>
-                  </ul>
-
                   <!-- Tab content -->
-                    <div id="Card" class="tabcontent">
+                    <!-- <div id="Card" class="tabcontent"> -->
                       <form  action="https://formspree.io/myernjgm" method="POST"> 
                      <!--  <form  action="https://formspree.io/mbreslow56@gmail.com" method="POST">  -->
                         <input type="text" name="_gotcha" style="display: none"> 
-                        <div class="input-group">
+                        <div class="input-group" id="donate-form">
                           <input type="hidden" name="_cc" value="chaim@emunah.com, donate@emunah.com" />
                           <input type="hidden" name="_next" value="/templates/thanks.html" />
                           Amount:
@@ -175,18 +164,20 @@
                           </select> -->
                           <br><br>
                           <div class="form-group">Full Name <i>(Required)</i>:
-                            <input class="form-control" type="name" name="name" placeholder="Rav Dror" required>
+                            <input class="form-control" style="margin-bottom: 5px"  type="name" name="name" placeholder="Rav Dror" required>
                           </div>
+                          <br>
                           <div class="form-group">You Email <i>(Required)</i>:
-                            <input class="form-control" type="email" name="email" placeholder="me@email.com" required>
+                            <input class="form-control" style="margin-bottom: 5px"  type="email" name="email" placeholder="me@email.com" required>
                           </div>
-                          <div class="form-group">You Phone <i>(Required)</i>:</div>
-                            <input class="form-control" type="tel" name="phone" placeholder="123-456-7890" required>
+                          <div class="form-group">You Phone <i>(Required)</i>:
+                            <input class="form-control" style="margin-bottom: 5px"  type="tel" name="phone" placeholder="123-456-7890" required>
+                          </div>
                           <div class="form-group">Referrer <i>(Optional)</i>:
-                            <input class="form-control" type="name" name="referrer">
+                            <input class="form-control" style="margin-bottom: 5px"  type="name" name="referrer">
                           </div>
-                          <div class="form-group">Please dedicate my service in someone's memory, honor or merit:
-                            <textarea class="form-control" name="message" placeholder="Dedication (Optional)"></textarea>
+                          <div class="form-group" >Please dedicate my service in someone's memory, honor or merit:
+                            <textarea class="form-control" style="margin-bottom: 10px" name="message" placeholder="Dedication (Optional)"></textarea>
                           </div>
                           <div class="form-thumb">
                             <img style="margin: 10px" width="100%" src="images/banner.png" alt="Image Captions" />
@@ -265,52 +256,14 @@
                               </div>
                           </div>            
                           <!-- CREDIT CARD FORM ENDS HERE -->
-            
-            
-        </div> 
+                        </div> 
                     </form>
-                  </div>
-
-                  <div id="PayPal" class="tabcontent">
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                      <input type="hidden" name="cmd" value="_s-xclick">
-                      <input type="hidden" name="hosted_button_id" value="TSP7GW8E8YA36">
-                      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                    </form>
-
-                  </div>
-
-                  <div id="Mail" class="tabcontent">
-                    <p>Please write a check payable to Emunah Project and send it to this address:</p>
-                    <br>
-                    <p>Emunah Project</p>
-                    <p>6251 Chimineas Ave</p>
-                    <p>Reseda, CA 91335</p>
-                  </div>
-                  <div id="Phone" class="tabcontent">
-                    <p>Provide your credit card information over the phone, 24 hours a day, 6 days a week:</p>
-                    <br>
-                    <ul>
-                      <li>Worldwide, Toll free: (+1) 877-778-9290</li>
-                      <li>Worldwide, Cell Phone: (+1) 310-907-6652</li>
-                      <li>Email: <a href="mailto:info@emunah.com">info@emunah.com</a></li>
-                    </ul>
-                  </div>
-                  <div id="Transfer" class="tabcontent">
-                    <p>Please write a check payable to Emunah Project and send it to this address:</p>
-                    <br>
-                    <p>Emunah Project, Inc.</p>
-                    <p>Citibank account number: 206643694</p>
-                    <p>Domestic routing number: 322271724</p>
-                    <p>Swift International: citius33</p>
-                  </div>
 
               </div><!-- Post Body -->
             </article><!-- Post -->
           </div><!-- Blog posts -->
         </section><!-- Main -->
-        <smallaside-directive></smallaside-directive>
+        <!-- <smallaside-directive></smallaside-directive> -->
       </div><!-- Row -->
     </div><!-- Container -->
   </section><!-- Main Area -->

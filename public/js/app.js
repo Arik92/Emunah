@@ -237,7 +237,28 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     })
     .state('donate', {
       url: '/donate',
-      templateUrl: '/templates/donate.html'
+      templateUrl: '/templates/donate.html',
+      controller: 'donateCtrl'
+    })
+    .state('donate-paypal', {
+      url: '/donate-paypal',
+      templateUrl: '/templates/donate-paypal.html',
+      controller: 'donateCtrl'
+    })
+    .state('donate-mail', {
+      url: '/donate-mail',
+      templateUrl: '/templates/donate-mail.html',
+      controller: 'donateCtrl'
+    })
+    .state('donate-phone', {
+      url: '/donate-phone',
+      templateUrl: '/templates/donate-phone.html',
+      controller: 'donateCtrl'
+    })
+    .state('donate-transfer', {
+      url: '/donate-transfer',
+      templateUrl: '/templates/donate-transfer.html',
+      controller: 'donateCtrl'
     })
     .state('services', {
       url: '/services',
