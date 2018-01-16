@@ -1,4 +1,4 @@
-app.controller('playlistCtrl', function($rootScope, $scope, $stateParams, ytService, selectedFactory) {
+app.controller('playlistCtrl', [ '$rootScope', '$scope', '$stateParams', 'ytService', 'selectedFactory', function($rootScope, $scope, $stateParams, ytService, selectedFactory) {
   //$scope.playerPlaylist = $stateParams.playlistParam;
   $scope.title = $stateParams.title;
   function playlistPrep(list, privateParam) {
@@ -42,4 +42,4 @@ app.controller('playlistCtrl', function($rootScope, $scope, $stateParams, ytServ
   }//initPlayer
   initPlayer();
   console.log("selected playlist is ", $scope.playerPlaylist);
-});
+}]);

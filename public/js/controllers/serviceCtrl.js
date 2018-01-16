@@ -1,4 +1,4 @@
-app.controller('serviceCtrl', function($scope, lodash) {
+app.controller('serviceCtrl', ['$scope', 'lodash', function($scope, lodash) {
   
   this.$onInit = () => {
     console.log('yo from serviceCtrl');
@@ -42,6 +42,6 @@ app.controller('serviceCtrl', function($scope, lodash) {
     }
   ]
 
-});//singleCtrl
+}]);//singleCtrl
 
 

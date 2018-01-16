@@ -1,6 +1,7 @@
-app.controller('authCtrl', function($scope,$rootScope, $http, authFactory, userService, $state, $timeout, $location) {	
+app.controller('authCtrl', ['$scope', '$rootScope', '$http', 'authFactory', 'userService', '$state', '$timeout', '$location', function($scope, $rootScope, $http, authFactory, userService, $state, $timeout, $location) {	
 	this.$onInit = () => {
 	 $scope.newMember = {};
+	 $scope.showSubmit = true;
  }
   /*function validateLogin() {
     var patt = /\w{8}/;
@@ -90,7 +91,8 @@ app.controller('authCtrl', function($scope,$rootScope, $http, authFactory, userS
         app.successMsg = data.data.message + ' ...Redirecting';
 		authFactory.login(loginObj).then(function(result){
 			$timeout(function() {			
-          $location.path('/');
+          //$location.path('/');
+		  	$state.go('home');
         }, 2000);
 		});        
       } else {
@@ -113,7 +115,8 @@ app.controller('authCtrl', function($scope,$rootScope, $http, authFactory, userS
         //redirect to home page
         //msg.successMsg = data.data.message + ' ...Redirecting';
         $timeout(function() {
-          $location.path('/');
+				$state.go('home');
+          //$location.path('/');
          //msg.loginData = '';
          // msg.successMsg = false;
         }, 2000);
@@ -164,13 +167,15 @@ app.controller('authCtrl', function($scope,$rootScope, $http, authFactory, userS
     $rootScope.currentUser = null;
      delete $http.defaults.headers.common.Authorization;
     authFactory.logout();
-    $location.path('/');
+	$state.go('home');
+    //$location.path('/');
   }//logout
       
 	
 $scope.joinWhatsapp = function() {
   var patt = /^\+[1-9][0-9]{0,2}\.?[0-9]{1,14}$/; //no country code starts with 0
   if (patt.test($scope.phone)) {
+	  $scope.showSubmit = false;
     authFactory.joinWhatsapp($scope.phone).then(function(err, res){
       if (err) {
         console.log(err);
@@ -182,7 +187,7 @@ $scope.joinWhatsapp = function() {
     alert("Please enter a phone number in international format(see example) ");
   }//else patt test
 }//joinWhatsapp
-}); //authCtrl
+}]); //authCtrl
 
 // <script>
 //   window.fbAsyncInit = function() {

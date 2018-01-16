@@ -8,7 +8,7 @@ var config = {
 };
 module.exports = config;
 },{}],2:[function(require,module,exports){
-app.controller('sabbathCtrl', function($scope, $state, authFactory, hebService) {
+app.controller('sabbathCtrl', ['$scope', '$state', 'authFactory', 'hebService', function($scope, $state, authFactory, hebService) {
   //console.log("auth user data to work with", authFactory.currentUser);
   $scope.havdala = 50;
   var config = require('../config.js');
@@ -134,9 +134,9 @@ addScript(mapSrc);
 		  $scope.gLoc = "";
 	  }//else reset show Result
   }//checkTimes
-}); //controller
+}]); //controller
 },{"../config.js":1}],3:[function(require,module,exports){
-app.service('ytService', function($http) {
+app.service('ytService', ['$http', function($http) {
   var serv= {};
   var config = require('../config.js');
 
@@ -199,6 +199,6 @@ app.service('ytService', function($http) {
 	});  
   }
   return serv;
-})//service
+}])//service
 
 },{"../config.js":1}]},{},[2,3]);

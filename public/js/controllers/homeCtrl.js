@@ -1,4 +1,4 @@
-app.controller('homeCtrl', function($rootScope, $scope, $state, authFactory, ytService, hebService, $location, $anchorScroll) {
+app.controller('homeCtrl', [ '$rootScope', '$scope', '$state', 'authFactory', 'ytService', 'hebService', '$location', '$anchorScroll', function($rootScope, $scope, $state, authFactory, ytService, hebService, $location, $anchorScroll) {
   //console.log("auth user data to work with", authFactory.currentUser);
   //$rootScope.currentUser = authFactory.currentUser.email;
   $scope.topThree = [];
@@ -218,5 +218,5 @@ getAllHolidays();
   };
 
 
-}); //controller
+}]); //controller
 

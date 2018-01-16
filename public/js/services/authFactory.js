@@ -1,8 +1,9 @@
-app.factory('authFactory', function($http, $rootScope, userService, authToken) {
+app.factory('authFactory', ['$http', '$rootScope', 'userService', 'authToken', function($http, $rootScope, userService, authToken) {
   var authFactory = {};
 
   authFactory.login = function(loginData) {
 	  console.log("login data service is", loginData);
+	  //delete $http.defaults.headers.common["x-access-token"];
     return $http.post('/users/authenticate', loginData).then(function(data){
 		console.log("authentication data", data);
       authToken.setToken(data.data.token);
@@ -46,9 +47,9 @@ app.factory('authFactory', function($http, $rootScope, userService, authToken) {
   }//joinWhatsapp
 
   return authFactory;
-});
+}]);
 
-app.factory('authToken', function($window) {
+app.factory('authToken', ['$window', function($window) {
   var authTokenFactory = {};
   //authToken.setToken(token)
   authTokenFactory.setToken = function(token) {
@@ -66,14 +67,15 @@ app.factory('authToken', function($window) {
     return $window.localStorage.getItem('token');
   };
   return authTokenFactory;
-})
+}]);
 
-app.factory('authServiceInterceptors', function(authToken) {
+app.factory('authServiceInterceptors', ['authToken', function(authToken) {
   var authServiceInterceptors = {};
   authServiceInterceptors.request = function(config) {
     var token = authToken.getToken();
+	//if (token) authToken.setToken(token);
     if (token) config.headers['x-access-token'] = token;
     return config;
   }
   return authServiceInterceptors;
-})
+}]);
