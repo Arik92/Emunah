@@ -1421,7 +1421,11 @@ header.header#layout3 .search-tigger:hover {
     margin: 0;
 }
 .blog-layout.layout-4 .post.first .post-thumb {
-    height: 268px;
+    /*height: 268px;*/
+    height: 100%;
+}
+.blog-layout.layout-4 .post.first .post-thumbtop {
+    height: 400px;
 }
 .blog-layout.layout-4 .post .post-thumb {
     height: 126px;
@@ -3608,6 +3612,10 @@ div.frameshop {
 
 
 img.lazy {
+    width: 100%;
+}
+
+img.lazyhome {
     width: 100%;
 }
 
