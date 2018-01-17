@@ -203,6 +203,9 @@ getAllHolidays();
     },
     {
       image: 'images/c3.jpg'
+    },
+    {
+      image: 'images/c4.jpg'
     }
   ];
 
