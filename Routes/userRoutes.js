@@ -80,6 +80,11 @@ router.post('/users', function(req, res){
           res.json({ success: false, message: 'could not authenticate password' });
         } else {
           var token = jwt.sign({ username: user.username, email: user.email, id: user._id }, secret, { expiresIn: '72h' } );
+		  
+		   res.setHeader("Access-Control-Allow-Origin", "localhost, https://localhost:8000, hebcal.com, www.hebcal.com, https://www.hebcal.com, https://www.emunah.com, https://emunah.com");          		
+			res.setHeader("Access-Control-Allow-Credentials", "true");
+			res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");   
+			res.setHeader("Access-Control-Allow-Headers", " Authorization, Origin ,Accept, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers");		
           res.json({ success: true, message: 'User authenticated', token: token });
         }
       }

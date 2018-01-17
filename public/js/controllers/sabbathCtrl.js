@@ -1,4 +1,4 @@
-app.controller('sabbathCtrl', function($scope, $state, authFactory, hebService) {
+app.controller('sabbathCtrl', ['$scope', '$state', 'authFactory', 'hebService', function($scope, $state, authFactory, hebService) {
   //console.log("auth user data to work with", authFactory.currentUser);
   $scope.havdala = 50;
   var config = require('../config.js');
@@ -124,4 +124,4 @@ addScript(mapSrc);
 		  $scope.gLoc = "";
 	  }//else reset show Result
   }//checkTimes
-}); //controller
+}]); //controller

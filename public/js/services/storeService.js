@@ -1,4 +1,4 @@
-app.service('storeService', function(){
+app.service('storeService', [function(){
 
   this.products = [
     { name: 'Illustrations', uiSref: 'store-illustrations' },
@@ -14,4 +14,4 @@ app.service('storeService', function(){
     { name: 'Downloadable Books', uiSref: 'store-pdf' }
   ];
 
-});
+}]);

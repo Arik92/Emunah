@@ -1,4 +1,4 @@
-app.controller('shortPlCtrl', function($scope, ytService, $stateParams) {
+app.controller('shortPlCtrl', ['$scope', 'ytService', '$stateParams', function($scope, ytService, $stateParams) {
   this.$onInit = () => {
     getPlayLists();
     }
@@ -39,5 +39,4 @@ app.controller('shortPlCtrl', function($scope, ytService, $stateParams) {
 		 })
 		 };
 	 }//updateplaylistbackward
-}
-);//singleCtrl
+}]);//singleCtrl
