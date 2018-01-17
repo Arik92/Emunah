@@ -20,9 +20,9 @@ app.service('linkService', [function(){
   this.languages.header = "International Pages";
   this.languages.icon = "fa fa-globe";
   this.languages.links = [
-    { title: 'Hebrew', hRef: 'http://emunah.com/he'},
-    { title: 'Spanish', hRef: 'http://emunah.com/es'},
-    { title: 'Portuguese', hRef: 'http://emunah.com/pt'},
+    { title: 'Hebrew', hRef: 'http://he.emunah.com/'},
+    { title: 'Spanish', hRef: 'http://es.emunah.com/'},
+    { title: 'Portuguese', hRef: 'http://pt.emunah.com/'},
   ];
   
   this.associatedFacebook.header = 'Associated Facebook ';
