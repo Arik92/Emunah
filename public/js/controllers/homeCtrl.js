@@ -215,6 +215,12 @@ getAllHolidays();
     },
     {
       image: 'images/c7.jpg'
+    },
+    {
+      image: 'images/c8.jpg'
+    },
+    {
+      image: 'images/c9.jpg'
     }
   ];
 
