@@ -196,6 +196,12 @@ getAllHolidays();
       image: 'images/cali.jpg'
     },
     {
+      image: 'images/c1-21.jpg'
+    },
+    {
+      image: 'images/c1-22.jpg'
+    },
+    {
       image: 'images/c1.jpg'
     },
     {
