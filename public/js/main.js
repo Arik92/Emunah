@@ -4,6 +4,8 @@
     AUTHOR WEBSITE : www.infinyteam.com
     OUR PORTFOLIO : http://themeforest.net/user/infinyteam/portfolio?ref=infinyteam
 */
+function snippetimage(a,e){var g=183,i=200;return image_tag='<img src="'+a.replace("/s72-c/","/w"+g+"-h"+i+"-p/")+'" alt="'+e+'"/>',yimage_tag='<img src="'+a.replace("default","0")+'" alt="'+e+'"/>',-1!=a.indexOf("img.youtube.com")?yimage_tag:""!=a?image_tag:""}
+
 (function ($) {
     "use strict";
     $(document).on('ready', function () {
