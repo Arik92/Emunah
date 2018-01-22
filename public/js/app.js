@@ -47,6 +47,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/thanks',
       templateUrl: '/templates/thanks.html',
     })
+    .state('thanks-whatsapp', {
+      url: '/thanks-whatsapp',
+      templateUrl: '/templates/thanks_whatsapp.html',
+    })
     .state('hitbodedut', {
       url: '/hitbodedut',
       templateUrl: '/templates/hitbodedut.html',
