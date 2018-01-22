@@ -17,30 +17,92 @@
 					<div class="blog-posts hfeed">
 						<article class="post single-post">
 							<div class="post-body">
-								<h2 style="font-size:2em">We’d Love to Hear From You, <br>
-								 Get In Touch With Us!</h2>
+								<h2 style="font-size:2em">Thank you for your interest in joining our <strong><i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp Group</strong>.</h2>
 
-								<p>Don’t forget to join our <a ui-sref="whatsapp"><strong>WhatsApp Group</strong></a>.</p>
+								<p>Please fill out the form below to be added to our Whatsapp group.</p>
+									
+								<p>If you'd like to be added faster, please send a WhatsApp message to +972-52-844-3917</p>
+								<form  action="https://formspree.io/xodqzlom" method="POST"> 
+                     <!--  <form  action="https://formspree.io/mbreslow56@gmail.com" method="POST">  -->
+			                        <input type="text" name="_gotcha" style="display: none"> 
+			                        <div class="input-group" id="donate-form">
+			                          <input type="hidden" name="_cc" value="chaim@emunah.com" />
+			                          <input type="hidden" name="_next" value="/templates/thanks_whatsapp.html" />
+			                          <div class="form-thumb">
+			                            <img style="margin: 10px" width="100%" src="images/banner.png" alt="Image Captions" />
+			                          </div>
+			                          <!-- CREDIT CARD FORM STARTS HERE -->
+			                          <div class="panel panel-default credit-card-box">
+			                              <div class="panel-body" id="payment-form" method="POST">
+			                                  
+			                                      <div class="row">
+			                                          <div class="col-xs-12">
+			                                              <div class="form-group"><label for="email">Full Name</i>:</label>
+								                            <input class="form-control" style="margin-bottom: 5px"  type="name" name="name" placeholder="Rav Dror" required>
+								                          </div>                         
+			                                          </div>
+			                                      </div>
+			                                      <div class="row">
+			                                          <div class="col-xs-7 col-md-7">
+			                                              <div class="form-group"><label for="email">Email:</label>
+								                            <input class="form-control" style="margin-bottom: 5px"  type="email" name="email" placeholder="me@email.com" required>
+								                          </div>
+			                                          </div>
+			                                          <div class="col-xs-5 col-md-5 pull-right">
+			                                              <div class="form-group">
+			                                              	<label for="reason">Whatsapp #:</label>
 
-								<p>Please be sure to include your phone number in international format:<br>
-									Do this by removing any leading 0's, and adding a '+'and your country's calling code (to find your country's calling code, go
-									<a href="http://www.nationsonline.org/oneworld/international-calling-codes.htm"><b>here</b></a>) followed by a dot (.) to your regular number <br>
-									examples:	+999.86564327, +54.30978995
-								</p>
-
-								<form class="contact-form" method="POST">
-                  <div class="input-group">
+								                            <input class="form-control" style="margin-bottom: 5px"  type="tel" name="phone" placeholder="+1 818-456-7890" required>
+								                          </div>
+			                                          </div>
+			                                      </div>
+			                                      <div class="row">
+			                                          <div class="col-xs-12">
+			                                              <div class="form-group">
+			                                                  <label for="reason">Why do you want to join the Whatsapp group?</label>
+			                                                  <div class="input-group">
+			                                                      <textarea 
+			                                                          type="name"
+			                                                          class="form-control"
+			                                                          name="reason"
+			                                                          placeholder="Reason (Required)"
+			                                                          required autofocus 
+			                                                      />
+			                                                      <span class="input-group-addon"><i class=""></i></span>
+			                                                  </div>
+			                                              </div>                            
+			                                          </div>
+			                                      </div>
+			                                      <br>
+			                                      <div class="row">
+			                                          <div class="col-xs-12">
+			                                              <button class="subscribe btn btn-success btn-lg btn-block" style="background-color:   steelblue" type="submit" value="Send">Join</button>
+			                                          </div>
+			                                      </div>
+			                                      <div class="row" style="text-align:   center">
+			                                          <div class="col-xs-12">
+			                                              <p>Please click submit only once.</p>
+			                                          </div>
+			                                      </div>
+			                                 
+			                              </div>
+			                          </div>            
+			                          <!-- CREDIT CARD FORM ENDS HERE -->
+			                        </div> 
+			                    </form>
+								<!-- <form class="contact-form" method="POST">
+                  						<div class="input-group">
 										<label for="phone number">Phone number<i>(Required)</i> :</label>
 										<input type="text" ng-model="phone" placeholder="mobile phone" required/>
-									</div>
-<!-- 									<div class="input-group">
+										</div>
+									<div class="input-group">
 									    <label>What is 2+2? (Anti-spam) <i>(Required)</i> :</label>
 										<input name="human" placeholder="Type the answer here"/>
-									</div> -->
+									</div>
 									<div class="input-group" ng-show="showSubmit">
 										<input type="submit" ng-click="joinWhatsapp()" class="bt btn-success">
 									</div>
-								</form>
+								</form> -->
 								<div class="row show-hide-message" ng-show="!showSubmit">
 								<div class="alert alert-success">Phone number submitted</div>
 								</div>
