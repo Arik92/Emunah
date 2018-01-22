@@ -614,14 +614,14 @@ ul#mobile-store-btns {
   }
   #main-area:not(.fullwidth) #main {
     border-right: 1px solid #eee;
-    padding-right: 30px;
+    padding-right: 1px;
     padding-top: 0px;
-    padding-bottom: 30px;
+    padding-bottom: 1px;
   }
   #main-area:not(.fullwidth) #sidebar {
-    padding-left: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-left: 1px;
+    padding-top: 0px;
+    padding-bottom: 1px;
   }
   #main-area.has-left-sidebar #main {
     border: 0;
@@ -736,12 +736,12 @@ ul#mobile-store-btns {
   }
   #main-area:not(.fullwidth) #main {
     border-right: 1px solid #eee;
-    padding-right: 30px;
+    padding-right: 10px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
   #main-area:not(.fullwidth) #sidebar {
-    padding-left: 30px;
+    padding-left: 10px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -749,7 +749,7 @@ ul#mobile-store-btns {
     border: 0;
     border-left: 1px solid #eee;
     padding-left: 30px;
-    padding-right: 15px;
+    padding-right: 10px;
   }
   #main-area.has-left-sidebar #sidebar {
     padding-left: 15px;
@@ -795,7 +795,7 @@ ul#mobile-store-btns {
 		}
 	
 		.logo-container img {
-			max-width: 80%;
+			max-width: 100%;
 		}
 	}
 
@@ -812,7 +812,7 @@ ul#mobile-store-btns {
   @media only screen and ( min-width: 992px) {
     #card {
       position: relative;
-      width: 300px;
+      width: 315px;
   }
   }
 
