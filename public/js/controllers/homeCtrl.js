@@ -196,25 +196,13 @@ getAllHolidays();
       image: 'images/cali.jpg'
     },
     {
-      image: 'images/c1-21.jpg'
-    },
-    {
-      image: 'images/c1-22.jpg'
-    },
-    {
       image: 'images/c1.jpg'
     },
     {
-      image: 'images/c2.jpg'
-    },
-    {
-      image: 'images/c3.jpg'
-    },
-    {
-      image: 'images/c4.jpg'
-    },
-    {
       image: 'images/c5.jpg'
+    },
+    {
+      image: 'images/c2.jpg'
     },
     {
       image: 'images/c6.jpg'
@@ -223,12 +211,28 @@ getAllHolidays();
       image: 'images/c7.jpg'
     },
     {
-      image: 'images/c8.jpg'
+      image: 'images/c3.jpg'
+    },
+    {
+      image: 'images/c4.jpg'
+    },
+    {
+      image: 'images/c2-01.jpg'
+    },
+    {
+      image: 'images/c2-03.jpg'
     },
     {
       image: 'images/c9.jpg'
     }
   ];
+
+  var trophies = [
+    "img/trophy.png",
+    "img/trophy.png",
+    "img/trophy.png",
+    "img/trophy.png",
+    "img/trophy.png"];
 
   $scope.gotoTop = function($scope, $location, $anchorScroll) {
     // set the location.hash to the id of
