@@ -205,6 +205,9 @@ getAllHolidays();
       image: 'images/c2.jpg'
     },
     {
+      image: 'images/c1-27.jpg'
+    },
+    {
       image: 'images/c6.jpg'
     },
     {
