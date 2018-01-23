@@ -17,6 +17,24 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/home.html',
       controller: 'homeCtrl'
     })
+    .state('es', {
+      url: '/es',
+        onEnter: function($window) {
+            $window.open('http://es.emunah.com/', '_self');
+        }
+    })
+    .state('he', {
+      url: '/he',
+        onEnter: function($window) {
+            $window.open('http://he.emunah.com/', '_self');
+        }
+    })
+    .state('pt', {
+      url: '/pt',
+        onEnter: function($window) {
+            $window.open('http://pt.emunah.com/', '_self');
+        }
+    })
     .state('page-about', {
       url: '/about-emunah',
       templateUrl: '/templates/about/page-about.html'
@@ -265,36 +283,36 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       controller: 'donateCtrl'
     })
     .state('services', {
-      url: '/services',
+      url: '/services-in-israel',
       templateUrl: '/templates/services/services.html',
       controller: 'serviceCtrl'
     })
     .state('services-prayer', {
-      url: '/services-prayer',
+      url: '/services-in-israel/prayer',
       templateUrl: '/templates/services/prayer.html'
     })
     .state('services-kaddish', {
-      url: '/services-kaddish',
+      url: '/services-in-israel/kaddish',
       templateUrl: '/templates/services/kaddish.html'
     })
     .state('services-tehillim', {
-      url: '/services-tehillim',
+      url: '/services-in-israel/tehillim',
       templateUrl: '/templates/services/tehillim.html'
     })
     .state('services-learning', {
-      url: '/services-learning',
+      url: '/services-in-israel/learning',
       templateUrl: '/templates/services/learning.html'
     })
     .state('services-torah', {
-      url: '/services-torah',
+      url: '/services-in-israel/sefer-torah',
       templateUrl: '/templates/services/torah.html'
     })
     .state('services-candle', {
-      url: '/services-candle',
+      url: '/services-in-israel/candle',
       templateUrl: '/templates/services/candle.html'
     })
     .state('services-note', {
-      url: '/services-note',
+      url: '/services-in-israel/note',
       templateUrl: '/templates/services/note.html'
     })
     .state('soundcloud', {
