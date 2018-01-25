@@ -131,13 +131,13 @@
       <ul class="recent-posts">
         <li class="post thumbnail">
           <div class="post-thumb">
-            <a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id})">
+            <a ui-sref="post-single({id: topThree[0].id.videoId})">
               <img class="lazy" src="images/4.jpg" alt="Post Title Placeholder"  />
             </a>
           </div><!-- Post Image -->
           <div class="post-content">
             <h6 class="post-title">
-              <a ui-sref="post-single({videoParam: topThree[0], id: topThree[0].id})">{{topThree[0].snippet.title}}</a>
+              <a ui-sref="post-single({id: topThree[0].id.videoId})">{{topThree[0].snippet.title}}</a>
             </h6><!-- Post Title -->
             <ul class="post-meta">
               <li><i class="fa fa-clock-o"></i> {{topThree[0].snippet.publishedAt}}</li>
@@ -146,13 +146,13 @@
         </li><!-- Post -->
         <li class="post thumbnail">
           <div class="post-thumb">
-            <a ui-sref="post-single">
+            <a ui-sref="post-single({id: topThree[1].id.videoId})">
               <img class="lazy" src="images/5.jpg" data-src="images/5.jpg" alt="Post Title Placeholder" />
             </a>
           </div><!-- Post Image -->
           <div class="post-content">
             <h6 class="post-title">
-              <a ui-sref="post-single({videoParam: topThree[1], id: topThree[1].id})">{{topThree[1].snippet.title}}</a>
+              <a ui-sref="post-single({id: topThree[1].id.videoId})">{{topThree[1].snippet.title}}</a>
             </h6><!-- Post Title -->
             <ul class="post-meta">
               <li><i class="fa fa-clock-o"></i> {{topThree[1].snippet.publishedAt}}</li>
@@ -161,13 +161,13 @@
         </li><!-- Post -->
         <li class="post thumbnail">
           <div class="post-thumb">
-            <a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id})">
+            <a ui-sref="post-single({id: topThree[2].id.videoId})">
               <img class="lazy" src="images/12.jpg" data-src="images/12.jpg" alt="Post Title Placeholder" />
             </a>
           </div><!-- Post Image -->
           <div class="post-content">
             <h6 class="post-title">
-              <a ui-sref="post-single({videoParam: topThree[2], id: topThree[2].id})">{{topThree[2].snippet.title}}</a>
+              <a ui-sref="post-single({id: topThree[2].id.videoId})">{{topThree[2].snippet.title}}</a>
             </h6><!-- Post Title -->
             <ul class="post-meta">
               <li><i class="fa fa-clock-o"></i> {{topThree[2].snippet.publishedAt}}</li>

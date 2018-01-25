@@ -10,7 +10,7 @@ app.controller('homeCtrl', [ '$rootScope', '$scope', '$state', 'authFactory', 'y
     } else {
       $scope.footerVids = data.items;
       $scope.topThree = data.items.splice(0,3);
-      //console.log("top three videos are ", $scope.topThree);
+      console.log("top three videos are ", $scope.topThree);
       $scope.latestVids = data.items;
 
       //console.log("latest vids are", data.items);

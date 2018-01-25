@@ -32,7 +32,7 @@
 								<div class="col col-sm-6" ng-repeat="playlistItem in playlistItems track by $index">
 									<article class="post">
 										<div class="post-thumb">
-											<a ui-sref="post-single({videoParam: playlistItem, id: playlistItem.id})">
+											<a ui-sref="post-single({id: playlistItem.contentDetails.videoId})">
 												<img class="lazy" src={{playlistItem.snippet.thumbnails.high.url}} alt="Post Title Placeholder" />
 												<!-- <youtube-video video-url="playlistItem.playurl" player="bestPlayer" enablejsapi="true" video-id="$index" player-width="'100%'" player-vars="{autoplay: 0, start: 0.01}"></youtube-video> -->
 											<span class="post-format">

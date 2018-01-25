@@ -90,8 +90,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/page-search.html'
     })
     .state('post-single', {
-      url: '/single/:id',
-      params: { videoParam: null },
+      url: '/single/:id',      
       templateUrl: '/templates/post-single.html',
       controller: 'singleCtrl'
     })

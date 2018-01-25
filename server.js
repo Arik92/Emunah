@@ -12,7 +12,7 @@ var userRoutes = require('./Routes/userRoutes');
 var articleRoutes = require('./Routes/articleRoutes');
 var app = express();
 var https = require('https');
-var fs = require('fs');
+//var fs = require('fs');
 
 
 //app.use(cors());
@@ -60,11 +60,11 @@ app.all('[^.]+', function(req, res) {
 });
 
 // if (process.env.NODE_ENV === 'production') {
-  https.createServer(https_options, app).listen(443)
-  /*https.createServer(https_options, function (req, res) {
+  //https.createServer(https_options, app).listen(443)
+  https.createServer(https_options, function (req, res) {
    res.writeHead(200);
    //res.end("Welcome to Node.js HTTPS Servern");
-  }).listen(443)*/
+  }).listen(443)
   
   var http = require('http');
   http.createServer(function (req, res) {
@@ -73,8 +73,8 @@ app.all('[^.]+', function(req, res) {
   }).listen(80);
 // } else {
   // local dev settings
-  // const devPort = '80';
-  // app.listen(process.env.PORT || devPort, function(){
-  //   console.log("listening on port "+devPort+". Baruh Hashem!")
-  // });
+  /* const devPort = '80';
+   app.listen(process.env.PORT || devPort, function(){
+     console.log("listening on port "+devPort+". Baruh Hashem!")
+   });*/
 // }
