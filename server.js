@@ -61,10 +61,10 @@ app.all('[^.]+', function(req, res) {
 
 // if (process.env.NODE_ENV === 'production') {
   https.createServer(https_options, app).listen(443)
-  //https.createServer(https_options, function (req, res) {
+  /*https.createServer(https_options, function (req, res) {
    res.writeHead(200);
    //res.end("Welcome to Node.js HTTPS Servern");
-  }).listen(443)
+  }).listen(443) */
   
   var http = require('http');
   http.createServer(function (req, res) {
