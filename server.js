@@ -12,7 +12,7 @@ var userRoutes = require('./Routes/userRoutes');
 var articleRoutes = require('./Routes/articleRoutes');
 var app = express();
 var https = require('https');
-//var fs = require('fs');
+var fs = require('fs');
 
 
 //app.use(cors());
