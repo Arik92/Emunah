@@ -35,7 +35,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
             $window.open('http://pt.emunah.com/', '_self');
         }
     })
-    .state('page-about', {
+    .state('about-emunah', {
       url: '/about-emunah',
       templateUrl: '/templates/about/page-about.html'
     })
