@@ -1,3 +1,5 @@
+/*If you change anything in here make sure to add an updated minfied version in the .min. file.*/
+
 header.header#layout2 .mainmenu .container {
   height: 15vh;
 }
