@@ -195,15 +195,15 @@ getAllHolidays();
     {
       image: 'images/cali.jpg'
     },
-    {
-      image: 'images/c1.jpg'
-    },
-    {
-      image: 'images/c5.jpg'
-    },
-    {
-      image: 'images/c2.jpg'
-    },
+    // {
+    //   image: 'images/c1.jpg'
+    // },
+    // {
+    //   image: 'images/c5.jpg'
+    // },
+    // {
+    //   image: 'images/c2.jpg'
+    // },
     {
       image: 'images/c1-27.jpg'
     },
