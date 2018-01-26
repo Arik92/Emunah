@@ -23,16 +23,19 @@
 				<div id="footer-subscribe">
 					<h4 class="chabad-gold" style="margin-right: 30px">Subscribe to our Weekly News Letter!</h4>
 					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Enter Email">
-						<span class="input-group-btn">
-							<button class="btn btn-default" style="background: #ffcc66; border: solid #ffcc66" type="button">
-								Subscribe!
-							</button>
-						</span>
+						<form action="//herokuapp.us15.list-manage.com/subscribe/post?u=f95258be440735b1039166749&amp;id=70a28598ae" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+							<input type="email" value="" name="EMAIL" class="form-control" placeholder="Enter Email" required>
+							<span class="input-group-btn">
+								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f95258be440735b1039166749_70a28598ae" tabindex="-1" value=""></div>
+								<button class="btn btn-default" style="background: #ffcc66; border: solid #ffcc66" type="submit" value="Subscribe" name="subscribe">
+									Subscribe!
+								</button>
+							</span>
+							<input name="loc" type="hidden" value="en_US">
+        				</form>
 					</div>
 				</div>
 				<!-- /.col-lg-6 -->
-
 				<ul class="footer-social-media">
 					<li ng-repeat="link in socialMedia" style="padding: 0 1em;">
 						<a href="{{ link.hRef }}" style="display: block; width: 100%">

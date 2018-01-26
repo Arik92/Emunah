@@ -2,6 +2,7 @@ app.service('storeService', [function(){
 
   this.products = [
     { name: 'Illustrations', uiSref: 'store-illustrations' },
+    { name: 'Paintings', uiSref: 'store-paintings' },
     { name: 'Judaica', uiSref: 'store-judaica' },
     { name: 'Necklaces ', uiSref: 'store-necklaces' },
     { name: 'Shirts', uiSref: 'store-shirts' },
@@ -9,7 +10,6 @@ app.service('storeService', [function(){
     { name: 'Books In English', uiSref: 'store-english' },
     { name: 'Booklets', uiSref: 'store-booklets' },
     { name: 'CDs', uiSref: 'store-cds' },
-    { name: 'Paintings', uiSref: 'store-paintings' },
     { name: 'Downloadable Audio', uiSref: 'store-mp3s' },
     { name: 'Downloadable Books', uiSref: 'store-pdf' }
   ];
