@@ -205,9 +205,6 @@ getAllHolidays();
     //   image: 'images/c2.jpg'
     // },
     {
-      image: 'images/c1-27.jpg'
-    },
-    {
       image: 'images/c6.jpg'
     },
     {
@@ -224,6 +221,9 @@ getAllHolidays();
     },
     {
       image: 'images/c2-03.jpg'
+    },
+    {
+      image: 'images/c1-27.jpg'
     },
     {
       image: 'images/c9.jpg'
