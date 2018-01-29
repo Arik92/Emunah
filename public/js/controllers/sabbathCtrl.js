@@ -103,8 +103,14 @@ addScript(mapSrc);
             } else {
 				//TODO: make error handler for: no candle light, couldnt find time zone, etc'
               $scope.showResult = true;
+			  $scope.candleTimes = "";
 			  //NOTE might need to check if its a saturday
-              $scope.candleTimes = sab.items[0].title;
+			  for (var i=0;i<sab.items.length;i++) {
+				  if (sab.items[i].category==="candles") {
+					  $scope.candleTimes = sab.items[i].title;
+				  }//if found candle times 
+			  }//for 
+              console.log("candles?", $scope.candleTimes);
               console.log("sabbath ", sab);
             }//else
           }) //hebCal cb

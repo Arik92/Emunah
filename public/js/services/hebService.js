@@ -81,7 +81,7 @@ app.service('hebService', ['$http', function($http) {
   function getSabbath(lat, lng, tz, minutes) {
     //navigator.geolocation.getCurrentPosition
     return $http.get('https://www.hebcal.com/shabbat/?cfg=json&b=18&a=on&m='+minutes+'&geo=pos&latitude='+lat+'&longitude='+lng+'&tzid='+tz).then(function(result){
-    //console.log("Exp return is", result.data);
+    console.log("Exp return is", result.data);
     return result.data;
     })
   }//getSabbath
