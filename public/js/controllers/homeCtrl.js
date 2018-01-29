@@ -204,9 +204,9 @@ getAllHolidays();
     // {
     //   image: 'images/c2.jpg'
     // },
-    {
-      image: 'https://emunah.com/images/c6.jpg'
-    },
+    // {
+    //   image: 'https://emunah.com/images/c6.jpg'
+    // },
     {
       image: 'images/c7.jpg'
     },
