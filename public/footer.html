@@ -14,7 +14,7 @@
 							</h4>
 							<li ng-repeat="link in column.links" style="cursor: pointer">
 								<a ng-if="link.hRef" href="{{ link.hRef }}" target="_blank">{{ link.title }}</a>
-								<a ng-if="link.uiSref" ui-sref="{{ link.uiSref }}" >{{ link.title }}</a>
+								<a ng-if="link.uiSref" ui-sref="{{ link.uiSref }}">{{ link.title }}</a>
 							</li>
 						</ul>
 					</li>
@@ -23,16 +23,23 @@
 				<div id="footer-subscribe">
 					<h4 class="chabad-gold" style="margin-right: 30px">Subscribe to our Weekly News Letter!</h4>
 					<div class="input-group">
-						<form action="//herokuapp.us15.list-manage.com/subscribe/post?u=f95258be440735b1039166749&amp;id=70a28598ae" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+						<form action="https://emunahchannel.us13.list-manage.com/subscribe/post" method="post" name="mc-embedded-subscribe-form"
+						 target="_blank" novalidate>
+							<input type="hidden" name="u" value="7d5679b8640e5113f10b23a4b">
+							<input type="hidden" name="id" value="8494cf23ed">
 							<input type="email" value="" name="EMAIL" class="form-control" placeholder="Enter Email" required>
 							<span class="input-group-btn">
-								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f95258be440735b1039166749_70a28598ae" tabindex="-1" value=""></div>
+								<div style="position: absolute; left: -5000px;" aria-hidden="true">
+									<input type="text" name="b_f95258be440735b1039166749_70a28598ae" tabindex="-1" value="">
+								</div>
 								<button class="btn btn-default" style="background: #ffcc66; border: solid #ffcc66" type="submit" value="Subscribe" name="subscribe">
 									Subscribe!
 								</button>
 							</span>
+							<input type="hidden" name="ht" value="908c581730848ee2fa93fb84b03a89764cd1528b:MTUxNzI1MjUwOC4zMDc0">
+							<input type="hidden" name="mc_signupsource" value="hosted">
 							<input name="loc" type="hidden" value="en_US">
-        				</form>
+						</form>
 					</div>
 				</div>
 				<!-- /.col-lg-6 -->
