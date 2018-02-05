@@ -210,15 +210,15 @@ getAllHolidays();
     // {
     //   image: 'images/c3.jpg'
     // },
-    {
-      image: 'images/c2-01.jpg'
-    },
-    {
-      image: 'images/c2-03.jpg'
-    },
-    {
-      image: 'images/c7.jpg'
-    },
+    // {
+    //   image: 'images/c2-01.jpg'
+    // },
+    // {
+    //   image: 'images/c2-03.jpg'
+    // },
+    // {
+    //   image: 'images/c7.jpg'
+    // },
     {
       image: 'images/c1-27.jpg'
     },
