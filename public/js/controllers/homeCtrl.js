@@ -219,15 +219,15 @@ getAllHolidays();
     // {
     //   image: 'images/c7.jpg'
     // },
+    // {
+    //   image: 'images/c1-27.jpg'
+    // },
     {
-      image: 'images/c1-27.jpg'
-    },
-    {
-      image: 'images/c9.jpg'
-    },
-    {
-      image: 'images/c4.jpg'
+      image: 'images/c9.jpeg'
     }
+    // {
+    //   image: 'images/c4.jpg'
+    // }
   ];
 
   var trophies = [
