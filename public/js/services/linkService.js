@@ -28,7 +28,7 @@ app.service('linkService', [function(){
   this.associatedFacebook.header = 'Associated Facebook ';
   this.associatedFacebook.icon = "fa fa-facebook-square";
   this.associatedFacebook.links = [
-    { title: 'Women Of Emunah', hRef: 'https://www.facebook.com/WomenofEmuna' },
+    { title: 'Women Of Emunah', hRef: 'https://www.facebook.com/WomenofEmunah' },
     { title: 'Breslov Nation', hRef: 'https://www.facebook.com/BreslovNation/' },
     { title: 'Emunah Deutsch', hRef: 'https://www.facebook.com/EmunahDeutsch/' },
     { title: 'Emunah Los Angeles', hRef: 'https://www.facebook.com/EmunahCenterLA/' },

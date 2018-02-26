@@ -195,17 +195,17 @@ getAllHolidays();
     // {
     //   image: 'images/cali.jpg'
     // },
+    {
+      image: 'images/c1.jpeg'
+    },
+    {
+      image: 'images/c2.jpeg'
+    }
     // {
-    //   image: 'images/c1.jpg'
+    //   image: 'https://emunah.com/images/c6.jpg'
     // },
     // {
     //   image: 'images/c5.jpg'
-    // },
-    // {
-    //   image: 'images/c2.jpg'
-    // },
-    // {
-    //   image: 'https://emunah.com/images/c6.jpg'
     // },
     // {
     //   image: 'images/c3.jpg'
@@ -222,9 +222,9 @@ getAllHolidays();
     // {
     //   image: 'images/c1-27.jpg'
     // },
-    {
-      image: 'images/c9.jpeg'
-    }
+    // {
+    //   image: 'images/c9.jpeg'
+    // }
     // {
     //   image: 'images/c4.jpg'
     // }
