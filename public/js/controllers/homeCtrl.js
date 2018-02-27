@@ -200,10 +200,10 @@ getAllHolidays();
     },
     {
       image: 'images/c2.jpeg'
+    },
+    {
+      image: 'images/purim.jpeg'
     }
-    // {
-    //   image: 'https://emunah.com/images/c6.jpg'
-    // },
     // {
     //   image: 'images/c5.jpg'
     // },
