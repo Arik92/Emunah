@@ -200,9 +200,6 @@ getAllHolidays();
     },
     {
       image: 'images/c2.jpeg'
-    },
-    {
-      image: 'images/purim.jpeg'
     }
     // {
     //   image: 'images/c5.jpg'
