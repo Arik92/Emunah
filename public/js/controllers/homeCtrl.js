@@ -197,10 +197,10 @@ getAllHolidays();
     // },
     {
       image: 'images/c1.jpeg'
-    },
-    {
-      image: 'images/c2.jpeg'
     }
+    // {
+    //   image: 'images/c2.jpeg'
+    // }
     // {
     //   image: 'images/c5.jpg'
     // },
