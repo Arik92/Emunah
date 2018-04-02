@@ -35,6 +35,9 @@ app.controller('articleCreationCtrl',['articleFactory','$scope' ,'Upload','$wind
       insert: ' world!!'
     }]
   }
+  $scope.save = function() {
+	  console.log(quill.getContents());
+  }
 //quill.setContents(delta.ops); NOTE; for getting the rtf back in the editor
   ////////////////////////////////////////quill//////////////////////////////////////////
 
