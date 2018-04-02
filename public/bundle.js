@@ -16,8 +16,8 @@ $scope.mapKey = config.MAPS_API_KEY;
 var timeKey = config.TIMEZONES_KEY;
 //console.log("key is: ", $scope.mapKey);
 /////////////////////////////////////////// Map interface /////////////////////////////////////////////////////////
-var placeSearch, autocomplete;
 function initAutocomplete(){
+	var placeSearch, autocomplete;
 // Create the autocomplete object, restricting the search to geographical
 // location types.
 autocomplete = new google.maps.places.Autocomplete(
