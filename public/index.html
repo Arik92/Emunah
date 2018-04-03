@@ -90,6 +90,9 @@
           <li>
             <a ui-sref="full">Full Lectures</a>
           </li>
+          <li>
+            <a ui-sref="soundcloud">Soundcloud</a>
+          </li>
         </ul>
       </li>
       <li class="has-sub">
@@ -118,9 +121,6 @@
           </li>
         </ul>
       </li>
-      <li>
-        <a ui-sref="soundcloud">Soundcloud</a>
-      </li>
       <li class="has-sub">
         <a ui-sref="page-about-rav">About</a>
         <ul>
@@ -142,10 +142,10 @@
         <a ui-sref="page-contact">Contact</a>
       </li>
       <li ng-hide="currentUser">
-        <a ui-sref="login">Login</a>
+        <a href="http://es.emunah.com/">Spanish</a>
       </li>
       <li ng-hide="currentUser">
-        <a ui-sref="signup">Sign Up</a>
+        <a href="http://pt.emunah.com/">Portuguese</a>
       </li>
       <li ng-show="currentUser" ng-controller="authCtrl">
         <a ng-click="logout()">Log out</a>
@@ -183,11 +183,17 @@
             <li id="whatsapp-menu-link" class="soft-trans" style="color:white">
               <a ui-sref="whatsapp" style="color:white">WhatsApp Group</a>
             </li>
-            <li class="top-menu-link soft-trans" ng-hide="currentUser">
+            <!-- <li class="top-menu-link soft-trans" ng-hide="currentUser">
               <a ui-sref="login" style="color:white">Login</a>
             </li>
             <li class="top-menu-link soft-trans" ng-hide="currentUser">
               <a ui-sref="signup" style="color:white">Sign Up</a>
+            </li> -->
+            <li class="top-menu-link soft-trans" ng-hide="currentUser">
+              <a href="http://es.emunah.com/" style="color:white">Spanish</a>
+            </li>
+            <li class="top-menu-link soft-trans" ng-hide="currentUser">
+              <a href="http://pt.emunah.com/" style="color:white">Portuguese</a>
             </li>
             <li id="top-menu-logout" class="soft-trans" ng-show="currentUser" ng-controller="authCtrl">
               <a href="#" ng-click="logout()" style="color:white">Log out</a>
@@ -203,7 +209,7 @@
               </a>
             </li>
             <li class="hvr-grow store-link">
-              <a ui-sref="store-necklaces">
+              <a ui-sref="store-english">
                 <b>Store</b>
               </a>
             </li>
@@ -338,6 +344,21 @@
                     </div>
                     <!-- Post -->
                   </div>
+                  <div class="item">
+                    <div class="post">
+                      <div class="post-thumb">
+                        <a ui-sref="soundcloud" style="color:steelblue;">
+                          <img src="images/15.jpg" alt="Post Title Placeholder" />
+                        </a>
+                      </div>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a ui-sref="soundcloud" style="color:steelblue;">Soundcloud</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Post -->
+                  </div>
                 </div>
               </div>
             </li>
@@ -459,7 +480,7 @@
               </div>
             </li>
             <li>
-              <a ui-sref="soundcloud">Soundcloud</a>
+              <a ui-sref="spread-emunah">Spread Emunah</a>
             </li>
             <li>
               <a ui-sref="about">About</a>
@@ -573,7 +594,7 @@
             </a>
           </li>
           <li class="">
-            <a ui-sref="store-necklaces">
+            <a ui-sref="store-english">
               <b>Store</b>
             </a>
           </li>
