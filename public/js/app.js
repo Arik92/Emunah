@@ -347,6 +347,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/Sabbath.html',
       controller: 'sabbathCtrl'
     })
+    .state('spread-emunah', {
+      url: '/spread-emunah',
+      templateUrl: '/templates/spread-emunah.html'
+    })
     .state('faq', {
       url: '/faq',
       templateUrl: '/templates/about/faq.html',
