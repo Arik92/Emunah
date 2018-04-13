@@ -40,7 +40,7 @@
       "imgWithCarousel": false,
       "variantTitle": false,
       "options": false,
-      "description": false,
+      "description": true,
       "buttonWithQuantity": false,
       "quantity": false
     },
@@ -52,7 +52,8 @@
         "@media (min-width: 601px)": {
           "max-width": "calc(25% - 20px)",
           "margin-left": "20px",
-          "margin-bottom": "50px"
+          "margin-bottom": "50px",
+          "padding": "5px",
         }
       },
       "button": {
@@ -97,8 +98,9 @@
     "styles": {
       "product": {
         "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
+          "max-width": "80%",
+          "margin-left": "5px",
+          "margin-right": "5px",
           "margin-bottom": "0px"
         }
       },
