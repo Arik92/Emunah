@@ -40,7 +40,7 @@
       "imgWithCarousel": false,
       "variantTitle": false,
       "options": false,
-      "description": true,
+      "description": false,
       "buttonWithQuantity": false,
       "quantity": false
     },
