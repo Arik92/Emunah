@@ -227,6 +227,118 @@ getAllHolidays();
     // }
   ];
 
+  $scope.myInterval = 3000;
+  $scope.memes = [
+    // {
+    //   image: 'images/cali.jpg'
+    // },
+    {
+      image: 'images/memes/m1.jpg'
+    },
+    {
+      image: 'images/memes/m2.jpg'
+    },
+    {
+      image: 'images/memes/m3.jpg'
+    },
+    {
+      image: 'images/memes/m4.jpg'
+    },
+    {
+      image: 'images/memes/m5.jpg'
+    },
+    {
+      image: 'images/memes/m6.jpg'
+    },
+    {
+      image: 'images/memes/m7.jpg'
+    },
+    {
+      image: 'images/memes/m8.jpg'
+    },
+    {
+      image: 'images/memes/m9.jpg'
+    },
+    {
+      image: 'images/memes/m10.jpg'
+    },
+    {
+      image: 'images/memes/m11.jpg'
+    },
+    {
+      image: 'images/memes/m12.jpg'
+    },
+    {
+      image: 'images/memes/m13.jpg'
+    },
+    {
+      image: 'images/memes/m14.jpg'
+    },
+    {
+      image: 'images/memes/m15.jpg'
+    },
+    {
+      image: 'images/memes/m16.jpg'
+    },
+    {
+      image: 'images/memes/m17.jpg'
+    },
+    {
+      image: 'images/memes/m18.jpg'
+    },
+    {
+      image: 'images/memes/m19.jpg'
+    },
+    {
+      image: 'images/memes/m20.jpg'
+    },
+    {
+      image: 'images/memes/m21.jpg'
+    },
+    {
+      image: 'images/memes/m22.jpg'
+    },
+    {
+      image: 'images/memes/m23.jpg'
+    },
+    {
+      image: 'images/memes/m24.jpg'
+    },
+    {
+      image: 'images/memes/m25.jpg'
+    },
+    {
+      image: 'images/memes/m25.jpg'
+    },
+    {
+      image: 'images/memes/m26.jpg'
+    },
+    {
+      image: 'images/memes/m27.jpg'
+    },
+    {
+      image: 'images/memes/m28.jpg'
+    },
+    {
+      image: 'images/memes/m29.jpg'
+    },
+    {
+      image: 'images/memes/m30.jpg'
+    },
+    {
+      image: 'images/memes/m31.jpg'
+    },
+    {
+      image: 'images/memes/m32.jpg'
+    },
+    {
+      image: 'images/memes/m33.jpg'
+    },
+    {
+      image: 'images/memes/m34.jpg'
+    }
+  ];
+
   var trophies = [
     "img/trophy.png",
     "img/trophy.png",

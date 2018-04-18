@@ -53,7 +53,7 @@
           "max-width": "calc(25% - 20px)",
           "margin-left": "20px",
           "margin-bottom": "50px",
-          "padding": "5px",
+          "padding": "10px",
         }
       },
       "button": {

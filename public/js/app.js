@@ -81,6 +81,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/rav-dror-in-usa',
       templateUrl: '/templates/rav-dror-in-usa.html',
     })
+    .state('memes', {
+      url: '/memes',
+      templateUrl: '/templates/memes.html',
+    })
     .state('page-error', {
       url: '/error',
       templateUrl: '/templates/page-error.html'
@@ -187,8 +191,13 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     //   url: '/store',
     //   templateUrl: '/templates/store/store.html'
     // })
-    .state('store-necklaces', {
+    .state('store', {
       url: '/store',
+      templateUrl: '/templates/store/store-english.html',
+      controller: 'storeCtrl'
+    })
+    .state('store-necklaces', {
+      url: '/store-necklaces',
       templateUrl: '/templates/store/store-necklaces.html',
       controller: 'storeCtrl'
     })
@@ -227,11 +236,11 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/store/store-hebrew.html',
       controller: 'storeCtrl'
     })
-    .state('store-english', {
-      url: '/store-english',
-      templateUrl: '/templates/store/store-english.html',
-      controller: 'storeCtrl'
-    })
+    // .state('store-english', {
+    //   url: '/store-english',
+    //   templateUrl: '/templates/store/store-english.html',
+    //   controller: 'storeCtrl'
+    // })
     .state('store-booklets', {
       url: '/store-booklets',
       templateUrl: '/templates/store/store-booklets.html',
