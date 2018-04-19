@@ -33,6 +33,7 @@ app.service('linkService', [function(){
     { title: 'Emunah Deutsch', hRef: 'https://www.facebook.com/EmunahDeutsch/' },
     { title: 'Emunah Los Angeles', hRef: 'https://www.facebook.com/EmunahCenterLA/' },
     { title: 'Emunah Español', hRef: 'https://www.facebook.com/EmunahEspanol/' },
+    { title: "Ezra L'Anousim Pro Israel Rallies", hRef: 'https://www.facebook.com/1553616908295931/videos/2048526512138299/' },
   ]
 
   this.associatedYT.header = 'Associated Youtube';
