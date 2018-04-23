@@ -200,10 +200,10 @@ getAllHolidays();
     },
     {
       image: 'images/c2.jpeg'
+    },
+    {
+      image: 'images/c3.jpeg'
     }
-    // {
-    //   image: 'images/c5.jpg'
-    // },
     // {
     //   image: 'images/c3.jpg'
     // },
